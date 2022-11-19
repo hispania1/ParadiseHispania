@@ -133,7 +133,7 @@ SUBSYSTEM_DEF(ticker)
 			Master.SetRunLevel(RUNLEVEL_POSTGAME) // This shouldnt process more than once, but you never know
 			auto_toggle_ooc(TRUE) // Turn it on
 			declare_completion()
-			addtimer(CALLBACK(src, .proc/call_reboot), 5 SECONDS)
+			addtimer(CALLBACK(src, PROC_REF(call_reboot)), 5 SECONDS)
 			// Start a map vote IF
 			// - Map rotate doesnt have a mode for today and map voting is enabled
 			// - Map rotate has a mode for the day and it ISNT full random
@@ -338,7 +338,7 @@ SUBSYSTEM_DEF(ticker)
 	#endif
 
 	// Do this 10 second after roundstart because of roundstart lag, and make it more visible
-	addtimer(CALLBACK(src, .proc/handle_antagfishing_reporting), 10 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(handle_antagfishing_reporting)), 10 SECONDS)
 	return TRUE
 
 
