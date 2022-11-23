@@ -191,6 +191,9 @@ admin_role_id = ""
 # Role ID for the mentor role on the discord. Set to "" to disable.
 mentor_role_id = ""
 
+# HISPANIA - Id del rol para la mencion de nueva ronda. Pon "" para desactivar.
+player_role_id = ""
+
 # Forward all ahelps to the discord? If disabled, ahelps are only forwarded if admins are AFK/Offline
 forward_all_ahelps = true
 
