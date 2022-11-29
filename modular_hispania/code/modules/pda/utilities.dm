@@ -1,4 +1,3 @@
-
 /datum/data/pda/utility/trombone/ //wah wah wah
 	name = "Sad Trombone"
 	icon = "smile-o"

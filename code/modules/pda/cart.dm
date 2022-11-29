@@ -106,7 +106,9 @@
 	charges = 5
 	programs = list(
 		new/datum/data/pda/utility/honk,
+		//HISPANIA STARTS
 		new/datum/data/pda/utility/trombone)
+		//HISPANIA ENDS
 	messenger_plugins = list(
 		new /datum/data/pda/messenger_plugin/virus/clown
 	)
