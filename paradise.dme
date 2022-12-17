@@ -2655,6 +2655,7 @@
 #include "modular_hispania\code\modules\clothing\under\jobs\security.dm"
 #include "modular_hispania\code\modules\hydroponics\grown.dm"
 #include "modular_hispania\code\modules\hydroponics\seeds.dm"
+#include "modular_hispania\code\modules\pda\utilities.dm"
 #include "modular_hispania\code\modules\projectiles\gun.dm"
 #include "modular_hispania\controllers\subsystem\discord.dm"
 // END_INCLUDE
