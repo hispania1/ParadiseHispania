@@ -229,7 +229,7 @@
 	name = "security belt"
 	desc = "Can hold security gear like handcuffs and flashes."
 	//icon_state = "securitybelt"
-	item_state = "security"//Could likely use a better one.
+	//item_state = "security"//Could likely use a better one.
 	storage_slots = 5
 	max_w_class = WEIGHT_CLASS_NORMAL
 	//use_item_overlays = TRUE

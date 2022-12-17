@@ -94,6 +94,11 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	icon_state = "hoscap"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
 	)
@@ -112,6 +117,11 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	icon_state = "hosberetblack"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/beret.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/beret.dmi'
 	)
@@ -121,6 +131,11 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	icon_state = "wardenblue"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
 	)
@@ -134,18 +149,45 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 
 /obj/item/clothing/head/officer
 	icon = 'modular_hispania/icons/obj/clothing/head/hats.dmi'
-	icon_state = "seccap"
+	icon_state = "sechat"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
 	)
+
+/obj/item/clothing/head/soft/sec
+	icon = 'modular_hispania/icons/obj/clothing/head/hats.dmi'
+	icon_state = "seccap"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
+	)
+
+/obj/item/clothing/head/soft/sec/corp
+	icon_state = "corpsec"
 
 /obj/item/clothing/head/beret/sec
 	icon = 'modular_hispania/icons/obj/clothing/head/berets.dmi'
 	icon_state = "secberet"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/beret.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/beret.dmi'
 	)
@@ -154,6 +196,11 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	icon_state = "wardenberet"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/beret.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/beret.dmi'
 	)
@@ -163,6 +210,11 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	icon_state = "det"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
 	)
@@ -175,6 +227,11 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	desc = "Someone who wears this will look very cool."
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
 	)

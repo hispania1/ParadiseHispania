@@ -44,6 +44,11 @@
 	icon = 'modular_hispania/icons/obj/clothing/shoes.dmi'
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/shoes.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/shoes.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/shoes.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/shoes.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/shoes.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/shoes.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/shoes.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/shoes.dmi'
 	)

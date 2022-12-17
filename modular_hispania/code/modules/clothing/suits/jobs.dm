@@ -7,13 +7,18 @@
 	icon_state = "det"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/jacket.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/jacket.dmi',
 		"Drask" = 'icons/mob/clothing/species/drask/suit.dmi'
 	)
 
 /obj/item/clothing/suit/storage/det_suit/forensics/red
-	icon_state = "detred
+	icon_state = "detred"
 
 /obj/item/clothing/suit/storage/det_suit/forensics/blue
 	icon_state = "detblue"

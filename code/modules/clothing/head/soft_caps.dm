@@ -106,7 +106,7 @@
 /obj/item/clothing/head/soft/sec
 	name = "security cap"
 	desc = "It's baseball hat in tasteful red colour."
-	icon_state = "secsoft"
+	//icon_state = "secsoft"
 	item_color = "sec"
 	armor = list(MELEE = 25, BULLET = 20, LASER = 20, ENERGY = 5, BOMB = 0, BIO = 0, RAD = 0, FIRE = 10, ACID = 50)
 	strip_delay = 60
@@ -115,7 +115,7 @@
 /obj/item/clothing/head/soft/sec/corp
 	name = "corporate security cap"
 	desc = "It's a baseball hat in corporate colours."
-	icon_state = "corpsoft"
+	//icon_state = "corpsoft"
 	item_color = "corp"
 
 /obj/item/clothing/head/soft/solgov

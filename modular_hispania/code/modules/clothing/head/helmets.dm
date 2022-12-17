@@ -26,6 +26,11 @@
 	icon_state = "sechelm"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/helmet.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/helmet.dmi'
 	)

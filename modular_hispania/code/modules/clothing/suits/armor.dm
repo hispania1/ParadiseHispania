@@ -53,6 +53,11 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	icon_state = "armor"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/armor.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/armor.dmi'
 	)
@@ -66,6 +71,11 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	item_color = "hos"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/jacket.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/jacket.dmi'
 	)
@@ -80,17 +90,23 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 /obj/item/clothing/suit/armor/hos/formal/fem
 	name = "head of security's formal dress"
 	desc = "For some more serious batoning."
-	icon_state = "hosformalfem"
+	icon_state = "hosformfem"
 
 /obj/item/clothing/suit/armor/hos/alt
 	icon_state = "hostrench_open"
 	item_color = "hostrench_open"
 
 /obj/item/clothing/suit/armor/vest/warden
+	icon = 'modular_hispania/icons/obj/clothing/suits/jacket.dmi'
 	icon_state = "warden"
 	item_color = "warden"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Slime" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/jacket.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/jacket.dmi',
 		"Drask" = 'icons/mob/clothing/species/drask/suit.dmi'
