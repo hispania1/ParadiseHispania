@@ -98,14 +98,14 @@
 /obj/item/clothing/head/det_hat
 	name = "hat"
 	desc = "Someone who wears this will look very smart."
-	icon_state = "detective"
+//	icon_state = "detective"
 	allowed = list(/obj/item/reagent_containers/food/snacks/candy/candy_corn, /obj/item/pen)
 	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 5, BOMB = 0, BIO = 0, RAD = 0, FIRE = 20, ACID = 50)
 	dog_fashion = /datum/dog_fashion/head/detective
 
-	sprite_sheets = list(
+/*	sprite_sheets = list(
 	"Vox" = 'icons/mob/clothing/species/vox/head.dmi'
-	)
+	) */
 
 //Mime
 /obj/item/clothing/head/beret
@@ -129,7 +129,7 @@
 /obj/item/clothing/head/HoS
 	name = "head of security's cap"
 	desc = "The robust standard-issue cap of the Head of Security. For showing the officers who's in charge."
-	icon_state = "hos_cap"
+	//icon_state = "hos_cap"
 	armor = list(MELEE = 35, BULLET = 20, LASER = 20, ENERGY = 5, BOMB = 15, BIO = 5, RAD = 0, FIRE = 50, ACID = 75)
 	strip_delay = 80
 	dog_fashion = /datum/dog_fashion/head/HoS
@@ -137,7 +137,7 @@
 /obj/item/clothing/head/HoS/beret
 	name = "head of security's beret"
 	desc = "A robust beret for the Head of Security, for looking stylish while not sacrificing protection."
-	icon_state = "beret_hos_black"
+	//icon_state = "beret_hos_black"
 	dog_fashion = /datum/dog_fashion/head/HoS
 
 	sprite_sheets = list(
@@ -147,7 +147,7 @@
 /obj/item/clothing/head/warden
 	name = "warden's police hat"
 	desc = "It's a special armored hat issued to the Warden of a security force. Protects the head from impacts."
-	icon_state = "policehat"
+	//icon_state = "policehat"
 	armor = list(MELEE = 35, BULLET = 20, LASER = 20, ENERGY = 5, BOMB = 15, BIO = 0, RAD = 0, FIRE = 20, ACID = 75)
 	strip_delay = 60
 	dog_fashion = /datum/dog_fashion/head/warden
@@ -159,7 +159,7 @@
 /obj/item/clothing/head/officer
 	name = "officer's cap"
 	desc = "A red cap with an old-fashioned badge on the front for establishing that you are, in fact, the law."
-	icon_state = "sechat"
+	//icon_state = "sechat"
 	item_state = "sechat"
 	armor = list(MELEE = 25, BULLET = 20, LASER = 20, ENERGY = 5, BOMB = 0, BIO = 0, RAD = 0, FIRE = 10, ACID = 50)
 	strip_delay = 60
@@ -180,7 +180,7 @@
 /obj/item/clothing/head/beret/sec
 	name = "security beret"
 	desc = "A beret with the security insignia emblazoned on it. For officers that are more inclined towards style than safety."
-	icon_state = "beret_officer"
+	//icon_state = "beret_officer"
 	armor = list(MELEE = 25, BULLET = 20, LASER = 20, ENERGY = 5, BOMB = 0, BIO = 0, RAD = 0, FIRE = 10, ACID = 50)
 	strip_delay = 60
 	dog_fashion = /datum/dog_fashion/head/beret/sec
@@ -188,7 +188,7 @@
 /obj/item/clothing/head/beret/sec/warden
 	name = "warden's beret"
 	desc = "A special beret with the Warden's insignia emblazoned on it. For wardens with class."
-	icon_state = "beret_warden"
+	//icon_state = "beret_warden"
 	armor = list(MELEE = 35, BULLET = 20, LASER = 20, ENERGY = 5, BOMB = 15, BIO = 0, RAD = 0, FIRE = 20, ACID = 50)
 
 /obj/item/clothing/head/beret/eng

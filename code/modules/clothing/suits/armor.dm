@@ -40,10 +40,10 @@
 /obj/item/clothing/suit/armor/vest/security
 	name = "security armor"
 	desc = "An armored vest that protects against some damage. This one has a clip for a holobadge."
-	sprite_sheets = list(
+	/*sprite_sheets = list(
 		"Grey" = 'icons/mob/clothing/species/grey/suit.dmi'
 	)
-	icon_state = "armor"
+	icon_state = "armor"*/
 	item_state = "armor"
 	var/obj/item/clothing/accessory/holobadge/attached_badge
 
@@ -133,7 +133,7 @@
 /obj/item/clothing/suit/armor/hos/alt
 	name = "armored trenchcoat"
 	desc = "A trenchcoat enhanced with a special lightweight kevlar. The epitome of tactical plainclothes."
-	icon_state = "hostrench_open"
+	//icon_state = "hostrench_open"
 	item_state = "hostrench_open"
 	flags_inv = 0
 	ignore_suitadjust = 0
@@ -152,7 +152,7 @@
 /obj/item/clothing/suit/armor/vest/warden
 	name = "warden's armored jacket"
 	desc = "An armored jacket with silver rank pips and livery."
-	icon_state = "warden_jacket"
+	//icon_state = "warden_jacket"
 	item_state = "armor"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	cold_protection = UPPER_TORSO|LOWER_TORSO|HANDS
@@ -169,7 +169,7 @@
 /obj/item/clothing/suit/armor/vest/warden/alt
 	name = "warden's jacket"
 	desc = "A navy-blue armored jacket with blue shoulder designations and '/Warden/' stitched into one of the chest pockets."
-	icon_state = "warden_jacket_alt"
+	//icon_state = "warden_jacket_alt"
 
 //Captain
 /obj/item/clothing/suit/armor/vest/capcarapace
@@ -325,7 +325,7 @@
 /obj/item/clothing/suit/armor/vest/det_suit
 	name = "armor"
 	desc = "An armored vest with a detective's badge on it."
-	icon_state = "detective-armor"
+	//icon_state = "detective-armor"
 	item_state = "armor"
 	blood_overlay_type = "armor"
 	allowed = list(/obj/item/tank/internals/emergency_oxygen,/obj/item/reagent_containers/spray/pepper,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/restraints/handcuffs,/obj/item/storage/fancy/cigarettes,/obj/item/lighter,/obj/item/detective_scanner,/obj/item/taperecorder)

@@ -81,21 +81,21 @@
 /obj/item/clothing/gloves/color/black
 	name = "black gloves"
 	desc = "These gloves are fire-resistant."
-	icon_state = "black"
+	//icon_state = "black"
 	item_state = "bgloves"
-	item_color="black"
+	//item_color=	"black"
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	resistance_flags = NONE
 	var/can_be_cut = 1
-	sprite_sheets = list(
+	/*sprite_sheets = list(
 		"Vox" = 'icons/mob/clothing/species/vox/gloves.dmi',
 		"Drask" = 'icons/mob/clothing/species/drask/gloves.dmi',
 		"Grey" = 'icons/mob/clothing/species/grey/gloves.dmi',
 		"Kidan" = 'icons/mob/clothing/species/kidan/gloves.dmi',
-		)
+		)*/
 
 
 /obj/item/clothing/gloves/color/black/hos

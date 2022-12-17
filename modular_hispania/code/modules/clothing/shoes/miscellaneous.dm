@@ -37,3 +37,14 @@
 	icon_state = "SwagShoes"
 	item_color = "SwagShoes"
 	species_restricted = list("Human", "Slime", "Machine", "Kidan", "Skrell", "Diona" ) //VOX CANT HAVE THIS MUCH SWAG
+
+//Re-Sprite Code
+
+/obj/item/clothing/shoes/jackboots
+	icon = 'modular_hispania/icons/obj/clothing/shoes.dmi'
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/shoes.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/shoes.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/shoes.dmi'
+	)
+	icon_state = "boots"

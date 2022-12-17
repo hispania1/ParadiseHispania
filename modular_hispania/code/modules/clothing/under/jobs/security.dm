@@ -47,3 +47,71 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	item_color = "brig_phys"
 	permeability_coefficient = 0.50
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0, fire = 30, acid = 30)
+
+//Detective New Uniform
+
+/obj/item/clothing/under/rank/security/detective/forensics
+	name = "forensics jumpsuit"
+	desc = "A forensics jumpsuit used by detectives in crime scenes."
+	icon_state = "detblack"
+	item_state = "bl_suit"
+	item_color = "detective"
+
+
+//Re-Sprites Code//
+
+/obj/item/clothing/under/rank/security
+	icon = 'modular_hispania/icons/obj/clothing/under/security.dmi'
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/under/security.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/under/security.dmi',
+		"Drask" = 'icons/mob/clothing/species/drask/under/security.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/under/security.dmi'
+	)
+
+/obj/item/clothing/under/rank/security/warden/skirt
+	icon_state = "wardenf"
+
+/obj/item/clothing/under/rank/security/officer
+	icon_state = "secred"
+	item_color = "secred"
+
+/obj/item/clothing/under/rank/security/officer/skirt
+	icon_state = "secredf"
+	item_color = "secredf"
+
+/obj/item/clothing/under/rank/security/officer/corporate
+	icon_state = "seccorp"
+	item_color = "seccorp"
+
+/obj/item/clothing/under/rank/security/warden/corporate
+	icon_state = "wardencorp"
+	item_color = "wardencorp"
+
+/obj/item/clothing/under/rank/security/detective
+	icon_state = "det"
+	item_color = "det"
+
+/obj/item/clothing/under/rank/security/head_of_security
+	icon_state = "hos"
+	item_color = "hos"
+
+/obj/item/clothing/under/rank/security/head_of_security/skirt
+	icon_state = "hosf"
+	item_color = "hosf"
+
+/obj/item/clothing/under/rank/security/head_of_security/corporate
+	icon_state = "hoscorp"
+	item_color = "hoscorp"
+
+/obj/item/clothing/under/rank/security/formal
+	icon_state = "secformal"
+	item_color = "secformal"
+
+/obj/item/clothing/under/rank/security/formal/warden
+	icon_state = "wardenformal"
+	item_color = "wardenformal"
+
+/obj/item/clothing/under/rank/security/formal/head_of_security
+	icon_state = "hosformal"
+	item_color = "hosformal"

@@ -18,3 +18,15 @@
 	flags = BLOCKHAIR
 	hispania_icon = TRUE
 	species_restricted = list("Human", "Slime", "Machine", "Kidan", "Skrell", "Diona" )
+
+//Re-sprite Code//
+
+/obj/item/clothing/head/helmet
+	icon = 'modular_hispania/icons/obj/clothing/head/helmet.dmi'
+	icon_state = "sechelm"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/helmet.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/helmet.dmi'
+	)
+

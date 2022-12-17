@@ -87,4 +87,98 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	hispania_icon = TRUE
 	species_restricted = list("exclude", "Grey")
 
+//Re-sprite Code//
+
+/obj/item/clothing/head/HoS
+	icon = 'modular_hispania/icons/obj/clothing/head/hats.dmi'
+	icon_state = "hoscap"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
+	)
+
+//
+
+/obj/item/clothing/head/HoS/formal
+	name = "Head of Security Formal Cap"
+	desc = "For some more serious batoning."
+	icon_state = "hosformal"
+
+//
+
+/obj/item/clothing/head/HoS/beret
+	icon = 'modular_hispania/icons/obj/clothing/head/berets.dmi'
+	icon_state = "hosberetblack"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/beret.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/beret.dmi'
+	)
+
+/obj/item/clothing/head/warden
+	icon = 'modular_hispania/icons/obj/clothing/head/hats.dmi'
+	icon_state = "wardenblue"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
+	)
+
+// Warden Red Hat
+
+/obj/item/clothing/head/warden/red
+	icon_state = "wardenred"
+
+//
+
+/obj/item/clothing/head/officer
+	icon = 'modular_hispania/icons/obj/clothing/head/hats.dmi'
+	icon_state = "seccap"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
+	)
+
+/obj/item/clothing/head/beret/sec
+	icon = 'modular_hispania/icons/obj/clothing/head/berets.dmi'
+	icon_state = "secberet"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/beret.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/beret.dmi'
+	)
+
+/obj/item/clothing/head/beret/sec/warden
+	icon_state = "wardenberet"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/beret.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/beret.dmi'
+	)
+
+/obj/item/clothing/head/det_hat
+	icon = 'modular_hispania/icons/obj/clothing/head/hats.dmi'
+	icon_state = "det"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
+	)
+
+//Cool Black Hat for the Det Oh yeah
+
+/obj/item/clothing/head/det_hat/black
+	icon_state = "detblack"
+	name = "Detective Black Fedora"
+	desc = "Someone who wears this will look very cool."
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
+	)
+
+
+
 

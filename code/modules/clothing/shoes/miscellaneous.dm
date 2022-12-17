@@ -157,7 +157,7 @@
 	name = "jackboots"
 	desc = "Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time."
 	can_cut_open = 1
-	icon_state = "jackboots"
+	//icon_state = "jackboots"
 	item_state = "jackboots"
 	item_color = "hosred"
 	strip_delay = 50

@@ -45,3 +45,58 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	sprite_sheets = list(
 		"Vox" = 'icons/mob/clothing/species/vox/suit.dmi'
 		)
+
+//Re-Sprite Code//
+
+/obj/item/clothing/suit/armor/vest/security
+	icon = 'modular_hispania/icons/obj/clothing/suits/armor.dmi'
+	icon_state = "armor"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/armor.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/armor.dmi'
+	)
+
+/obj/item/clothing/suit/armor/vest/det_suit
+	icon_state = "detarmor"
+
+/obj/item/clothing/suit/armor/hos
+	icon = 'modular_hispania/icons/obj/clothing/suits/jacket.dmi'
+	icon_state = "hos"
+	item_color = "hos"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/jacket.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/jacket.dmi'
+	)
+
+//Hos Formal Suit
+
+/obj/item/clothing/suit/armor/hos/formal
+	name = "head of security's formal suit"
+	desc = "For some more serious batoning."
+	icon_state = "hosformal"
+
+/obj/item/clothing/suit/armor/hos/formal/fem
+	name = "head of security's formal dress"
+	desc = "For some more serious batoning."
+	icon_state = "hosformalfem"
+
+/obj/item/clothing/suit/armor/hos/alt
+	icon_state = "hostrench_open"
+	item_color = "hostrench_open"
+
+/obj/item/clothing/suit/armor/vest/warden
+	icon_state = "warden"
+	item_color = "warden"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/jacket.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/jacket.dmi',
+		"Drask" = 'icons/mob/clothing/species/drask/suit.dmi'
+	)
+
+/obj/item/clothing/suit/armor/vest/warden/alt
+	icon_state = "wardenblue"
+	item_color = "wardenblue"
+
