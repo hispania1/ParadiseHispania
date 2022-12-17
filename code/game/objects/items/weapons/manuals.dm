@@ -717,7 +717,7 @@
   * These are automated well enough that as long as the link to the wiki is set correctly in the config and the article name is correct
   * these will display (mostly) CSS stripped wiki pages in them.
   */
-
+/* Comentado y puesto en el dm nuevo manuals.dm en modular hispania
 /obj/item/book/manual/wiki
 	name = "Wiki Book Manual"
 	desc = "This REALLY shouldn't exist in-game, please contact a coder"
@@ -736,7 +736,7 @@
 		<html><head></head><body bgcolor='[book_bgcolor]'>
 		<iframe width='100%' height='97%' src="[GLOB.configuration.url.wiki_url]/index.php/[wiki_article_title]?action=render" frameborder="0" id="main_frame"></iframe>
 		</body></html>"})
-
+*/
 //*    MISCELANIOUS WIKI PAGE MANUALS    *//
 /obj/item/book/manual/wiki/hacking
 	name = "Hacking"
@@ -796,7 +796,7 @@
 	wiki_article_title = "Guide_to_Faxes"
 
  //* STANDARD OPERATING PROCEDURE MANUALS *// (and space Law)
-
+/* Comentado y puesto en el dm nuevo manuals.dm en modular hispania
 /obj/item/book/manual/wiki/security_space_law
 	name = "Space Law"
 	desc = "A set of Nanotrasen guidelines for keeping law and order on their space stations."
@@ -805,7 +805,7 @@
 	author = "Nanotrasen"
 	title = "Space Law"
 	wiki_article_title = "Space_law"
-
+*/
 /obj/item/book/manual/wiki/security_space_law/black
 	name = "Space Law - Limited Edition"
 	desc = "A leather-bound, immaculately-written copy of JUSTICE."
