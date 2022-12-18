@@ -2027,7 +2027,6 @@
 #include "code\modules\mob\living\silicon\ai\freelook\cameranet.dm"
 #include "code\modules\mob\living\silicon\ai\freelook\chunk.dm"
 #include "code\modules\mob\living\silicon\ai\freelook\eye.dm"
-#include "code\modules\mob\living\silicon\ai\freelook\read_me.dm"
 #include "code\modules\mob\living\silicon\decoy\death.dm"
 #include "code\modules\mob\living\silicon\decoy\decoy.dm"
 #include "code\modules\mob\living\silicon\decoy\life.dm"
@@ -2635,6 +2634,7 @@
 #include "goon\code\datums\browserOutput.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
+#include "modular_hispania\code\game\jobs\job\job.dm"
 #include "modular_hispania\code\game\objects\items.dm"
 #include "modular_hispania\code\game\objects\items\weapons\manuals.dm"
 #include "modular_hispania\code\modules\clothing\clothing.dm"
@@ -2657,6 +2657,7 @@
 #include "modular_hispania\code\modules\clothing\under\jobs\security.dm"
 #include "modular_hispania\code\modules\hydroponics\grown.dm"
 #include "modular_hispania\code\modules\hydroponics\seeds.dm"
+#include "modular_hispania\code\modules\pda\utilities.dm"
 #include "modular_hispania\code\modules\projectiles\gun.dm"
 #include "modular_hispania\controllers\subsystem\discord.dm"
 // END_INCLUDE
