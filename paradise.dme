@@ -2636,6 +2636,7 @@
 #include "interface\skin.dmf"
 #include "modular_hispania\code\game\jobs\job\job.dm"
 #include "modular_hispania\code\game\objects\items.dm"
+#include "modular_hispania\code\game\objects\items\weapons\manuals.dm"
 #include "modular_hispania\code\modules\clothing\clothing.dm"
 #include "modular_hispania\code\modules\clothing\head\helmets.dm"
 #include "modular_hispania\code\modules\clothing\head\jobs.dm"
