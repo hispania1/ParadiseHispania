@@ -1,5 +1,5 @@
 /obj/item/syndieprototype
-	name = "a sus machine prototype"
+	name = "suspicious machine prototype"
 	desc = "A complicated machine prototype. You have no idea how it works, but it looks kinda sus."
 	icon = 'modular_hispania/icons/obj/syndieproto.dmi'
 	icon_state = "proto"
