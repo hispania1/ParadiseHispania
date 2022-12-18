@@ -99,6 +99,9 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Machine" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Nian" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Tajaran" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
 	)
@@ -136,6 +139,9 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Machine" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Nian" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Tajaran" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
 	)
@@ -157,6 +163,9 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Machine" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Nian" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Tajaran" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
 	)
@@ -171,6 +180,9 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Machine" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Nian" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Tajaran" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
 	)
@@ -188,6 +200,9 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Machine" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Nian" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Tajaran" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/beret.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/beret.dmi'
 	)
@@ -201,6 +216,9 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Machine" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Nian" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Tajaran" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/beret.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/beret.dmi'
 	)
@@ -215,6 +233,9 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Machine" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Nian" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Tajaran" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
 	)
@@ -232,6 +253,9 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Machine" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Nian" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Tajaran" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
 	)

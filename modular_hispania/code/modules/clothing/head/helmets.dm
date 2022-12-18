@@ -30,6 +30,9 @@
 		"Slime People" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
 		"Machine" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Nian"	= 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Tajaran" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/helmet.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/helmet.dmi'

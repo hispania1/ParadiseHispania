@@ -12,6 +12,9 @@
 		"Machine" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Nian" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Tajaran" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/jacket.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/jacket.dmi',
 		"Drask" = 'icons/mob/clothing/species/drask/suit.dmi'

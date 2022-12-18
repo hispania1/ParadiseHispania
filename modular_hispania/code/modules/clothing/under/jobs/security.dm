@@ -55,8 +55,8 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/under/security.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/under/security.dmi',
-		"Drask" = 'icons/mob/clothing/species/drask/under/security.dmi',
-		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/under/security.dmi'
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/under/security.dmi',
+		"Drask" = 'icons/mob/clothing/species/drask/under/security.dmi'
 	)
 
 /obj/item/clothing/under/rank/security/officer
