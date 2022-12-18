@@ -48,34 +48,16 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	permeability_coefficient = 0.50
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0, fire = 30, acid = 30)
 
-//Detective New Uniform
-
-/obj/item/clothing/under/rank/security/detective/forensics
-	name = "forensics jumpsuit"
-	desc = "A forensics jumpsuit used by detectives in crime scenes."
-	icon_state = "detblack"
-	item_state = "bl_suit"
-	item_color = "detective"
-
-
 //Re-Sprites Code//
 
 /obj/item/clothing/under/rank/security
 	icon = 'modular_hispania/icons/obj/clothing/under/security.dmi'
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/under/security.dmi',
-		"Kidan" = 'modular_hispania/icons/mob/clothing/under/security.dmi',
-		"Slime" = 'modular_hispania/icons/mob/clothing/under/security.dmi',
-		"Machine" = 'modular_hispania/icons/mob/clothing/under/security.dmi',
-		"Skrell" = 'modular_hispania/icons/mob/clothing/under/security.dmi',
-		"Diona" = 'modular_hispania/icons/mob/clothing/under/security.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/under/security.dmi',
 		"Drask" = 'icons/mob/clothing/species/drask/under/security.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/under/security.dmi'
 	)
-
-/obj/item/clothing/under/rank/security/warden/skirt
-	icon_state = "wardenf"
 
 /obj/item/clothing/under/rank/security/officer
 	icon_state = "secred"
@@ -97,6 +79,18 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	icon_state = "det"
 	item_color = "det"
 
+/obj/item/clothing/under/rank/security/detective/fem
+	name = "detective skirt"
+	desc = "a comfortable skirt made for detectives"
+	icon_state = "detf"
+	item_color = "detf"
+
+/obj/item/clothing/under/rank/security/detective/black
+	name = "forensics technician jumpsuit"
+	desc = "a forensics technician jumpsuit used in crime scenes"
+	icon_state = "detblack"
+	item_color = "detblack"
+
 /obj/item/clothing/under/rank/security/head_of_security
 	icon_state = "hos"
 	item_color = "hos"
@@ -116,6 +110,10 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 /obj/item/clothing/under/rank/security/formal/warden
 	icon_state = "wardenformal"
 	item_color = "wardenformal"
+
+/obj/item/clothing/under/rank/security/warden/skirt
+	icon_state = "wardenf"
+	item_color = "wardenf"
 
 /obj/item/clothing/under/rank/security/formal/head_of_security
 	icon_state = "hosformal"

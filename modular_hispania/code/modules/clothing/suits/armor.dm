@@ -54,7 +54,7 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
-		"Slime" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Slime People" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
 		"Machine" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
@@ -63,7 +63,18 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	)
 
 /obj/item/clothing/suit/armor/vest/det_suit
+	icon = 'modular_hispania/icons/obj/clothing/suits/armor.dmi'
 	icon_state = "detarmor"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Slime People" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/armor.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/armor.dmi'
+	)
 
 /obj/item/clothing/suit/armor/hos
 	icon = 'modular_hispania/icons/obj/clothing/suits/jacket.dmi'
@@ -72,7 +83,7 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
-		"Slime" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Slime People" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Machine" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
@@ -103,7 +114,7 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
-		"Slime" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Slime People" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Machine" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
@@ -115,4 +126,3 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 /obj/item/clothing/suit/armor/vest/warden/alt
 	icon_state = "wardenblue"
 	item_color = "wardenblue"
-

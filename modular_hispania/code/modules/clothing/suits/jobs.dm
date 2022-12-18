@@ -8,7 +8,7 @@
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
-		"Slime" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Slime People" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Machine" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Skrell" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Diona" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
