@@ -62,6 +62,12 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 /obj/item/clothing/under/rank/security/officer
 	icon_state = "secred"
 	item_color = "secred"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/under/security.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/under/security.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/under/security.dmi',
+		"Drask" = 'icons/mob/clothing/species/drask/under/security.dmi'
+	)
 
 /obj/item/clothing/under/rank/security/officer/skirt
 	icon_state = "secredf"
@@ -78,6 +84,12 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 /obj/item/clothing/under/rank/security/detective
 	icon_state = "det"
 	item_color = "det"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/under/security.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/under/security.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/under/security.dmi',
+		"Drask" = 'icons/mob/clothing/species/drask/under/security.dmi'
+	)
 
 /obj/item/clothing/under/rank/security/detective/fem
 	name = "detective skirt"
@@ -94,6 +106,12 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 /obj/item/clothing/under/rank/security/head_of_security
 	icon_state = "hos"
 	item_color = "hos"
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/under/security.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/under/security.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/under/security.dmi',
+		"Drask" = 'icons/mob/clothing/species/drask/under/security.dmi'
+	)
 
 /obj/item/clothing/under/rank/security/head_of_security/skirt
 	icon_state = "hosf"
@@ -106,6 +124,14 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 /obj/item/clothing/under/rank/security/formal
 	icon_state = "secformal"
 	item_color = "secformal"
+
+/obj/item/clothing/under/rank/security/warden
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/under/security.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/under/security.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/under/security.dmi',
+		"Drask" = 'icons/mob/clothing/species/drask/under/security.dmi'
+	)
 
 /obj/item/clothing/under/rank/security/formal/warden
 	icon_state = "wardenformal"
