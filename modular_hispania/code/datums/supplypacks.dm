@@ -15,7 +15,7 @@
 					/obj/item/clothing/mask/gas/sechailer/cloaker,
 					/obj/item/storage/belt/military/assault,
 					/obj/item/storage/belt/military/assault)
-	cost = 120
+	cost = 950
 	containername = "assault armor crate"
 	contraband = 1
 
@@ -23,6 +23,6 @@
 /datum/supply_packs/science/syndieprototype
 	name = "Suspicious Prototype Crate"
 	contains = list(/obj/item/syndieprototype)
-	cost = 180
+	cost = 1200
 	containername = "suspicious machine prototype crate"
 	contraband = 1
