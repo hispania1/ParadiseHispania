@@ -1,9 +1,6 @@
 
 /obj/item/clothing/gloves/color/black
 	icon = 'modular_hispania/icons/obj/clothing/gloves.dmi'
-	icon_state = "black"
-	item_state = "black"
-	item_color = "black"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/gloves.dmi',
 		"Kidan" ='modular_hispania/icons/mob/clothing/gloves.dmi',
