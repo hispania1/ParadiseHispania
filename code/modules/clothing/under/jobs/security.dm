@@ -13,14 +13,14 @@
 /obj/item/clothing/under/rank/security/warden
 	name = "warden's jumpsuit"
 	desc = "It's made of a slightly sturdier material than standard jumpsuits, to allow for more robust protection. It has the word \"Warden\" written on the shoulders."
-	//icon_state = "warden"
+	icon_state = "warden"
 	item_state = "r_suit"
 	item_color = "warden"
 
 /obj/item/clothing/under/rank/security/warden/skirt
 	name = "warden's jumpskirt"
 	desc = "Standard feminine fashion for a Warden. It is made of sturdier material than standard jumpskirts. It has the word \"Warden\" written on the shoulders."
-	//icon_state = "warden_skirt"
+	icon_state = "warden_skirt"
 	item_state = "r_suit"
 	item_color = "warden_skirt"
 
@@ -32,9 +32,9 @@
 /obj/item/clothing/under/rank/security/officer
 	name = "security officer's jumpsuit"
 	desc = "It's made of a slightly sturdier material than standard jumpsuits, to allow for robust protection."
-	//icon_state = "security"
+	icon_state = "security"
 	item_state = "r_suit"
-	//item_color = "security"
+	item_color = "security"
 
 /obj/item/clothing/under/rank/security/officer/sensor
 	sensor_mode = SENSOR_COORDS
@@ -43,9 +43,9 @@
 /obj/item/clothing/under/rank/security/officer/skirt
 	name = "security officer's jumpskirt"
 	desc = "Standard feminine fashion for Security Officers.  It's made of sturdier material than the standard jumpskirts."
-	//icon_state = "security_skirt"
+	icon_state = "security_skirt"
 	item_state = "r_suit"
-	//item_color = "security_skirt"
+	item_color = "security_skirt"
 
 /obj/item/clothing/under/rank/security/officer/skirt/corporate
 	name = "corporate security jumpskirt"
@@ -83,14 +83,14 @@
 
 /obj/item/clothing/under/rank/security/officer/corporate
 	name = "corporate security jumpsuit"
-	//icon_state = "sec_corporate"
+	icon_state = "sec_corporate"
 	item_state = "sec_corporate"
-	//item_color = "sec_corporate"
+	item_color = "sec_corporate"
 
 /obj/item/clothing/under/rank/security/warden/corporate
-	//icon_state = "warden_corporate"
+	icon_state = "warden_corporate"
 	item_state = "warden_corporate"
-	//item_color = "warden_corporate"
+	item_color = "warden_corporate"
 
 /*
  * Detective
@@ -98,9 +98,9 @@
 /obj/item/clothing/under/rank/security/detective
 	name = "hard-worn suit"
 	desc = "Someone who wears this means business."
-	//icon_state = "detective"
+	icon_state = "detective"
 	item_state = "det"
-	//item_color = "detective"
+	item_color = "detective"
 
 /*
  * Head of Security
@@ -108,23 +108,23 @@
 /obj/item/clothing/under/rank/security/head_of_security
 	name = "head of security's jumpsuit"
 	desc = "It's a jumpsuit worn by those few with the dedication to achieve the position of \"Head of Security\". It has additional armor to protect the wearer."
-	//icon_state = "hos"
+	icon_state = "hos"
 	item_state = "r_suit"
-	//item_color = "hos"
+	item_color = "hos"
 	armor = list(MELEE = 5, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 50, ACID = 50)
 	strip_delay = 60
 
 /obj/item/clothing/under/rank/security/head_of_security/skirt
 	name = "head of security's jumpskirt"
 	desc = "It's a fashionable jumpskirt worn by those few with the dedication to achieve the position of \"Head of Security\". It has additional armor to protect the wearer."
-	//icon_state = "hos_skirt"
+	icon_state = "hos_skirt"
 	item_state = "r_suit"
-	//item_color = "hos_skirt"
+	item_color = "hos_skirt"
 
 /obj/item/clothing/under/rank/security/head_of_security/corporate
-	//icon_state = "hos_corporate"
+	icon_state = "hos_corporate"
 	item_state = "hos_corporate"
-	//item_color = "hos_corporate"
+	item_color = "hos_corporate"
 
 /obj/item/clothing/under/rank/security/head_of_security/skirt/corporate
 	icon_state = "hos_corporate_skirt"
@@ -134,21 +134,21 @@
 /obj/item/clothing/under/rank/security/formal
 	name = "security suit"
 	desc = "A formal security suit for officers complete with nanotrasen belt buckle."
-	//icon_state = "sec_formal"
+	icon_state = "sec_formal"
 	item_state = "gy_suit"
-	//item_color = "sec_formal"
+	item_color = "sec_formal"
 
 /obj/item/clothing/under/rank/security/formal/warden
 	name = "warden's suit"
 	desc = "A formal security suit for the warden with blue desginations and '/Warden/' stiched into the shoulders."
-	//icon_state = "warden_formal"
+	icon_state = "warden_formal"
 	item_state = "gy_suit"
-	//item_color = "warden_formal"
+	item_color = "warden_formal"
 
 /obj/item/clothing/under/rank/security/formal/head_of_security
 	name = "head of security's suit"
 	desc = "A security suit decorated for those few with the dedication to achieve the position of Head of Security."
-	//icon_state = "hos_formal"
+	icon_state = "hos_formal"
 	item_state = "gy_suit"
-	//item_color = "hos_formal"
+	item_color = "hos_formal"
 

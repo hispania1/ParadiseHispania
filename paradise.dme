@@ -2634,6 +2634,7 @@
 #include "goon\code\datums\browserOutput.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
+#include "modular_hispania\code\game\machinery\vending.dm"
 #include "modular_hispania\code\game\objects\items.dm"
 #include "modular_hispania\code\game\objects\items\weapons\storage\belt.dm"
 #include "modular_hispania\code\modules\clothing\clothing.dm"

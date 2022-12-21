@@ -50,7 +50,6 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 
 /obj/item/clothing/suit/armor/vest/security
 	icon = 'modular_hispania/icons/obj/clothing/suits/armor.dmi'
-	icon_state = "armor"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
@@ -67,7 +66,6 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 
 /obj/item/clothing/suit/armor/vest/det_suit
 	icon = 'modular_hispania/icons/obj/clothing/suits/armor.dmi'
-	icon_state = "detarmor"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
@@ -84,8 +82,6 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 
 /obj/item/clothing/suit/armor/hos
 	icon = 'modular_hispania/icons/obj/clothing/suits/jacket.dmi'
-	icon_state = "hos"
-	item_color = "hos"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
@@ -112,14 +108,10 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	desc = "For some more serious batoning."
 	icon_state = "hosformfem"
 
-/obj/item/clothing/suit/armor/hos/alt
-	icon_state = "hostrench_open"
-	item_color = "hostrench_open"
+//
 
 /obj/item/clothing/suit/armor/vest/warden
 	icon = 'modular_hispania/icons/obj/clothing/suits/jacket.dmi'
-	icon_state = "warden"
-	item_color = "warden"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
@@ -134,7 +126,3 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/jacket.dmi',
 		"Drask" = 'icons/mob/clothing/species/drask/suit.dmi'
 	)
-
-/obj/item/clothing/suit/armor/vest/warden/alt
-	icon_state = "wardenblue"
-	item_color = "wardenblue"

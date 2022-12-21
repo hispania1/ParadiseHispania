@@ -228,11 +228,11 @@
 /obj/item/storage/belt/security
 	name = "security belt"
 	desc = "Can hold security gear like handcuffs and flashes."
-	//icon_state = "securitybelt"
-	//item_state = "security"//Could likely use a better one.
+	icon_state = "securitybelt"
+	item_state = "security"//Could likely use a better one.
 	storage_slots = 5
 	max_w_class = WEIGHT_CLASS_NORMAL
-	//use_item_overlays = TRUE
+	use_item_overlays = TRUE
 	can_hold = list(
 		/obj/item/grenade/flashbang,
 		/obj/item/grenade/chem_grenade/teargas,

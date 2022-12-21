@@ -55,4 +55,3 @@
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/shoes.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/shoes.dmi'
 	)
-	icon_state = "boots"

@@ -23,7 +23,6 @@
 
 /obj/item/clothing/head/helmet
 	icon = 'modular_hispania/icons/obj/clothing/head/helmet.dmi'
-	icon_state = "sechelm"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',

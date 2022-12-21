@@ -1,7 +1,7 @@
 /obj/item/clothing/head/helmet
 	name = "helmet"
 	desc = "Standard Security gear. Protects the head from impacts."
-	//icon_state = "helmetmaterials"
+	icon_state = "helmetmaterials"
 	w_class = WEIGHT_CLASS_NORMAL
 	flags = HEADBANGPROTECT
 	flags_cover = HEADCOVERSEYES

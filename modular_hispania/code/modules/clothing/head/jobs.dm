@@ -91,7 +91,6 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 
 /obj/item/clothing/head/HoS
 	icon = 'modular_hispania/icons/obj/clothing/head/hats.dmi'
-	icon_state = "hoscap"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
@@ -117,7 +116,6 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 
 /obj/item/clothing/head/HoS/beret
 	icon = 'modular_hispania/icons/obj/clothing/head/berets.dmi'
-	icon_state = "hosberetblack"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
@@ -131,7 +129,6 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 
 /obj/item/clothing/head/warden
 	icon = 'modular_hispania/icons/obj/clothing/head/hats.dmi'
-	icon_state = "wardenblue"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
@@ -187,28 +184,8 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
 	)
 
-/obj/item/clothing/head/soft/sec/corp
-	icon_state = "corpsec"
-
 /obj/item/clothing/head/beret/sec
 	icon = 'modular_hispania/icons/obj/clothing/head/berets.dmi'
-	icon_state = "secberet"
-	sprite_sheets = list(
-		"Human" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
-		"Kidan" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
-		"Slime People" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
-		"Machine" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
-		"Skrell" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
-		"Diona" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
-		"Nian" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
-		"Tajaran" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
-		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
-		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/beret.dmi',
-		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/beret.dmi'
-	)
-
-/obj/item/clothing/head/beret/sec/warden
-	icon_state = "wardenberet"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
@@ -225,7 +202,6 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 
 /obj/item/clothing/head/det_hat
 	icon = 'modular_hispania/icons/obj/clothing/head/hats.dmi'
-	icon_state = "det"
 	sprite_sheets = list(
 		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
 		"Kidan" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
