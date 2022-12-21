@@ -15,7 +15,7 @@
 					/obj/item/clothing/mask/gas/sechailer/cloaker,
 					/obj/item/storage/belt/military/assault,
 					/obj/item/storage/belt/military/assault)
-	cost = 950
+	cost = 1150
 	containername = "assault armor crate"
 	contraband = 1
 
