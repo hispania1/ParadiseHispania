@@ -2637,6 +2637,8 @@
 #include "modular_hispania\code\datums\supplypacks.dm"
 #include "modular_hispania\code\game\objects\items.dm"
 #include "modular_hispania\code\game\objects\items\devices\syndieprototype.dm"
+#include "modular_hispania\code\datums\datumvars.dm"
+#include "modular_hispania\code\datums\supplypacks.dm"
 #include "modular_hispania\code\game\jobs\job\job.dm"
 #include "modular_hispania\code\game\objects\items.dm"
 #include "modular_hispania\code\game\objects\items\weapons\manuals.dm"
@@ -2663,4 +2665,5 @@
 #include "modular_hispania\code\modules\pda\utilities.dm"
 #include "modular_hispania\code\modules\projectiles\gun.dm"
 #include "modular_hispania\controllers\subsystem\discord.dm"
+#include "modular_hispania\hispania\game\machinery\jukebox.dm"
 // END_INCLUDE
