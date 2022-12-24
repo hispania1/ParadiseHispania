@@ -250,7 +250,7 @@
 
 /obj/machinery/clothelate/attackby(obj/item/O, mob/user, params)
 	if(busy)
-		to_chat(user, "<span class='alert'>The autolathe is busy. Please wait for completion of previous operation.</span>")
+		to_chat(user, "<span class='alert'>The clothelate is busy. Please wait for completion of previous operation.</span>")
 		return 1
 	if(exchange_parts(user, O))
 		return
@@ -265,11 +265,11 @@
 				var/datum/design/design = D.blueprint // READ ONLY!!
 
 				if(design.id in files.known_designs)
-					to_chat(user, "<span class='warning'>This design has already been loaded into the autolathe.</span>")
+					to_chat(user, "<span class='warning'>This design has already been loaded into the clothelate.</span>")
 					return 1
 
 				if(!files.CanAddDesign2Known(design))
-					to_chat(user, "<span class='warning'>This design is not compatible with the autolathe.</span>")
+					to_chat(user, "<span class='warning'>This design is not compatible with the clothelate.</span>")
 					return 1
 				user.visible_message("[user] begins to load \the [O] in \the [src]...",
 					"You begin to load a design from \the [O]...",
@@ -287,7 +287,7 @@
 			return 1
 		else
 			// So that people who are bad at computers don't shred their disks
-			to_chat(user, "<span class='warning'>This is not the correct type of disk for the autolathe!</span>")
+			to_chat(user, "<span class='warning'>This is not the correct type of disk for the clothelate!</span>")
 			return 1
 
 	return ..()
