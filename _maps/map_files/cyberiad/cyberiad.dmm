@@ -58,10 +58,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/ai_slipper,
-/mob/living/simple_animal/bot/secbot/pingsky,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 9
 	},
+/mob/living/simple_animal/bot/secbot/pingsky,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -7688,9 +7688,9 @@
 	},
 /area/hallway/secondary/exit)
 "avE" = (
-/mob/living/simple_animal/mouse/white,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/cable_coil/random,
+/mob/living/simple_animal/mouse/white,
 /turf/simulated/floor/plating,
 /area/maintenance/fpmaint)
 "avF" = (
@@ -38887,10 +38887,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/mob/living/simple_animal/pet/dog/corgi/borgi,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/mob/living/simple_animal/pet/dog/corgi/borgi,
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "whitepurple"
@@ -50769,7 +50769,7 @@
 /obj/machinery/computer/general_air_control{
 	frequency = 1441;
 	name = "Tank Monitor";
-	sensors = list("n2_sensor"="Nitrogen","o2_sensor"="Oxygen","co2_sensor"="Carbon Dioxide","tox_sensor"="Toxins","n2o_sensor"="Nitrous Oxide","waste_sensor"="Gas Mix Tank")
+	sensors = list("n2_sensor" = "Nitrogen", "o2_sensor" = "Oxygen", "co2_sensor" = "Carbon Dioxide", "tox_sensor" = "Toxins", "n2o_sensor" = "Nitrous Oxide", "waste_sensor" = "Gas Mix Tank")
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -50944,7 +50944,7 @@
 	frequency = 1443;
 	level = 3;
 	name = "Distribution and Waste Monitor";
-	sensors = list("mair_in_meter"="Mixed Air In","air_sensor"="Mixed Air Supply Tank","mair_out_meter"="Mixed Air Out","dloop_atm_meter"="Distribution Loop","wloop_atm_meter"="Waste Loop")
+	sensors = list("mair_in_meter" = "Mixed Air In", "air_sensor" = "Mixed Air Supply Tank", "mair_out_meter" = "Mixed Air Out", "dloop_atm_meter" = "Distribution Loop", "wloop_atm_meter" = "Waste Loop")
 	},
 /turf/simulated/floor/plasteel,
 /area/atmos/control)
@@ -51990,7 +51990,7 @@
 	frequency = 1443;
 	level = 3;
 	name = "Distribution and Waste Monitor";
-	sensors = list("mair_in_meter"="Mixed Air In","air_sensor"="Mixed Air Supply Tank","mair_out_meter"="Mixed Air Out","dloop_atm_meter"="Distribution Loop","wloop_atm_meter"="Waste Loop")
+	sensors = list("mair_in_meter" = "Mixed Air In", "air_sensor" = "Mixed Air Supply Tank", "mair_out_meter" = "Mixed Air Out", "dloop_atm_meter" = "Distribution Loop", "wloop_atm_meter" = "Waste Loop")
 	},
 /turf/simulated/floor/plasteel,
 /area/engine/controlroom)
@@ -53608,10 +53608,10 @@
 /area/maintenance/apmaint2)
 "cEJ" = (
 /obj/structure/chair/stool/bar,
-/mob/living/simple_animal/mouse,
 /obj/structure/sign/poster/contraband/random{
 	pixel_y = 32
 	},
+/mob/living/simple_animal/mouse,
 /turf/simulated/floor/wood{
 	icon_state = "wood-broken"
 	},
@@ -54856,7 +54856,7 @@
 	dir = 4;
 	frequency = 1441;
 	name = "Tank Monitor";
-	sensors = list("n2_sensor"="Nitrogen","o2_sensor"="Oxygen","co2_sensor"="Carbon Dioxide","tox_sensor"="Toxins","n2o_sensor"="Nitrous Oxide","waste_sensor"="Gas Mix Tank")
+	sensors = list("n2_sensor" = "Nitrogen", "o2_sensor" = "Oxygen", "co2_sensor" = "Carbon Dioxide", "tox_sensor" = "Toxins", "n2o_sensor" = "Nitrous Oxide", "waste_sensor" = "Gas Mix Tank")
 	},
 /turf/simulated/floor/plasteel,
 /area/atmos/control)
@@ -56061,7 +56061,6 @@
 /area/assembly/assembly_line)
 "cLy" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/mouse,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
@@ -56069,6 +56068,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/mob/living/simple_animal/mouse,
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint2)
 "cLz" = (
@@ -57370,7 +57370,7 @@
 	input_tag = "tox_in";
 	name = "Toxin Supply Control";
 	output_tag = "tox_out";
-	sensors = list("tox_sensor"="Tank")
+	sensors = list("tox_sensor" = "Tank")
 	},
 /obj/effect/decal/warning_stripes/east,
 /turf/simulated/floor/plasteel,
@@ -59042,7 +59042,7 @@
 	input_tag = "waste_in";
 	name = "Gas Mix Tank Control";
 	output_tag = "waste_out";
-	sensors = list("waste_sensor"="Tank")
+	sensors = list("waste_sensor" = "Tank")
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -60685,7 +60685,7 @@
 	input_tag = "n2o_in";
 	name = "Nitrous Oxide Supply Control";
 	output_tag = "n2o_out";
-	sensors = list("n2o_sensor"="Tank")
+	sensors = list("n2o_sensor" = "Tank")
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -62859,7 +62859,7 @@
 	input_tag = "co2_in";
 	name = "Carbon Dioxide Supply Control";
 	output_tag = "co2_out";
-	sensors = list("co2_sensor"="Tank")
+	sensors = list("co2_sensor" = "Tank")
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -63722,7 +63722,7 @@
 	input_tag = "n2_in";
 	name = "Nitrogen Supply Control";
 	output_tag = "n2_out";
-	sensors = list("n2_sensor"="Tank")
+	sensors = list("n2_sensor" = "Tank")
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/simulated/floor/plasteel{
@@ -63752,7 +63752,7 @@
 	input_tag = "o2_in";
 	name = "Oxygen Supply Control";
 	output_tag = "o2_out";
-	sensors = list("o2_sensor"="Tank")
+	sensors = list("o2_sensor" = "Tank")
 	},
 /turf/simulated/floor/plasteel{
 	dir = 0;
@@ -63783,7 +63783,7 @@
 	name = "Mixed Air Supply Control";
 	output_tag = "air_out";
 	pressure_setting = 2000;
-	sensors = list("air_sensor"="Tank")
+	sensors = list("air_sensor" = "Tank")
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "arrival"
@@ -70352,6 +70352,13 @@
 /obj/item/storage/box/bodybags,
 /turf/simulated/floor/plating,
 /area/maintenance/aft)
+"fxn" = (
+/obj/machinery/hispaniabox,
+/obj/effect/decal/warning_stripes/yellow,
+/turf/simulated/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/crew_quarters/bar)
 "fxD" = (
 /obj/machinery/camera{
 	c_tag = "Research Access";
@@ -72772,10 +72779,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/mob/living/simple_animal/mouse/brown,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/mob/living/simple_animal/mouse/brown,
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
 "hjX" = (
@@ -73119,7 +73126,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
 "hxx" = (
-/mob/living/carbon/human/monkey,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
@@ -73127,6 +73133,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
+/mob/living/carbon/human/monkey,
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
@@ -75134,10 +75141,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint)
 "jcY" = (
-/mob/living/carbon/human/monkey,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/mob/living/carbon/human/monkey,
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
@@ -77041,8 +77048,8 @@
 /area/medical/medbay2)
 "kGB" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/carbon/human/monkey,
 /obj/effect/decal/cleanable/blood,
+/mob/living/carbon/human/monkey,
 /turf/simulated/floor/plating,
 /area/maintenance/aft)
 "kGM" = (
@@ -78767,6 +78774,13 @@
 	icon_state = "white"
 	},
 /area/toxins/hallway)
+"mhJ" = (
+/obj/machinery/hispaniabox/boombox,
+/obj/structure/table/wood,
+/turf/simulated/floor/plasteel{
+	icon_state = "caution"
+	},
+/area/crew_quarters/dorms)
 "mhW" = (
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt,
@@ -80866,7 +80880,6 @@
 /turf/simulated/floor/grass,
 /area/hallway/secondary/exit)
 "nPD" = (
-/mob/living/simple_animal/pet/cat/Runtime,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -80875,6 +80888,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/mob/living/simple_animal/pet/cat/Runtime,
 /turf/simulated/floor/plasteel{
 	dir = 9;
 	icon_state = "darkbluefull"
@@ -81244,10 +81258,10 @@
 /turf/space,
 /area/space/nearstation)
 "oiS" = (
-/mob/living/carbon/human/monkey,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/mob/living/carbon/human/monkey,
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
@@ -81688,8 +81702,8 @@
 /obj/structure/bed,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mob_spawn/human/skeleton,
-/mob/living/simple_animal/hostile/scarybat,
 /obj/effect/landmark/spawner/nukedisc_respawn,
+/mob/living/simple_animal/hostile/scarybat,
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
 "oBJ" = (
@@ -83534,7 +83548,6 @@
 	},
 /area/engine/break_room)
 "pUR" = (
-/mob/living/simple_animal/mouse,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4
 	},
@@ -83549,6 +83562,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/mob/living/simple_animal/mouse,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint2)
 "pUZ" = (
@@ -89171,7 +89185,7 @@
 /obj/machinery/computer/general_air_control{
 	frequency = 1222;
 	name = "Bomb Mix Monitor";
-	sensors = list("burn_sensor"="Burn Mix")
+	sensors = list("burn_sensor" = "Burn Mix")
 	},
 /obj/machinery/door_control{
 	id = "ToxinsVenting";
@@ -93469,12 +93483,12 @@
 /turf/simulated/floor/plasteel,
 /area/toxins/hallway)
 "ygu" = (
-/mob/living/carbon/human/monkey,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/mob/living/carbon/human/monkey,
 /turf/simulated/floor/engine,
 /area/toxins/test_chamber)
 "ygw" = (
@@ -128849,7 +128863,7 @@ aUS
 dji
 biS
 bom
-bkO
+bpC
 bmr
 bmM
 btm
@@ -129106,7 +129120,7 @@ aUS
 djj
 dkL
 boH
-bpC
+fxn
 bmr
 bmM
 btw
@@ -132689,7 +132703,7 @@ sHt
 aOI
 gCU
 aPm
-aSM
+mhJ
 aIF
 aZL
 sXh
