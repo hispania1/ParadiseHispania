@@ -39,6 +39,7 @@ GLOBAL_LIST_EMPTY(nukedisc_respawn)
 GLOBAL_LIST_EMPTY(ninjastart)
 GLOBAL_LIST_EMPTY(carplist) //list of all carp-spawn landmarks
 GLOBAL_LIST_EMPTY(syndicateofficer)
+GLOBAL_LIST_EMPTY(feedmespawn)
 
 //away missions
 GLOBAL_LIST_EMPTY(awaydestinations)	//a list of landmarks that the warpgate can take you to
