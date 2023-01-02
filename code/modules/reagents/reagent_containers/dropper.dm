@@ -11,6 +11,8 @@
 	amount_per_transfer_from_this = 1
 	possible_transfer_amounts = list(1, 2, 3, 4, 5)
 	volume = 5
+	pickup_sound =  'modular_hispania/sound/medbay/needle_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/needle_drop.ogg'
 
 /obj/item/reagent_containers/dropper/on_reagent_change()
 	if(!reagents.total_volume)

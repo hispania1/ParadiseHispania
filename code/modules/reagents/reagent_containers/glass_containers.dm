@@ -16,6 +16,8 @@
 	resistance_flags = ACID_PROOF
 	blocks_emissive = FALSE
 	var/label_text = ""
+	pickup_sound =  'modular_hispania/sound/medbay/beaker_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/beaker_drop.ogg'
 
 /obj/item/reagent_containers/glass/Initialize(mapload)
 	. = ..()

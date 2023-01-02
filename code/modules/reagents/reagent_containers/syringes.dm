@@ -18,6 +18,8 @@
 	var/projectile_type = /obj/item/projectile/bullet/dart/syringe
 	materials = list(MAT_METAL=10, MAT_GLASS=20)
 	container_type = TRANSPARENT
+	pickup_sound =  'modular_hispania/sound/medbay/needle_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/needle_drop.ogg'
 
 /obj/item/reagent_containers/syringe/Initialize(mapload)
 	. = ..()

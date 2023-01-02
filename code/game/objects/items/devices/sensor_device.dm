@@ -2,6 +2,8 @@
 	name = "handheld crew monitor"
 	desc = "A miniature machine that tracks suit sensors across the station."
 	icon = 'icons/obj/device.dmi'
+	pickup_sound =  'modular_hispania/sound/medbay/device_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/device_drop.ogg'
 	icon_state = "scanner"
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = SLOT_BELT

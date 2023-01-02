@@ -10,6 +10,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 	origin_tech = "materials=1;biotech=1"
 	tool_behaviour = TOOL_RETRACTOR
+	pickup_sound =  'modular_hispania/sound/medbay/surgery2_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/knife2_drop.ogg'
 
 /obj/item/retractor/Initialize(mapload)
 	. = ..()
@@ -33,6 +35,8 @@
 	origin_tech = "materials=1;biotech=1"
 	attack_verb = list("attacked", "pinched")
 	tool_behaviour = TOOL_HEMOSTAT
+	pickup_sound =  'modular_hispania/sound/medbay/surgery2_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/knife2_drop.ogg'
 
 /obj/item/hemostat/Initialize(mapload)
 	. = ..()
@@ -55,6 +59,8 @@
 	origin_tech = "materials=1;biotech=1"
 	attack_verb = list("burnt")
 	tool_behaviour = TOOL_CAUTERY
+	pickup_sound =  'modular_hispania/sound/medbay/surgery2_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/knife2_drop.ogg'
 
 /obj/item/cautery/Initialize(mapload)
 	. = ..()
@@ -80,6 +86,8 @@
 	origin_tech = "materials=1;biotech=1"
 	attack_verb = list("drilled")
 	tool_behaviour = TOOL_DRILL
+	pickup_sound =  'modular_hispania/sound/medbay/surgery1_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/knife2_drop.ogg'
 
 /obj/item/surgicaldrill/Initialize(mapload)
 	. = ..()
@@ -117,6 +125,8 @@
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	tool_behaviour = TOOL_SCALPEL
+	pickup_sound =  'modular_hispania/sound/medbay/knife1_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/knife2_drop.ogg'
 
 /obj/item/scalpel/Initialize(mapload)
 	. = ..()
@@ -205,6 +215,8 @@
 	origin_tech = "biotech=1;combat=1"
 	attack_verb = list("attacked", "slashed", "sawed", "cut")
 	tool_behaviour = TOOL_SAW
+	pickup_sound =  'modular_hispania/sound/medbay/surgery1_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/metal_drop.ogg'
 
 /obj/item/circular_saw/Initialize(mapload)
 	. = ..()
@@ -228,6 +240,8 @@
 	throwforce = 1.0
 	origin_tech = "materials=1;biotech=1"
 	tool_behaviour = TOOL_BONEGEL
+	pickup_sound =  'modular_hispania/sound/medbay/surgery2_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/cardboardbox_drop.ogg'
 
 /obj/item/bonegel/Initialize(mapload)
 	. = ..()
@@ -247,6 +261,8 @@
 	origin_tech = "materials=1;biotech=1"
 	w_class = WEIGHT_CLASS_SMALL
 	tool_behaviour = TOOL_FIXOVEIN
+	pickup_sound =  'modular_hispania/sound/medbay/surgery1_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/device_drop.ogg'
 
 /obj/item/FixOVein/Initialize(mapload)
 	. = ..()
@@ -261,6 +277,8 @@
 	icon_state = "bonesetter"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	pickup_sound =  'modular_hispania/sound/medbay/surgery1_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/metal_drop.ogg'
 	force = 8.0
 	throwforce = 9.0
 	throw_speed = 3

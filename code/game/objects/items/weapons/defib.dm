@@ -16,7 +16,8 @@
 	sprite_sheets = list(
 		"Vox" = 'icons/mob/clothing/species/vox/back.dmi'
 		)
-
+	pickup_sound =  'modular_hispania/sound/medbay/defib_pickup.ogg'
+	drop_sound = 'modular_hispania/sound/medbay/device_drop.ogg'
 	var/paddles_on_defib = TRUE //if the paddles are on the defib (TRUE)
 	var/powered = FALSE //if there's a cell in the defib with enough power for a revive, blocks paddles from reviving otherwise
 	var/obj/item/twohanded/shockpaddles/paddles
