@@ -87,8 +87,7 @@ REAGENT SCANNER
 	item_state = "healthanalyzer"
 	belt_icon = "health_analyzer"
 	desc = "A hand-held body scanner able to distinguish vital signs of the subject."
-	pickup_sound =  'modular_hispania/sound/medbay/device_pickup.ogg'
-	drop_sound = 'modular_hispania/sound/medbay/device_drop.ogg'
+
 	flags = CONDUCT | NOBLUDGEON
 	slot_flags = SLOT_BELT
 	throwforce = 3
@@ -109,7 +108,9 @@ REAGENT SCANNER
 		to_chat(user, "<span class='info'>Body temperature: ???</span>")
 		return
 
+	//HISPANIA CHANGES START
 	playsound(user.loc, 'modular_hispania/sound/medbay/healthscanner_used.ogg', 25)
+	//HISPANIA CHANGES END
 
 	user.visible_message("<span class='notice'>[user] analyzes [M]'s vitals.</span>", "<span class='notice'>You analyze [M]'s vitals.</span>")
 
@@ -473,8 +474,6 @@ REAGENT SCANNER
 	var/datatoprint = ""
 	var/scanning = TRUE
 	actions_types = list(/datum/action/item_action/print_report)
-	pickup_sound =  'modular_hispania/sound/medbay/device_pickup.ogg'
-	drop_sound = 'modular_hispania/sound/medbay/device_drop.ogg'
 
 /obj/item/reagent_scanner/afterattack(obj/O, mob/user as mob)
 	if(user.stat)

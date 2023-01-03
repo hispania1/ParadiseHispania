@@ -124,7 +124,6 @@
 	icon_state = "folded"
 	w_class = WEIGHT_CLASS_BULKY
 	var/extended = /obj/structure/bed/roller
-	pickup_sound =  'modular_hispania/sound/item/items_pickup_3.ogg'
 
 /obj/item/roller/attack_self(mob/user)
 	var/obj/structure/bed/roller/R = new extended(user.loc)

@@ -11,8 +11,6 @@
 	item_state = "broken_beer" //Generic held-item sprite until unique ones are made.
 	var/const/duration = 13 //Directly relates to the 'weaken' duration. Lowered by armor (i.e. helmets)
 	var/is_glass = TRUE //Whether the 'bottle' is made of glass or not so that milk cartons dont shatter when someone gets hit by it
-	pickup_sound =  'modular_hispania/sound/medbay/bottle_pickup.ogg'
-	drop_sound = 'modular_hispania/sound/medbay/bottle_drop.ogg'
 
 /obj/item/reagent_containers/food/drinks/bottle/proc/smash(mob/living/target, mob/living/user, ranged = FALSE)
 

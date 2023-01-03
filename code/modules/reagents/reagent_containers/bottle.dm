@@ -11,8 +11,6 @@
 	possible_transfer_amounts = list(5,10,15,25,30)
 	container_type = OPENCONTAINER
 	volume = 30
-	pickup_sound =  'modular_hispania/sound/medbay/bottle_pickup.ogg'
-	drop_sound = 'modular_hispania/sound/medbay/bottle_drop.ogg'
 
 /obj/item/reagent_containers/glass/bottle/on_reagent_change()
 	update_icon(UPDATE_OVERLAYS)

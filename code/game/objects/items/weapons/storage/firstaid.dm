@@ -15,8 +15,6 @@
 	throw_speed = 2
 	throw_range = 8
 	req_one_access =list(ACCESS_MEDICAL, ACCESS_ROBOTICS) //Access and treatment are utilized for medbots.
-	pickup_sound =  'modular_hispania/sound/medbay/cardboardbox_pickup.ogg'
-	drop_sound = 'modular_hispania/sound/medbay/cardboardbox_drop.ogg'
 	var/treatment_brute = "salglu_solution"
 	var/treatment_oxy = "salbutamol"
 	var/treatment_fire = "salglu_solution"
@@ -234,8 +232,6 @@
 	storage_slots = 50
 	max_combined_w_class = 50
 	display_contents_with_number = TRUE
-	pickup_sound =  'modular_hispania/sound/medbay/pillbottle.ogg'
-	drop_sound = 'modular_hispania/sound/medbay/pillbottle_drop.ogg'
 
 	var/base_name = ""
 	var/label_text = ""
