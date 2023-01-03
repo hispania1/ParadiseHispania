@@ -245,7 +245,6 @@
 #define ishostile(A) 		(istype((A), /mob/living/simple_animal/hostile))
 #define isterrorspider(A) 	(istype((A), /mob/living/simple_animal/hostile/poison/terror_spider))
 #define isslaughterdemon(A) (istype((A), /mob/living/simple_animal/slaughter))
-#define isfeedme(A)			(istype(A, /mob/living/simple_animal/feedme))
 
 #define issilicon(A)	(istype((A), /mob/living/silicon))
 #define isAI(A)			(istype((A), /mob/living/silicon/ai))
@@ -302,3 +301,7 @@
 
 #define MAX_EYE_BLURRY_FILTER_SIZE 2
 #define EYE_BLUR_TO_FILTER_SIZE_MULTIPLIER 0.005
+
+//HISPANIA CHANGES START
+#define isfeedme(A)			(istype(A, /mob/living/simple_animal/feedme))
+//HISPANIA CHANGES END

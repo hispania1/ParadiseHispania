@@ -98,8 +98,10 @@
 		if(M.mind.assigned_role == "Botanist")
 			active_with_role["Botanist"]++
 
+		//HISPANIA CHANGES START
 		if(M.mind.assigned_role in list("Botanist", "Cheff","Bartender","Mime","Clown","Libarian","Barber","Chaplain"))
 			active_with_role["Service"]++
+		//HISPANIA CHANGES END
 
 	return active_with_role
 

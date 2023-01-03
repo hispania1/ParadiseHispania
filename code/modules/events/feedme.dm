@@ -12,7 +12,7 @@
 /mob/living/simple_animal/feedme
 	name = "Catador"
 	desc = "Parece hambriento.."
-	icon = 'icons/hispania/mob/comensales.dmi'
+	icon = 'modular_hispania/icons/mob/comensales.dmi'
 	var/list/comensales = list("clown","carnivoro","mexicano")
 	speak = list("Muero de hambre!", "Escuche varias cosas de la cocina de este lugar.. Y no particularmente buenas", "Deme su mejor platillo", "Tengo tanto hambre que me comeria un planeta","¿Cuanto tiempo hay que esperar para ser atendido?")
 	speak_chance = 15
@@ -91,11 +91,11 @@
 	. = ..()
 	if(world.time > endtime)
 		endtime = endtime * 2 //para q no entre denuevo
-		GLOB.event_announcement.Announce("El Catador se ha ido y nos ha dejado una muy mala calificacion. Habra consecuencias..")
+		GLOB.event_announcement.Announce("El Catador se ha ido y nos ha dejado una muy mala calificacion. Habra consecuencias en el bar..")
 		var/locat = src.loc
 		new /obj/effect/portal/(locat)
 		icon_state = "vacio"
-		spawn(7 SECONDS)
+		spawn(15 SECONDS)
 			explosion((pick(GLOB.feedmespawn)), 2, 3, 4, 4)
 			del(src)
 
@@ -154,5 +154,6 @@
 	. = ..(gibbed)
 	if(!.)
 		return
-	GLOB.event_announcement.Announce("... Han matado al catador. Esto es inaceptable")
-	explosion((pick(GLOB.feedmespawn)), 2, 3, 4, 4)
+	GLOB.event_announcement.Announce("... Han matado al catador. Esto es inaceptable. El bar sera bombardeado")
+	spawn(15 SECONDS)
+		explosion((pick(GLOB.feedmespawn)), 2, 3, 4, 4)
