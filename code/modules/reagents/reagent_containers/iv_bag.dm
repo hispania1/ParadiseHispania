@@ -16,8 +16,6 @@
 	var/label_text
 	var/mode = IV_INJECT
 	var/mob/living/carbon/human/injection_target
-	pickup_sound =  'modular_hispania/sound/item/items_pickup_1.ogg'
-	drop_sound = 'modular_hispania/sound/medbay/cardboardbox_drop.ogg'
 
 /obj/item/reagent_containers/iv_bag/Destroy()
 	end_processing()
