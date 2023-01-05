@@ -85,9 +85,6 @@
 	new /obj/item/clothing/under/rank/security/head_of_security/skirt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/skirt/corporate(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
-	new	/obj/item/clothing/head/HoS/formal(src)		// Hispania Clothes Start
-	new /obj/item/clothing/suit/armor/hos/formal(src)
-	new /obj/item/clothing/suit/armor/hos/formal/fem(src) // Hispania Clothes End
 
 /obj/item/storage/bag/garment/research_director
 	name = "research director's garment bag"

@@ -9,8 +9,8 @@
 ///Hispania Civilians Clothes
 
 /obj/machinery/economy/vending/proc/make_products()
-	products |= hispa_products	// For each, use the following pattern:
-	contraband |= hispa_contraband	// list(/type/path = amount,/type/path2 = amount2)
+	products |= hispa_products // For each, use the following pattern:
+	contraband |= hispa_contraband // list(/type/path = amount,/type/path2 = amount2)
 	premium |= hispa_premium
 	prices |= hispa_prices
 
