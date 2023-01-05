@@ -25,7 +25,7 @@
 								"cry"			= "NOW CRY FOR MOM TO CHANGE YOUR DIAPERS!",
 								"expected"			= "I EXPECTED BETTER",
 								"hitting-yourself"			= "STOP HITTING YOURSELF! STOP HITTING YOURSELF!",
-								"im_late"			= "I know I know, I'm late",
+								"im-late"			= "I know I know, I'm late",
 								"meeting"			= "We gotta stop meeting like this you know?",
 								"missed"			= "MISSED ME, DIDN'T YA?",
 								"no-return"			= "THIS IS THE POINT OF NO RETURN!",
@@ -53,5 +53,5 @@
 	var/message = phrase_list[key]
 	if(cooldown < world.time - 35)
 		usr.visible_message("[usr]'s Cloaker-o-Nator: <font color='red' size='4'><b>[message]</b></font>")
-		playsound(src.loc, "sound/hispania/voice/hailer/cloaker/[key].ogg", 100, 0, 4)
+		playsound(src.loc, "modular_hispania/sound/voice/hailer/cloaker/[key].ogg", 100, 0, 4)
 		cooldown = world.time
