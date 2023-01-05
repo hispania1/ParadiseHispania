@@ -2645,6 +2645,7 @@
 #include "modular_hispania\code\modules\clothing\head\helmets.dm"
 #include "modular_hispania\code\modules\clothing\head\jobs.dm"
 #include "modular_hispania\code\modules\clothing\head\misc.dm"
+#include "modular_hispania\code\modules\clothing\head\soft_caps.dm"
 #include "modular_hispania\code\modules\clothing\mask\gasmask.dm"
 #include "modular_hispania\code\modules\clothing\mask\miscellaneous.dm"
 #include "modular_hispania\code\modules\clothing\shoes\miscellaneous.dm"
