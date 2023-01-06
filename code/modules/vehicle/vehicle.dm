@@ -203,7 +203,7 @@
 	handle_vehicle_offsets()
 
 
-/obj/vehicle/Bump(atom/movable/M, yes)
+/obj/vehicle/Bump(atom/movable/M)
 	if(!spaceworthy && isspaceturf(get_turf(src)))
 		return FALSE
 	. = ..()
@@ -211,7 +211,6 @@
 		if(istype(M, /obj/machinery/door) && has_buckled_mobs())
 			for(var/m in buckled_mobs)
 				M.Bumped(m)
-
 
 /obj/vehicle/proc/RunOver(mob/living/carbon/human/H)
 	return		//write specifics for different vehicles
