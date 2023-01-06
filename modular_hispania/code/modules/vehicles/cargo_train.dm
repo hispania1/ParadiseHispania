@@ -196,6 +196,7 @@
 	turn_on()
 	if (on)
 		usr << "You start [src]'s engine."
+		playsound(src,'modular_hispania/sound/effects/engine_start.ogg',50,1)
 	else
 		if(cell.charge < power_use)
 			usr << "[src] is out of power."
