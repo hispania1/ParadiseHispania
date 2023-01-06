@@ -1,4 +1,4 @@
-/obj/vehicle/train
+/obj/vehicleh/train
 	name = "train"
 	dir = 4
 
@@ -14,18 +14,18 @@
 	var/active_engines = 0
 	var/train_length = 0
 
-	var/obj/vehicle/train/lead
-	var/obj/vehicle/train/tow
+	var/obj/vehicleh/train/lead
+	var/obj/vehicleh/train/tow
 
 
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
-obj/vehicle/train/proc/initialize()
-	for(var/obj/vehicle/train/T in orange(1, src))
+obj/vehicleh/train/proc/initialize()
+	for(var/obj/vehicleh/train/T in orange(1, src))
 		latch(T)
 
-/obj/vehicle/train/Move()
+/obj/vehicleh/train/Move()
 	var/old_loc = get_turf(src)
 	if(..())
 		if(tow)
@@ -34,7 +34,7 @@ obj/vehicle/train/proc/initialize()
 	else
 		return 0
 
-/obj/vehicle/train/Bump(atom/Obstacle,yes)
+/obj/vehicleh/train/Bump(atom/Obstacle,yes)
 	. = ..()
 	if(!istype(Obstacle, /atom/movable))
 		return
@@ -61,7 +61,7 @@ obj/vehicle/train/proc/initialize()
 //-------------------------------------------
 // Interaction procs
 //-------------------------------------------
-/obj/vehicle/train/relaymove(mob/user, direction)
+/obj/vehicleh/train/relaymove(mob/user, direction)
 	var/turf/T = get_step_to(src, get_step(src, direction))
 	if(!T)
 		user << "You can't find a clear area to step onto."
@@ -80,17 +80,17 @@ obj/vehicle/train/proc/initialize()
 
 	return 1
 
-/obj/vehicle/train/MouseDrop_T(var/atom/movable/C, mob/user as mob)
+/obj/vehicleh/train/MouseDrop_T(var/atom/movable/C, mob/user as mob)
 	//!usr.canmove ||
 	if(  usr.stat || usr.restrained() || !Adjacent(usr) || !user.Adjacent(C))
 		return
-	if(istype(C,/obj/vehicle/train))
+	if(istype(C,/obj/vehicleh/train))
 		latch(C, user)
 	else
 		if(!load(C))
 			to_chat(user, "<span class='warning'>You were unable to load [C] on [src].</span>")
 
-/obj/vehicle/train/attack_hand(mob/user as mob)
+/obj/vehicleh/train/attack_hand(mob/user as mob)
 	if(user.stat || user.restrained() || !Adjacent(user))
 		return 0
 
@@ -104,7 +104,7 @@ obj/vehicle/train/proc/initialize()
 	else
 		return 0
 
-/obj/vehicle/train/verb/unlatch_v()
+/obj/vehicleh/train/verb/unlatch_v()
 	set name = "Unlatch"
 	set desc = "Unhitches this train from the one in front of it."
 	set category = "Object"
@@ -124,7 +124,7 @@ obj/vehicle/train/proc/initialize()
 //-------------------------------------------
 
 //attempts to attach src as a follower of the train T
-/obj/vehicle/train/proc/attach_to(obj/vehicle/train/T, mob/user)
+/obj/vehicleh/train/proc/attach_to(obj/vehicleh/train/T, mob/user)
 	if (get_dist(src, T) > 1)
 		to_chat(user, "<span class='warning'>[src] is too far away from [T] to hitch them together.</span>")
 		return
@@ -148,7 +148,7 @@ obj/vehicle/train/proc/initialize()
 
 
 //detaches the train from whatever is towing it
-/obj/vehicle/train/proc/unattach(mob/user)
+/obj/vehicleh/train/proc/unattach(mob/user)
 	if (!lead)
 		to_chat(user, "<span class='warning'>[src] is not hitched to anything.</span>")
 		return
@@ -161,7 +161,7 @@ obj/vehicle/train/proc/initialize()
 
 	update_stats()
 
-/obj/vehicle/train/proc/latch(obj/vehicle/train/T, mob/user)
+/obj/vehicleh/train/proc/latch(obj/vehicleh/train/T, mob/user)
 	if(!istype(T) || !user.Adjacent(T))
 		return 0
 
@@ -173,7 +173,7 @@ obj/vehicle/train/proc/initialize()
 		T.attach_to(src, user)
 
 //returns 1 if this is the lead car of the train
-/obj/vehicle/train/proc/is_train_head()
+/obj/vehicleh/train/proc/is_train_head()
 	if (lead)
 		return 0
 	return 1
@@ -185,13 +185,13 @@ obj/vehicle/train/proc/initialize()
 // These are useful for calculating speed based on the
 // size of the train, to limit super long trains.
 //-------------------------------------------------------
-/obj/vehicle/train/update_stats()
+/obj/vehicleh/train/update_stats()
 	if(tow)
 		return tow.update_stats()	//take us to the very end
 	else
 		update_train_stats()		//we're at the end
 
-/obj/vehicle/train/proc/update_train_stats()
+/obj/vehicleh/train/proc/update_train_stats()
 	if(powered && on)
 		active_engines = 1	//increment active engine count if this is a running engine
 	else

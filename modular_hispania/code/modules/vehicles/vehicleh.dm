@@ -1,4 +1,4 @@
-/obj/vehicle
+/obj/vehicleh
 	name = "vehicle"
 	icon = 'icons/obj/vehicles.dmi'
 	layer = MOB_LAYER + 0.1 //so it sits above objects including mobs
@@ -32,11 +32,11 @@
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
-/obj/vehicle/New()
+/obj/vehicleh/New()
 	..()
 	//spawn the cell you want in each vehicle
 
-/obj/vehicle/Move()
+/obj/vehicleh/Move()
 	if(world.time > l_move_time + move_delay)
 		if(on && powered && cell.charge < power_use)
 			turn_off()
@@ -56,7 +56,7 @@
 	else
 		return 0
 
-/obj/vehicle/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/vehicleh/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/screwdriver))
 		if(!locked)
 			open = !open
@@ -93,7 +93,7 @@
 	else
 		..()
 
-/obj/vehicle/attack_animal(var/mob/living/simple_animal/M as mob)
+/obj/vehicleh/attack_animal(var/mob/living/simple_animal/M as mob)
 	if(M.melee_damage_upper == 0)	return
 	health -= M.melee_damage_upper
 	src.visible_message("\red <B>[M] has [M.attacktext] [src]!</B>")
@@ -101,7 +101,7 @@
 		new /obj/effect/decal/cleanable/blood/oil(src.loc)
 	healthcheck()
 
-/obj/vehicle/bullet_act(var/obj/item/projectile/Proj)
+/obj/vehicleh/bullet_act(var/obj/item/projectile/Proj)
 	health -= Proj.damage
 	..()
 	healthcheck()
@@ -112,12 +112,12 @@
 	return
 */
 
-/obj/vehicle/blob_act()
+/obj/vehicleh/blob_act()
 	src.health -= rand(20,40)*fire_dam_coeff
 	healthcheck()
 	return
 
-/obj/vehicle/ex_act(severity)
+/obj/vehicleh/ex_act(severity)
 	switch(severity)
 		if(1.0)
 			explode()
@@ -135,7 +135,7 @@
 				return
 	return
 
-/obj/vehicle/emp_act(severity)
+/obj/vehicleh/emp_act(severity)
 	var/was_on = on
 	stat |= EMPED
 	//var/obj/effect/overlay/pulse2 = new/obj/effect/overlay ( src.loc )
@@ -155,7 +155,7 @@
 //-------------------------------------------
 // Vehicle procs
 //-------------------------------------------
-/obj/vehicle/proc/turn_on()
+/obj/vehicleh/proc/turn_on()
 	if(stat)
 		return 0
 	if(powered && cell.charge < power_use)
@@ -165,19 +165,19 @@
 	update_icon()
 	return 1
 
-/obj/vehicle/proc/turn_off()
+/obj/vehicleh/proc/turn_off()
 	on = 0
 	luminosity = 0
 	update_icon()
 
-/obj/vehicle/proc/Emag(mob/user as mob)
+/obj/vehicleh/proc/Emag(mob/user as mob)
 	emagged = 1
 
 	if(locked)
 		locked = 0
 		user << "<span class='warning'>You bypass [src]'s controls.</span>"
 
-/obj/vehicle/proc/explode()
+/obj/vehicleh/proc/explode()
 	src.visible_message("\red <B>[src] blows apart!</B>", 1)
 	var/turf/Tsec = get_turf(src)
 
@@ -197,11 +197,11 @@
 
 	del(src)
 
-/obj/vehicle/proc/healthcheck()
+/obj/vehicleh/proc/healthcheck()
 	if(health <= 0)
 		explode()
 
-/obj/vehicle/proc/powercheck()
+/obj/vehicleh/proc/powercheck()
 	if(!cell && !powered)
 		return
 
@@ -217,7 +217,7 @@
 		turn_on()
 		return
 
-/obj/vehicle/proc/insert_cell(var/obj/item/stock_parts/cell/C, var/mob/living/carbon/human/H)
+/obj/vehicleh/proc/insert_cell(var/obj/item/stock_parts/cell/C, var/mob/living/carbon/human/H)
 	if(cell)
 		return
 	if(!istype(C))
@@ -229,7 +229,7 @@
 	powercheck()
 	usr << "<span class='notice'>You install [C] in [src].</span>"
 
-/obj/vehicle/proc/remove_cell(var/mob/living/carbon/human/H)
+/obj/vehicleh/proc/remove_cell(var/mob/living/carbon/human/H)
 	if(!cell)
 		return
 
@@ -238,8 +238,8 @@
 	cell = null
 	powercheck()
 
-///obj/vehicle/proc/RunOver(var/mob/living/carbon/human/H)
-//	return		//write specifics for different vehicles
+/obj/vehicleh/proc/RunOver(var/mob/living/carbon/human/H)
+	return		//write specifics for different vehicles
 
 //-------------------------------------------
 // Loading/unloading procs
@@ -248,7 +248,7 @@
 // the vehicle load() definition before
 // calling this parent proc.
 //-------------------------------------------
-/obj/vehicle/proc/load(var/atom/movable/C)
+/obj/vehicleh/proc/load(var/atom/movable/C)
 	//define allowed items for loading in specific vehicle definitions
 
 	if(!isturf(C.loc)) //To prevent loading things from someone's inventory, which wouldn't get handled properly.
@@ -280,7 +280,7 @@
 	return 1
 
 
-/obj/vehicle/proc/unload(var/mob/user, var/direction)
+/obj/vehicleh/proc/unload(var/mob/user, var/direction)
 	if(!load)
 		return
 
@@ -332,5 +332,5 @@
 //-------------------------------------------------------
 // Stat update procs
 //-------------------------------------------------------
-/obj/vehicle/proc/update_stats()
+/obj/vehicleh/proc/update_stats()
 	return

@@ -1,4 +1,4 @@
-/obj/vehicle/train/cargo/engine
+/obj/vehicleh/train/cargo/engine
 	name = "cargo train tug"
 	desc = "A ridable electric car designed for pulling cargo trolleys."
 	icon = 'modular_hispania/icons/obj/vehicles.dmi'
@@ -23,7 +23,7 @@
 	icon_state = "train_keys"
 	w_class = 1
 
-/obj/vehicle/train/cargo/trolley
+/obj/vehicleh/train/cargo/trolley
 	name = "cargo train trolley"
 	icon = 'modular_hispania/icons/obj/vehicles.dmi'
 	icon_state = "cargo_trailer"
@@ -39,13 +39,13 @@
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
-/obj/vehicle/train/cargo/engine/New()
+/obj/vehicleh/train/cargo/engine/New()
 	..()
 	cell = new /obj/item/stock_parts/cell/high/
 	//verbs -= /atom/movable/verb/pull
 	key = new()
 
-/obj/vehicle/train/cargo/engine/Move()
+/obj/vehicleh/train/cargo/engine/Move()
 	if(on && cell.charge < power_use)
 		turn_off()
 		update_stats()
@@ -57,45 +57,45 @@
 
 	return ..()
 
-/obj/vehicle/train/cargo/trolley/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/vehicleh/train/cargo/trolley/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(open && istype(W, /obj/item/wirecutters))
 		passenger_allowed = !passenger_allowed
 		user.visible_message("<span class='notice'>[user] [passenger_allowed ? "cuts" : "mends"] a cable in [src].</span>","<span class='notice'>You [passenger_allowed ? "cut" : "mend"] the load limiter cable.</span>")
 	else
 		..()
 
-/obj/vehicle/train/cargo/engine/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/vehicleh/train/cargo/engine/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/weapon/key/cargo_train))
 		if(!key)
 			user.drop_item()
 			key = W
 			W.loc = src
-			verbs += /obj/vehicle/train/cargo/engine/verb/remove_key
+			verbs += /obj/vehicleh/train/cargo/engine/verb/remove_key
 		return
 	..()
 
-/obj/vehicle/train/cargo/update_icon()
+/obj/vehicleh/train/cargo/update_icon()
 	if(open)
 		icon_state = "mulebot-hatch"
 	else
 		icon_state = initial(icon_state)
 
-/obj/vehicle/train/cargo/engine/Emag(mob/user as mob)
+/obj/vehicleh/train/cargo/engine/Emag(mob/user as mob)
 	..()
 	flick("mulebot-emagged", src)
 
-/obj/vehicle/train/cargo/trolley/insert_cell(var/obj/item/stock_parts/cell/C, var/mob/living/carbon/human/H)
+/obj/vehicleh/train/cargo/trolley/insert_cell(var/obj/item/stock_parts/cell/C, var/mob/living/carbon/human/H)
 	return
 
-/obj/vehicle/train/cargo/engine/insert_cell(var/obj/item/stock_parts/cell/C, var/mob/living/carbon/human/H)
+/obj/vehicleh/train/cargo/engine/insert_cell(var/obj/item/stock_parts/cell/C, var/mob/living/carbon/human/H)
 	..()
 	update_stats()
 
-/obj/vehicle/train/cargo/engine/remove_cell(var/mob/living/carbon/human/H)
+/obj/vehicleh/train/cargo/engine/remove_cell(var/mob/living/carbon/human/H)
 	..()
 	update_stats()
 
-/obj/vehicle/train/cargo/engine/Bump(atom/Obstacle, yes)
+/obj/vehicleh/train/cargo/engine/Bump(atom/Obstacle, yes)
 	var/obj/machinery/door/D = Obstacle
 	var/mob/living/carbon/human/H = load
 	if(istype(D) && istype(H))
@@ -103,7 +103,7 @@
 
 	..()
 
-/obj/vehicle/train/cargo/trolley/Bump(atom/Obstacle, yes)
+/obj/vehicleh/train/cargo/trolley/Bump(atom/Obstacle, yes)
 	if(!lead)
 		return //so people can't knock others over by pushing a trolley around
 	..()
@@ -111,25 +111,25 @@
 //-------------------------------------------
 // Train procs
 //-------------------------------------------
-/obj/vehicle/train/cargo/engine/turn_on()
+/obj/vehicleh/train/cargo/engine/turn_on()
 	if(!key)
 		return
 	else
 		..()
 		update_stats()
 
-/obj/vehicle/train/cargo/RunOver(var/mob/living/carbon/human/H)
+/obj/vehicleh/train/cargo/RunOver(var/mob/living/carbon/human/H)
 	var/list/parts = list("head", "chest", "l_leg", "r_leg", "l_arm", "r_arm")
 
 	H.apply_effects(5, 5)
 	for(var/i = 0, i < rand(1,3), i++)
 		H.apply_damage(rand(1,5), BRUTE, pick(parts))
 
-/obj/vehicle/train/cargo/trolley/RunOver(var/mob/living/carbon/human/H)
+/obj/vehicleh/train/cargo/trolley/RunOver(var/mob/living/carbon/human/H)
 	..()
 	attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [H.name] ([H.ckey])</font>")
 
-/obj/vehicle/train/cargo/engine/RunOver(var/mob/living/carbon/human/H)
+/obj/vehicleh/train/cargo/engine/RunOver(var/mob/living/carbon/human/H)
 	..()
 
 	if(is_train_head() && istype(load, /mob/living/carbon/human))
@@ -145,7 +145,7 @@
 //-------------------------------------------
 // Interaction procs
 //-------------------------------------------
-/obj/vehicle/train/cargo/engine/relaymove(mob/user, direction)
+/obj/vehicleh/train/cargo/engine/relaymove(mob/user, direction)
 	if(user != load)
 		return 0
 
@@ -158,7 +158,7 @@
 	else
 		return ..()
 
-/obj/vehicle/train/cargo/engine/examine()
+/obj/vehicleh/train/cargo/engine/examine()
 	..()
 
 	if(!istype(usr, /mob/living/carbon/human))
@@ -167,7 +167,7 @@
 	if(get_dist(usr,src) <= 1)
 		usr << "The power light is [on ? "on" : "off"].\nThere are[key ? "" : " no"] keys in the ignition."
 
-/obj/vehicle/train/cargo/engine/verb/check_power()
+/obj/vehicleh/train/cargo/engine/verb/check_power()
 	set name = "Check power level"
 	set category = "Object"
 	set src in view(1)
@@ -181,7 +181,7 @@
 
 	usr << "The power meter reads [round(cell.percent(), 0.01)]%"
 
-/obj/vehicle/train/cargo/engine/verb/start_engine()
+/obj/vehicleh/train/cargo/engine/verb/start_engine()
 	set name = "Start engine"
 	set category = "Object"
 	set src in view(1)
@@ -202,7 +202,7 @@
 		else
 			usr << "[src]'s engine won't start."
 
-/obj/vehicle/train/cargo/engine/verb/stop_engine()
+/obj/vehicleh/train/cargo/engine/verb/stop_engine()
 	set name = "Stop engine"
 	set category = "Object"
 	set src in view(1)
@@ -218,7 +218,7 @@
 	if (!on)
 		usr << "You stop [src]'s engine."
 
-/obj/vehicle/train/cargo/engine/verb/remove_key()
+/obj/vehicleh/train/cargo/engine/verb/remove_key()
 	set name = "Remove key"
 	set category = "Object"
 	set src in view(1)
@@ -237,12 +237,12 @@
 		usr.put_in_hands(key)
 	key = null
 
-	verbs -= /obj/vehicle/train/cargo/engine/verb/remove_key
+	verbs -= /obj/vehicleh/train/cargo/engine/verb/remove_key
 
 //-------------------------------------------
 // Loading/unloading procs
 //-------------------------------------------
-/obj/vehicle/train/cargo/trolley/load(var/atom/movable/C)
+/obj/vehicleh/train/cargo/trolley/load(var/atom/movable/C)
 	if(ismob(C) && !passenger_allowed)
 		return 0
 	if(!istype(C,/obj/machinery) && !istype(C,/obj/structure/closet) && !istype(C,/obj/structure/largecrate) && !istype(C,/obj/structure/reagent_dispensers) && !istype(C,/obj/structure/ore_box) && !ismob(C))
@@ -250,7 +250,7 @@
 
 	return ..()
 
-/obj/vehicle/train/cargo/engine/load(var/atom/movable/C)
+/obj/vehicleh/train/cargo/engine/load(var/atom/movable/C)
 	if(!ismob(C))
 		return 0
 
@@ -268,7 +268,7 @@
 // more engines increases this limit by car_limit per
 // engine.
 //-------------------------------------------------------
-/obj/vehicle/train/cargo/engine/update_train_stats()
+/obj/vehicleh/train/cargo/engine/update_train_stats()
 	..()
 
 	update_move_delay()
@@ -287,7 +287,7 @@
 		verbs -= /atom/movable/verb/pull
 */
 
-/obj/vehicle/train/cargo/engine/proc/update_move_delay()
+/obj/vehicleh/train/cargo/engine/proc/update_move_delay()
 	if(!is_train_head() || !on)
 		move_delay = initial(move_delay)		//so that engines that have been turned off don't lag behind
 	else
