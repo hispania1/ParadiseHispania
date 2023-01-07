@@ -1,4 +1,5 @@
 /obj/item/clothing/under/rank/security
+	//HISPANIA CHANGES START
 	//icon = 'icons/obj/clothing/under/security.dmi'
 	armor = list(MELEE = 5, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 20, ACID = 20)
 	strip_delay = 50
@@ -8,6 +9,7 @@
 		"Drask" = 'icons/mob/clothing/species/drask/under/security.dmi',
 		"Grey" = 'icons/mob/clothing/species/grey/under/security.dmi'
 		)*/
+	//HISPANIA CHANGES END
 
 
 /obj/item/clothing/under/rank/security/warden
