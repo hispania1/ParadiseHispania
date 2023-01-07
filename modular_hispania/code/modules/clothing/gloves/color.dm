@@ -12,6 +12,7 @@
 		"Nian" = 'modular_hispania/icons/mob/clothing/gloves.dmi',
 		"Tajaran" = 'modular_hispania/icons/mob/clothing/gloves.dmi',
 		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/gloves.dmi',
+		"Unathi" = 'modular_hispania/icons/mob/clothing/gloves.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/gloves.dmi',
 		"Drask" = 'icons/mob/clothing/species/drask/gloves.dmi',
 		"Kidan" = 'icons/mob/clothing/species/kidan/gloves.dmi'

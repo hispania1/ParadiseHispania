@@ -60,6 +60,7 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Nian" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
 		"Tajaran" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
 		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Unathi" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/armor.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/armor.dmi'
 	)
@@ -76,6 +77,7 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Nian" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
 		"Tajaran" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
 		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
+		"Unathi" = 'modular_hispania/icons/mob/clothing/suits/armor.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/armor.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/armor.dmi'
 	)
@@ -92,6 +94,7 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Nian" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Tajaran" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Unathi" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/jacket.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/jacket.dmi'
 	)
@@ -122,6 +125,7 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 		"Nian" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Tajaran" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
+		"Unathi" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/jacket.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/jacket.dmi',
 		"Drask" = 'icons/mob/clothing/species/drask/suit.dmi'

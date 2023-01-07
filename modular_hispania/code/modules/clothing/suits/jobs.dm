@@ -15,6 +15,7 @@
 		"Tajaran" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/suits/jacket.dmi',
+		"Unathi" = 'modular_hispania/icons/mob/clothing/suits/jacket.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/suits/jacket.dmi',
 		"Drask" = 'icons/mob/clothing/species/drask/suit.dmi'
 	)

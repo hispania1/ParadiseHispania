@@ -52,6 +52,7 @@
 		"Nian" = 'modular_hispania/icons/mob/clothing/shoes.dmi',
 		"Tajaran" = 'modular_hispania/icons/mob/clothing/shoes.dmi',
 		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/shoes.dmi',
+		"Unathi" = 'modular_hispania/icons/mob/clothing/shoes.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/shoes.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/shoes.dmi'
 	)
