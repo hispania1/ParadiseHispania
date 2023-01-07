@@ -68,6 +68,7 @@
 /obj/vehicleh/train/cargo/engine/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/weapon/key/cargo_train))
 		if(!key)
+			playsound(src,'modular_hispania/sound/effects/key_insert.ogg',50,1)
 			user.drop_item()
 			key = W
 			W.loc = src
@@ -219,12 +220,13 @@
 		return
 
 	if(!on)
-		usr << "The engine is already stopped."
+		to_chat(src, "The engine is already stopped")
 		return
 
 	turn_off()
 	if (!on)
-		usr << "You stop [src]'s engine."
+		playsound(src,'modular_hispania/sound/effects/engine_stop.ogg',50,1)
+		to_chat(src, "[src]'s engine stops")
 
 /obj/vehicleh/train/cargo/engine/verb/remove_key()
 	set name = "Remove key"
