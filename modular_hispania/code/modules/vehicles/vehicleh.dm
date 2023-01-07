@@ -1,6 +1,6 @@
 /obj/vehicleh
 	name = "vehicle"
-	icon = 'icons/obj/vehicles.dmi'
+	icon = 'modular_hispania/icons/obj/vehicles.dmi'
 	layer = MOB_LAYER + 0.1 //so it sits above objects including mobs
 	density = 1
 	anchored = 1
@@ -61,7 +61,7 @@
 		if(!locked)
 			open = !open
 			update_icon()
-			user << "<span class='notice'>Maintenance panel is now [open ? "opened" : "closed"].</span>"
+			to_chat(user, "<span class='notice'>Maintenance panel is now [open ? "opened" : "closed"].</span>")
 	else if(istype(W, /obj/item/crowbar) && cell && open)
 		remove_cell(user)
 
@@ -73,13 +73,13 @@
 			if(health < maxhealth)
 				if(open)
 					health = min(maxhealth, health+10)
-					user.visible_message("\red [user] repairs [src]!","\blue You repair [src]!")
+					user.visible_message("<span class='warning'>[user] repairs [src]!</span>","<span class='notice'>You repair [src]!</span>")
 				else
-					user << "<span class='notice'>Unable to repair with the maintenance panel closed.</span>"
+					to_chat(user, "<span class='notice'>Unable to repair with the maintenance panel closed.</span>")
 			else
-				user << "<span class='notice'>[src] does not need a repair.</span>"
+				to_chat(user, "<span class='notice'>[src] does not need a repair.</span>")
 		else
-			user << "<span class='notice'>Unable to repair while [src] is off.</span>"
+			to_chat(user, "<span class='notice'>Unable to repair while [src] is off.</span>")
 	else if(istype(W, /obj/item/card/emag) && !emagged)
 		Emag(user)
 	else if(hasvar(W,"force") && hasvar(W,"damtype"))
@@ -222,18 +222,19 @@
 		return
 	if(!istype(C))
 		return
-
-	//H.drop_from_inventory(C)
+	H.drop_item(C)
+	
+	//H.drop_from_inventory(C,src)
 	cell = C
 	C.loc = null	//this wont be GC'd since it's referrenced above
 	powercheck()
-	usr << "<span class='notice'>You install [C] in [src].</span>"
+	to_chat(usr, "<span class='notice'>You install [C] in [src].</span>")
 
 /obj/vehicleh/proc/remove_cell(var/mob/living/carbon/human/H)
 	if(!cell)
 		return
 
-	usr << "<span class='notice'>You remove [cell] from [src].</span>"
+	to_chat(usr, "<span class='notice'>You remove [cell] from [src].</span>")
 	cell.loc = get_turf(H)
 	cell = null
 	powercheck()

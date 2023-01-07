@@ -50,7 +50,8 @@
 		turn_off()
 		update_stats()
 		if(load && is_train_head())
-			load << "The drive motor briefly whines, then drones to a stop."
+			playsound(src,'sound/machines/buzz-sigh.ogg',50,1)
+			to_chat(load, "The drive motor briefly whines, then drones to a stop.")
 
 	if(is_train_head() && !on)
 		return 0
@@ -74,9 +75,15 @@
 		return
 	..()
 
-/obj/vehicleh/train/cargo/update_icon()
+/obj/vehicleh/train/cargo/engine/update_icon()
 	if(open)
-		icon_state = "mulebot-hatch"
+		icon_state = "cargo_engine_open"
+	else
+		icon_state = initial(icon_state)
+
+/obj/vehicleh/train/cargo/trolley/update_icon()
+	if(open)
+		icon_state = "cargo_trailer_open"
 	else
 		icon_state = initial(icon_state)
 
@@ -190,18 +197,18 @@
 		return
 
 	if(on)
-		usr << "The engine is already running."
+		to_chat(user, SPAN_WARNING("The engine is already running."))
 		return
 
 	turn_on()
 	if (on)
-		usr << "You start [src]'s engine."
-		playsound(src,'modular_hispania/sound/effects/engine_start.ogg',100,1)
+		to_chat(user, SPAN_NOTICE("You start \the [src]'s engine."))
+		playsound(src,'modular_hispania/sound/effects/engine_start.ogg',50,1)
 	else
 		if(cell.charge < power_use)
-			usr << "[src] is out of power."
+			to_chat(user, SPAN_WARNING("\The [src] is out of power."))
 		else
-			usr << "[src]'s engine won't start."
+			to_chat(user, SPAN_WARNING("[src]'s engine won't start."))
 
 /obj/vehicleh/train/cargo/engine/verb/stop_engine()
 	set name = "Stop engine"
