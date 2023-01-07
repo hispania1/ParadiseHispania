@@ -41,9 +41,9 @@
 //-------------------------------------------
 /obj/vehicleh/train/cargo/engine/New()
 	..()
-	cell = new /obj/item/stock_parts/cell/high/
+	cell = new /obj/item/stock_parts/cell/high
 	//verbs -= /atom/movable/verb/pull
-	key = new()
+	//key = new()
 
 /obj/vehicleh/train/cargo/engine/Move()
 	if(on && cell.charge < power_use)
@@ -197,18 +197,18 @@
 		return
 
 	if(on)
-		to_chat(user, SPAN_WARNING("The engine is already running."))
+		to_chat(src, "The engine is already running.")
 		return
 
 	turn_on()
 	if (on)
-		to_chat(user, SPAN_NOTICE("You start \the [src]'s engine."))
+		to_chat(src, "The engine starts")
 		playsound(src,'modular_hispania/sound/effects/engine_start.ogg',50,1)
 	else
 		if(cell.charge < power_use)
-			to_chat(user, SPAN_WARNING("\The [src] is out of power."))
+			to_chat(src, "\The [src] is out of power.")
 		else
-			to_chat(user, SPAN_WARNING("[src]'s engine won't start."))
+			to_chat(src, "[src]'s engine won't start.")
 
 /obj/vehicleh/train/cargo/engine/verb/stop_engine()
 	set name = "Stop engine"
