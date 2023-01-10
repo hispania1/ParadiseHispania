@@ -153,7 +153,19 @@
 //-------------------------------------------
 // Interaction procs
 //-------------------------------------------
+/obj/vehicleh/unbuckle_mob(mob/living/buckled_mob, force = FALSE)
+	if(istype(buckled_mob))
+		buckled_mob.pixel_x = 0
+		buckled_mob.pixel_y = 0
+	. = ..()
+
 /obj/vehicleh/train/cargo/engine/relaymove(mob/user, direction)
+	if(user.incapacitated())
+		unload()
+		var/mob/living/L  = user
+		L.KnockDown(10 SECONDS)
+		return
+
 	if(user != load)
 		return 0
 
@@ -173,7 +185,7 @@
 		return
 
 	if(get_dist(usr,src) <= 1)
-		usr << "The power light is [on ? "on" : "off"].\nThere are[key ? "" : " no"] keys in the ignition."
+		to_chat(usr, "<span class='notice'>The power light is [on ? "on" : "off"].\nThere are[key ? "" : " no"] keys in the ignition.")
 
 /obj/vehicleh/train/cargo/engine/verb/check_power()
 	set name = "Check power level"
@@ -184,7 +196,7 @@
 		return
 
 	if(!cell)
-		usr << "There is no power cell installed in [src]."
+		to_chat(usr, "<span class='notice'>There is no power cell installed in [src].</span>")
 		return
 
 	usr << "The power meter reads [round(cell.percent(), 0.01)]%"
@@ -198,18 +210,18 @@
 		return
 
 	if(on)
-		to_chat(src, "The engine is already running.")
+		to_chat(usr, "The engine is already running.")
 		return
 
 	turn_on()
 	if (on)
-		to_chat(src, "The engine starts")
-		playsound(src,'modular_hispania/sound/effects/engine_start.ogg',50,1)
+		to_chat(usr, "The engine starts")
+		playsound(usr,'modular_hispania/sound/effects/engine_start.ogg',50,1)
 	else
 		if(cell.charge < power_use)
-			to_chat(src, "\The [src] is out of power.")
+			to_chat(usr, "\The [src] is out of power.")
 		else
-			to_chat(src, "[src]'s engine won't start.")
+			to_chat(usr, "[src]'s engine won't start.")
 
 /obj/vehicleh/train/cargo/engine/verb/stop_engine()
 	set name = "Stop engine"
@@ -220,13 +232,13 @@
 		return
 
 	if(!on)
-		to_chat(src, "The engine is already stopped")
+		to_chat(usr, "The engine is already stopped")
 		return
 
 	turn_off()
 	if (!on)
 		playsound(src,'modular_hispania/sound/effects/engine_stop.ogg',50,1)
-		to_chat(src, "[src]'s engine stops")
+		to_chat(usr, "[src]'s engine stops")
 
 /obj/vehicleh/train/cargo/engine/verb/remove_key()
 	set name = "Remove key"
@@ -281,7 +293,7 @@
 /obj/vehicleh/train/cargo/engine/update_train_stats()
 	..()
 
-	update_move_delay()
+//	update_move_delay()
 /*
 /obj/vehicle/train/cargo/trolley/update_train_stats()
 	..()
@@ -295,7 +307,7 @@
 	else
 		anchored = 1
 		verbs -= /atom/movable/verb/pull
-*/
+
 
 /obj/vehicleh/train/cargo/engine/proc/update_move_delay()
 	if(!is_train_head() || !on)
@@ -305,3 +317,4 @@
 		move_delay *= (1 / max(1, active_engines)) * 2 										//overweight penalty (scaled by the number of engines)
 		move_delay += GLOB.configuration.movement.base_run_speed 														//base reference speed
 		move_delay *= 1.05 																	//makes cargo trains 5% slower than running when not overweight
+*/

@@ -223,7 +223,7 @@
 	if(!istype(C))
 		return
 	H.drop_item(C)
-	
+
 	//H.drop_from_inventory(C,src)
 	cell = C
 	C.loc = null	//this wont be GC'd since it's referrenced above

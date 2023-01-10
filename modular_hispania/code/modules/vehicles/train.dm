@@ -2,7 +2,7 @@
 	name = "train"
 	dir = 4
 
-	move_delay = 1
+	move_delay = 2
 
 	health = 100
 	maxhealth = 100
@@ -64,7 +64,7 @@ obj/vehicleh/train/proc/initialize()
 /obj/vehicleh/train/relaymove(mob/user, direction)
 	var/turf/T = get_step_to(src, get_step(src, direction))
 	if(!T)
-		user << "You can't find a clear area to step onto."
+		to_chat(user, "<span class='notice'>You can't find a clear area to step onto.</span>")
 		return 0
 
 	if(user != load)
