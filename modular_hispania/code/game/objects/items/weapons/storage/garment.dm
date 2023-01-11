@@ -1,0 +1,5 @@
+/obj/item/storage/bag/garment/head_of_security/populate_contents()
+	new	/obj/item/clothing/head/HoS/formal(src)
+	new /obj/item/clothing/suit/armor/hos/formal(src)
+	new /obj/item/clothing/suit/armor/hos/formal/fem(src)
+	..()
