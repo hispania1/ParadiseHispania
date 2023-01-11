@@ -143,9 +143,9 @@
 	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 
-	sprite_sheets = list(
+	/*sprite_sheets = list(
 		"Vox" = 'icons/mob/clothing/species/vox/suit.dmi'
-		)
+		)*/
 
 //Forensics
 /obj/item/clothing/suit/storage/det_suit/forensics
