@@ -2671,6 +2671,7 @@
 #include "modular_hispania\code\modules\hydroponics\grown.dm"
 #include "modular_hispania\code\modules\hydroponics\seeds.dm"
 #include "modular_hispania\code\modules\mining\machine_vending.dm"
+#include "modular_hispania\code\modules\mob\mimic.dm"
 #include "modular_hispania\code\modules\paperwork\photography.dm"
 #include "modular_hispania\code\modules\pda\utilities.dm"
 #include "modular_hispania\code\modules\projectiles\gun.dm"
