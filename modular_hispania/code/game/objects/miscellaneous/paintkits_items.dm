@@ -2,6 +2,7 @@
 /obj/item/fluff/mongosflash
 	name = "red flash paintkit"
 	desc = "An assorted set of exchangable parts for a flash."
+	icon = 'icons/obj/painting.dmi'
 	icon_state = "paintkit"
 
 
