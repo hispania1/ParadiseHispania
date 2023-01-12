@@ -223,10 +223,12 @@
 	desc = "A cap surgeons wear during operations. Keeps their hair from tickling your internal organs."
 	icon_state = "surgcap_blue"
 	flags = BLOCKHEADHAIR
-	sprite_sheets = list(
+	//HISPANIA CHANGES START
+	/*sprite_sheets = list(
 		"Drask" = 'icons/mob/clothing/species/drask/head.dmi',
 		"Vox" = 'icons/mob/clothing/species/vox/head.dmi'
-		)
+		)*/
+	//HISPANIA CHANGES END
 
 /obj/item/clothing/head/surgery/purple
 	name = "purple surgical cap"
