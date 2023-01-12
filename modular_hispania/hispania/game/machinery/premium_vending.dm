@@ -135,3 +135,17 @@
 					/obj/item/fluff/dogwhistle = 22000,
 					/obj/item/clothing/head/helmet/fluff/merchant_sallet = 22000,
 					/obj/item/fluff/rapid_wheelchair_kit = 25000)
+
+//no queremos ladrones ni articulos gratis
+
+/obj/machinery/economy/vending/premium_vending/obj_break(damage_flag)
+	if(stat & BROKEN)
+		return
+	stat |= BROKEN
+	set_light(0)
+	update_icon(UPDATE_OVERLAYS)
+	return
+
+/obj/machinery/economy/vending/premium_vending/throw_item()
+	return
+
