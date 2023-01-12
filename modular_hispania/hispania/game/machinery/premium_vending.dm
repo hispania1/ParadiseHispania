@@ -121,7 +121,7 @@
 					/obj/item/storage/backpack/fluff/hiking = 7500,
 					/obj/item/clothing/suit/fluff/kluys = 7500,
 					/obj/item/fluff/fei_gasmask_kit = 7500,
-					/obj/item/fluff/desolate_baton_kit = 90000,
+					/obj/item/fluff/desolate_baton_kit = 9000,
 					/obj/item/clothing/gloves/ring/fluff/benjaminfallout = 9000,
 					/obj/item/fluff/pyro_wintersec_kit = 12000,
 					/obj/item/fluff/tattoo_gun/elliot_cybernetic_tat = 12500,
