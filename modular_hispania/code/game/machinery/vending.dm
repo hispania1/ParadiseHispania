@@ -15,30 +15,14 @@
 	prices |= hispa_prices
 	..()
 
-/obj/machinery/economy/vending/security
+/obj/machinery/economy/vending/detdrobe
 	hispa_products = list(
-					/obj/item/fluff/mongosflash = 1,
-					/obj/item/storage/backpack/fluff/syndiesatchel = 1,
-					/obj/item/fluff/desolate_baton_kit = 1,
-					/obj/item/fluff/pyro_wintersec_kit = 1,
-					/obj/item/fluff/sylus_conversion_kit = 1
-					)
+					/obj/item/clothing/under/rank/security/detective/black = 1,
+					/obj/item/clothing/under/rank/security/detective/fem = 2,
+					/obj/item/clothing/suit/storage/det_suit/forensics/black = 1,
+					/obj/item/clothing/head/det_hat/black = 1)
 	hispa_prices = list(
-					/obj/item/fluff/mongosflash = 3000,
-					/obj/item/storage/backpack/fluff/syndiesatchel = 5000,
-					/obj/item/fluff/desolate_baton_kit = 90000,
-					/obj/item/fluff/pyro_wintersec_kit = 12000,
-					/obj/item/fluff/sylus_conversion_kit = 15000
-					)
-
-/obj/machinery/economy/vending/bardrobe
-		hispa_products = list(
-					/obj/item/fluff/mongosflash = 1,
-
-					)
-	hispa_prices = list(
-					/obj/item/fluff/mongosflash = 3000,
-
-					)
-
-
+					/obj/item/clothing/under/rank/security/detective/black = 50,
+					/obj/item/clothing/under/rank/security/detective/fem = 50,
+					/obj/item/clothing/suit/storage/det_suit/forensics/black = 75,
+					/obj/item/clothing/head/det_hat/black = 20)
