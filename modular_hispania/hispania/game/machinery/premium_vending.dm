@@ -1,8 +1,8 @@
-/obj/machinery/economy/vending/accesories
+/obj/machinery/economy/vending/premium_vending
 	name = "Premium Hispania"
 	desc = "Accessories dispenser. Made by NT Corp."
-	ads_list = ("..")
-	icon = 'modular_hispania/icons/obj/premium.dmi'
+	ads_list = ("Un precio alto para articulos de alta calidad")
+	icon = 'modular_hispania/icons/obj/vending.dmi'
 	icon_state = "premium"
 	icon_vend = "premium-vend"
 	density = TRUE
@@ -12,7 +12,6 @@
 					/obj/item/storage/toolbox/fluff/lunchbox = 1,
 					/obj/item/lighter/zippo/fluff/purple = 1,
 					/obj/item/bedsheet/fluff/hugosheet = 1,
-					/obj/item/clothing/under/pants/fluff/combat = 1,
 					/obj/item/clothing/head/fluff/heather_winceworth = 1,
 					/obj/item/clothing/head/wizard/fake/fluff/dreamy = 1,
 					/obj/item/storage/backpack/fluff/ssscratches_back = 1,
@@ -47,7 +46,6 @@
 					/obj/item/clothing/head/valkyriehelmet = 1,
 					/obj/item/storage/backpack/fluff/syndiesatchel = 1,
 					/obj/item/clothing/head/fluff/pinesalad_horns = 1,
-					/obj/item/bikehorn/fluff/pinkbikehorn = 1,
 					/obj/item/clothing/suit/fluff/supplymaster_jacket = 1,
 					/obj/item/clothing/head/bearpelt/fluff/polar = 1,
 					/obj/item/clothing/glasses/monocle/fluff/trubus = 1,
@@ -69,6 +67,7 @@
 					/obj/item/clothing/suit/jacket/miljacket/patch = 1,
 					/obj/item/clothing/suit/storage/fluff/k3_webbing = 1,
 					/obj/item/fluff/bird_painter = 1,
+					/obj/item/bikehorn/fluff/pinkbikehorn = 1,
 					/obj/item/clothing/glasses/hud/security/sunglasses/fluff/voxxyhud = 1,
 					/obj/item/clothing/glasses/hud/security/sunglasses/fluff/eyepro = 1,
 					/obj/item/fluff/dogwhistle = 1,
@@ -79,7 +78,6 @@
 					/obj/item/storage/toolbox/fluff/lunchbox = 500,
 					/obj/item/lighter/zippo/fluff/purple = 1000,
 					/obj/item/bedsheet/fluff/hugosheet = 1000,
-					/obj/item/clothing/under/pants/fluff/combat = 1000,
 					/obj/item/clothing/head/fluff/heather_winceworth = 1000,
 					/obj/item/clothing/head/wizard/fake/fluff/dreamy = 1000,
 					/obj/item/storage/backpack/fluff/ssscratches_back = 1000,
@@ -114,7 +112,6 @@
 					/obj/item/clothing/head/valkyriehelmet = 5000,
 					/obj/item/storage/backpack/fluff/syndiesatchel = 5000,
 					/obj/item/clothing/head/fluff/pinesalad_horns = 5000,
-					/obj/item/bikehorn/fluff/pinkbikehorn = 5000,
 					/obj/item/clothing/suit/fluff/supplymaster_jacket = 5000,
 					/obj/item/clothing/head/bearpelt/fluff/polar = 5000,
 					/obj/item/clothing/glasses/monocle/fluff/trubus = 5000,
@@ -132,6 +129,7 @@
 					/obj/item/clothing/suit/jacket/miljacket/patch = 15000,
 					/obj/item/clothing/suit/storage/fluff/k3_webbing = 15000,
 					/obj/item/fluff/bird_painter = 20000,
+					/obj/item/bikehorn/fluff/pinkbikehorn = 20000,
 					/obj/item/clothing/glasses/hud/security/sunglasses/fluff/voxxyhud = 20000,
 					/obj/item/clothing/glasses/hud/security/sunglasses/fluff/eyepro = 20000,
 					/obj/item/fluff/dogwhistle = 22000,

@@ -2,8 +2,8 @@
 /obj/item/fluff/mongosflash
 	name = "red flash paintkit"
 	desc = "An assorted set of exchangable parts for a flash."
-	icon_state = "modkit"
 	icon_state = "paintkit"
+
 
 /obj/item/fluff/mongosflash/afterattack(atom/target, mob/user, proximity)
 	if(!proximity || !ishuman(user) || user.incapacitated())
