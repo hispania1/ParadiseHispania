@@ -2645,6 +2645,7 @@
 #include "modular_hispania\code\game\objects\items.dm"
 #include "modular_hispania\code\game\objects\items\policetape.dm"
 #include "modular_hispania\code\game\objects\items\devices\syndieprototype.dm"
+#include "modular_hispania\code\game\objects\items\weapons\cards_ids.dm"
 #include "modular_hispania\code\game\objects\items\miscellaneous\noose.dm"
 #include "modular_hispania\code\game\objects\items\weapons\manuals.dm"
 #include "modular_hispania\code\game\objects\items\weapons\storage\belt.dm"
