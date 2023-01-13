@@ -216,14 +216,15 @@
 			var/list/players_copy = GLOB.player_list.Copy()
 
 			for(var/mob/M in range(musicrange,src))
-				rangers[M] = TRUE
 				if(!M.client || !(M.client.prefs.sound & SOUND_INSTRUMENTS))
 					continue
+				rangers[M] = TRUE
 				M.playsound_local(src, 100, channel = MusicChannel, S = song_played)
 				M.set_sound_channel_volume(MusicChannel, 100)
 			for(var/mob/M in players_copy)
 				if(!M.client || !(M.client.prefs.sound & SOUND_INSTRUMENTS) || M in rangers)
 					continue
+				rangers[M] = TRUE
 				M.playsound_local(src, 100, channel = MusicChannel, S = song_played)
 				M.set_sound_channel_volume(MusicChannel, 0)
 			START_PROCESSING(SSobj, src)
@@ -270,10 +271,9 @@
 
 		for(var/mob/M in range(musicrange,src))
 			if(!(M in rangers))
-				rangers[M] = TRUE
-
 				if(!M.client || !(M.client.prefs.sound & SOUND_INSTRUMENTS))
 					continue
+				rangers[M] = TRUE
 				M.set_sound_channel_volume(MusicChannel, 100)
 		for(var/mob/L in rangers)
 			if(get_dist(src, L) > musicrange)
