@@ -18,3 +18,23 @@
 	flags = BLOCKHAIR
 	hispania_icon = TRUE
 	species_restricted = list("Human", "Slime", "Machine", "Kidan", "Skrell", "Diona" )
+
+//Re-sprite Code//
+
+/obj/item/clothing/head/helmet
+	icon = 'modular_hispania/icons/obj/clothing/head/helmet.dmi'
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Slime People" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Nian"	= 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Tajaran" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Unathi" = 'modular_hispania/icons/mob/clothing/head/helmet.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/helmet.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/helmet.dmi'
+	)
+
