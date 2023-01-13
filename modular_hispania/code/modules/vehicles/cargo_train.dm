@@ -6,7 +6,7 @@
 	on = 0
 	powered = 1
 	locked = 0
-
+	move_delay = 2
 	standing_mob = 1
 	load_item_visible = 1
 	load_offset_x = 0
@@ -42,7 +42,7 @@
 /obj/vehicleh/train/cargo/engine/New()
 	..()
 	cell = new /obj/item/stock_parts/cell/high
-	//verbs -= /atom/movable/verb/pull
+	//verbs -= /atom/movable/verb/pulled
 	//key = new()
 
 /obj/vehicleh/train/cargo/engine/Move()
@@ -66,6 +66,11 @@
 		..()
 
 /obj/vehicleh/train/cargo/engine/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/borg/upgrade/vtec) && move_delay > 1)
+		move_delay = 1
+		qdel(W)
+		to_chat(user, "<span class='notice'>You upgrade [src] with [W].</span>")
+		return
 	if(istype(W, /obj/item/weapon/key/cargo_train))
 		if(!key)
 			playsound(src,'modular_hispania/sound/effects/key_insert.ogg',50,1)
@@ -293,11 +298,11 @@
 /obj/vehicleh/train/cargo/engine/update_train_stats()
 	..()
 
-//	update_move_delay()
-/*
-/obj/vehicle/train/cargo/trolley/update_train_stats()
-	..()
+	update_move_delay()
 
+/obj/vehicleh/train/cargo/trolley/update_train_stats()
+	..()
+	/*
 	if(!lead && !tow)
 		anchored = 0
 		if(verbs.Find(/atom/movable/verb/pull))
@@ -307,14 +312,14 @@
 	else
 		anchored = 1
 		verbs -= /atom/movable/verb/pull
-
+		*/
 
 /obj/vehicleh/train/cargo/engine/proc/update_move_delay()
 	if(!is_train_head() || !on)
 		move_delay = initial(move_delay)		//so that engines that have been turned off don't lag behind
 	else
-		move_delay = max(0, (-car_limit * active_engines) + train_length - active_engines)	//limits base overweight so you cant overspeed trains
+		move_delay = max(1, (-car_limit * active_engines) + (train_length) - active_engines)	//limits base overweight so you cant overspeed trains
 		move_delay *= (1 / max(1, active_engines)) * 2 										//overweight penalty (scaled by the number of engines)
 		move_delay += GLOB.configuration.movement.base_run_speed 														//base reference speed
 		move_delay *= 1.05 																	//makes cargo trains 5% slower than running when not overweight
-*/
+
