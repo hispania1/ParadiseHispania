@@ -103,3 +103,12 @@
     				///obj/item/storage/bag/UNO = 200,
     				/obj/item/stack/sheet/animalhide/monkey = 1500,
     				/obj/item/stack/sheet/animalhide/lizard = 2000)
+
+/obj/machinery/economy/vending/security
+	hispa_products = list(
+					/obj/item/hailer = 1
+					)
+	hispa_prices = list(
+					/obj/item/hailer = 100
+					)
+
