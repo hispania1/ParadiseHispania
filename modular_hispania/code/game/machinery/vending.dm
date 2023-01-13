@@ -26,3 +26,11 @@
 					/obj/item/clothing/under/rank/security/detective/fem = 50,
 					/obj/item/clothing/suit/storage/det_suit/forensics/black = 75,
 					/obj/item/clothing/head/det_hat/black = 20)
+
+/obj/machinery/economy/vending/security
+	hispa_products = list(
+					/obj/item/hailer = 1
+					)
+	hispa_prices = list(
+					/obj/item/hailer = 100
+					)
