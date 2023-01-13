@@ -2650,6 +2650,7 @@
 #include "modular_hispania\code\game\objects\items\weapons\manuals.dm"
 #include "modular_hispania\code\game\objects\items\weapons\storage\belt.dm"
 #include "modular_hispania\code\game\objects\items\weapons\storage\garment.dm"
+#include "modular_hispania\code\game\objects\structures\morgue.dm"
 #include "modular_hispania\code\game\objects\structures\tank_dispenser.dm"
 #include "modular_hispania\code\modules\clothing\clothing.dm"
 #include "modular_hispania\code\modules\clothing\gloves\color.dm"
