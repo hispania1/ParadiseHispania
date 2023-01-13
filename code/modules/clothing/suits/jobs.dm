@@ -11,9 +11,11 @@
 	/obj/item/healthanalyzer, /obj/item/flashlight, /obj/item/radio, /obj/item/tank/internals/emergency_oxygen)
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 5, RAD = 5, FIRE = 50, ACID = 50)
 
-	sprite_sheets = list(
+	//HISPANIA CHANGES START
+	/*sprite_sheets = list(
 		"Vox" = 'icons/mob/clothing/species/vox/suit.dmi'
-		)
+		)*/
+	//HISPANIA CHANGES END
 
 //Botanist
 /obj/item/clothing/suit/apron
