@@ -209,7 +209,7 @@
 	desc = "Made in Space South America."
 	icon_state = "hot_coco"
 	item_state = "coffee"
-	list_reagents = list("hot_coco" = 30, "sugar" = 5)
+	list_reagents = list("hot_coco" = 30)
 	resistance_flags = FREEZE_PROOF
 
 /obj/item/reagent_containers/food/drinks/chocolate
@@ -217,7 +217,7 @@
 	desc = "Made in Space Switzerland."
 	icon_state = "hot_coco"
 	item_state = "coffee"
-	list_reagents = list("hot_coco" = 15, "chocolate" = 6, "water" = 9)
+	list_reagents = list("hot_coco" = 15, "water" = 9)
 	resistance_flags = FREEZE_PROOF
 
 /obj/item/reagent_containers/food/drinks/weightloss
