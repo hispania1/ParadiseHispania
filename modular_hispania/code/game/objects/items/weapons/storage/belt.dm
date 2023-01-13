@@ -16,4 +16,15 @@
 		"Unathi" = 'modular_hispania/icons/mob/clothing/belt.dmi',
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/belt.dmi',
 	)
+	var/list/hispa_can_hold = list(/obj/item/taperoll)
 
+/obj/item/storage/belt/security/Initialize(mapload)
+	can_hold |= hispa_can_hold
+	..()
+
+/obj/item/storage/belt/utility
+	var/list/hispa_can_hold = list(/obj/item/taperoll)
+
+/obj/item/storage/belt/utility/Initialize(mapload)
+	can_hold |= hispa_can_hold
+	..()
