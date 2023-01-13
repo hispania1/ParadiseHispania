@@ -21,6 +21,10 @@
 /obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor/plating,
 /area/maintenance/fpmaint)
+"aae" = (
+/obj/effect/landmark/spawner/feedmespawn,
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
 "aaf" = (
 /obj/structure/closet/crate{
 	name = "Silver Crate";
@@ -128611,7 +128615,7 @@ bmr
 bmM
 bmq
 bmq
-bmq
+aae
 bmq
 bmq
 bmq
@@ -129381,7 +129385,7 @@ bjm
 bmq
 brW
 btq
-bmq
+aae
 bmq
 bmq
 bmq
