@@ -26831,6 +26831,7 @@
 	name = "north bump";
 	pixel_y = 24
 	},
+/obj/machinery/economy/vending/accesories,
 /turf/simulated/floor/plasteel,
 /area/crew_quarters/locker)
 "bnB" = (
