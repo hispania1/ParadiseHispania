@@ -213,3 +213,44 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	icon_state = "detblack"
 	name = "Detective Black Fedora"
 	desc = "Someone who wears this will look very cool."
+
+/obj/item/clothing/head/beret/med
+	icon = 'modular_hispania/icons/obj/clothing/head/berets.dmi'
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Slime People" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Nian" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Tajaran" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Unathi" = 'modular_hispania/icons/mob/clothing/head/beret.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/beret.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/beret.dmi'
+	)
+
+/obj/item/clothing/head/beret/med/paramedic
+	name = "paramedic beret"
+	desc = "a blue beret with a white cross, wear by paramedic and EMT teams."
+	icon_state = "paramed"
+	item_state = "paramed"
+	item_color = "paramed"
+
+/obj/item/clothing/head/surgery
+	icon = 'modular_hispania/icons/obj/clothing/head/hats.dmi'
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Kidan" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Slime People" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Machine" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Skrell" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Diona" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Nian" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Tajaran" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Vulpkanin" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Unathi" = 'modular_hispania/icons/mob/clothing/head/hats.dmi',
+		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/hats.dmi',
+		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/hats.dmi'
+	)
