@@ -204,7 +204,7 @@
 		to_chat(usr, "<span class='notice'>There is no power cell installed in [src].</span>")
 		return
 
-	usr << "The power meter reads [round(cell.percent(), 0.01)]%"
+	to_chat(usr, "The power meter reads [round(cell.percent(), 0.01)]%")
 
 /obj/vehicleh/train/cargo/engine/verb/start_engine()
 	set name = "Start engine"
