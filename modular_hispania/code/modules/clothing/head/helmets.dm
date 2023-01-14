@@ -46,3 +46,13 @@
 		"Grey" = 'modular_hispania/icons/mob/clothing/species/grey/head/helmet.dmi',
 		"Vox" = 'modular_hispania/icons/mob/clothing/species/vox/head/helmet.dmi'
 	)
+
+/obj/item/clothing/head/helmet/space  //to not have invisible sprites
+	icon = 'icons/obj/clothing/hats.dmi'
+	sprite_sheets = list(
+		"Human" = 'icons/mob/clothing/head.dmi',
+		"Vox" = 'icons/mob/clothing/species/vox/helmet.dmi',
+		"Drask" = 'icons/mob/clothing/species/drask/helmet.dmi',
+		"Grey" = 'icons/mob/clothing/species/grey/helmet.dmi'
+		)
+
