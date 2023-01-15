@@ -2710,7 +2710,6 @@
 #include "modular_hispania\code\modules\vehicle\vehicle.dm"
 #include "modular_hispania\code\modules\surgery\tools.dm"
 #include "modular_hispania\controllers\subsystem\discord.dm"
-#include "modular_hispania\game\machinery\vendors\departmental_vendors.dm"
 #include "modular_hispania\hispania\game\machinery\jukebox.dm"
 #include "modular_hispania\hispania\game\machinery\premium_vending.dm"
 // END_INCLUDE

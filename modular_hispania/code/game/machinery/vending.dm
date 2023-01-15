@@ -106,9 +106,12 @@
 
 /obj/machinery/economy/vending/security
 	hispa_products = list(
+					/obj/item/taperoll = 8,
 					/obj/item/hailer = 1
 					)
 	hispa_prices = list(
 					/obj/item/hailer = 100
 					)
 
+/obj/machinery/economy/vending/engivend
+	hispa_products = list(/obj/item/taperoll/engi = 8)
