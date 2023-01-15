@@ -2655,6 +2655,7 @@
 #include "modular_hispania\code\game\objects\items\weapons\storage\belt.dm"
 #include "modular_hispania\code\game\objects\items\weapons\storage\firstaid.dm"
 #include "modular_hispania\code\game\objects\items\weapons\storage\garment.dm"
+#include "modular_hispania\code\game\objects\miscellaneous\paintkits_items.dm"
 #include "modular_hispania\code\game\objects\structures\morgue.dm"
 #include "modular_hispania\code\game\objects\structures\tank_dispenser.dm"
 #include "modular_hispania\code\game\objects\structures\crates_lockers\closets\job_closets.dm"
@@ -2705,4 +2706,5 @@
 #include "modular_hispania\controllers\subsystem\discord.dm"
 #include "modular_hispania\game\machinery\vendors\departmental_vendors.dm"
 #include "modular_hispania\hispania\game\machinery\jukebox.dm"
+#include "modular_hispania\hispania\game\machinery\premium_vending.dm"
 // END_INCLUDE
