@@ -26835,7 +26835,7 @@
 /turf/simulated/floor/plasteel,
 /area/crew_quarters/locker)
 "bnB" = (
-/obj/machinery/economy/vending/cola,
+/obj/machinery/economy/vending/premium_vending,
 /turf/simulated/floor/plasteel,
 /area/crew_quarters/locker)
 "bnC" = (
