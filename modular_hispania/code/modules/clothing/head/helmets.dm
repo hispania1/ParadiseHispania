@@ -19,6 +19,15 @@
 	hispania_icon = TRUE
 	species_restricted = list("Human", "Slime", "Machine", "Kidan", "Skrell", "Diona" )
 
+/obj/item/clothing/head/helmet
+	drop_sound = 'modular_hispania/sound/items/helmet_drop.ogg'
+	pickup_sound = 'modular_hispania/sound/items/helmet_pickup.ogg'
+
+/obj/item/clothing/head/det_hat
+	drop_sound = 'modular_hispania/sound/items/hat_drop.ogg'
+	pickup_sound = 'modular_hispania/sound/items/hat_pickup.ogg'
+
+
 //Re-sprite Code//
 
 /obj/item/clothing/head/helmet
