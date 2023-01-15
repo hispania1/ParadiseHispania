@@ -19,7 +19,7 @@
 	emagged = 0
 	var/powered = 0		//set if vehicle is powered and should use fuel when moving
 	var/move_delay = 1	//set this to limit the speed of the vehicle
-
+	var/needs_gravity = TRUE
 	var/obj/item/stock_parts/cell/cell
 	var/power_use = 5	//set this to adjust the amount of power the vehicle uses per move
 
@@ -58,13 +58,14 @@
 
 /obj/vehicleh/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/screwdriver))
+		playsound(src, 'sound/items/screwdriver.ogg', 100, 1)
 		if(!locked)
 			open = !open
 			update_icon()
 			to_chat(user, "<span class='notice'>Maintenance panel is now [open ? "opened" : "closed"].</span>")
 	else if(istype(W, /obj/item/crowbar) && cell && open)
+		playsound(src, 'sound/items/crowbar.ogg', 100, 1)
 		remove_cell(user)
-
 	else if(istype(W, /obj/item/stock_parts/cell) && !cell && open)
 		insert_cell(W, user)
 	else if(istype(W, /obj/item/weldingtool))
@@ -93,6 +94,17 @@
 	else
 		..()
 
+/obj/vehicleh/examine()
+	. = ..()
+	var/healthpercent = health/maxhealth * 100
+	switch(healthpercent)
+		if(50 to 99)
+			. += "It looks slightly damaged."
+		if(25 to 50)
+			. += "It appears heavily damaged."
+		if(0 to 25)
+			. += "<span class='warning'>It's falling apart!</span>"
+
 /obj/vehicleh/attack_animal(var/mob/living/simple_animal/M as mob)
 	if(M.melee_damage_upper == 0)	return
 	health -= M.melee_damage_upper
@@ -105,12 +117,6 @@
 	health -= Proj.damage
 	..()
 	healthcheck()
-
-/*
-/obj/vehicle/meteorhit()
-	explode()
-	return
-*/
 
 /obj/vehicleh/blob_act()
 	src.health -= rand(20,40)*fire_dam_coeff
@@ -171,11 +177,12 @@
 	update_icon()
 
 /obj/vehicleh/proc/Emag(mob/user as mob)
-	emagged = 1
-
+	if(emagged == 0)
+		to_chat(user, "<span class='warning'>You bypass [src]'s controls.</span>")
+		emagged = 1
 	if(locked)
 		locked = 0
-		user << "<span class='warning'>You bypass [src]'s controls.</span>"
+		to_chat(user, "<span class='warning'>You bypass [src]'s security lock.</span>")
 
 /obj/vehicleh/proc/explode()
 	src.visible_message("\red <B>[src] blows apart!</B>", 1)

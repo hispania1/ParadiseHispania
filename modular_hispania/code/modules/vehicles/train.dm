@@ -46,7 +46,7 @@ obj/vehicleh/train/proc/initialize()
 			A.Move(T)	//bump things away when hit
 	*/
 	if(emagged)
-		if(isliving(A))
+		if(isliving(A) && !A.anchored)
 			var/mob/living/M = A
 			visible_message("<span class='warning'>[src] knocks over [M]!</span>")
 			var/def_zone = ran_zone()
@@ -55,7 +55,7 @@ obj/vehicleh/train/proc/initialize()
 			if(isliving(load))
 				var/mob/living/D = load
 				to_chat(D, "<span class='warning'>You hit [M]!</span>")
-				msg_admin_attack("[D.name] ([D.ckey]) hit [M.name] ([M.ckey]) with [src]. (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>)",ckey=key_name(D),ckey_target=key_name(M))
+				msg_admin_attack("[D.name] [key_name(D)] hit [M.name] [key_name(M)] with [src]. (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>)")
 
 
 //-------------------------------------------
@@ -142,6 +142,7 @@ obj/vehicleh/train/proc/initialize()
 	dir = lead.dir
 
 	if(user)
+		playsound(loc, 'sound/machines/click.ogg', 10, 1)
 		to_chat(user, "<span class='notice'>You hitch [src] to [T].</span>")
 
 	update_stats()
