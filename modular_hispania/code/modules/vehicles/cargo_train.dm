@@ -60,6 +60,7 @@
 
 /obj/vehicleh/train/cargo/trolley/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(open && istype(W, /obj/item/wirecutters))
+		playsound(src,'sound/items/wirecutter.ogg',50,1)
 		passenger_allowed = !passenger_allowed
 		user.visible_message("<span class='notice'>[user] [passenger_allowed ? "cuts" : "mends"] a cable in [src].</span>","<span class='notice'>You [passenger_allowed ? "cut" : "mend"] the load limiter cable.</span>")
 	else
@@ -67,7 +68,7 @@
 
 /obj/vehicleh/train/cargo/engine/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/borg/upgrade/vtec) && move_delay > 1)
-		move_delay = 1
+		move_delay = 1.5
 		qdel(W)
 		to_chat(user, "<span class='notice'>You upgrade [src] with [W].</span>")
 		return
@@ -95,7 +96,8 @@
 
 /obj/vehicleh/train/cargo/engine/Emag(mob/user as mob)
 	..()
-	flick("mulebot-emagged", src)
+	do_sparks(3, 1, src)
+	//flick("mulebot-emagged", src)
 
 /obj/vehicleh/train/cargo/trolley/insert_cell(var/obj/item/stock_parts/cell/C, var/mob/living/carbon/human/H)
 	return
@@ -140,7 +142,7 @@
 
 /obj/vehicleh/train/cargo/trolley/RunOver(var/mob/living/carbon/human/H)
 	..()
-	attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [H.name] ([H.ckey])</font>")
+	attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [H.name] [key_name(H)]</font>")
 
 /obj/vehicleh/train/cargo/engine/RunOver(var/mob/living/carbon/human/H)
 	..()
@@ -149,10 +151,10 @@
 		var/mob/living/carbon/human/D = load
 		to_chat(D, "<span class='danger'>You ran over [H]!</span>")
 		visible_message("<B>\red \The [src] ran over [H]!</B>")
-		attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [H.name] ([H.ckey]), driven by [D.name] ([D.ckey])</font>")
-		msg_admin_attack("[D.name] ([D.ckey]) ran over [H.name] ([H.ckey]). (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>)")
+		attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [H.name][key_name(H)], driven by [D.name] [key_name(D)]</font>")
+		msg_admin_attack("[D.name] [key_name(D)] ran over [H.name] [key_name(H)]. (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>)")
 	else
-		attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [H.name] ([H.ckey])</font>")
+		attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [H.name] [key_name(H)]</font>")
 
 
 //-------------------------------------------
@@ -176,6 +178,9 @@
 
 	if(is_train_head())
 		if(direction == reverse_direction(dir))
+			return 0
+		var/ahead = get_step(src,direction)
+		if(istype(ahead, /turf/space))
 			return 0
 		if(Move(get_step(src, direction)))
 			return 1
@@ -244,6 +249,9 @@
 	if (!on)
 		playsound(src,'modular_hispania/sound/effects/engine_stop.ogg',50,1)
 		to_chat(usr, "[src]'s engine stops")
+
+/obj/vehicleh/train/cargo/engine/AltClick(mob/user)
+	remove_key()
 
 /obj/vehicleh/train/cargo/engine/verb/remove_key()
 	set name = "Remove key"
