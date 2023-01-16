@@ -175,7 +175,10 @@ GLOBAL_LIST_INIT(pglass_recipes, list (
 
 GLOBAL_LIST_INIT(prglass_recipes, list (
 	new /datum/stack_recipe/window("directional reinforced window", /obj/structure/window/plasmareinforced, time = 0 SECONDS, on_floor = TRUE, window_checks = TRUE),
-	new /datum/stack_recipe/window("fulltile reinforced window", /obj/structure/window/full/plasmareinforced, 2, time = 0 SECONDS, on_floor = TRUE, window_checks = TRUE)
+	new /datum/stack_recipe/window("fulltile reinforced window", /obj/structure/window/full/plasmareinforced, 2, time = 0 SECONDS, on_floor = TRUE, window_checks = TRUE),
+	//HISPANIA CHANGES START
+	new /datum/stack_recipe/window("windoor plasma frame", /obj/structure/windoor_assembly/plasma, 5, time = 0 SECONDS, on_floor = TRUE, window_checks = TRUE)
+	//HISPANIA CHANGES END
 ))
 
 /obj/item/stack/sheet/plasmarglass
