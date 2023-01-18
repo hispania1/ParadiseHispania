@@ -134,13 +134,6 @@
 					/obj/item/seeds/strawberry = 3,
 					)
 
-	hispa_prices = list(
-					/obj/item/clothing/under/rank/security/detective/black = 50,
-					/obj/item/clothing/under/rank/security/detective/fem = 50,
-					/obj/item/clothing/suit/storage/det_suit/forensics/black = 75,
-					/obj/item/clothing/head/det_hat/black = 20
-					)
-
 	hispa_contraband = list(
 					/obj/item/seeds/money = 2,
 					/obj/item/seeds/random = 2
