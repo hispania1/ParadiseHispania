@@ -466,7 +466,7 @@
 
 /datum/chemical_reaction/slimespeed/on_reaction(datum/reagents/holder)
 	SSblackbox.record_feedback("tally", "slime_cores_used", 1, type)
-	var/obj/item/slimepotion/speed/P = new /obj/item/slimepotion/speed
+	var/obj/item/slimepotion/speed/P = new /obj/item/slimepotion/speed/old // HISPANIA CHANGES START & END
 	P.forceMove(get_turf(holder.my_atom))
 
 
