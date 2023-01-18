@@ -2639,6 +2639,7 @@
 #include "modular_hispania\code\datums\datumvars.dm"
 #include "modular_hispania\code\datums\supplypacks.dm"
 #include "modular_hispania\code\datums\wires\clothelate.dm"
+#include "modular_hispania\code\game\dna\genes\goon_powers.dm"
 #include "modular_hispania\code\game\jobs\job\job.dm"
 #include "modular_hispania\code\game\machinery\clothelate.dm"
 #include "modular_hispania\code\game\machinery\constructable_frame.dm"
