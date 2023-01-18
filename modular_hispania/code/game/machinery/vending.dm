@@ -117,7 +117,7 @@
 	hispa_products = list(/obj/item/taperoll/engi = 8)
 
 //HISPANIA SEEDS
-/obj/machinery/vending/hydroseeds
+/obj/machinery/economy/vending/hydroseeds
 	hispa_products = list(
 					/obj/item/seeds/aloe =3,
 					/obj/item/seeds/anonna = 3,
@@ -132,12 +132,14 @@
 					/obj/item/seeds/prickly_pear = 3,
 					/obj/item/seeds/ricinus = 3,
 					/obj/item/seeds/strawberry = 3,
+					)
 
 	hispa_prices = list(
 					/obj/item/clothing/under/rank/security/detective/black = 50,
 					/obj/item/clothing/under/rank/security/detective/fem = 50,
 					/obj/item/clothing/suit/storage/det_suit/forensics/black = 75,
-					/obj/item/clothing/head/det_hat/black = 20)
+					/obj/item/clothing/head/det_hat/black = 20
+					)
 
 	hispa_contraband = list(
 					/obj/item/seeds/money = 2,

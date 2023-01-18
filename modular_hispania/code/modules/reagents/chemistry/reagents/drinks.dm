@@ -1,6 +1,3 @@
-/datum/reagent/consumable/drink/hispania
-	icon = 'modular_hispania/icons/obj/drinks.dmi'
-
 /datum/reagent/consumable/drink/hispania/agave
 	name = "Agave Juice"
 	id = "agave"

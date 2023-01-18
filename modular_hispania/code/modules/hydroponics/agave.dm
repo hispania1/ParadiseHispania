@@ -2,7 +2,7 @@
 /obj/item/seeds/agave
 	name = "pack of agave"
 	desc = "These seeds grow into agave, used to create tequila."
-	icon = 'icons/hispania/obj/hydroponics/seeds.dmi'
+	icon = 'modular_hispania/icons/obj/hydroponics/seeds.dmi'
 	icon_state = "agave-seed"
 	species = "agave"
 	plantname = "Agave Bush"
@@ -12,7 +12,7 @@
 	yield = 5
 	potency = 30
 	maturation = 5
-	growing_icon = 'icons/hispania/obj/hydroponics/growing_fruits.dmi'
+	growing_icon = 'modular_hispania/icons/obj/hydroponics/growing_fruits.dmi'
 	reagents_add = list("agave" = 0.04)
 
 //Fruta
@@ -20,7 +20,7 @@
 	seed = /obj/item/seeds/agave
 	name = "agave"
 	desc = "Used to create tequila."
-	icon = 'icons/hispania/obj/hydroponics/harvest.dmi'
+	icon = 'modular_hispania/icons/obj/hydroponics/harvest.dmi'
 	icon_state = "agave"
 	wine_power = 0.5
 	tastes = list("bland" = 1)
