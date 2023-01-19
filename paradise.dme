@@ -2675,6 +2675,7 @@
 #include "modular_hispania\code\modules\clothing\mask\miscellaneous.dm"
 #include "modular_hispania\code\modules\clothing\shoes\colour.dm"
 #include "modular_hispania\code\modules\clothing\shoes\miscellaneous.dm"
+#include "modular_hispania\code\modules\clothing\spacesuits\ert.dm"
 #include "modular_hispania\code\modules\clothing\suits\armor.dm"
 #include "modular_hispania\code\modules\clothing\suits\jobs.dm"
 #include "modular_hispania\code\modules\clothing\suits\labcoat.dm"
