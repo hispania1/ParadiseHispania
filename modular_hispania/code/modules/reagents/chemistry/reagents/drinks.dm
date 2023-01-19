@@ -11,7 +11,7 @@
 
 /datum/reagent/consumable/drink/hispania/anonna
 	name = "Anonna Juice"
-	id = "anonna"
+	id = "anonnajuice"
 	description = "Magic juice with lovely taste"
 	color = "#C1AA8D"
 	drink_icon = "anonna_juice"
@@ -33,7 +33,7 @@
 
 /datum/reagent/consumable/drink/hispania/mango
 	name = "Mango Juice"
-	id = "mango"
+	id = "mangojuice"
 	description = "Sweat and pulpy"
 	color = "#FF9903"
 	drink_icon = "mango_juice"
@@ -55,7 +55,7 @@
 
 /datum/reagent/consumable/drink/hispania/nispero
 	name = "Nispero Juice"
-	id = "nispero"
+	id = "nisperojuice"
 	description = "Weird stuff no idea what is this"
 	color = "#9B723C"
 	drink_icon = "nispero_juice"
@@ -66,7 +66,7 @@
 
 /datum/reagent/consumable/drink/hispania/peach
 	name = "Peach Juice"
-	id = "peach"
+	id = "peachjuice"
 	description = "Coloured, juicy fruit"
 	color = "#FFB5B6"
 	drink_icon = "peach_juice"
@@ -102,3 +102,35 @@
 	drink_desc = "Acidic and sweet"
 	taste_description = "sweet citric"
 	metabolization_rate = 0.15 * REAGENTS_METABOLISM
+
+/datum/reagent/consumable/drink/hispania/cactusjuice
+	name = "Prickly Pear Cactus Juice"
+	id = "cactusjuice"
+	description = "The lower tier of the avocado."
+	color = "#5BB615"
+	drink_icon = "cactus_juice"
+	drink_name = "Glass of Prickly Pear Cactus Juice"
+	drink_desc = "Wait what, cactus?"
+	taste_description = "bland water"
+	metabolization_rate = 0.15 * REAGENTS_METABOLISM
+
+/datum/reagent/consumable/drink/hispania/green_juice
+	name= "Green Juice"
+	id = "green_juice"
+	description = "A drinkable salad?"
+	color = "#2D572C"
+	nutriment_factor = 2 * REAGENTS_METABOLISM
+	drink_icon = "green_juice"
+	drink_name = "Glass of Green Juice"
+	drink_desc = "A drinkable salad?"
+	taste_description = "grassy"
+
+/datum/reagent/consumable/drink/hispania/drakeblood
+	name = "Drake Blood"
+	id = "drakeblood"
+	description = "The raw essence of a Drake."
+	color = "#E6502F"
+	drink_icon = "drakeblood"
+	drink_name = "Glass of drake blood"
+	drink_desc = "The raw essence of a Drake RAAWR"
+	taste_description = "fresh blood."

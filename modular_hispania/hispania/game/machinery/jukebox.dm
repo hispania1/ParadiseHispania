@@ -79,7 +79,7 @@
 
 /obj/machinery/hispaniabox/welder_act(mob/user, obj/item/I)
 	if(user.a_intent == INTENT_HARM) // Harm intent
-		return
+		return FALSE
 	else // Any other intents
 		if(obj_integrity >= max_integrity)
 			to_chat(user, "<span class='notice'>[src] does not need repairs.</span>")
@@ -230,7 +230,7 @@
 				else
 					M.set_sound_channel_volume(MusicChannel, 100 * M.client.prefs.get_channel_volume(CHANNEL_JUKEBOX))
 			for(var/mob/M in players_copy)
-				if(!M.client || !(M.client.prefs.sound & SOUND_INSTRUMENTS) || M in rangers)
+				if(!M.client || !(M.client.prefs.sound & SOUND_INSTRUMENTS) || (M in rangers))
 					continue
 				rangers[M] = TRUE
 				M.playsound_local(src, 100, channel = MusicChannel, S = song_played)
@@ -306,7 +306,7 @@
 		icon_state = "[initial(icon_state)]"
 		stop = world.time + 10
 
-/obj/machinery/hispaniabox/update_icon()
+/obj/machinery/hispaniabox/update_icon_state()
 	if(stat & BROKEN)
 		icon_state = "[initial(icon_state)]-broken"
 	else if (active)
