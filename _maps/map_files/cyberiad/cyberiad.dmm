@@ -80439,10 +80439,7 @@
 	info = "<B>Hola trabajador de cargo!</B><BR>\n<BR>\nI Te doy la bienvenida y te doy un par de consejos sobre como manejar este nuevo vehiculo exclusivo de cargonia<BR>\n Pasos: <BR>\n 1.Arrastrar con el click del mouse para acoplar un vagon a otro vagon. El primer vagon ira acoplado al motor<BR>\n 2.Es conveniente que los vagones esten apuntando todos en la misma direccion<BR>\n 3.Arrastrar las cajas a los vagones para cargarlas!<BR>\n 4.Subirse <BR>\n 5.Darle click derecho -Start engine ! <BR>\n 6.Sacar / poner las llaves a gusto<BR>\n 7.Apagar el motor para no gastar energia<BR>\n<B> No olvides molestar a ciencias para pedir unas baterias mejores. Y por ultimo.. No bebas y conduzcas.  Viva cargonia!</B>";
 	name = "Manejar seguro"
 	},
-/obj/item/weapon/key/cargo_train{
-	step_x = 0;
-	step_y = 0
-	},
+/obj/item/weapon/key/cargo_train,
 /turf/simulated/floor/plasteel,
 /area/quartermaster/storage)
 "nxX" = (
