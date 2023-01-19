@@ -2636,6 +2636,7 @@
 #include "modular_hispania\code\datums\datumvars.dm"
 #include "modular_hispania\code\datums\supplypacks.dm"
 #include "modular_hispania\code\datums\wires\clothelate.dm"
+#include "modular_hispania\code\game\area\hispania_areas.dm"
 #include "modular_hispania\code\game\dna\genes\goon_powers.dm"
 #include "modular_hispania\code\game\jobs\job\job.dm"
 #include "modular_hispania\code\game\machinery\clothelate.dm"
@@ -2753,5 +2754,4 @@
 #include "modular_hispania\hispania\game\machinery\jukebox.dm"
 #include "modular_hispania\hispania\game\machinery\premium_vending.dm"
 #include "modular_hispania\modules\mapping\hispania.dm"
-#include "modular_hispania\code\game\area\hispania_areas.dm"
 // END_INCLUDE
