@@ -2753,4 +2753,5 @@
 #include "modular_hispania\hispania\game\machinery\jukebox.dm"
 #include "modular_hispania\hispania\game\machinery\premium_vending.dm"
 #include "modular_hispania\modules\mapping\hispania.dm"
+#include "modular_hispania\code\game\area\hispania_areas.dm"
 // END_INCLUDE
