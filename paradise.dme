@@ -1792,11 +1792,8 @@
 #include "code\modules\lighting\lighting_turf.dm"
 #include "code\modules\mapping\access_helpers.dm"
 #include "code\modules\mapping\base_map_datum.dm"
-#include "code\modules\mapping\cyberiad.dm"
-#include "code\modules\mapping\delta.dm"
 #include "code\modules\mapping\mapping_helpers.dm"
 #include "code\modules\mapping\merge_conflicts.dm"
-#include "code\modules\mapping\metastation.dm"
 #include "code\modules\mapping\test_tiny.dm"
 #include "code\modules\martial_arts\adminfu.dm"
 #include "code\modules\martial_arts\brawling.dm"
@@ -2753,4 +2750,5 @@
 #include "modular_hispania\controllers\subsystem\discord.dm"
 #include "modular_hispania\hispania\game\machinery\jukebox.dm"
 #include "modular_hispania\hispania\game\machinery\premium_vending.dm"
+#include "modular_hispania\modules\mapping\hispania.dm"
 // END_INCLUDE
