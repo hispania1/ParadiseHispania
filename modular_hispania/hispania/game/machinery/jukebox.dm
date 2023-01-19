@@ -79,7 +79,7 @@
 
 /obj/machinery/hispaniabox/welder_act(mob/user, obj/item/I)
 	if(user.a_intent == INTENT_HARM) // Harm intent
-		return
+		return FALSE
 	else // Any other intents
 		if(obj_integrity >= max_integrity)
 			to_chat(user, "<span class='notice'>[src] does not need repairs.</span>")
@@ -101,7 +101,7 @@
 	stop = 0
 	active = FALSE
 	selection = null
-	STOP_PROCESSING(SSmachines, src)
+	STOP_PROCESSING(SSfastprocess, src)
 	playsound(src.loc, 'sound/effects/sparks4.ogg', 50, TRUE)
 	do_sparks(3, 1, src)
 	obj_integrity -= max_integrity - 1 // OUCH daño a la jukebox, 2 EMP TUMBAN LA JUKEBOX
@@ -110,14 +110,14 @@
 /obj/machinery/hispaniabox/Destroy()
 	dance_over()
 	selection = null
-	STOP_PROCESSING(SSmachines, src)
+	STOP_PROCESSING(SSfastprocess, src)
 	return ..()
 
 /obj/machinery/hispaniabox/obj_break(damage_flag)
 	..()
 	dance_over()
 	selection = null
-	STOP_PROCESSING(SSmachines, src)
+	STOP_PROCESSING(SSfastprocess, src)
 	update_icon()
 
 /obj/machinery/hispaniabox/attackby(obj/item/O, mob/user, params)
@@ -220,9 +220,17 @@
 					continue
 				rangers[M] = TRUE
 				M.playsound_local(src, 100, channel = MusicChannel, S = song_played)
-				M.set_sound_channel_volume(MusicChannel, 100)
+				var/dis = get_dist(src, M)
+				if(dis >= musicrange-1)
+					M.set_sound_channel_volume(MusicChannel, 5 * M.client.prefs.get_channel_volume(CHANNEL_JUKEBOX))
+				else if(dis >= musicrange-2)
+					M.set_sound_channel_volume(MusicChannel, 15 * M.client.prefs.get_channel_volume(CHANNEL_JUKEBOX))
+				else if(dis >= musicrange-4)
+					M.set_sound_channel_volume(MusicChannel, 40 * M.client.prefs.get_channel_volume(CHANNEL_JUKEBOX))
+				else
+					M.set_sound_channel_volume(MusicChannel, 100 * M.client.prefs.get_channel_volume(CHANNEL_JUKEBOX))
 			for(var/mob/M in players_copy)
-				if(!M.client || !(M.client.prefs.sound & SOUND_INSTRUMENTS) || M in rangers)
+				if(!M.client || !(M.client.prefs.sound & SOUND_INSTRUMENTS) || (M in rangers))
 					continue
 				rangers[M] = TRUE
 				M.playsound_local(src, 100, channel = MusicChannel, S = song_played)
@@ -274,23 +282,31 @@
 				if(!M.client || !(M.client.prefs.sound & SOUND_INSTRUMENTS))
 					continue
 				rangers[M] = TRUE
-				M.set_sound_channel_volume(MusicChannel, 100)
+				M.set_sound_channel_volume(MusicChannel, M.client.prefs.get_channel_volume(CHANNEL_JUKEBOX))
 		for(var/mob/L in rangers)
-			if(get_dist(src, L) > musicrange)
+			var/dis = get_dist(src, L)
+			if(dis > musicrange)
 				rangers -= L
 				if(!L || !L.client)
 					continue
 				L.set_sound_channel_volume(MusicChannel, 0)
-
+			else if(dis >= musicrange-1)
+				L.set_sound_channel_volume(MusicChannel, 5 * L.client.prefs.get_channel_volume(CHANNEL_JUKEBOX))
+			else if(dis >= musicrange-2)
+				L.set_sound_channel_volume(MusicChannel, 15 * L.client.prefs.get_channel_volume(CHANNEL_JUKEBOX))
+			else if(dis >= musicrange-4)
+				L.set_sound_channel_volume(MusicChannel, 40 * L.client.prefs.get_channel_volume(CHANNEL_JUKEBOX))
+			else
+				L.set_sound_channel_volume(MusicChannel, 100 *L.client.prefs.get_channel_volume(CHANNEL_JUKEBOX))
 	else if(active)
 		active = FALSE
-		STOP_PROCESSING(SSmachines, src)
+		STOP_PROCESSING(SSfastprocess, src)
 		dance_over()
 		playsound(src,'sound/machines/terminal_off.ogg',50,1)
 		icon_state = "[initial(icon_state)]"
 		stop = world.time + 10
 
-/obj/machinery/hispaniabox/update_icon()
+/obj/machinery/hispaniabox/update_icon_state()
 	if(stat & BROKEN)
 		icon_state = "[initial(icon_state)]-broken"
 	else if (active)

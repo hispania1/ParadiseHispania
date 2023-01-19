@@ -35,7 +35,7 @@
 	else
 		return ..(target, user, proximity)
 
-/obj/item/reagent_containers/food/snacks/canned_food/update_icon()
+/obj/item/reagent_containers/food/snacks/canned_food/update_icon_state()
 	if(!sealed)
 		icon_state = "[initial(icon_state)]-open"
 
