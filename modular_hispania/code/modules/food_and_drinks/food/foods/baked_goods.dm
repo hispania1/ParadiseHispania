@@ -317,7 +317,7 @@
     var/list/pancakes = list()// If the pancakes are stacked, they come here
     tastes = list("soft dough" = 10, "butter" = 10)
 
-/obj/item/reagent_containers/food/snacks/pancake_sal/update_icon()
+/obj/item/reagent_containers/food/snacks/pancake_sal/update_icon_state()
     overlays = list()
     if(pancakes.len > 0)
         desc = "A pile of delicious pancakes. There appears to be [pancakes.len+1] pancakes in the pile. All fully loaded of butter."
@@ -354,7 +354,7 @@
     var/list/pancakes = list()// If the pancakes are stacked, they come here
     tastes = list("soft dough" = 10, "sweet jelly" = 10)
 
-/obj/item/reagent_containers/food/snacks/pancake_mermelada/update_icon()
+/obj/item/reagent_containers/food/snacks/pancake_mermelada/update_icon_state()
     overlays = list()
     if(pancakes.len > 0)
         desc = "A pile of delicious pancakes. There appears to be [pancakes.len+1] pancakes in the pile. All fully loaded of jelly of nispero and berries."

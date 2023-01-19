@@ -21,7 +21,7 @@
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
-obj/vehicleh/train/proc/initialize()
+obj/vehicleh/train/Initialize(mapload)
 	for(var/obj/vehicleh/train/T in orange(1, src))
 		latch(T)
 
