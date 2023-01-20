@@ -38,7 +38,7 @@
 		if(role in active_with_role)
 			job_weight += active_with_role[role] * role_weights[role]
 
-	return clamp((weight + job_weight) * weight_mod, min_weight, max_weight)
+	return clamp((weight + (job_weight*2)) * weight_mod, min_weight, max_weight)
 
 /*/datum/event_meta/ninja/get_weight(var/list/active_with_role)
 	if(toggle_space_ninja)
