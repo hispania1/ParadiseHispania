@@ -53628,6 +53628,7 @@
 /obj/structure/chair/comfy/brown{
 	dir = 1
 	},
+/obj/effect/landmark/start/engineer,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -55559,6 +55560,7 @@
 	req_access_txt = "32"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/landmark/start/engineer,
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "yellow"
@@ -58128,6 +58130,7 @@
 	network = list("SS13","Engi)")
 	},
 /obj/effect/decal/warning_stripes/yellow/hollow,
+/obj/machinery/economy/vending/engivend,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "darkyellowfull"
@@ -60069,6 +60072,7 @@
 /area/crew_quarters/toilet)
 "cUs" = (
 /obj/effect/decal/warning_stripes/yellow/hollow,
+/obj/machinery/economy/vending/tool/free,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "darkyellowfull"
@@ -60138,6 +60142,7 @@
 /area/hispania/engine/upper_hall)
 "cUz" = (
 /obj/structure/chair/comfy/green,
+/obj/effect/landmark/start/atmospheric,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "darkyellowcorners"
@@ -60767,6 +60772,7 @@
 	dir = 8;
 	initialize_directions = 11
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "darkyellow"
@@ -61158,6 +61164,7 @@
 /area/engine/engineering)
 "cXQ" = (
 /obj/structure/chair/comfy/green,
+/obj/effect/landmark/start/atmospheric,
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "darkyellowcorners"
@@ -61204,6 +61211,7 @@
 /area/engine/controlroom)
 "cXV" = (
 /obj/structure/chair/comfy/green,
+/obj/effect/landmark/start/atmospheric,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -61538,6 +61546,7 @@
 /obj/structure/chair/comfy/beige{
 	dir = 8
 	},
+/obj/effect/landmark/start/chief_engineer,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "darkyellowcorners"
@@ -70324,6 +70333,7 @@
 /obj/structure/chair/office/dark{
 	dir = 8
 	},
+/obj/effect/landmark/start/engineer,
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "yellowcorner"
@@ -70814,7 +70824,7 @@
 	},
 /area/hallway/primary/aft)
 "eAt" = (
-/obj/machinery/hologram/holopad,
+/obj/machinery/economy/vending/engidrobe,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "darkyellow"
@@ -80441,6 +80451,7 @@
 /obj/structure/chair/comfy/brown{
 	dir = 4
 	},
+/obj/effect/landmark/start/engineer,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -82294,6 +82305,16 @@
 	icon_state = "white"
 	},
 /area/toxins/hallway)
+"mkp" = (
+/obj/structure/chair/stool,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/landmark/start/engineer,
+/turf/simulated/floor/plasteel{
+	icon_state = "darkyellow"
+	},
+/area/engine/equipmentstorage)
 "mkE" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -84496,6 +84517,19 @@
 	icon_state = "whiteyellowfull"
 	},
 /area/medical/chemistry)
+"nHY" = (
+/obj/structure/chair/stool,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/start/engineer,
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "darkyellow"
+	},
+/area/engine/equipmentstorage)
 "nIq" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -88813,14 +88847,10 @@
 	},
 /area/medical/virology)
 "qnM" = (
-/obj/structure/table,
-/obj/item/wrench,
-/obj/item/t_scanner,
-/obj/item/storage/belt/utility,
-/obj/item/storage/belt/utility,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
 	},
+/obj/machinery/economy/vending/atmosdrobe,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -88873,6 +88903,7 @@
 /obj/structure/chair/comfy/brown{
 	dir = 4
 	},
+/obj/effect/landmark/start/engineer,
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "darkyellowcorners"
@@ -91942,6 +91973,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/landmark/start/chief_engineer,
 /turf/simulated/floor/plasteel{
 	icon_state = "darkyellow"
 	},
@@ -129357,7 +129389,7 @@ cQE
 cRL
 cYY
 cVj
-cIw
+nHY
 uku
 nsz
 cVj
@@ -129873,7 +129905,7 @@ cYY
 cId
 cIw
 oAM
-nsz
+mkp
 cId
 cYY
 cNW
