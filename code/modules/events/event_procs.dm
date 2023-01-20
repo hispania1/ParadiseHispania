@@ -107,6 +107,12 @@
 
 		if(M.mind.assigned_role == "Chaplain")
 			active_with_role["Chaplain"]++
+
+		if(M.mind.assigned_role == "Research Director")
+			active_with_role["Research Director"]++
+
+		if(M.mind.assigned_role in GLOB.supply_positions)
+			active_with_role["Cargo"]++
 		//HISPANIA CHANGES END
 
 	return active_with_role
