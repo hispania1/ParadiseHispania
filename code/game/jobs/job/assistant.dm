@@ -29,7 +29,7 @@
 	title = "Aprendiz"
 	max_horas = TRUE	// convierte la exp en vez de minimo a maximo
 	//esta exp map esta revertida, en vez de minimo 5 horas para jugarlo, es maximo 5 horas para jugarlo
-	exp_map = list(EXP_TYPE_CREW = 180)
+	exp_map = list(EXP_TYPE_CREW = 600)
 	flag = JOB_ASSISTANT
 	department_flag = JOBCAT_SUPPORT
 	total_positions = -1
