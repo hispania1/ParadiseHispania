@@ -137,6 +137,13 @@ GLOBAL_LIST_INIT(role_playtime_requirements, list(
 
 	// Check their requirements
 	for(var/exp_type in exp_map)
+	//HISPANIA CHANGES START
+		if(max_horas)
+			if(text2num(exp_map[exp_type]) < text2num(play_records[exp_type]))
+				success = FALSE
+			else
+				return TRUE
+	//HISPANIA CHANGES END
 		if(!(exp_type in play_records))
 			success = FALSE
 			continue
