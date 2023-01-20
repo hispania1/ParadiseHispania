@@ -65,7 +65,7 @@
 	icon_state = "kiwi"
 	icon_animado = FALSE
 
-/mob/living/simple_animal/kiwi/emote(act, m_type=1, message = null, force)
+/mob/living/simple_animal/kiwi/emote(act, m_type=1, message = null, force, intentional = FALSE)
 	if(stat != CONSCIOUS)
 		return
 

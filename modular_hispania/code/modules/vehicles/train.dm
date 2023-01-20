@@ -21,10 +21,6 @@
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
-obj/vehicleh/train/proc/initialize()
-	for(var/obj/vehicleh/train/T in orange(1, src))
-		latch(T)
-
 /obj/vehicleh/train/Move()
 	var/old_loc = get_turf(src)
 	if(..())

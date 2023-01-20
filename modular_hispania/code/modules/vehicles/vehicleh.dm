@@ -69,18 +69,18 @@
 	else if(istype(W, /obj/item/stock_parts/cell) && !cell && open)
 		insert_cell(W, user)
 	else if(istype(W, /obj/item/weldingtool))
-		//var/obj/item/weldingtool/T = W
-		if(TRUE)
-			if(health < maxhealth)
-				if(open)
-					health = min(maxhealth, health+10)
-					user.visible_message("<span class='warning'>[user] repairs [src]!</span>","<span class='notice'>You repair [src]!</span>")
-				else
-					to_chat(user, "<span class='notice'>Unable to repair with the maintenance panel closed.</span>")
-			else
-				to_chat(user, "<span class='notice'>[src] does not need a repair.</span>")
-		else
-			to_chat(user, "<span class='notice'>Unable to repair while [src] is off.</span>")
+		if(user.a_intent == INTENT_HARM) // Harm intent
+			return ..()
+		else if(health >= maxhealth)
+			to_chat(user, "<span class='notice'>[src] does not need repairs.</span>")
+			return
+		else if(!W.tool_use_check(user, 0))
+			return
+		WELDER_ATTEMPT_REPAIR_MESSAGE
+		if(W.use_tool(src, user, 40, volume = W.tool_volume))
+			WELDER_REPAIR_SUCCESS_MESSAGE
+			health = min(maxhealth, health+10)
+		return
 	else if(istype(W, /obj/item/card/emag) && !emagged)
 		Emag(user)
 	else if(hasvar(W,"force") && hasvar(W,"damtype"))

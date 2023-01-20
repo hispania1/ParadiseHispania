@@ -14,7 +14,7 @@
 	junkiness = 20
 	var/stick = FALSE
 
-/obj/item/reagent_containers/food/snacks/butter/update_icon()
+/obj/item/reagent_containers/food/snacks/butter/update_icon_state()
 	if(stick)
 		icon_state = "butter_stick"
 		name = "butter on a stick"
