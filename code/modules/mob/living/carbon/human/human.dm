@@ -205,6 +205,10 @@
 			if(V)
 				stat("Total Blood", "[V.bloodtotal]")
 				stat("Usable Blood", "[V.bloodusable]")
+			if(mind.nation)
+				stat("Nation Name", "[mind.nation.current_name ? "[mind.nation.current_name]" : "[mind.nation.default_name]"]")
+				stat("Nation Leader", "[mind.nation.current_leader ? "[mind.nation.current_leader]" : "None"]")
+				stat("Nation Heir", "[mind.nation.heir ? "[mind.nation.heir]" : "None"]")
 
 /mob/living/carbon/human/ex_act(severity)
 	if(status_flags & GODMODE)
