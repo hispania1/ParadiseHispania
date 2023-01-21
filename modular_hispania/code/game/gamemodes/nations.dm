@@ -5,7 +5,8 @@
 	var/kickoff = 0
 	var/victory = 0
 	var/list/cargonians = list("Quartermaster","Cargo Technician","Shaft Miner")
-	var/list/servicion = list("Clown", "Mime", "Bartender", "Chef", "Botanist", "Librarian", "Chaplain", "Barber","Explorer")
+	var/list/servicion = list("Clown", "Mime", "Bartender", "Chef", "Botanist", "Librarian", "Chaplain", "Barber","Explorer","Janitor")
+	var/list/comandatzia = list("Captain","Head of Personnel","Nanotrasen Representative","Blueshield")
 
 
 /datum/game_mode/nations/post_setup()
@@ -49,6 +50,7 @@
 				update_nations_icons_added(H,"hudatmosia")
 				H.mind.nation.membership += H.mind.current
 				new /obj/item/flag/atmos(H.loc)
+				new /obj/effect/temp_visual/dir_setting/speedbike_trail(H.loc)
 				if(H.mind.assigned_role == H.mind.nation.default_leader)
 					H.mind.nation.current_leader = H.mind.current
 					to_chat(H, "You have been chosen to lead the nation of [H.mind.nation.default_name]!")
@@ -61,6 +63,7 @@
 				update_nations_icons_added(H,"hudmedistan")
 				H.mind.nation.membership += H.mind.current
 				new /obj/item/flag/med(H.loc)
+				new /obj/effect/temp_visual/dir_setting/speedbike_trail(H.loc)
 				if(H.mind.assigned_role == H.mind.nation.default_leader)
 					H.mind.nation.current_leader = H.mind.current
 					to_chat(H, "You have been chosen to lead the nation of [H.mind.nation.default_name]!")
@@ -73,6 +76,7 @@
 				update_nations_icons_added(H,"hudscientopia")
 				H.mind.nation.membership += H.mind.current
 				new /obj/item/flag/rnd(H.loc)
+				new /obj/effect/temp_visual/dir_setting/speedbike_trail(H.loc)
 				if(H.mind.assigned_role == H.mind.nation.default_leader)
 					H.mind.nation.current_leader = H.mind.current
 					to_chat(H, "You have been chosen to lead the nation of [H.mind.nation.default_name]!")
@@ -85,6 +89,7 @@
 				update_nations_icons_added(H,"hudbrigston")
 				H.mind.nation.membership += H.mind.current
 				new /obj/item/flag/sec(H.loc)
+				new /obj/effect/temp_visual/dir_setting/speedbike_trail(H.loc)
 				if(H.mind.assigned_role == H.mind.nation.default_leader)
 					H.mind.nation.current_leader = H.mind.current
 					to_chat(H, "You have been chosen to lead the nation of [H.mind.nation.default_name]!")
@@ -98,6 +103,7 @@
 				update_nations_icons_added(H,"hudcargonia")
 				H.mind.nation.membership += H.mind.current
 				new /obj/item/flag/cargo(H.loc)
+				new /obj/effect/temp_visual/dir_setting/speedbike_trail(H.loc)
 				if(H.mind.assigned_role == H.mind.nation.default_leader)
 					H.mind.nation.current_leader = H.mind.current
 					to_chat(H, "You have been chosen to lead the nation of [H.mind.nation.default_name]!")
@@ -110,6 +116,7 @@
 				update_nations_icons_added(H,"hudservice")
 				H.mind.nation.membership += H.mind.current
 				new /obj/item/flag/ian(H.loc)
+				new /obj/effect/temp_visual/dir_setting/speedbike_trail(H.loc)
 				if(H.mind.assigned_role == H.mind.nation.default_leader)
 					H.mind.nation.current_leader = H.mind.current
 					to_chat(H, "You have been chosen to lead the nation of [H.mind.nation.default_name]!")
@@ -117,13 +124,14 @@
 				to_chat(H, "You are now part of the great sovereign nation of [H.mind.nation.default_name]!")
 				continue
 
-			if(H.mind.assigned_role in GLOB.command_positions || H.mind.assigned_role == "Blueshield")
+			if(H.mind.assigned_role in comandatzia)
 				H.mind.nation = GLOB.all_nations["People's Republic of Commandzakstan"]
 				update_nations_icons_added(H,"hudcommand")
 				H.mind.nation.membership += H.mind.current
+				new /obj/item/flag/command(H.loc)
+				new /obj/effect/temp_visual/dir_setting/speedbike_trail(H.loc)
 				if(H.mind.assigned_role == H.mind.nation.default_leader)
 					H.mind.nation.current_leader = H.mind.current
-					new /obj/item/flag/command(H.loc)
 					to_chat(H, "You have been chosen to lead the nation of [H.mind.nation.default_name]!")
 					continue
 				to_chat(H, "You are now part of the great sovereign nation of [H.mind.nation.default_name]!")
@@ -193,7 +201,8 @@
  */
 /proc/give_latejoiners_nations(var/mob/living/carbon/human/H)
 	var/list/cargonians = list("Quartermaster","Cargo Technician","Shaft Miner")
-	var/list/servicion = list("Clown", "Mime", "Bartender", "Chef", "Botanist", "Librarian", "Chaplain", "Barber","Explorer")
+	var/list/servicion = list("Clown", "Mime", "Bartender", "Chef", "Botanist", "Librarian", "Chaplain", "Barber","Explorer","Janitor")
+	var/list/comandatzia = list("Captain","Head of Personnel","Nanotrasen Representative","Blueshield")
 	var/datum/game_mode/nations/mode = get_nations_mode()
 	if(!mode) return 1
 
@@ -202,7 +211,7 @@
 	if(H.mind)
 		if(H.mind.assigned_role in GLOB.engineering_positions)
 			H.mind.nation = GLOB.all_nations["Atmosia"]
-			mode.update_nations_icons_added(H,"atmosia")
+			mode.update_nations_icons_added(H,"hudatmosia")
 			H.mind.nation.membership += H.mind.current
 			to_chat(H, "You are now part of the great sovereign nation of [H.mind.nation.current_name]!")
 			return 1
@@ -242,7 +251,7 @@
 			to_chat(H, "You are now part of the great sovereign nation of [H.mind.nation.current_name]!")
 			return 1
 
-		if(H.mind.assigned_role in GLOB.command_positions || H.mind.assigned_role == "Blueshield")
+		if(H.mind.assigned_role in comandatzia)
 			H.mind.nation = GLOB.all_nations["People's Republic of Commandzakstan"]
 			mode.update_nations_icons_added(H,"hudcommand")
 			H.mind.nation.membership += H.mind.current

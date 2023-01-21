@@ -3,6 +3,7 @@
 	icon_state = "droidpeace"
 	modtype = "Nations"
 	designation = "Nations"
+	hud_possible = list(SPECIALROLE_HUD, DIAG_STAT_HUD, DIAG_HUD,NATIONS_HUD)
 
 /mob/living/silicon/robot/nations/init()
 	..()
