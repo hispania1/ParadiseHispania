@@ -97215,7 +97215,8 @@
 /turf/space,
 /area/space/nearstation)
 "vrl" = (
-/obj/machinery/atmospherics/meter,
+/obj/machinery/door/airlock/public/glass,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "darkyellowcorners"
