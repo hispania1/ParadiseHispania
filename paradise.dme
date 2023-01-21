@@ -2752,5 +2752,6 @@
 #include "modular_hispania\controllers\subsystem\discord.dm"
 #include "modular_hispania\hispania\game\machinery\jukebox.dm"
 #include "modular_hispania\hispania\game\machinery\premium_vending.dm"
+#include "modular_hispania\modules\mapping\dadaby.dm"
 #include "modular_hispania\modules\mapping\hispania.dm"
 // END_INCLUDE
