@@ -33,11 +33,12 @@
 
 /datum/game_mode/nations/proc/send_intercept()
 	GLOB.event_announcement.Announce(
-					" Nanotrasen Corporation ha decidido liquidar todos \
-					los activos de la División Centcom para pagar los honorarios legales masivos en los que se incurrirá \
-					durante los siguientes siglos de largo proceso judicial. Por lo tanto, todos los contratos de trabajo actuales \
-					son TERMINADOS INMEDIATAMENTE. Nanotrasen no podrá enviar la shuttle de rescate para llevarlos a centcomm,\
-					sin embargo, por el momento se decidio continuar con el comercio de cargo. Que tengan una feliz  \
+					" Nanotrasen ha decidido liquidar todos \
+					los activos de la División de Centcom para pagar los honorarios legales masivos en los que se incurrirá. \
+					Por lo tanto, todos los contratos de trabajo actuales son TERMINADOS INMEDIATAMENTE \
+					. Cada departamento a partir de ahora es INDEPENDIENTE. \
+					Tomaremos en cuenta el rescate con la shuttle solo si todos los departamentos \
+					estan de acuerdo en llamarla. Que tengan una feliz  \
 					estadia.", "FINAL DE TRANSMISSION, CENTCOM.", new_sound = 'sound/AI/intercept.ogg')
 
 
