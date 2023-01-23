@@ -7,9 +7,6 @@
 #define ASSIGNMENT_MEDICAL "Medical"
 #define ASSIGNMENT_SCIENTIST "Scientist"
 #define ASSIGNMENT_SECURITY "Security"
-//HISPANIA CHANGES START
-#define ASSIGNMENT_SERVICE "Service"
-//HISPANIA CHANGES END
 
 GLOBAL_LIST_INIT(severity_to_string, list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT_LEVEL_MODERATE = "Moderate", EVENT_LEVEL_MAJOR = "Major"))
 GLOBAL_LIST_EMPTY(event_last_fired)
@@ -144,9 +141,6 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Wallrot",			/datum/event/wallrot, 			0,		list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_GARDENER = 50)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Koi School",		/datum/event/carp_migration/koi,		80),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Disease Outbreak",	/datum/event/disease_outbreak, 			50,		list(ASSIGNMENT_MEDICAL = 50), TRUE),
-		//HISPANIA CHANGES START
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Toilets clog",			/datum/event/toilets_clog, 			50,		list(ASSIGNMENT_JANITOR = 500)),
-		//HISPANIA CHANGES END
 	)
 
 /datum/event_container/moderate
@@ -187,10 +181,6 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Morph Spawn", 				/datum/event/spawn_morph, 				40,		list(ASSIGNMENT_SECURITY = 10), is_one_shot = TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disease Outbreak",			/datum/event/disease_outbreak, 			0,		list(ASSIGNMENT_MEDICAL = 150), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Door Runtime",				/datum/event/door_runtime,				50,		list(ASSIGNMENT_ENGINEER = 25, ASSIGNMENT_AI = 150), TRUE),
-
-		//HISPANIA CHANGES START
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Feed me",					/datum/event/feedme, 					0,		list(ASSIGNMENT_SERVICE = 50))
-		//HISPANIA CHANGES END
 	)
 
 /datum/event_container/major
@@ -220,6 +210,3 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 #undef ASSIGNMENT_MEDICAL
 #undef ASSIGNMENT_SCIENTIST
 #undef ASSIGNMENT_SECURITY
-//HISPANIA CHANGES START
-#undef ASSIGNMENT_SERVICE
-//HISPANIA CHANGES END

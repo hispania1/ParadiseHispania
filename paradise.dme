@@ -2689,6 +2689,7 @@
 #include "modular_hispania\code\modules\clothing\under\jobs\medsci.dm"
 #include "modular_hispania\code\modules\clothing\under\jobs\security.dm"
 #include "modular_hispania\code\modules\crafting\recipes.dm"
+#include "modular_hispania\code\modules\events\event_container.dm"
 #include "modular_hispania\code\modules\events\feedme.dm"
 #include "modular_hispania\code\modules\events\toilets_clog.dm"
 #include "modular_hispania\code\modules\food_and_drinks\condiments.dm"
