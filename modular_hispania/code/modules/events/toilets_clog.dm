@@ -11,7 +11,7 @@
 	for(var/obj/structure/toilet/W in world)
 		cant++
 		if(W.anchored)
-			if(prob(60))
+			if(prob(50))
 				al_menos_uno = TRUE
 				W.averiado = TRUE
 				W.inundar()
