@@ -169,7 +169,9 @@
 					/obj/item/reagent_containers/glass/rag,
 					/obj/item/grenade/chem_grenade/cleaner,
 					/obj/item/grenade/chem_grenade/cleaner,
-					/obj/item/grenade/chem_grenade/cleaner)
+					/obj/item/grenade/chem_grenade/cleaner,
+					/obj/item/clothing/head/plunger //HISPANIA CHANGES START & END HERE
+					)
 	cost = 200
 	containername = "janitorial supplies crate"
 	announce_beacons = list("Janitor" = list("Janitorial"))

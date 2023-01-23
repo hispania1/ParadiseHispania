@@ -124,6 +124,9 @@
 		return
 
 /obj/structure/toilet/wrench_act(mob/user, obj/item/I)
+	if(averiado)
+		user.visible_message("<span class='notice'>Esto seria una mala idea! Necesito una sopapa para destaparlo</span>")
+		return
 	. = TRUE
 	if(!I.tool_use_check(user, 0))
 		return

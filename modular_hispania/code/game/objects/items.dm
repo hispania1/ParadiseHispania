@@ -1,6 +1,6 @@
 
 /obj/item
-
+	var/pixelYoffset = 0
 	var/hispania_icon = FALSE
 
 /obj/item/Initialize()
