@@ -29,7 +29,8 @@
 /obj/structure/toilet/proc/inundar()
 	if(averiado)
 		for(var/obj/machinery/door/airlock/D in range(3, src))//para que ensucie un poqito mas
-			D.open()
+			if((D.req_access_txt == "0"))
+				D.open()
 		var/obj/item/grenade/chem_grenade/cleaner/A = new /obj/item/grenade/chem_grenade/cleaner(src.loc)
 		A.prime()
 		spawn(4 SECONDS)
