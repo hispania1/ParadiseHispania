@@ -1,6 +1,6 @@
 /datum/event/all_access
 	announceWhen = 3
-	endWhen = 60
+	endWhen = 40
 
 /datum/event/all_access/start()
 	for(var/obj/machinery/door/airlock/D in GLOB.airlocks)
