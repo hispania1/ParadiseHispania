@@ -1,6 +1,8 @@
 //HISPANIA EVENTS
 #define ASSIGNMENT_SERVICE "Service"
-//HISPANIA CHANGES END
+#define ASSIGMENT_CHAPLAIN "Chaplain"
+#define ASSIGMENT_CARGO "Cargo"
+#define ASSIGMENT_RD "RD"
 
 /datum/event_container/
 	var/list/available_events_hispa
@@ -24,4 +26,5 @@
 		)
 
 #undef ASSIGNMENT_SERVICE
-
+#undef ASSIGMENT_CHAPLAIN
+#undef ASSIGMENT_CARGO
