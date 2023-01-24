@@ -1,6 +1,6 @@
 /obj/effect/landmark/spawner/feedmespawn
 	name = "feed me spawn"
-	icon = 'icons/effects/spawner_icons.dmi'
+	icon = 'modular_hispania/icons/effects/spawner_icons.dmi'
 	icon_state = "clown"
 
 /obj/effect/landmark/spawner/feedmespawn/Initialize(mapload)
