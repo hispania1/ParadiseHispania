@@ -37,15 +37,21 @@
 			inundar()
 
 /obj/structure/toilet/attackby(obj/item/I, mob/living/user)
-	if(!averiado)
-		user.visible_message("<span class='notice'>[src] no necesita ser destapado</span>")
-		return
 	if(istype(I, /obj/item/clothing/head/plunger))
+		if(!averiado)
+			user.visible_message("<span class='notice'>[src] no necesita ser destapado</span>")
+			return
 		playsound(user,'modular_hispania/sound/effects/plunger.ogg',50)
 		if(do_after(user, 150, target = src))
 			user.visible_message("<span class='notice'>[user] ha destapado el [src] !</span>")
 			averiado = FALSE
 			desc = old_desc
+	..()
 
-
-
+/obj/structure/toilet/wrench_act(mob/living/user, obj/item/I)
+	if(averiado)
+		//user.drop_item()
+		user.visible_message("<span class='notice'>Esto seria una mala idea! Necesito una sopapa para destaparlo</span>")
+		return
+	else
+		..()
