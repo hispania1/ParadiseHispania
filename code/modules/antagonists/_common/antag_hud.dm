@@ -1,5 +1,5 @@
 /datum/atom_hud/antag
-	hud_icons = list(SPECIALROLE_HUD)
+	hud_icons = list(SPECIALROLE_HUD,NATIONS_HUD) //HISPANIA CHANGES START & END HERE
 	var/self_visible = TRUE
 
 /datum/atom_hud/antag/hidden

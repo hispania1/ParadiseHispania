@@ -82,13 +82,13 @@
 		return
 	..()
 
-/obj/vehicleh/train/cargo/engine/update_icon()
+/obj/vehicleh/train/cargo/engine/update_icon_state()
 	if(open)
 		icon_state = "cargo_engine_open"
 	else
 		icon_state = initial(icon_state)
 
-/obj/vehicleh/train/cargo/trolley/update_icon()
+/obj/vehicleh/train/cargo/trolley/update_icon_state()
 	if(open)
 		icon_state = "cargo_trailer_open"
 	else

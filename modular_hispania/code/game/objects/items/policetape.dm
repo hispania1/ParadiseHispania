@@ -21,7 +21,7 @@ GLOBAL_LIST_INIT(tape_roll_applications, list())
 			afterattack(airlock, null, TRUE)
 		return INITIALIZE_HINT_QDEL
 
-/obj/structure/taper/update_icon()
+/obj/structure/taper/update_icon_state()
 	//Possible directional bitflags: 0 (AIRLOCK), 1 (NORTH), 2 (SOUTH), 4 (EAST), 8 (WEST), 3 (VERTICAL), 12 (HORIZONTAL)
 	overlays.Cut()
 	var/new_state
@@ -77,7 +77,7 @@ GLOBAL_LIST_INIT(tape_roll_applications, list())
 	desc = "A length of engineering tape. Better not cross it."
 	color = COLOR_ORANGE
 
-/obj/item/taperoll/update_icon()
+/obj/item/taperoll/update_icon_state()
 	overlays.Cut()
 	var/image/overlay = image(icon = src.icon)
 	overlay.appearance_flags = RESET_COLOR

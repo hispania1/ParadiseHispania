@@ -59,6 +59,7 @@
 	active_with_role["Any"] = GLOB.player_list.len
 	//HISPANIA CHANGES START
 	active_with_role["Service"] = 0
+	active_with_role["Chaplain"] = 0
 	//HISPANIA CHANGES END
 
 	for(var/mob/M in GLOB.player_list)
@@ -76,16 +77,16 @@
 			if(R.module && (R.module.name == "security robot module"))
 				active_with_role["Security"]++
 
-		if(M.mind.assigned_role in list("Chief Engineer", "Station Engineer"))
+		if(M.mind.assigned_role in GLOB.engineering_positions)
 			active_with_role["Engineer"]++
 
-		if(M.mind.assigned_role in list("Chief Medical Officer", "Medical Doctor"))
+		if(M.mind.assigned_role in GLOB.medical_positions)
 			active_with_role["Medical"]++
 
 		if(M.mind.assigned_role in GLOB.security_positions)
 			active_with_role["Security"]++
 
-		if(M.mind.assigned_role in list("Research Director", "Scientist"))
+		if(M.mind.assigned_role in GLOB.science_positions)
 			active_with_role["Scientist"]++
 
 		if(M.mind.assigned_role == "AI")
@@ -103,6 +104,15 @@
 		//HISPANIA CHANGES START
 		if(M.mind.assigned_role in list("Botanist", "Cheff","Bartender","Mime","Clown","Libarian","Barber","Chaplain"))
 			active_with_role["Service"]++
+
+		if(M.mind.assigned_role == "Chaplain")
+			active_with_role["Chaplain"]++
+
+		if(M.mind.assigned_role == "Research Director")
+			active_with_role["Research Director"]++
+
+		if(M.mind.assigned_role in GLOB.supply_positions)
+			active_with_role["Cargo"]++
 		//HISPANIA CHANGES END
 
 	return active_with_role
