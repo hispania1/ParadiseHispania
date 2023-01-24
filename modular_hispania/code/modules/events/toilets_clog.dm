@@ -42,7 +42,7 @@
 			user.visible_message("<span class='notice'>[src] no necesita ser destapado</span>")
 			return
 		playsound(user,'modular_hispania/sound/effects/plunger.ogg',50)
-		if(do_after(user, 150, target = src))
+		if(do_after(user, 75, target = src))
 			user.visible_message("<span class='notice'>[user] ha destapado el [src] !</span>")
 			averiado = FALSE
 			desc = old_desc
