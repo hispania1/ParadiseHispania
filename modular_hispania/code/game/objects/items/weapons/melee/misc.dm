@@ -29,6 +29,7 @@
 
 
 /obj/item/twohanded/required/ram/afterattack(atom/target, mob/user, proximity)
+	var/borrar_asembly = FALSE
 	if(ramming)
 		to_chat(user, "<span class='warning'>You are already ramming!</span>")
 		return
@@ -46,8 +47,11 @@
 				afterattack(A, user, proximity)
 			else
 				var/old_loc = A.loc
-				A.take_damage(dmg_deal, damtype, "melee", 1) 		// 120
-				for(var/obj/item/airlock_electronics/D in old_loc)	//destruye el airlock_assembly dropeado
-					qdel(D)
-				for(var/obj/structure/door_assembly/E in old_loc)	//destruye el assembly
-					qdel(E)
+				if(istype(A,/obj/machinery/door/airlock))
+					borrar_asembly = TRUE
+				A.take_damage(dmg_deal, damtype, "melee", 1)
+				if(borrar_asembly)
+					for(var/obj/item/airlock_electronics/D in old_loc)	//destruye el airlock_assembly dropeado
+						qdel(D)
+					for(var/obj/structure/door_assembly/E in old_loc)	//destruye el assembly
+						qdel(E)
