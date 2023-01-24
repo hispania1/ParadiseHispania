@@ -169,8 +169,7 @@
 					/obj/item/reagent_containers/glass/rag,
 					/obj/item/grenade/chem_grenade/cleaner,
 					/obj/item/grenade/chem_grenade/cleaner,
-					/obj/item/grenade/chem_grenade/cleaner,
-					/obj/item/clothing/head/plunger //HISPANIA CHANGES START & END HERE
+					/obj/item/grenade/chem_grenade/cleaner
 					)
 	cost = 200
 	containername = "janitorial supplies crate"
