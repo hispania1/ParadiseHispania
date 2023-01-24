@@ -2646,6 +2646,7 @@
 #include "modular_hispania\code\game\machinery\clothelate.dm"
 #include "modular_hispania\code\game\machinery\constructable_frame.dm"
 #include "modular_hispania\code\game\machinery\vending.dm"
+#include "modular_hispania\code\game\machinery\doors\airlock.dm"
 #include "modular_hispania\code\game\objects\items.dm"
 #include "modular_hispania\code\game\objects\items\policetape.dm"
 #include "modular_hispania\code\game\objects\items\trash.dm"
