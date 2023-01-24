@@ -65,9 +65,7 @@
 		L = target
 		if(!L.can_inject(user, TRUE))
 			return
-	//HISPANIA CHANGES START
-	user.do_attack_animation(target)
-	//HISPANIA CHANGES END
+
 	switch(mode)
 		if(SYRINGE_DRAW)
 

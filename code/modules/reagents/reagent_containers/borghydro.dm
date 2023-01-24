@@ -90,6 +90,7 @@
 	if(R.total_volume && M.can_inject(user, TRUE, user.zone_selected, penetrate_thick = bypass_protection))
 		to_chat(user, "<span class='notice'>You inject [M] with the injector.</span>")
 		to_chat(M, "<span class='notice'>You feel a tiny prick!</span>")
+
 		R.add_reagent(M)
 		if(M.reagents)
 			var/datum/reagent/injected = GLOB.chemical_reagents_list[reagent_ids[mode]]
