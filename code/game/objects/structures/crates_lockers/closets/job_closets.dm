@@ -101,7 +101,7 @@
 	new /obj/item/radio/headset/headset_service(src)
 	new /obj/item/clothing/under/rank/civilian/janitor(src)
 	new /obj/item/cartridge/janitor(src)
-	new /obj/item/clothing/head/plunger(src) //HISPANIA CHANGES START & END HERE
+
 /*
  * Lawyer
  */
