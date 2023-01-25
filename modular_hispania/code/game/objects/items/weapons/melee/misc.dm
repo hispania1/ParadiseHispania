@@ -29,7 +29,6 @@
 
 
 /obj/item/twohanded/required/ram/afterattack(atom/target, mob/user, proximity)
-	var/borrar_asembly = FALSE
 	if(ramming)
 		to_chat(user, "<span class='warning'>You are already ramming!</span>")
 		return
@@ -38,20 +37,30 @@
 	if(is_type_in_list(target,objetos_rompibles))
 		ramming = TRUE
 		var/obj/A = target
-		playsound(get_turf(A), 'modular_hispania/sound/weapons/ram.ogg', 150, 1, -1)
-		if(do_after(usr, 10, target = A))
-			ramming = FALSE
-			user.do_attack_animation(A)
-			to_chat(viewers(user), "<span class='danger'>[user] rams [A]!</span>")
-			if(A.take_damage(dmg_deal, damtype, "melee", 1) < A.obj_integrity) 	//Si el golpe no va destruir la puerta
-				afterattack(A, user, proximity)
-			else
-				var/old_loc = A.loc
-				if(istype(A,/obj/machinery/door/airlock))
-					borrar_asembly = TRUE
-				A.take_damage(dmg_deal, damtype, "melee", 1)
-				if(borrar_asembly)
-					for(var/obj/item/airlock_electronics/D in old_loc)	//destruye el airlock_assembly dropeado
-						qdel(D)
-					for(var/obj/structure/door_assembly/E in old_loc)	//destruye el assembly
-						qdel(E)
+		rammear(A,user)
+	ramming = FALSE
+
+/obj/item/twohanded/required/ram/proc/rammear(obj/A,mob/user)
+	user.do_attack_animation(A)
+	playsound(get_turf(A), 'modular_hispania/sound/weapons/ram.ogg', 150, 1, -1)
+	to_chat(viewers(user), "<span class='danger'>[user] rams [A]!</span>")
+	if(do_after(usr, 10, target = A))
+		if(A.obj_integrity <= 0)	//ya lo destruyo nuestro basico, no hagamos nada
+			return
+		if(A.take_damage(dmg_deal, damtype, "melee", 1) < A.obj_integrity)	//si aun le queda vida vuelve a pegar
+			rammear(A,user)
+		else
+			if(QDELETED(A))	//por las dudas deq ya no exista
+				return
+			var/old_loc = null
+			if(istype(A,/obj/machinery/door/airlock))
+				old_loc = A.loc
+			A.take_damage(dmg_deal, damtype, "melee", 1)	//ultimo hit!!
+			if(old_loc != null)
+				eliminar_restos(old_loc)
+
+/obj/item/twohanded/required/ram/proc/eliminar_restos(old_loc)	//es lo mejor q se puede hacer sin tener q tocar el codigo de los airlocks
+	for(var/obj/item/airlock_electronics/D in old_loc)	//destruye el airlock_assembly dropeado
+		qdel(D)
+	for(var/obj/structure/door_assembly/E in old_loc)	//destruye el assembly
+		qdel(E)
