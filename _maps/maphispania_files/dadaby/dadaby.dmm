@@ -162,17 +162,6 @@
 /obj/structure/sign/securearea,
 /turf/simulated/wall/r_wall,
 /area/security/nuke_storage)
-"aB" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 3;
-	height = 7;
-	id = "mining_home";
-	name = "mining shuttle bay";
-	width = 7
-	},
-/turf/space,
-/area/space)
 "aC" = (
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
@@ -3741,6 +3730,15 @@
 /obj/structure/lattice/catwalk,
 /turf/space,
 /area/solar/auxstarboard)
+"he" = (
+/obj/machinery/door/airlock/external{
+	id_tag = "mining_home";
+	locked = 1;
+	name = "Mining Dock Airlock";
+	req_access_txt = "48"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/miningdock)
 "hf" = (
 /turf/simulated/wall,
 /area/medical/morgue)
@@ -8104,6 +8102,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/landmark/start/quartermaster,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/plasteel{
 	dir = 9;
 	icon_state = "brown"
@@ -10367,7 +10370,13 @@
 /area/crew_quarters/dorms)
 "xC" = (
 /obj/effect/spawner/window/reinforced,
-/obj/structure/cable,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/qm)
 "xD" = (
@@ -11685,6 +11694,9 @@
 	icon_state = "white"
 	},
 /area/toxins/misc_lab)
+"JY" = (
+/turf/simulated/floor/plating,
+/area/quartermaster/miningdock)
 "Kf" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -11892,6 +11904,19 @@
 	},
 /turf/simulated/floor/plasteel/dark,
 /area/crew_quarters/dorms)
+"LR" = (
+/obj/docking_port/stationary{
+	area_type = /area/lavaland/surface/outdoors;
+	dir = 8;
+	dwidth = 3;
+	height = 5;
+	id = "mining_away";
+	name = "lavaland mine";
+	turf_type = /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface;
+	width = 7
+	},
+/turf/space,
+/area/space)
 "LS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -12161,6 +12186,9 @@
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/simulated/floor/plating,
 /area/security/nuke_storage)
+"OW" = (
+/turf/simulated/floor/transparent/glass/reinforced,
+/area/quartermaster/miningdock)
 "Pb" = (
 /obj/machinery/computer/pandemic,
 /turf/simulated/floor/plasteel{
@@ -12282,6 +12310,7 @@
 /area/hallway/primary/central/ne)
 "PK" = (
 /obj/structure/cable,
+/obj/effect/spawner/window/reinforced,
 /turf/simulated/wall/r_wall,
 /area/quartermaster/qm)
 "PL" = (
@@ -12608,6 +12637,9 @@
 /obj/structure/cable,
 /turf/simulated/floor/plasteel,
 /area/engine/controlroom)
+"Sw" = (
+/turf/simulated/wall/r_wall,
+/area/quartermaster/miningdock)
 "SB" = (
 /obj/machinery/chem_dispenser,
 /obj/machinery/firealarm{
@@ -44447,7 +44479,7 @@ aa
 aa
 aa
 aa
-aa
+LR
 aa
 aa
 aa
@@ -44697,15 +44729,15 @@ dA
 Bx
 Ma
 Vc
-dA
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+pH
+Sw
+eh
+eh
+eh
+eh
+eh
+aD
+Sw
 aa
 aa
 aa
@@ -44954,15 +44986,15 @@ dA
 KL
 uO
 Vc
-dA
-aa
-aB
-aa
-aa
-aa
-aa
-aa
-aa
+pH
+Sw
+JY
+OW
+OW
+OW
+OW
+JY
+Sw
 aa
 aa
 aa
@@ -45211,14 +45243,14 @@ dA
 dA
 tn
 Vc
-dA
-eh
-aD
-eh
-qA
-qA
-qA
-aa
+pH
+Sw
+he
+Sw
+Sw
+Sw
+Sw
+Sw
 kC
 kC
 kC
