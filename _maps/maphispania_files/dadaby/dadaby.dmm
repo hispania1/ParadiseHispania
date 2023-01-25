@@ -11462,10 +11462,6 @@
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/auxsolarstarboard)
-"Hv" = (
-/obj/machinery/economy/vending/clothing,
-/turf/space,
-/area/space)
 "Hw" = (
 /obj/structure/table/wood/poker,
 /obj/effect/spawner/lootdrop/maintenance{
@@ -66010,7 +66006,7 @@ aa
 aa
 aa
 aa
-Hv
+aa
 aa
 aa
 aa
