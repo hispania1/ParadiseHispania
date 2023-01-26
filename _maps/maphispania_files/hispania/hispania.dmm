@@ -47997,7 +47997,7 @@
 	req_access_txt = "73"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/apmaint2)
+/area/ntrep)
 "cpg" = (
 /obj/effect/decal/warning_stripes/north,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -48663,7 +48663,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/maintenance/aft)
+/area/medical/psych)
 "crd" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -50540,7 +50540,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plasteel,
-/area/hispania/engine/upper_hall)
+/area/engine/controlroom)
 "cvL" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -54908,6 +54908,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/door/poddoor{
+	density = 0;
+	icon_state = "open";
+	id_tag = "Engineering";
+	name = "Engineering Security Doors";
+	opacity = 0
+	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "cHw" = (
@@ -56674,16 +56681,14 @@
 /turf/simulated/floor/plasteel,
 /area/engine/break_room)
 "cLT" = (
-/obj/effect/spawner/window/reinforced,
-/obj/machinery/door/poddoor{
-	density = 0;
-	icon_state = "open";
-	id_tag = "Engineering";
-	name = "Engineering Security Doors";
-	opacity = 0
+/obj/effect/decal/warning_stripes/yellow/hollow,
+/obj/machinery/camera{
+	c_tag = "Engineering Atmos Storage";
+	network = list("SS13","Engi");
+	dir = 9
 	},
 /turf/simulated/floor/plating,
-/area/hallway/primary/aft)
+/area/storage/secure)
 "cLU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
@@ -56917,11 +56922,8 @@
 /area/maintenance/aft)
 "cMG" = (
 /obj/structure/closet/emcloset,
-/turf/simulated/floor/plasteel{
-	dir = 6;
-	icon_state = "yellow"
-	},
-/area/engine/controlroom)
+/turf/simulated/floor/plasteel,
+/area/hallway/primary/aft)
 "cMH" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan,
 /obj/structure/cable{
@@ -57811,7 +57813,7 @@
 	req_access_txt = "26"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/aft)
+/area/janitor)
 "cOW" = (
 /obj/structure/grille,
 /obj/effect/decal/warning_stripes/north,
@@ -59623,7 +59625,7 @@
 	dir = 9;
 	icon_state = "darkyellow"
 	},
-/area/maintenance/aft)
+/area/hispania/engine/down_hall)
 "cTs" = (
 /obj/structure/closet/secure_closet/atmos_personal,
 /obj/effect/decal/warning_stripes/yellow/hollow,
@@ -59711,7 +59713,7 @@
 	dir = 5;
 	icon_state = "darkyellow"
 	},
-/area/maintenance/aft)
+/area/hispania/engine/down_hall)
 "cTF" = (
 /obj/structure/table,
 /obj/item/radio{
@@ -60589,7 +60591,7 @@
 /obj/machinery/camera{
 	c_tag = "Singularity NorthEast";
 	dir = 8;
-	network = list("SS13","Singularity","Engineering")
+	network = list("SS13","Singularity","Engineerings")
 	},
 /obj/effect/decal/warning_stripes/south,
 /turf/simulated/floor/plating/airless,
@@ -62244,7 +62246,7 @@
 	dir = 1;
 	icon_state = "darkyellow"
 	},
-/area/maintenance/aft)
+/area/hispania/engine/down_hall)
 "dbc" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -62981,7 +62983,7 @@
 	dir = 1;
 	icon_state = "darkyellow"
 	},
-/area/maintenance/aft)
+/area/hispania/engine/down_hall)
 "dcV" = (
 /obj/effect/decal/warning_stripes/west,
 /obj/structure/cable/yellow{
@@ -75013,12 +75015,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/turbine)
 "hdq" = (
-/obj/machinery/computer/security/engineering{
-	network = list("Power Alarms","Atmosphere Alarms","Fire Alarms","Engi")
-	},
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = 24
+	},
+/obj/machinery/computer/security/engineering{
+	network = list("Power Alarms","Atmosphere Alarms","Fire Alarms"s,"Engi", "Engineering")
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -77953,11 +77955,17 @@
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "iVg" = (
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "yellow"
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/conveyor{
+	id = "Skynet_heavy"
 	},
-/area/engine/controlroom)
+/obj/machinery/camera{
+	c_tag = "Engineering Atmos Storage";
+	network = list("SS13","Engi");
+	dir = 9
+	},
+/turf/simulated/floor/plasteel,
+/area/assembly/assembly_line)
 "iVE" = (
 /obj/structure/chair/stool,
 /turf/simulated/floor/plasteel{
@@ -80133,6 +80141,11 @@
 /obj/structure/closet/crate/internals,
 /obj/effect/decal/warning_stripes/yellow/hollow,
 /obj/effect/decal/warning_stripes/north,
+/obj/machinery/camera{
+	c_tag = "Engineering Atmos Storage";
+	network = list("SS13","Engi");
+	dir = 10
+	},
 /turf/simulated/floor/plating,
 /area/storage/secure)
 "kAp" = (
@@ -90433,8 +90446,8 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/office)
 "rac" = (
-/obj/machinery/suit_storage_unit/engine,
 /obj/effect/decal/warning_stripes/yellow/hollow,
+/obj/machinery/power/tesla_coil,
 /turf/simulated/floor/plating,
 /area/storage/secure)
 "rao" = (
@@ -92751,7 +92764,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "showroomfloor"
 	},
-/area/maintenance/aft)
+/area/medical/surgery)
 "sAl" = (
 /turf/simulated/floor/plasteel{
 	icon_state = "whitecorner"
@@ -98683,7 +98696,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/aft)
+/area/medical/coldroom)
 "wjs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -99079,7 +99092,7 @@
 	req_access_txt = "67"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/aft)
+/area/blueshield)
 "wyf" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/barricade/wooden,
@@ -99864,10 +99877,6 @@
 /obj/item/circuitboard/mecha_control{
 	pixel_x = 1;
 	pixel_y = -1
-	},
-/obj/item/circuitboard/clothelate{
-	pixel_x = 5;
-	pixel_y = -5
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "darkyellow"
@@ -119480,8 +119489,8 @@ coL
 coL
 coL
 iez
-cgQ
 cAo
+coL
 cWz
 tGO
 hdK
@@ -125655,8 +125664,8 @@ cZw
 cXO
 wyI
 cKb
-cKb
-cKb
+cUQ
+cUQ
 cKb
 cGk
 cSS
@@ -127454,7 +127463,7 @@ cNB
 cKb
 cMw
 cME
-cMx
+iVg
 cMx
 cJx
 gea
@@ -127479,7 +127488,7 @@ vQg
 cQi
 cTc
 dar
-rac
+cpz
 csQ
 cRw
 rSD
@@ -127736,7 +127745,7 @@ dar
 dar
 dar
 dar
-rac
+cpz
 wEx
 cRw
 rSD
@@ -127996,8 +128005,8 @@ xye
 uLN
 wEx
 cRw
-cpz
-cpz
+rac
+rac
 dar
 deV
 dcq
@@ -129276,7 +129285,7 @@ ruR
 cSE
 cSE
 qRu
-cpz
+cLT
 cTD
 lgp
 cRb
@@ -130022,7 +130031,7 @@ dpR
 mqV
 vuD
 aje
-iVg
+cHD
 cMG
 csD
 csD
@@ -131307,14 +131316,14 @@ cGJ
 cGq
 cHj
 cHM
-cLT
-cLH
-cLn
-cOQ
+dAq
+dAq
+csD
+cvB
 cvK
-cOQ
-cLn
-cLn
+cvB
+csD
+csD
 cGl
 cHa
 cSp
