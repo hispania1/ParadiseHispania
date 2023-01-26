@@ -75020,7 +75020,7 @@
 	pixel_x = 24
 	},
 /obj/machinery/computer/security/engineering{
-	network = list("Power Alarms","Atmosphere Alarms","Fire Alarms"s,"Engi","Engineering")
+	network = list("Power Alarms","Atmosphere Alarms","Fire Alarms","Engi","Engineering")
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
