@@ -30,6 +30,11 @@
 	else
 		return 0
 
+/obj/vehicleh/train/Initialize()
+	. = ..()
+	for(var/obj/vehicleh/train/T in orange(1, src))
+		latch(T)
+
 /obj/vehicleh/train/Bump(atom/Obstacle,yes)
 	. = ..()
 	if(!istype(Obstacle, /atom/movable))
@@ -159,7 +164,7 @@
 	update_stats()
 
 /obj/vehicleh/train/proc/latch(obj/vehicleh/train/T, mob/user)
-	if(!istype(T) || !user.Adjacent(T))
+	if(!istype(T) || !Adjacent(T))
 		return 0
 
 	var/T_dir = get_dir(src, T)	//figure out where T is wrt src
