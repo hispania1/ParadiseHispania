@@ -130,11 +130,11 @@
 		to_chat(user, "<span class='warning'>[src] is too far away from [T] to hitch them together.</span>")
 		return
 
-	if (lead)
+	if (lead && user)	//el user es para evitar runtimes de inicio
 		to_chat(user, "<span class='warning'>[src] is already hitched to something.</span>")
 		return
 
-	if (T.tow)
+	if (T.tow && user)
 		to_chat(user, "<span class='warning'>[T] is already towing something.</span>")
 		return
 	//latch with src as the follower
