@@ -23,27 +23,18 @@
 	melee_damage_upper = 2
 	attacktext = "scratch"
 	attack_sound = 'sound/weapons/pierce.ogg'
+	speak_chance = 1
 
-/mob/living/simple_animal/friendly/owl/emote(act, m_type = 1, message = null, force)
-	if(stat != CONSCIOUS)
-		return
+/datum/emote/living/simple_animal/friendly/owl
+	key = "hoot"
+	key_third_person = "hoots"
+	message = "Hoots!"
+	message_simple = "hoots."
+	emote_type = EMOTE_SOUND | EMOTE_MOUTH
+	volume = 80
+	sound = 'modular_hispania/sound/mob/owl_hoot.ogg'
 
-	var/on_CD = 0
-	act = lowertext(act)
-	switch(act)
-		if("hoot")
-			on_CD = start_audio_emote_cooldown(TRUE, 10 SECONDS)
-		else
-			on_CD = 0
-
-	if(!force && on_CD == 1)
-		return
-
-	switch(act)
-		if("hoot")
-			message = "<B>[src]</B> [pick(emote_hear)]!"
-			m_type = 2 //audible
-			playsound(src, owl_sound, 50, 0.75)
-		if("help")
-			to_chat(src, "scream, hoot")
-	return 0
+/mob/living/simple_animal/friendly/owl/handle_automated_speech()
+	..()
+	if(prob(speak_chance) && !incapacitated())
+		playsound(src, owl_sound, 50, 1)
