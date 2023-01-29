@@ -83,6 +83,12 @@
 /area/aisat/entrance{
 	name = "\improper AI Satellite Atmospherics"
 	})
+"aaj" = (
+/obj/machinery/economy/vending/chap,
+/turf/simulated/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/chapel/office)
 "aaQ" = (
 /obj/docking_port/stationary/whiteship{
 	dir = 8;
@@ -141471,7 +141477,7 @@ baz
 bcB
 bcz
 bcz
-bcz
+aaj
 baz
 bjA
 bpM
