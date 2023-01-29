@@ -33,7 +33,7 @@
 	emote_type = EMOTE_SOUND | EMOTE_MOUTH
 	volume = 80
 	sound = 'modular_hispania/sound/mob/owl_hoot.ogg'
-/datum/keybinding/emote/silicon/no
+/datum/keybinding/emote/living/simple_animal/friendly/owl
 	linked_emote = /datum/emote/living/simple_animal/friendly/owl
 	name = "Hoot"
 
