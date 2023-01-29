@@ -139,7 +139,7 @@
 					/obj/item/seeds/random = 2
 					)
 
-//hispania chaplain vending waldrobe
+//hispania chaplains vending waldrobe
 /obj/machinery/economy/vending/chap
 	icon = 'modular_hispania/icons/obj/vending.dmi'
 	icon_state = "chapdrobe"
