@@ -7,7 +7,7 @@
 		if(is_station_level(D.z))
 			D.emergency = 1
 			D.update_icon()
-	GLOB.minor_announcement.Announce("Los accesos de [station_name()] estan teniendo dificultades tecnicas. Porfavor mantengan la calma mientras se reestablecen")
+	GLOB.minor_announcement.Announce(" [station_name()] is having technical difficulties processing station acceses. Please remain calm until its fixed")
 	GLOB.station_all_access = 1
 
 /datum/event/all_access/end()
@@ -15,5 +15,5 @@
 		if(is_station_level(D.z))
 			D.emergency = 0
 			D.update_icon()
-	GLOB.minor_announcement.Announce("Los accesos ya funcionan con normalidad. Muchas gracias")
+	GLOB.minor_announcement.Announce("Station accesses are working back, thank you have a nice day")
 	GLOB.station_all_access = 0
