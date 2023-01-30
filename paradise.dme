@@ -2654,6 +2654,7 @@
 #include "modular_hispania\code\game\objects\items\devices\sensor_device.dm"
 #include "modular_hispania\code\game\objects\items\devices\syndieprototype.dm"
 #include "modular_hispania\code\game\objects\items\miscellaneous\noose.dm"
+#include "modular_hispania\code\game\objects\items\stacks\sheets\sheet_types.dm"
 #include "modular_hispania\code\game\objects\items\weapons\cards_ids.dm"
 #include "modular_hispania\code\game\objects\items\weapons\defib.dm"
 #include "modular_hispania\code\game\objects\items\weapons\handcuffs.dm"
