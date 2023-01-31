@@ -64,14 +64,11 @@ GLOBAL_LIST_INIT(AISwarmerCapsByType, list(/mob/living/simple_animal/hostile/swa
 /mob/living/simple_animal/hostile/megafauna/swarmer_swarm_beacon/Initialize(mapload)
 	. = ..()
 	swarmer_caps = GLOB.AISwarmerCapsByType //for admin-edits
-	var/only_two = 2
 	for(var/ddir in GLOB.cardinal)
 		new /obj/structure/swarmer/blockade (get_step(src, ddir))
 		var/mob/living/simple_animal/hostile/swarmer/ai/resource/R = new(loc)
 		step(R, ddir) //Step the swarmers, instead of spawning them there, incase the turf is solid
-		only_two--
-		if(only_two == 0)
-			break
+		break	//only 1
 
 /mob/living/simple_animal/hostile/megafauna/swarmer_swarm_beacon/Life()
 	. = ..()
