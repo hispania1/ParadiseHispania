@@ -30,6 +30,11 @@
 	else
 		return 0
 
+/obj/vehicleh/train/Initialize()
+	. = ..()
+	for(var/obj/vehicleh/train/T in orange(1, src))
+		latch(T)
+
 /obj/vehicleh/train/Bump(atom/Obstacle,yes)
 	. = ..()
 	if(!istype(Obstacle, /atom/movable))
@@ -125,11 +130,11 @@
 		to_chat(user, "<span class='warning'>[src] is too far away from [T] to hitch them together.</span>")
 		return
 
-	if (lead)
+	if (lead && user)	//el user es para evitar runtimes de inicio
 		to_chat(user, "<span class='warning'>[src] is already hitched to something.</span>")
 		return
 
-	if (T.tow)
+	if (T.tow && user)
 		to_chat(user, "<span class='warning'>[T] is already towing something.</span>")
 		return
 	//latch with src as the follower
@@ -159,7 +164,7 @@
 	update_stats()
 
 /obj/vehicleh/train/proc/latch(obj/vehicleh/train/T, mob/user)
-	if(!istype(T) || !user.Adjacent(T))
+	if(!istype(T) || !Adjacent(T))
 		return 0
 
 	var/T_dir = get_dir(src, T)	//figure out where T is wrt src

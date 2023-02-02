@@ -169,21 +169,22 @@
 #define MFOAM_IRON 		2
 
 //Human Overlays Indexes/////////
-#define OVER_SHOE_LAYER			42 // HISPANIA CHANGES START & END sirve para que la ropa renderee por encima de los zapatos, si no los zapatos toman prioridad.
-#define WING_LAYER				41
-#define WING_UNDERLIMBS_LAYER	40
-#define MUTANTRACE_LAYER		39
-#define TAIL_UNDERLIMBS_LAYER	38	//Tail split-rendering.
-#define LIMBS_LAYER				37
-#define INTORGAN_LAYER			36
-#define MARKINGS_LAYER			35
-#define UNDERWEAR_LAYER			34
-#define MUTATIONS_LAYER			33
-#define H_DAMAGE_LAYER			32
-#define UNIFORM_LAYER			31
-#define ID_LAYER				30
-#define HANDS_LAYER				29	//Exists to overlay hands over jumpsuits
-#define SHOES_LAYER				28
+ // HISPANIA CHANGES START & END sirve para que la ropa renderee por encima de los zapatos, si no los zapatos toman prioridad.
+#define WING_LAYER				42
+#define WING_UNDERLIMBS_LAYER	41
+#define MUTANTRACE_LAYER		40
+#define TAIL_UNDERLIMBS_LAYER	39	//Tail split-rendering.
+#define LIMBS_LAYER				38
+#define INTORGAN_LAYER			37
+#define MARKINGS_LAYER			36
+#define UNDERWEAR_LAYER			35
+#define MUTATIONS_LAYER			34
+#define H_DAMAGE_LAYER			33
+#define UNIFORM_LAYER			32
+#define ID_LAYER				31
+#define HANDS_LAYER				30	//Exists to overlay hands over jumpsuits
+#define SHOES_LAYER				29
+#define OVER_SHOE_LAYER			28
 #define GLOVES_LAYER			27
 #define EARS_LAYER				26
 #define SUIT_LAYER				25
