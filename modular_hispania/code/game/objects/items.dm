@@ -1,5 +1,5 @@
 /obj/item
-  var/pixelYoffset = 0
+	var/pixelYoffset = 0
 	var/hispania_icon = FALSE
 
 /obj/item/proc/swapped(mob/usr)
