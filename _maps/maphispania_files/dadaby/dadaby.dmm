@@ -119,7 +119,11 @@
 /obj/machinery/door/airlock/public/glass{
 	name = "Barber Shop"
 	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_regular_floor = "yellowsiding";
+	icon_state = "tranquillite"
+	},
 /area/hallway/primary/central/ne)
 "aW" = (
 /turf/simulated/wall,
@@ -789,7 +793,10 @@
 /area/atmos)
 "cT" = (
 /obj/vehicle/janicart,
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "purple"
+	},
 /area/janitor)
 "de" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -835,7 +842,10 @@
 	pixel_y = -24
 	},
 /obj/structure/janitorialcart,
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "purple"
+	},
 /area/janitor)
 "dp" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -1173,7 +1183,10 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "purple"
+	},
 /area/janitor)
 "eu" = (
 /turf/simulated/wall,
@@ -1216,7 +1229,10 @@
 	dir = 1;
 	pixel_x = -28
 	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "purple"
+	},
 /area/janitor)
 "eB" = (
 /obj/machinery/optable,
@@ -4908,7 +4924,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "whitepurplefull"
+	},
 /area/janitor)
 "pE" = (
 /obj/structure/cable{
@@ -5725,7 +5744,10 @@
 	scrub_N2O = 1;
 	scrub_Toxins = 1
 	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "whitepurplefull"
+	},
 /area/janitor)
 "sk" = (
 /obj/machinery/blackbox_recorder,
@@ -5792,7 +5814,10 @@
 	dir = 8;
 	pixel_x = -24
 	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "purple"
+	},
 /area/janitor)
 "sr" = (
 /obj/structure/cable{
@@ -5802,7 +5827,10 @@
 	},
 /obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "whitepurplefull"
+	},
 /area/janitor)
 "st" = (
 /obj/structure/cable{
@@ -5914,7 +5942,10 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/janitor,
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "whitepurplefull"
+	},
 /area/janitor)
 "sV" = (
 /obj/structure/table/wood,
@@ -8427,7 +8458,6 @@
 /obj/structure/sign/poster/contraband/random{
 	pixel_y = 32
 	},
-/mob/living/simple_animal/mouse,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
 	dir = 1
@@ -8440,6 +8470,7 @@
 	lootcount = 8;
 	name = "8maintenance loot spawner"
 	},
+/mob/living/simple_animal/mouse,
 /turf/simulated/floor/wood{
 	icon_state = "wood-broken"
 	},
@@ -8942,8 +8973,8 @@
 	pixel_x = 10;
 	pixel_y = 2
 	},
-/mob/living/simple_animal/mouse/brown/Tom,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/mouse/brown/Tom,
 /turf/simulated/floor/plasteel{
 	icon_state = "vault"
 	},
@@ -9711,6 +9742,13 @@
 /obj/effect/landmark/start/assistant,
 /turf/simulated/floor/plasteel,
 /area/hallway/primary/central/ne)
+"Io" = (
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_regular_floor = "yellowsiding";
+	icon_state = "tranquillite"
+	},
+/area/hallway/primary/central/ne)
 "Ir" = (
 /obj/machinery/suit_storage_unit/cmo/secure/sec_storage,
 /obj/effect/decal/warning_stripes/yellow/hollow,
@@ -10351,16 +10389,16 @@
 	},
 /area/hallway/primary/central/ne)
 "Lq" = (
-/mob/living/simple_animal/pig,
-/mob/living/simple_animal/pig,
 /obj/structure/closet/secure_closet/freezer/meat,
-/mob/living/simple_animal/cow/betsy,
-/mob/living/simple_animal/chicken/clucky,
-/mob/living/simple_animal/cow/betsy,
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/machinery/light{
 	dir = 1
 	},
+/mob/living/simple_animal/pig,
+/mob/living/simple_animal/pig,
+/mob/living/simple_animal/cow/betsy,
+/mob/living/simple_animal/chicken/clucky,
+/mob/living/simple_animal/cow/betsy,
 /turf/simulated/floor/grass,
 /area/crew_quarters/kitchen)
 "Lt" = (
@@ -11593,9 +11631,9 @@
 	},
 /area/quartermaster/office)
 "Qs" = (
-/mob/living/simple_animal/mouse/brown/Tom,
 /obj/item/trash/popcorn,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/mouse/brown/Tom,
 /turf/simulated/floor/plasteel,
 /area/security/nuke_storage)
 "Qu" = (
@@ -11743,17 +11781,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/chair/stool/bar,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "Rh" = (
@@ -13012,7 +13040,6 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads)
 "WK" = (
-/mob/living/simple_animal/mouse/brown/Tom,
 /obj/item/stack/spacecash/c10000{
 	pixel_y = 14;
 	pixel_x = 9
@@ -13020,6 +13047,7 @@
 /obj/item/trash/spentcasing,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/maintenance,
+/mob/living/simple_animal/mouse/brown/Tom,
 /turf/simulated/floor/plasteel,
 /area/security/nuke_storage)
 "WP" = (
@@ -13254,7 +13282,10 @@
 	c_tag = "Janitor's Office";
 	dir = 4
 	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "purple"
+	},
 /area/janitor)
 "Yh" = (
 /obj/structure/lattice/catwalk,
@@ -54750,8 +54781,8 @@ jT
 yD
 YZ
 aV
-id
-id
+Io
+Io
 Nj
 ly
 Xu
@@ -55007,8 +55038,8 @@ jT
 Hg
 YZ
 aV
-id
-id
+Io
+Io
 Wh
 ly
 Xu
