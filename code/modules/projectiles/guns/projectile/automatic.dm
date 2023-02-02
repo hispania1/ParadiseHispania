@@ -1,3 +1,6 @@
+// HISPANIA USA SU PROPIO AUTOMATIC.DM
+// modular_hispania/modules/projectiles/guns/projectile/automatic.dm
+
 /obj/item/gun/projectile/automatic
 	w_class = WEIGHT_CLASS_NORMAL
 	var/alarmed = 0
@@ -75,7 +78,7 @@
 		alarmed = 1
 
 //Saber SMG//
-/obj/item/gun/projectile/automatic/proto
+/obj/item/gun/projectile/automatic/fullauto/twomode/proto
 	name = "\improper Nanotrasen Saber SMG"
 	desc = "A rejected prototype three-round burst 9mm submachine gun, designated 'SABR'. Surplus of this model are bouncing around armories of Nanotrasen Space Stations. Has a threaded barrel for suppressors."
 	icon_state = "saber"

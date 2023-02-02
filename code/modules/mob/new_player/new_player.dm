@@ -358,7 +358,7 @@
 	SSticker.equip_cuis(character) // Gives them their CUIs
 
 	SSticker.mode.latespawn(character)
-
+	give_latejoiners_nations(character)	//HISPANIA CHANGES START & END HERE
 	if(character.mind.assigned_role == "Cyborg")
 		AnnounceCyborg(character, rank, join_message)
 	else
