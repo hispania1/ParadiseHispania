@@ -58,6 +58,11 @@
 	SetJitter(0)
 	SetLoseBreath(0)
 
+	// HISPANIA STARTS HERE
+	if(client)
+		kill_CH() //We dead... clear any prepared abilities...
+	// HISPANIA ENDS HERE
+
 	if(!gibbed && deathgasp_on_death)
 		emote("deathgasp")
 
