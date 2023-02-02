@@ -57,6 +57,15 @@
 	},
 /turf/space,
 /area/space)
+"ai" = (
+/obj/structure/chair/stool/bar,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
 "aj" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -5766,16 +5775,6 @@
 	dir = 4;
 	initialize_directions = 11
 	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/bar)
-"mR" = (
-/obj/structure/chair/stool/bar,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/landmark/spawner/feedmespawn,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "mT" = (
@@ -50031,7 +50030,7 @@ Cf
 ul
 aY
 bh
-mR
+ai
 bm
 iX
 jj
