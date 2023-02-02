@@ -482,7 +482,7 @@
 	new /obj/item/ammo_box/magazine/smgm45(src)
 	new /obj/item/ammo_box/magazine/smgm45(src)
 	new /obj/item/ammo_box/magazine/smgm45(src)
-	new /obj/item/gun/projectile/automatic/c20r(src)
+	new /obj/item/gun/projectile/automatic/fullauto/twomode/c20r(src)
 	new /obj/item/suppressor/specialoffer(src)
 
 /obj/item/storage/backpack/duffel/syndie/bulldogbundle

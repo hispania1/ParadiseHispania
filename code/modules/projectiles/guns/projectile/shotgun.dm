@@ -17,6 +17,7 @@
 	fire_sound = 'sound/weapons/gunshots/gunshot_shotgun.ogg'
 	var/recentpump = 0 // to prevent spammage
 	weapon_weight = WEAPON_HEAVY
+	pb_knockback = 1
 
 /obj/item/gun/projectile/shotgun/detailed_examine()
 	return "This is a ballistic weapon. After firing, you will need to pump the gun, by clicking on the gun in your hand. To reload, load more shotgun \
@@ -318,6 +319,7 @@
 	origin_tech = "combat=6"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/com
 	w_class = WEIGHT_CLASS_HUGE
+	pb_knockback = 2
 
 //Dual Feed Shotgun
 

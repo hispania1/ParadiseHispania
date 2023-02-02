@@ -211,7 +211,6 @@
 	return 0
 
 
-
 //This is a SAFE proc. Use this instead of equip_to_slot()!
 //set del_on_fail to have it delete W if it fails to equip
 //set disable_warning to disable the 'you are unable to equip that' warning.
@@ -228,6 +227,7 @@
 		return 0
 
 	equip_to_slot(W, slot, initial) //This proc should not ever fail.
+	W.hotkeyequip(src)
 	return 1
 
 //This is an UNSAFE proc. It merely handles the actual job of equipping. All the checks on whether you can or can't eqip need to be done before! Use mob_can_equip() for that task.
