@@ -5,6 +5,12 @@ respectivos sprites en las carpetas de iconos de hispania , es decir modular_his
 deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE"*/
 
 // Captain Formal uniform by Danaleja
+/obj/item/clothing/under/rank/chaplain
+	icon = 'modular_hispania/icons/obj/clothing/under/medical.dmi'
+	sprite_sheets = list(
+		"Human" = 'modular_hispania/icons/mob/uniform.dmi',
+	)
+
 /obj/item/clothing/under/rank/command/captain/formal/dark
 	name = "captain's formal blue uniform"
 	desc = "A nice and formal uniform made of silk, only for station captains. Made by D&N Corp."
@@ -41,6 +47,7 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	icon_state = "elzrafem"
 	item_state = "elzrafem"
 	item_color = "elzrafem"
+	hispania_icon = TRUE
 	over_shoe = TRUE
 
 /obj/item/clothing/under/rank/chaplain/alt
