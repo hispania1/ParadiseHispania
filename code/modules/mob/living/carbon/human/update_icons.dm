@@ -897,6 +897,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts)
 		standing.alpha = head.alpha
 		standing.color = head.color
 		overlays_standing[HEAD_LAYER] = standing
+		standing.pixel_y = head.pixelYoffset //HISPANIA CHANGES START & END
 	apply_overlay(HEAD_LAYER)
 
 /mob/living/carbon/human/update_inv_belt()
