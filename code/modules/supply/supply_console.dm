@@ -190,6 +190,12 @@
 		ui = new(user, src, ui_key, "CargoConsole", name, 900, 800, master_ui, state)
 		ui.open()
 
+/obj/machinery/computer/supplycomp
+	var/tiempo = 60 SECONDS
+
+/obj/machinery/computer/supplycomp/proc/disminuir()
+	tiempo -= 10 SECONDS
+
 /obj/machinery/computer/supplycomp/ui_data(mob/user)
 	var/list/data = list()
 
@@ -200,7 +206,7 @@
 	data["is_public"] = is_public
 	data["moving"] = SSshuttle.supply.mode != SHUTTLE_IDLE
 	data["at_station"] = SSshuttle.supply.getDockedId() == "supply_home"
-	data["timeleft"] = SSshuttle.supply.timeLeft(60 SECONDS)
+	data["timeleft"] = SSshuttle.supply.timeLeft(tiempo)
 	data["can_launch"] = !SSshuttle.supply.canMove()
 
 	return data
