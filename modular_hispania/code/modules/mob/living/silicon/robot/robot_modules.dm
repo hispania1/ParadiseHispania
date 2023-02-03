@@ -32,3 +32,7 @@
 
 	fix_modules()
 
+/obj/item/robot_module/janitor/Initialize(mapload)
+	..()
+	var/list/hispa = (/obj/item/clothing/head/plunger)
+	basic_modules |= hispa
