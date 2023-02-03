@@ -138,3 +138,32 @@
 					/obj/item/seeds/money = 2,
 					/obj/item/seeds/random = 2
 					)
+
+//hispania chaplains vending waldrobe
+/obj/machinery/economy/vending/chap
+	icon = 'modular_hispania/icons/obj/vending.dmi'
+	icon_state = "chapdrobe"
+	icon_vend = "chapdrobe-vend"
+	name = "\improper Chaplain's Walldrobe"
+	req_access = list(ACCESS_CHAPEL_OFFICE)
+	products = list(/obj/item/clothing/under/rank/civilian/chaplain = 1,
+					/obj/item/clothing/shoes/black = 1,
+					/obj/item/clothing/suit/hooded/nun = 1,
+					/obj/item/clothing/suit/hooded/chaplain_hoodie = 1,
+					/obj/item/clothing/suit/hooded/monk = 1,
+					/obj/item/clothing/suit/witchhunter = 1,
+					/obj/item/clothing/head/witchhunter_hat = 1,
+					/obj/item/clothing/suit/holidaypriest = 1,
+					/obj/item/clothing/under/dress/wedding/bride_white = 1,
+					/obj/item/clothing/suit/storage/labcoat = 1,
+					/obj/item/clothing/under/rank/chaplain/elzra = 1,
+					/obj/item/clothing/under/rank/chaplain/elzra/female = 1,
+					/obj/item/clothing/under/rank/chaplain/alt = 1,
+					/obj/item/clothing/under/rank/chaplain/alt/blue = 1,
+					/obj/item/clothing/under/rank/chaplain/cassock = 1,
+					/obj/item/clothing/suit/chasuble = 1,
+					/obj/item/clothing/suit/chasuble/elzra = 1,
+					/obj/item/clothing/head/helmet/riot/knight/templar = 1,
+					/obj/item/clothing/suit/armor/riot/knight/templar = 1,
+					/obj/item/clothing/head/elzrahat = 1,
+					/obj/item/clothing/head/miter = 1)
