@@ -15,5 +15,5 @@
 		if(is_station_level(D.z))
 			D.emergency = 0
 			D.update_icon()
-	GLOB.minor_announcement.Announce("Station accesses are working back, thank you have a nice day")
+	GLOB.minor_announcement.Announce("Station accesses are working back. Have a nice day")
 	GLOB.station_all_access = 0

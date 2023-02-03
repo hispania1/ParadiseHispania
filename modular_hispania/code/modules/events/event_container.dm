@@ -19,6 +19,7 @@
 /datum/event_container/moderate
 	available_events_hispa = list(
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Feed me",					/datum/event/feedme, 			0,		list(ASSIGNMENT_SERVICE = 50)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "All acces",				/datum/event/all_access, 				75,		list(ASSIGNMENT_SECURITY = 100)),
 		)
 
 /datum/event_container/major
