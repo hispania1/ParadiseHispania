@@ -10,7 +10,7 @@
 	/// Vote type text, for showing in UIs and stuff
 	var/vote_type_text = "unset"
 	/// Do we want to show the vote counts as it goes
-	var/show_counts = FALSE
+	var/show_counts = TRUE		//HISPANIA CHANGES START & END HERE
 	/// Vote result type. This determines how a winner is picked
 	var/vote_result_type = VOTE_RESULT_TYPE_MAJORITY
 	/// Was this vote custom started?
@@ -193,6 +193,10 @@
 	switch(action)
 		if("vote")
 			if(params["target"] in choices)
+				//HISPANIA CHANGES START
+				if(!(usr.ckey in voted))
+					to_chat(world, "Un usuario ha votado por [params["target"]]")
+				//HISPANIA CHANGES END
 				voted[usr.ckey] = params["target"]
 			else
 				message_admins("<span class='boldannounce'>\[EXPLOIT]</span> User [key_name_admin(usr)] spoofed a vote in the vote panel!")
