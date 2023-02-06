@@ -94,7 +94,7 @@
 		var/list/access = usr.get_access()
 		if(allowed(usr))
 			authenticated = COMM_AUTHENTICATION_HEAD
-		if(ACCESS_CAPTAIN in access)
+		if(ACCESS_HEADS in access)	//Hispania changes start & end here
 			authenticated = COMM_AUTHENTICATION_CAPT
 			var/mob/living/carbon/human/H = usr
 			var/obj/item/card/id = H.get_idcard(TRUE)
