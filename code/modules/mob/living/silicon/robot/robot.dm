@@ -336,10 +336,10 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 		"Janitor" = image('icons/mob/robots.dmi', "jan-radial"),
 		"Medical" = image('icons/mob/robots.dmi', "med-radial"),
 		"Mining" = image('icons/mob/robots.dmi', "mining-radial"),
-		"Service" = image('icons/mob/robots.dmi', "serv-radial"))
+		"Service" = image('icons/mob/robots.dmi', "serv-radial"),
+		"Security" = image('icons/mob/robots.dmi', "security-radial"))//hispania changes start & end here
 	var/static/list/special_modules = list(
 		"Combat" = image('icons/mob/robots.dmi', "security-radial"),
-		"Security" = image('icons/mob/robots.dmi', "security-radial"),
 		"Destroyer" = image('icons/mob/robots.dmi', "droidcombat"))
 
 	if(mmi?.alien)
