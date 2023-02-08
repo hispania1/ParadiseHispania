@@ -13,6 +13,8 @@
 	strip_delay = 40
 	hispania_icon = TRUE
 	flags = BLOCKHEADHAIR
+	pixelYoffset = 1
+	item_color = null
 
 /obj/item/clothing/head/miter
 	name = "Miter"
@@ -21,3 +23,4 @@
 	item_state = "miter"
 	strip_delay = 40
 	hispania_icon = TRUE
+	pixelYoffset = 5

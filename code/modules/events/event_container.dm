@@ -7,13 +7,6 @@
 #define ASSIGNMENT_MEDICAL "Medical"
 #define ASSIGNMENT_SCIENTIST "Scientist"
 #define ASSIGNMENT_SECURITY "Security"
-//HISPANIA CHANGES START
-#define ASSIGNMENT_SERVICE "Service"
-#define ASSIGMENT_CHAPLAIN "Chaplain"
-#define ASSIGMENT_CARGO "Cargo"
-#define ASSIGMENT_RD "RD"
-
-//HISPANIA CHANGES END
 
 GLOBAL_LIST_INIT(severity_to_string, list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT_LEVEL_MODERATE = "Moderate", EVENT_LEVEL_MAJOR = "Major"))
 GLOBAL_LIST_EMPTY(event_last_fired)
@@ -147,7 +140,7 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Sentience",			/datum/event/sentience,			50),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Wallrot",			/datum/event/wallrot, 			0,		list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_BOTANIST = 50)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Koi School",		/datum/event/carp_migration/koi,		80),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Disease Outbreak",	/datum/event/disease_outbreak, 			50,		list(ASSIGNMENT_MEDICAL = 50), TRUE)
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Disease Outbreak",	/datum/event/disease_outbreak, 			50,		list(ASSIGNMENT_MEDICAL = 50), TRUE),
 	)
 
 /datum/event_container/moderate
@@ -164,7 +157,7 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Communication Blackout",	/datum/event/communications_blackout,	500,	list(ASSIGNMENT_AI = 150, ASSIGNMENT_SECURITY = 120)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Prison Break",				/datum/event/prison_break,				0,		list(ASSIGNMENT_SECURITY = 100)),
 		//new /datum/event_meta(EVENT_LEVEL_MODERATE, "Virology Breach",			/datum/event/prison_break/virology,		0,		list(ASSIGNMENT_MEDICAL = 100)),
-		//new /datum/event_meta(EVENT_LEVEL_MODERATE, "Xenobiology Breach",		/datum/event/prison_break/xenobiology,	0,		list(ASSIGNMENT_SCIENCE = 100)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Xenobiology Breach",		/datum/event/prison_break/xenobiology,	0,		list(ASSIGNMENT_SCIENCE = 100)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "APC Short",				/datum/event/apc_short, 				200,	list(ASSIGNMENT_ENGINEER = 60)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Electrical Storm",			/datum/event/electrical_storm, 			250,	list(ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_JANITOR = 150)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Radiation Storm",			/datum/event/radiation_storm, 			25,		list(ASSIGNMENT_MEDICAL = 50), TRUE),
@@ -189,10 +182,6 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disease Outbreak",			/datum/event/disease_outbreak, 			0,		list(ASSIGNMENT_MEDICAL = 150), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Door Runtime",				/datum/event/door_runtime,				50,		list(ASSIGNMENT_ENGINEER = 25, ASSIGNMENT_AI = 150), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Carp Migration",			/datum/event/carp_migration,			10,		list(ASSIGNMENT_SECURITY =  30), TRUE),
-
-		//HISPANIA CHANGES START
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Feed me",					/datum/event/feedme, 					0,		list(ASSIGNMENT_SERVICE = 50))
-		//HISPANIA CHANGES END
 	)
 
 /datum/event_container/major
@@ -221,9 +210,3 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 #undef ASSIGNMENT_MEDICAL
 #undef ASSIGNMENT_SCIENTIST
 #undef ASSIGNMENT_SECURITY
-//HISPANIA CHANGES START
-#undef ASSIGNMENT_SERVICE
-#undef ASSIGMENT_CHAPLAIN
-#undef ASSIGMENT_RD
-#undef ASSIGMENT_CARGO
-//HISPANIA CHANGES END
