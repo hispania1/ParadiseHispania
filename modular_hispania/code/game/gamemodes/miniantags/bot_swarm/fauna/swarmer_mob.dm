@@ -88,6 +88,11 @@ GLOBAL_LIST_INIT(AISwarmerCapsByType, list(/mob/living/simple_animal/hostile/swa
 /mob/living/simple_animal/hostile/megafauna/swarmer_swarm_beacon/emp_act(severity)
 	adjustHealth(50)
 
+/mob/living/simple_animal/hostile/megafauna/swarmer_swarm_beacon/Destroy()
+	new /obj/item/deactivated_swarmer(get_turf(src))
+	new /obj/item/deactivated_swarmer(get_turf(src))
+	. = ..()
+
 /obj/item/gps/internal/swarmer_beacon
 	icon_state = null
 	gpstag = "Hungry Signal"

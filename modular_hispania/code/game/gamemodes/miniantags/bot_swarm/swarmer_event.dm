@@ -1,6 +1,6 @@
 /datum/event/spawn_swarmer
-	startWhen = 3 //30 minutes
-	announceWhen = 10
+	startWhen = 3
+	announceWhen = 50
 
 /datum/event/spawn_swarmer/announce()
 	if(prob(100)) //always announce
