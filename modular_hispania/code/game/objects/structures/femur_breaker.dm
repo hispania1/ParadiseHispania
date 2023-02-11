@@ -55,8 +55,8 @@
 		if(BREAKER_SLAT_RAISED)
 			if(LAZYLEN(buckled_mobs))
 				if(user.a_intent == INTENT_HARM)
-					//if(user.buckled || user.incapacitated())//no se puede usar en uno mismo
-					//	return
+					if(user.buckled || user.incapacitated())//no se puede usar en uno mismo
+						return
 					user.visible_message("<span class='warning'>[user] begins to pull the lever!</span>",
 						                 "<span class='warning'>You begin to the pull the lever.</span>")
 					current_action = BREAKER_ACTION_INUSE

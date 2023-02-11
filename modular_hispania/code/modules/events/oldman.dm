@@ -3,7 +3,7 @@
 /datum/event/spawn_oldman
 	announceWhen = 20
 	endWhen		 = 30
-	var/successSpawn = FALSE
+	var/successSpawn = TRUE
 	var/key_of_oldman
 
 /datum/event/spawn_oldman/announce()
@@ -16,12 +16,14 @@
 		if(!candidates.len)
 			key_of_oldman = null
 			kill()
+			successSpawn = FALSE
 			return
 		var/mob/C = pick(candidates)
 		key_of_oldman = C.key
 
 		if(!key_of_oldman)
 			kill()
+			successSpawn = FALSE
 			return
 
 		var/datum/mind/player_mind = new /datum/mind(key_of_oldman)
