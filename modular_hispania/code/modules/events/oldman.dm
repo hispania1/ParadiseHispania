@@ -1,7 +1,7 @@
 #define SPECIAL_ROLE_OLD_MAN "Old Man"
 
 /datum/event/spawn_oldman
-	announceWhen = 15
+	announceWhen = 25
 	endWhen		 = 30
 	var/successSpawn = TRUE
 	var/key_of_oldman
@@ -52,6 +52,10 @@
 		message_admins("[key_name_admin(SCP)] has been made into the Old Man by an event.")
 		log_game("[key_name_admin(SCP)] was spawned as the Old Man by an event.")
 		successSpawn = TRUE
+		var/oldman_report = "<font size=3><b>NAS Trurl High-Priority Update</b></span>"
+		oldman_report += "<br><br>Our long-range sensors have detected paranormal activity emanating from your station. There is not much information but a femur breaker seems to be its weakness. Build one and use it with a living being. We highly recommend using perma-prisoners or non-crewmembers for this horrible task"
+		print_command_report(oldman_report, "Classified NAS Trurl Update", FALSE)
+		GLOB.event_announcement.Announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/AI/commandreport.ogg')
 
 /datum/event/spawn_oldman/start()
 	get_oldman()

@@ -109,24 +109,26 @@
 		return
 	if(dimension)
 		return
-	if(isliving(target) && (!client || a_intent == INTENT_HARM))
-		if(istype(loc,/turf/simulated/wall))
+	if(isliving(target))
+		if(istype(loc,/turf/simulated/wall))//si estoy en un muro
 			to_chat(src, "<span class ='warning'>You cannot reach them!</span>")
 			return
 		attack_sound = pick(list('modular_hispania/sound/effects/oldman/gasp1.ogg','modular_hispania/sound/effects/oldman/gasp2.ogg','modular_hispania/sound/effects/oldman/sludge.ogg'))
-		var/mob/living/carbon/human/L = target
-		if(L.mind.isblessed)
-			if(prob(25))
-				do_attack_animation(L)
-				playsound(src, 'sound/items/trayhit2.ogg', 50, FALSE)
-				visible_message("<span class='notice'>[L.name]'s holy aura blocks the attack!</span>")
-		L.adjustStaminaLoss(20)
-		L.adjustToxLoss(3)
-		if(ishuman(L) && !HAS_TRAIT(L, TRAIT_NOGERMS))
-			if(prob(5))
-				for(var/obj/item/organ/external/P in (L.bodyparts))
-					P.germ_level += INFECTION_LEVEL_ONE //cada golpe tiene una prob de infectar
-	..()
+		if(ishuman(target))
+			var/mob/living/carbon/human/L = target
+			if((L.mind) && (L.mind.isblessed))
+				if(prob(25))
+					do_attack_animation(L)
+					playsound(src, 'sound/items/trayhit2.ogg', 50, FALSE)
+					visible_message("<span class='notice'>[L.name]'s holy aura blocks the attack!</span>")
+					return
+			L.adjustStaminaLoss(20)
+			L.adjustToxLoss(3)
+			if(!HAS_TRAIT(L, TRAIT_NOGERMS))
+				if(prob(5))
+					for(var/obj/item/organ/external/P in (L.bodyparts))
+						P.germ_level += INFECTION_LEVEL_ONE //cada golpe tiene una prob de infectar
+	. = ..()
 
 /mob/living/simple_animal/hostile/oldman/hitby(atom/movable/AM, datum/thrownthing/throwingdatum) //No floor tiling them to death, wiseguy
 	if(istype(AM, /obj/item))
