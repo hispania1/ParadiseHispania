@@ -24,6 +24,7 @@
 /datum/event_container/major
 	available_events_hispa = list(
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Old Man",		/datum/event/spawn_oldman,	10,		list(ASSIGNMENT_SECURITY = 5), TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Swarmer Spawn", 		/datum/event/spawn_swarmer, 	10, 	list(ASSIGNMENT_SECURITY = 4),is_one_shot = TRUE),
 		)
 
 #undef ASSIGNMENT_SERVICE

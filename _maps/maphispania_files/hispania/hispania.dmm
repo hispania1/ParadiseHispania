@@ -630,6 +630,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "vault"
@@ -1588,6 +1591,8 @@
 	dir = 1;
 	layer = 2.9
 	},
+/obj/item/gun/projectile/automatic/fullauto/wt550,
+/obj/item/gun/projectile/automatic/fullauto/wt550,
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "vault"
@@ -2262,6 +2267,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/item/twohanded/required/ram,
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "vault"
