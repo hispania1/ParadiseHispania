@@ -1,7 +1,7 @@
 #define SPECIAL_ROLE_OLD_MAN "Old Man"
 
 /datum/event/spawn_oldman
-	announceWhen = 20
+	announceWhen = 15
 	endWhen		 = 30
 	var/successSpawn = TRUE
 	var/key_of_oldman
