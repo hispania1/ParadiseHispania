@@ -23,6 +23,7 @@
 
 /datum/event_container/major
 	available_events_hispa = list(
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Old Man",		/datum/event/spawn_oldman,	10,		list(ASSIGNMENT_SECURITY = 5), TRUE),
 		)
 
 #undef ASSIGNMENT_SERVICE
