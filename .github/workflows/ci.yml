@@ -27,6 +27,7 @@ jobs:
           tools/ci/check_json.sh
           tools/ci/build_tgui.sh
           tools/ci/check_grep.sh
+          tools/bootstrap/python tools/validate_dme.py <paradise.dme
           python3 tools/ci/check_line_endings.py
           ~/dreamchecker > ${GITHUB_WORKSPACE}/output-annotations.txt 2>&1
       - name: Annotate Lints
