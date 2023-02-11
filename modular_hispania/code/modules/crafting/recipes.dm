@@ -7,7 +7,7 @@
 
 /datum/crafting_recipe/femur_breaker
 	name = "Femur Breaker"
-	result = /obj/structure/femur_breaker
+	result = list(/obj/structure/femur_breaker)
 	time = 150
 	reqs = list(/obj/item/stack/sheet/plasteel = 10,
 				/obj/item/stack/sheet/plastic = 2,
