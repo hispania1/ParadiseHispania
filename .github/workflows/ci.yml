@@ -21,7 +21,6 @@ jobs:
       - name: Install Tools
         run: |
           pip3 install setuptools
-          tools/ci/install_build_tools.sh
           bash tools/ci/install_build_deps.sh
           bash tools/ci/install_dreamchecker.sh
           tools/bootstrap/python -c ''
