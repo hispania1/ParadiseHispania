@@ -22,6 +22,7 @@ jobs:
         run: |
           bash tools/ci/install_build_deps.sh
           bash tools/ci/install_dreamchecker.sh
+          tools/bootstrap/python -c ''
       - name: Run Linters
         run: |
           tools/ci/check_json.sh
