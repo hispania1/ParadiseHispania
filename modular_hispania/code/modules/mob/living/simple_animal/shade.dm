@@ -28,7 +28,7 @@
 /obj/effect/proc_holder/spell/endure/cast(list/targets, mob/living/user = usr)
 	for(var/obj/item/nullrod/scythe/talking/A in world)
 		if(A.name == user.name)//esto es horrible pero por como funciona el codigo de los shade no queda otra
-			playsound(user.loc, 'modular_hispania/sound/effects/endure.ogg', 70, TRUE)
+			playsound(A.loc, 'modular_hispania/sound/effects/endure.ogg', 70, TRUE)
 			A.add_atom_colour("#FF0000", TEMPORARY_COLOUR_PRIORITY)
 			A.force += 20
 			spawn(100) //10sec
