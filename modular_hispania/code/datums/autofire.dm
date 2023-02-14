@@ -105,7 +105,8 @@
 		return FALSE
 	if(!isturf(owner.mob.loc)) // This stops from firing full auto weapons inside closets or in /obj/effect/dummy/chameleon chameleon projector
 		return FALSE
-
+	if(isobserver(owner.mob))	// prevents ghosts from firing
+		return FALSE
 	object = resolve_world_target(object, location, control, params)
 	if(object)
 		target = object
