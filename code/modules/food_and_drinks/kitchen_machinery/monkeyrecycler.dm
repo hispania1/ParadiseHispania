@@ -96,7 +96,7 @@ GLOBAL_LIST_EMPTY(monkey_recyclers)
 					playsound(loc, 'sound/machines/juicer.ogg', 50, 1)
 					var/offset = prob(50) ? -2 : 2
 					animate(src, pixel_x = pixel_x + offset, time = 0.2, loop = 200) //start shaking
-					use_power(500)
+					power_state(500)
 					grinded++
 					sleep(50)
 					pixel_x = initial(pixel_x)

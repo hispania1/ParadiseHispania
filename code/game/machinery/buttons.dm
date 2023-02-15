@@ -65,7 +65,7 @@
 
 	add_fingerprint(user)
 
-	use_power(5)
+	power_state(5)
 
 	// Start us off
 	launch_sequence()
@@ -148,7 +148,7 @@
 	if(active)
 		return
 
-	use_power(5)
+	power_state(5)
 
 	active = TRUE
 	icon_state = "launcheract"
@@ -159,7 +159,7 @@
 
 	for(var/obj/machinery/igniter/M in GLOB.machines)
 		if(M.id == id)
-			use_power(50)
+			power_state(50)
 			M.on = !M.on
 			M.icon_state = "igniter[M.on]"
 

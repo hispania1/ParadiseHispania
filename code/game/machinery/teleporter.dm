@@ -387,7 +387,7 @@
 			visible_message("<span class='warning'>[src] emits a loud buzz, as its teleport portal flickers and fails!</span>")
 			playsound(loc, 'sound/machines/buzz-sigh.ogg', 50, FALSE)
 			power_station.toggle() // turn off the portal.
-		use_power(5000)
+		power_state(5000)
 	return
 
 /obj/machinery/teleport/hub/attackby(obj/item/I, mob/user, params)
@@ -477,7 +477,7 @@
 
 	if(target && !recalibrating && !panel_open && !blockAI(A))
 		do_teleport(A, target)
-		use_power(5000)
+		power_state(5000)
 		if(tele_delay)
 			recalibrating = TRUE
 			update_icon(UPDATE_ICON_STATE | UPDATE_OVERLAYS)
@@ -649,7 +649,7 @@
 		return
 	if(teleporter_console.target)
 		engaged = !engaged
-		use_power(5000)
+		power_state(5000)
 		visible_message("<span class='notice'>Teleporter [engaged ? "" : "dis"]engaged!</span>")
 	else
 		visible_message("<span class='alert'>No target detected.</span>")

@@ -368,7 +368,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			linked_destroy.icon_state = "d_analyzer"
 
 	linked_destroy.busy = FALSE
-	use_power(DECONSTRUCT_POWER)
+	power_state(DECONSTRUCT_POWER)
 	menu = MENU_MAIN
 	submenu = SUBMENU_MAIN
 	SStgui.update_uis(src)
@@ -428,7 +428,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 		flick("circuit_imprinter_ani", machine)
 
 	machine.busy = TRUE
-	use_power(power)
+	power_state(power)
 
 	var/list/efficient_mats = list()
 	for(var/MAT in being_built.materials)

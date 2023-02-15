@@ -63,7 +63,7 @@
 /obj/machinery/snow_machine/process()
 	if(power_used_this_cycle)
 		power_used_this_cycle /= power_efficiency
-		use_power(power_used_this_cycle)
+		power_state(power_used_this_cycle)
 		power_used_this_cycle = 0
 	if(!active || !anchored)
 		return

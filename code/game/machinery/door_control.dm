@@ -61,7 +61,7 @@
 		flick("doorctrl-denied",src)
 		return
 
-	use_power(5)
+	power_state(5)
 	icon_state = "doorctrl1"
 	add_fingerprint(user)
 

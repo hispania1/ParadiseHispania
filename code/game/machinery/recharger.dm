@@ -216,7 +216,7 @@
 
 /obj/machinery/recharger/proc/recharge_cell(obj/item/stock_parts/cell/C, power_usage)
 	C.give(C.chargerate * recharge_coeff)
-	use_power(power_usage)
+	power_state(power_usage)
 
 /obj/machinery/recharger/proc/try_recharging_if_possible()
 	var/obj/item/stock_parts/cell/C = get_cell_from(charging)

@@ -351,7 +351,7 @@ GLOBAL_LIST_INIT(cloner_biomass_items, list(\
 			//Also heal some oxyloss ourselves just in case!!
 			occupant.adjustOxyLoss(-10)
 
-			use_power(7500) //This might need tweaking.
+			power_state(7500) //This might need tweaking.
 
 		else if((occupant.cloneloss <= (100 - heal_level)))
 			connected_message("Cloning Process Complete.")
@@ -361,7 +361,7 @@ GLOBAL_LIST_INIT(cloner_biomass_items, list(\
 	else if((!occupant) || (occupant.loc != src))
 		occupant = null
 		update_icon()
-		use_power(200)
+		power_state(200)
 
 //Let's unlock this early I guess.  Might be too early, needs tweaking.
 /obj/machinery/clonepod/attackby(obj/item/I, mob/user, params)

@@ -341,7 +341,7 @@
 			flick("autolathe_o", src)//plays metal insertion animation
 		if(MAT_GLASS)
 			flick("autolathe_r", src)//plays glass insertion animation
-	use_power(min(1000, amount_inserted / 100))
+	power_state(min(1000, amount_inserted / 100))
 	SStgui.update_uis(src)
 
 /obj/machinery/autolathe/attack_ghost(mob/user)
@@ -379,7 +379,7 @@
 	var/power = max(2000, (metal_cost+glass_cost)*multiplier/5)
 	if(can_build(D, multiplier))
 		being_built = list(D, multiplier)
-		use_power(power)
+		power_state(power)
 		icon_state = "autolathe"
 		flick("autolathe_n",src)
 		if(is_stack)

@@ -28,9 +28,9 @@
 				low_power_mode = FALSE
 				update_headlamp()
 		else if(stat == CONSCIOUS)
-			use_power()
+			power_state()
 
-/mob/living/silicon/robot/proc/use_power()
+/mob/living/silicon/robot/proc/power_state()
 	// this check is safe because `cell` is guaranteed to be set when the power cell is functioning
 	if(is_component_functioning("power cell") && cell.charge)
 		if(cell.charge <= 100)

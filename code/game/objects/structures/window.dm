@@ -579,7 +579,7 @@
 	qdel(src)
 
 /obj/machinery/button/windowtint/proc/toggle_tint()
-	use_power(5)
+	power_state(5)
 
 	active = !active
 	update_icon()

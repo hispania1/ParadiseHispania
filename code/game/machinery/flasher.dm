@@ -82,7 +82,7 @@
 	set_light(2, 1, COLOR_WHITE)
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, set_light), 0), 2)
 	last_flash = world.time
-	use_power(1000)
+	power_state(1000)
 
 	for(var/mob/living/L in viewers(src, null))
 		if(get_dist(src, L) > range)
@@ -155,7 +155,7 @@
 	if(active)
 		return
 
-	use_power(5)
+	power_state(5)
 
 	active = TRUE
 	icon_state = "launcheract"

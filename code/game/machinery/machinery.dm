@@ -101,7 +101,7 @@
 	return machine_powernet.has_power(channel)	// return power status of the area
 
 // use active power from the local powernet
-/obj/machinery/proc/use_power(channel, amount)
+/obj/machinery/proc/power_state(channel, amount)
 	if(!has_power())
 		return FALSE
 	if(!channel)
@@ -489,7 +489,7 @@
 
 /obj/machinery/emp_act(severity)
 	if(power_state && !stat)
-		use_power(7500/severity)
+		power_state(7500/severity)
 		. = TRUE
 	..()
 

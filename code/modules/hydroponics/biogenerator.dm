@@ -269,7 +269,7 @@
 
 	stored_plants.Cut()
 	playsound(loc, 'sound/machines/blender.ogg', 50, 1)
-	use_power(plants_processed * 150)
+	power_state(plants_processed * 150)
 	addtimer(CALLBACK(src, PROC_REF(end_processing)), (plants_processed * 5) / productivity)
 
 /obj/machinery/biogenerator/proc/end_processing()

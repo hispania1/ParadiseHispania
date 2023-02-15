@@ -310,7 +310,7 @@
 	for(var/i=1 to seconds)
 		if(stat & (NOPOWER|BROKEN))
 			return FALSE
-		use_power(500)
+		power_state(500)
 		sleep(10)
 	return TRUE
 

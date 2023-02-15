@@ -21,7 +21,7 @@
 		return
 	var/turf/T = get_turf(target)
 	if(T)
-		chassis.use_power(energy_drain)
+		chassis.power_state(energy_drain)
 		do_teleport(chassis, T, tele_precision)
 		return
 
@@ -213,7 +213,7 @@
 		chassis.obj_integrity += min(h_boost, chassis.max_integrity-chassis.obj_integrity)
 		repaired = TRUE
 	if(repaired)
-		if(!chassis.use_power(energy_drain))
+		if(!chassis.power_state(energy_drain))
 			STOP_PROCESSING(SSobj, src)
 			set_ready_state(1)
 	else //no repair needed, we turn off

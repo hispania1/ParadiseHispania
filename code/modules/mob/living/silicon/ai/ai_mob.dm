@@ -358,7 +358,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 		return
 
 	loc = powered_ai.loc
-	use_power(1) // Just incase we need to wake up the power system.
+	power_state(1) // Just incase we need to wake up the power system.
 
 	..()
 

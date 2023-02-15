@@ -90,7 +90,7 @@
 		return
 
 	playsound(loc, 'sound/items/welder.ogg', 50, 1)
-	use_power(5000) // Use a lot of power.
+	power_state(5000) // Use a lot of power.
 
 	// Activate the cooldown
 	is_on_cooldown = TRUE
@@ -133,7 +133,7 @@
 		return
 
 	playsound(loc, 'sound/items/welder.ogg', 50, 1)
-	use_power(5000) // Use a lot of power.
+	power_state(5000) // Use a lot of power.
 
 	var/icon/newicon = new(I.icon, I.icon_state)
 	newicon.GrayScale()

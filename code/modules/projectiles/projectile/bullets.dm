@@ -219,7 +219,7 @@
 		else if(istype(target, /obj/mecha/combat/honker))
 			var/obj/mecha/chassis = target
 			chassis.occupant_message("A mimetech anti-honk bullet has hit \the [chassis]!")
-			chassis.use_power(chassis.get_charge() / 2)
+			chassis.power_state(chassis.get_charge() / 2)
 			for(var/obj/item/mecha_parts/mecha_equipment/weapon/honker in chassis.equipment)
 				honker.set_ready_state(0)
 

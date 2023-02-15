@@ -1226,7 +1226,7 @@ GLOBAL_LIST_EMPTY(airlock_emissive_underlays)
 	if(!forced)
 		if(!arePowerSystemsOn() || wires.is_cut(WIRE_OPEN_DOOR))
 			return 0
-	use_power(360)	//360 W seems much more appropriate for an actuator moving an industrial door capable of crushing people
+	power_state(360)	//360 W seems much more appropriate for an actuator moving an industrial door capable of crushing people
 	if(forced)
 		playsound(loc, 'sound/machines/airlockforced.ogg', 30, 1)
 	else
@@ -1271,7 +1271,7 @@ GLOBAL_LIST_EMPTY(airlock_emissive_underlays)
 					autoclose_in(60)
 					return
 
-	use_power(360)	//360 W seems much more appropriate for an actuator moving an industrial door capable of crushing people
+	power_state(360)	//360 W seems much more appropriate for an actuator moving an industrial door capable of crushing people
 	if(forced)
 		playsound(loc, 'sound/machines/airlockforced.ogg', 30, 1)
 	else

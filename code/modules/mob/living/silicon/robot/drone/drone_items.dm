@@ -177,7 +177,7 @@
 	return
 
 //Putting the decompiler here to avoid doing list checks every tick.
-/mob/living/silicon/robot/drone/use_power()
+/mob/living/silicon/robot/drone/power_state()
 
 	..()
 	if(low_power_mode || !decompiler)

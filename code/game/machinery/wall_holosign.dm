@@ -60,7 +60,7 @@
 		return
 	add_fingerprint(user)
 
-	use_power(5)
+	power_state(5)
 
 	active = !active
 	if(active)

@@ -563,7 +563,7 @@ GLOBAL_LIST_EMPTY(crematoriums)
 		to_chat(usr, "<span class='warning'>Access denied.</span>")
 		return
 
-	use_power(400000)
+	power_state(400000)
 	for(var/obj/structure/crematorium/C in GLOB.crematoriums)
 		if(C.id == id && !C.cremating)
 			C.cremate(user)

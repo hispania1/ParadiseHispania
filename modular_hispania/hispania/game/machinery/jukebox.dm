@@ -19,30 +19,30 @@
 	var/list/sparkles = list()
 	var/list/songs = list(
 		"Play/Pause", // POR NADA DEL MUNDO QUITAR A ESTE
-		"Lo-Fi Chill • Fly me to the moon - Frank Sinatra"    = new /datum/track('modular_hispania/sound/hispaniabox/Fly_Me_To_The_Moon.ogg',	1340,	5,	"moon", "Fly me to the moon - Frank Sinatra"),
-		"Lo-Fi Chill • Interstellar Main Theme - Hans Zimmer"  = new /datum/track('modular_hispania/sound/music/title11.ogg',		2540,	5,	"zimmer", "Interstellar Main Theme - Hans Zimmer"),
-		"Jazz • Porco Rosso Main Theme"  					   = new /datum/track('modular_hispania/sound/hispaniabox/PorcoRosso.ogg',		5000,	5,	"porco", "Porco Rosso Main Theme"),
-		"Eurodance Trance • Better Off Alone - SALEM Remix"    = new /datum/track('modular_hispania/sound/music/title12.ogg',					1750,	5,	"euro", "Better Off Alone - SALEM Remix"),
-		"Cyberpunk • Dance With The Dead - Andromeda"  		   = new /datum/track('modular_hispania/sound/music/title1.ogg',					3010,	5,	"withdead", "Dance With The Dead - Andromeda"),
-		"Pop-Rock • Space Oddity - David Bowie"  			   = new /datum/track('modular_hispania/sound/music/title4.ogg',					3300,	5,	"oddity", "Space Oddity - David Bowie"  ),
-		"Pop • Space Jam"  									   = new /datum/track('modular_hispania/sound/music/title3.ogg',					1930,	5,	"jam", "Space Jam"),
-		"Pop • Europa VII - La Oreja de Van Gogh"  			   = new /datum/track('modular_hispania/sound/music/title10.ogg',					2390,	5,	"europa", "Europa VII - La Oreja de Van Gogh"),
-		"Pop • Los Marcianos Llegaron Ya - Tito Rodriguez"     = new /datum/track('modular_hispania/sound/music/title5.ogg',					1740,	5,	"marcianos", "Los Marcianos Llegaron Ya - Tito Rodriguez"),
-		"Pop • Never Gonna Give You Up - Rick Astley"		   = new /datum/track('modular_hispania/sound/hispaniabox/Give_You_Up.ogg',		2120,	5,	"giveyouup", "Never Gonna Give You Up - Rick Astley"),
-		"Pop • Cacho Castaña - Si te agarro con otro te mato"  = new /datum/track('modular_hispania/sound/hispaniabox/cacho.ogg',		2000,	5,	"cacho", "Cacho Castaña - Si te agarro con otro te mato"),
-		"Pop • Children Of The Sun - Billy Thorpe"			   = new /datum/track('modular_hispania/sound/music/title8.ogg',		3470,	5,	"sun", "Children Of The Sun - Billy Thorpe"),
-		"Pop • Star Wars Cantina - Meco"  					   = new /datum/track('modular_hispania/sound/hispaniabox/star_wars_cantina.ogg',			2532,	5,	"cantina", "Star Wars Cantina - Meco"),
-		"Electro • Spoiler - DJ Hyper"						   = new /datum/track('modular_hispania/sound/music/title9.ogg',		3500,	5,	"hyper", "Spoiler - DJ Hyper"),
-		"Electro • Cheeki Breeki - Anthem"					   = new /datum/track('modular_hispania/sound/hispaniabox/russian.ogg',	1930,	5,	"cheeki", "Cheeki Breeki - Anthem"),
-		"Electro • Daft Punk - Veridis Quo"			   		   = new /datum/track('modular_hispania/sound/hispaniabox/daft.ogg',		5570,	5,	"daft", "Daft Punk - Veridis Quo"),
-		"Electro • Paradise Theme - Nanostrasen"			   = new /datum/track('modular_hispania/sound/music/title2.ogg',		2080,	5,	"paradise", "Paradise Theme - Nanostrasen"),
-		"Ambiente • Thunderdome Song - Nanostrasen"			   = new /datum/track('modular_hispania/sound/music/thunderdome.ogg',	2020,	5,	"thunderdome", "Thunderdome Song - Nanostrasen"),
-		"Ambiente • Tension Music - Nanostrasen"			   = new /datum/track('modular_hispania/sound/music/traitor.ogg',		3500,	5,	"tension", "Tension Music - Nanostrasen"),
-		"Ambiente • Space Ambient Song - Nanostrasen" 		   = new /datum/track('modular_hispania/sound/music/space.ogg',		2130,	5,	"space", "Space Ambient Song - Nanostrasen"),
-		"Cumbia • La Vida Es Un Carnaval - Celia Cruz"		   = new /datum/track('modular_hispania/sound/hispaniabox/cumbion.ogg',	2770,	5,	"carnaval", "La Vida Es Un Carnaval - Celia Cruz"),
-		"Rock • Yes - Roundabout"							   = new /datum/track('modular_hispania/sound/hispaniabox/yes.ogg',	2600,	5,	"roundabout", "Yes - Roundabout"),
-		"Rock Latino • Noviembre Sin Ti - Reik"				   = new /datum/track('modular_hispania/sound/hispaniabox/reik.ogg',	1990,	5,	"noviembre", "Noviembre Sin Ti - Reik"),
-		"For Science • Still Alive - GLaDOS"				   = new /datum/track('modular_hispania/sound/music/title7.ogg',		1840,	5,	"GLaDOS", "Still Alive - GLaDOS"),
+		"Lo-Fi Chill ï¿½ Fly me to the moon - Frank Sinatra"    = new /datum/track('modular_hispania/sound/hispaniabox/Fly_Me_To_The_Moon.ogg',	1340,	5,	"moon", "Fly me to the moon - Frank Sinatra"),
+		"Lo-Fi Chill ï¿½ Interstellar Main Theme - Hans Zimmer"  = new /datum/track('modular_hispania/sound/music/title11.ogg',		2540,	5,	"zimmer", "Interstellar Main Theme - Hans Zimmer"),
+		"Jazz ï¿½ Porco Rosso Main Theme"  					   = new /datum/track('modular_hispania/sound/hispaniabox/PorcoRosso.ogg',		5000,	5,	"porco", "Porco Rosso Main Theme"),
+		"Eurodance Trance ï¿½ Better Off Alone - SALEM Remix"    = new /datum/track('modular_hispania/sound/music/title12.ogg',					1750,	5,	"euro", "Better Off Alone - SALEM Remix"),
+		"Cyberpunk ï¿½ Dance With The Dead - Andromeda"  		   = new /datum/track('modular_hispania/sound/music/title1.ogg',					3010,	5,	"withdead", "Dance With The Dead - Andromeda"),
+		"Pop-Rock ï¿½ Space Oddity - David Bowie"  			   = new /datum/track('modular_hispania/sound/music/title4.ogg',					3300,	5,	"oddity", "Space Oddity - David Bowie"  ),
+		"Pop ï¿½ Space Jam"  									   = new /datum/track('modular_hispania/sound/music/title3.ogg',					1930,	5,	"jam", "Space Jam"),
+		"Pop ï¿½ Europa VII - La Oreja de Van Gogh"  			   = new /datum/track('modular_hispania/sound/music/title10.ogg',					2390,	5,	"europa", "Europa VII - La Oreja de Van Gogh"),
+		"Pop ï¿½ Los Marcianos Llegaron Ya - Tito Rodriguez"     = new /datum/track('modular_hispania/sound/music/title5.ogg',					1740,	5,	"marcianos", "Los Marcianos Llegaron Ya - Tito Rodriguez"),
+		"Pop ï¿½ Never Gonna Give You Up - Rick Astley"		   = new /datum/track('modular_hispania/sound/hispaniabox/Give_You_Up.ogg',		2120,	5,	"giveyouup", "Never Gonna Give You Up - Rick Astley"),
+		"Pop ï¿½ Cacho Castaï¿½a - Si te agarro con otro te mato"  = new /datum/track('modular_hispania/sound/hispaniabox/cacho.ogg',		2000,	5,	"cacho", "Cacho Castaï¿½a - Si te agarro con otro te mato"),
+		"Pop ï¿½ Children Of The Sun - Billy Thorpe"			   = new /datum/track('modular_hispania/sound/music/title8.ogg',		3470,	5,	"sun", "Children Of The Sun - Billy Thorpe"),
+		"Pop ï¿½ Star Wars Cantina - Meco"  					   = new /datum/track('modular_hispania/sound/hispaniabox/star_wars_cantina.ogg',			2532,	5,	"cantina", "Star Wars Cantina - Meco"),
+		"Electro ï¿½ Spoiler - DJ Hyper"						   = new /datum/track('modular_hispania/sound/music/title9.ogg',		3500,	5,	"hyper", "Spoiler - DJ Hyper"),
+		"Electro ï¿½ Cheeki Breeki - Anthem"					   = new /datum/track('modular_hispania/sound/hispaniabox/russian.ogg',	1930,	5,	"cheeki", "Cheeki Breeki - Anthem"),
+		"Electro ï¿½ Daft Punk - Veridis Quo"			   		   = new /datum/track('modular_hispania/sound/hispaniabox/daft.ogg',		5570,	5,	"daft", "Daft Punk - Veridis Quo"),
+		"Electro ï¿½ Paradise Theme - Nanostrasen"			   = new /datum/track('modular_hispania/sound/music/title2.ogg',		2080,	5,	"paradise", "Paradise Theme - Nanostrasen"),
+		"Ambiente ï¿½ Thunderdome Song - Nanostrasen"			   = new /datum/track('modular_hispania/sound/music/thunderdome.ogg',	2020,	5,	"thunderdome", "Thunderdome Song - Nanostrasen"),
+		"Ambiente ï¿½ Tension Music - Nanostrasen"			   = new /datum/track('modular_hispania/sound/music/traitor.ogg',		3500,	5,	"tension", "Tension Music - Nanostrasen"),
+		"Ambiente ï¿½ Space Ambient Song - Nanostrasen" 		   = new /datum/track('modular_hispania/sound/music/space.ogg',		2130,	5,	"space", "Space Ambient Song - Nanostrasen"),
+		"Cumbia ï¿½ La Vida Es Un Carnaval - Celia Cruz"		   = new /datum/track('modular_hispania/sound/hispaniabox/cumbion.ogg',	2770,	5,	"carnaval", "La Vida Es Un Carnaval - Celia Cruz"),
+		"Rock ï¿½ Yes - Roundabout"							   = new /datum/track('modular_hispania/sound/hispaniabox/yes.ogg',	2600,	5,	"roundabout", "Yes - Roundabout"),
+		"Rock Latino ï¿½ Noviembre Sin Ti - Reik"				   = new /datum/track('modular_hispania/sound/hispaniabox/reik.ogg',	1990,	5,	"noviembre", "Noviembre Sin Ti - Reik"),
+		"For Science ï¿½ Still Alive - GLaDOS"				   = new /datum/track('modular_hispania/sound/music/title7.ogg',		1840,	5,	"GLaDOS", "Still Alive - GLaDOS"),
 		)
 	var/datum/track/selection
 	var/track = ""
@@ -104,7 +104,7 @@
 	STOP_PROCESSING(SSfastprocess, src)
 	playsound(src.loc, 'sound/effects/sparks4.ogg', 50, TRUE)
 	do_sparks(3, 1, src)
-	obj_integrity -= max_integrity - 1 // OUCH daño a la jukebox, 2 EMP TUMBAN LA JUKEBOX
+	obj_integrity -= max_integrity - 1 // OUCH daï¿½o a la jukebox, 2 EMP TUMBAN LA JUKEBOX
 	update_icon()
 
 /obj/machinery/hispaniabox/Destroy()
@@ -156,9 +156,9 @@
 			user.visible_message("<span class='warning'>Sparks fly out of the [src]!</span>", "<span class='notice'>You emag the [src], new features unlocked.</span>")
 		playsound(src.loc, 'sound/effects/sparks4.ogg', 50, TRUE)
 		do_sparks(3, 1, src)
-		songs["Final_Gear.EXECUTE"] = new /datum/track('modular_hispania/sound/hispaniabox/emmaged/RapdelasOpciones.ogg',	1570,	5,	"gear", "CHOCUJUEGO • El rap de las opciones")
-		songs["Last Order Of Pizza"] = new /datum/track('modular_hispania/sound/hispaniabox/emmaged/pizza.ogg',	1270,	5,	"pizza", "Spider-Man 2 • The Game Pizza Theme")
-		songs["Nothing Honk Matters"] = new /datum/track('modular_hispania/sound/music/clown.ogg',	1470,	5,	"clown", "SS13 • Clown Main Theme")
+		songs["Final_Gear.EXECUTE"] = new /datum/track('modular_hispania/sound/hispaniabox/emmaged/RapdelasOpciones.ogg',	1570,	5,	"gear", "CHOCUJUEGO ï¿½ El rap de las opciones")
+		songs["Last Order Of Pizza"] = new /datum/track('modular_hispania/sound/hispaniabox/emmaged/pizza.ogg',	1270,	5,	"pizza", "Spider-Man 2 ï¿½ The Game Pizza Theme")
+		songs["Nothing Honk Matters"] = new /datum/track('modular_hispania/sound/music/clown.ogg',	1470,	5,	"clown", "SS13 ï¿½ Clown Main Theme")
 		return
 
 /obj/machinery/hispaniabox/examine(mob/living/M)
@@ -265,8 +265,8 @@
 	stop = world.time + selection["song_length"]
 
 /obj/machinery/hispaniabox/proc/dance_over()
-	QDEL_LIST(spotlights)
-	QDEL_LIST(sparkles)
+	QDEL_LIST_CONTENTS(spotlights)
+	QDEL_LIST_CONTENTS(sparkles)
 	for(var/mob/living/L in rangers)
 		if(!L || !L.client)
 			continue
@@ -355,7 +355,7 @@
 	if(!icono || !radial_check(user))
 		return
 
-	var/cancionreal = genero + " • " + nombre
+	var/cancionreal = genero + " ï¿½ " + nombre
 	if(!GLOB.sounds_cache.Find(rutacancion))
 		GLOB.sounds_cache += rutacancion
 

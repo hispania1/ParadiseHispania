@@ -344,7 +344,7 @@
 				var/energy_used = max(abs(heat_capacity * (gas.temperature - target_temperature) ), MAX_ENERGY_CHANGE)
 
 				//Use power.  Assuming that each power unit represents 1000 watts....
-				use_power(energy_used / 1000, PW_CHANNEL_ENVIRONMENT)
+				power_state(energy_used / 1000, PW_CHANNEL_ENVIRONMENT)
 
 				//We need to cool ourselves.
 				if(heat_capacity)

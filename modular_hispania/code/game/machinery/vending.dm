@@ -12,7 +12,6 @@
 /obj/machinery/economy/vending/Initialize(mapload)
 	products |= hispa_products // For each, use the following pattern:
 	contraband |= hispa_contraband // list(/type/path = amount,/type/path2 = amount2)
-	premium |= hispa_premium
 	prices |= hispa_prices
 	..()
 

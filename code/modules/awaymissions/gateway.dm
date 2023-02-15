@@ -65,7 +65,7 @@ GLOBAL_DATUM_INIT(the_gateway, /obj/machinery/gateway/centerstation, null)
 		return
 
 	if(active)
-		use_power(5000)
+		power_state(5000)
 
 
 /obj/machinery/gateway/centerstation/proc/detect()
@@ -147,7 +147,7 @@ GLOBAL_DATUM_INIT(the_gateway, /obj/machinery/gateway/centerstation, null)
 		if(dest)
 			M.forceMove(dest.loc)
 			M.dir = SOUTH
-			use_power(5000)
+			power_state(5000)
 		return
 
 

@@ -174,7 +174,7 @@ GLOBAL_LIST_INIT(conveyor_switches, list())
 /obj/machinery/conveyor/process()
 	if(!IS_OPERATING)
 		return
-	use_power(100)
+	power_state(100)
 	var/new_movables = loc.contents - affecting - src
 	var/still_stuff_to_move = FALSE
 	for(var/atom/movable/AM in new_movables)
