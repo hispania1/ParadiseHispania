@@ -1994,7 +1994,7 @@
 				var/available_in_days = job.available_in_days(user.client)
 				html += "<del class='dark'>[rank]</del></td><td class='bad'><b> \[IN [(available_in_days)] DAYS]</b></td></tr>"
 				continue
-			if((job_support_low & JOB_ASSISTANT) && (job.title != "Assistant"))
+			if((job_support_low & JOB_ASSISTANT) && (job.title != "Assistant")&& (job.title != "Aprendiz"))	//HISPANIA CHANGE START & END
 				html += "<font color=orange>[rank]</font></td><td></td></tr>"
 				continue
 			if((job.title in GLOB.command_positions) || (job.title == "AI"))//Bold head jobs
@@ -2035,7 +2035,7 @@
 
 	//			HTML += "<a href='?_src_=prefs;preference=job;task=input;text=[rank]'>"
 
-			if(job.title == "Assistant") // Assistant is special
+			if(job.title == "Assistant" || job.title == "Aprendiz") // Assistant is special //HISPANIA CHANGE START & END
 				if(job_support_low & JOB_ASSISTANT)
 					html += " <font color=green>Yes</font></a>"
 				else

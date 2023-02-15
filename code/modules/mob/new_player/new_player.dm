@@ -102,8 +102,8 @@
 
 		if(SSticker.current_state == GAME_STATE_PREGAME)
 			stat("Players:", "[totalPlayers]")
-			if(check_rights(R_ADMIN, 0, src))
-				stat("Players Ready:", "[totalPlayersReady]")
+			//if(check_rights(R_ADMIN, 0, src))  //// HISPANIA CHANGES START & END
+			stat("Players Ready:", "[totalPlayersReady]")//// HISPANIA CHANGES START & END
 			totalPlayers = 0
 			totalPlayersReady = 0
 			for(var/mob/new_player/player in GLOB.player_list)
@@ -358,7 +358,7 @@
 	SSticker.equip_cuis(character) // Gives them their CUIs
 
 	SSticker.mode.latespawn(character)
-
+	give_latejoiners_nations(character)	//HISPANIA CHANGES START & END HERE
 	if(character.mind.assigned_role == "Cyborg")
 		AnnounceCyborg(character, rank, join_message)
 	else

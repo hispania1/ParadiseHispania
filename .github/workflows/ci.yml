@@ -2,10 +2,10 @@ name: CI
 on:
   push:
     branches:
-    - master
+    - Lambda
   pull_request:
     branches:
-    - master
+    - Lambda
 
 jobs:
   run_linters:
@@ -60,7 +60,7 @@ jobs:
     strategy:
       fail-fast: false # Let all map tests run to completion
       matrix:
-        maptype: ['/datum/map/cyberiad', '/datum/map/delta', '/datum/map/metastation', '/datum/map/cerestation']
+        maptype: ['/datum/map/hispania']
         byondtype: ['STABLE', 'BETA']
     services:
       mariadb:

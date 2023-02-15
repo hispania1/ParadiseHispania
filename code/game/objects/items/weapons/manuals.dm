@@ -735,7 +735,7 @@
 	pages = list({"
 		<html><head></head><body bgcolor='[book_bgcolor]'>
 		<iframe width='100%' height='97%' src="[GLOB.configuration.url.wiki_url]/index.php/[wiki_article_title]?action=render" frameborder="0" id="main_frame"></iframe>
-		</body></html>"})
+		</body></html>"})//En manauals.dm de modular hispania//
 
 //*    MISCELANIOUS WIKI PAGE MANUALS    *//
 /obj/item/book/manual/wiki/hacking

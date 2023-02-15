@@ -126,6 +126,12 @@
 	/// The client's movement keybindings to directions, which work regardless of modifiers.
 	var/list/movement_kb_dirs = list()
 
+	////////////////
+	//HIPANIA AUTO//
+	////////////////
+	var/datum/click_handler/CH
+	///////////////////////////
+
 /client/vv_edit_var(var_name, var_value)
 	switch(var_name)
 		// I know we will never be in a world where admins are editing client vars to let people bypass TOS

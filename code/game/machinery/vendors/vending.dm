@@ -98,7 +98,8 @@
 
 	/// If true, enforce access checks on customers. Disabled by messing with wires.
 	var/scan_id = TRUE
-
+	/// Holder for a coin inserted into the vendor
+	var/obj/item/coin/coin
 	var/datum/wires/vending/wires
 
 	/// boolean, whether this vending machine can accept people inserting items into it, used for coffee vendors

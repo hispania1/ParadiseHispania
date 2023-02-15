@@ -14,7 +14,6 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 	required_enemies = 1
 	recommended_enemies = 1
 	restricted_jobs = list("Cyborg", "AI")
-
 	var/burst = 0
 
 	var/cores_to_spawn = 1
