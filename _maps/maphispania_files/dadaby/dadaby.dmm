@@ -5283,16 +5283,16 @@
 	},
 /area/engine/equipmentstorage)
 "qP" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1379;
-	id_tag = "solar_inner";
-	name = "Engineering External Access";
-	req_access_txt = "13"
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/external{
+	id_tag = "apsolar_door_int";
+	locked = 1;
+	name = "Engineering External Access";
+	req_access_txt = "13"
 	},
 /turf/simulated/floor/plating,
 /area/engine/engineering)
@@ -7666,12 +7666,12 @@
 	},
 /area/toxins/lab)
 "zz" = (
+/obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external{
 	hackProof = 1;
 	id_tag = "emergency_home";
 	name = "Escape Airlock"
 	},
-/obj/structure/fans/tiny,
 /turf/simulated/floor/plasteel,
 /area/hallway/primary/central/ne)
 "zA" = (
@@ -8854,12 +8854,12 @@
 	},
 /area/hallway/primary/central/ne)
 "EB" = (
+/obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external{
 	hackProof = 1;
 	id_tag = "emergency_home";
 	name = "Escape Airlock"
 	},
-/obj/structure/fans/tiny,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central/ne)
 "EI" = (
@@ -8982,19 +8982,18 @@
 	},
 /area/security/nuke_storage)
 "Fc" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1379;
-	id_tag = "solar_outer";
-	locked = 1;
-	name = "Engineering External Access";
-	req_access_txt = "10;13"
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/fans/tiny,
+/obj/machinery/door/airlock/external{
+	id_tag = "apsolar_door_ext";
+	locked = 1;
+	name = "Engineering External Access";
+	req_access_txt = "10;13"
+	},
 /turf/simulated/floor/plating,
 /area/engine/engineering)
 "Fe" = (
@@ -11482,22 +11481,19 @@
 	},
 /area/hallway/primary/central/ne)
 "PL" = (
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "solar_airlock";
-	pixel_x = -25;
-	req_access_txt = "13";
-	tag_chamber_sensor = "solar_sensor";
-	tag_exterior_door = "solar_outer";
-	tag_interior_door = "solar_inner"
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/airlock_sensor{
-	id_tag = "solar_sensor";
-	pixel_x = 22
+/obj/machinery/airlock_controller/air_cycler{
+	req_access_txt = "13";
+	vent_link_id = "apsolar_vent";
+	ext_door_link_id = "apsolar_door_ext";
+	int_door_link_id = "apsolar_door_int";
+	ext_button_link_id = "apsolar_btn_ext";
+	int_button_link_id = "apsolar_btn_int";
+	pixel_x = 25
 	},
 /turf/simulated/floor/plating,
 /area/engine/engineering)
@@ -12898,13 +12894,6 @@
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/simulated/floor/plating,
 /area/security/nuke_storage)
-"VY" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/external/glass,
-/turf/simulated/floor/plating,
-/area/maintenance/auxsolarstarboard)
 "VZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -13434,7 +13423,12 @@
 	icon_state = "4-8";
 	tag = ""
 	},
-/obj/machinery/door/airlock/external/glass,
+/obj/machinery/door/airlock/external{
+	id_tag = "fssolar_door_ext";
+	locked = 1;
+	name = "Engineering External Access";
+	req_access_txt = "10;13"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/auxsolarstarboard)
 "YP" = (
@@ -50656,7 +50650,7 @@ jZ
 iU
 iU
 iU
-VY
+Dt
 Fx
 aL
 kf
