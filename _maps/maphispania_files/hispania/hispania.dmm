@@ -21539,10 +21539,7 @@
 	},
 /area/chapel/office)
 "bcC" = (
-/obj/structure/extinguisher_cabinet{
-	name = "north bump";
-	pixel_y = 30
-	},
+/obj/machinery/economy/vending/chap,
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -26655,6 +26652,10 @@
 /area/storage/emergency2)
 "bny" = (
 /obj/structure/closet/wardrobe/xenos,
+/obj/machinery/light_switch{
+	name = "north bump";
+	pixel_y = 24
+	},
 /turf/simulated/floor/plasteel,
 /area/crew_quarters/locker)
 "bnz" = (
@@ -26671,14 +26672,11 @@
 /turf/simulated/floor/plating,
 /area/storage/emergency2)
 "bnA" = (
-/obj/machinery/light_switch{
-	name = "north bump";
-	pixel_y = 24
-	},
+/obj/machinery/economy/vending/premium_vending,
 /turf/simulated/floor/plasteel,
 /area/crew_quarters/locker)
 "bnB" = (
-/obj/machinery/economy/vending/cola,
+/obj/machinery/economy/vending/accesories,
 /turf/simulated/floor/plasteel,
 /area/crew_quarters/locker)
 "bnC" = (
@@ -92960,6 +92958,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/aft)
+"yhq" = (
+/obj/structure/extinguisher_cabinet{
+	name = "south bump";
+	pixel_y = -30
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/chapel/office)
 "yhw" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -140669,7 +140676,7 @@ baz
 bcC
 bcz
 bcz
-bcz
+yhq
 baz
 bjD
 bpO
