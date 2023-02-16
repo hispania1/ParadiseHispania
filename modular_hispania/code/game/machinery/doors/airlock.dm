@@ -1,15 +1,19 @@
+// humo de saga para las puertas
+
 /obj/machinery/door/airlock/obj_break()
 	var/datum/effect_system/smoke_spread/smoke = new
 	smoke.set_up(4, 0, loc)
 	smoke.start()
 	..()
 
+
+//keypad airlock
 /obj/machinery/door/airlock/
 	var/haskeypad = 0
-/*
+
 /obj/machinery/door/airlock/keypad // HERE
 	name = "Keypad Entry Airlock"
-	icon = 'modular_hispania/icons/obj/doors/Doorkeypad.dmi'
+	icon = 'modular_hispania/icons/obj/doors/airlocks/station/doorkeypad.dmi'
 	desc = "A door with a keypad lock."
 	assemblytype = /obj/structure/door_assembly/door_assembly_keyp
 	haskeypad = 1
@@ -49,10 +53,10 @@
 				src.code += text("[]", href_list["type"])
 				if(length(src.code) > 5)
 					src.code = "ERROR"
-		src.add_fingerprint(usr)
+		add_fingerprint(usr)
 		for(var/mob/M in viewers(1, src.loc))
 			if((M.client && M.machine == src))
-				src.attack_hand(M)
+				attack_hand(M)
 			return
 	return
 
@@ -66,16 +70,28 @@
 		user.set_machine(src)
 		var/dat = text("<TT><B>[]</B><BR>\n\nLock Status: []",src, (src.locked ? "LOCKED" : "UNLOCKED"))
 		var/message = "Code"
-		if((src.l_set == 0) && (!src.emagged) && (!src.l_setshort))
-			dat += text("<p>\n<b>5-DIGIT PASSCODE NOT SET.<br>ENTER NEW DOOR PASSCODE.</b>")
-		if(src.emagged)
-			dat += text("<p>\n<font color=red><b>LOCKING SYSTE	M ERROR - 1701</b></font>")
-		if(src.l_setshort)
+		if(!l_set && !emagged && !l_setshort)
+			dat += text("<p>\n<b>5-DIGIT PASSCODE NOT SET.<br>ENTER NEW PASSCODE.</b>")
+		if(emagged)
+			dat += text("<p>\n<font color=red><b>LOCKING SYSTEM ERROR - 1701</b></font>")
+		if(l_setshort)
 			dat += text("<p>\n<font color=red><b>ALERT: MEMORY SYSTEM ERROR - 6040 201</b></font>")
-		message = text("[]", src.code)
-		if(!src.locked)
+		message = text("[]", code)
+		if(!locked)
 			message = "*****"
-		dat += text("<HR>\n>[]<BR>\n<A href='?src=\ref[];type=1'>1</A>-<A href='?src=\ref[];type=2'>2</A>-<A href='?src=\ref[];type=3'>3</A><BR>\n<A href='?src=\ref[];type=4'>4</A>-<A href='?src=\ref[];type=5'>5</A>-<A href='?src=\ref[];type=6'>6</A><BR>\n<A href='?src=\ref[];type=7'>7</A>-<A href='?src=\ref[];type=8'>8</A>-<A href='?src=\ref[];type=9'>9</A><BR>\n<A href='?src=\ref[];type=R'>R</A>-<A href='?src=\ref[];type=0'>0</A>-<A href='?src=\ref[];type=E'>E</A><BR>\n</TT>", message, src, src, src, src, src, src, src, src, src, src, src, src)
+		dat += {"<HR>\n>[message]<BR>\n
+		<A href='?src=[UID()];type=1'>1</A>-
+		<A href='?src=[UID()];type=2'>2</A>-
+		<A href='?src=[UID()];type=3'>3</A><BR>\n
+		<A href='?src=[UID()];type=4'>4</A>-
+		<A href='?src=[UID()];type=5'>5</A>-
+		<A href='?src=[UID()];type=6'>6</A><BR>\n
+		<A href='?src=[UID()];type=7'>7</A>-
+		<A href='?src=[UID()];type=8'>8</A>-
+		<A href='?src=[UID()];type=9'>9</A><BR>\n
+		<A href='?src=[UID()];type=R'>R</A>-
+		<A href='?src=[UID()];type=0'>0</A>-
+		<A href='?src=[UID()];type=E'>E</A><BR>\n</TT>"}
 		user << browse(dat, "window=caselock;size=300x280")
 
 	if(panel_open)
@@ -83,4 +99,3 @@
 	else
 		..(user)
 	return
-*/
