@@ -30,13 +30,31 @@
 		else
 			to_chat(user, "<span class='notice'>Holster your pie cannon.</span>")
 			revert_cast(user)
-//termina el pie cannon spell
 
+//empieza el lube floor spell
+/obj/effect/proc_holder/spell/clown/floor_lube
+	name = "Floor lube"
+	desc = "placeholder"
+	school = "clown"
+	panel = "Clown"
+	clothes_req = FALSE
+	base_cooldown = 5 SECONDS
+	human_req = TRUE
+
+/obj/effect/proc_holder/spell/clown/floor_lube/create_new_targeting()
+	return new /datum/spell_targeting/self
+
+/obj/effect/proc_holder/spell/clown/floor_lube/Click(list/targets, mob/user = usr)
+	if(user.dir == SOUTH || user.dir == NORTH)
+		for(var/turf/simulated/floor/O in range("3x1", usr))
+			O.MakeSlippery(TURF_WET_LUBE, 20 SECONDS)
+	else
+		for(var/turf/simulated/floor/O in range("1x3", usr))
+			O.MakeSlippery(TURF_WET_LUBE, 20 SECONDS)
 
 
 ///Empieza el spellbook
 /obj/item/spellbook/oneuse/clown
-	spell = /obj/effect/proc_holder/spell/clown/pie_cannon
 	spellname = "Advanced Clowning"
 	name = "Tome of: "
 	desc = "As soon as you open the book images of the HonkMother start flashing inside your mind.. So beautiful."
@@ -54,7 +72,8 @@
 	if(used)
 		recoil(user)
 	else
-		user.mind.AddSpell(S)
+		user.mind.AddSpell(new /obj/effect/proc_holder/spell/clown/pie_cannon(null))
+		user.mind.AddSpell(new /obj/effect/proc_holder/spell/clown/floor_lube(null))
 		to_chat(user, "<span class='notice'>As soon as you open the book images of the HonkMother start flashing inside your mind.. So beautiful.</span>")
 		user.create_log(MISC_LOG, "learned the spell [spellname] ([S])")
 		user.create_attack_log("<font color='orange'>[key_name(user)] learned the spell [spellname] ([S]).</font>")
@@ -67,5 +86,3 @@
 	used = TRUE
 	new ash_type(loc)
 	qdel(src)
-
-/// Final del spellbook
