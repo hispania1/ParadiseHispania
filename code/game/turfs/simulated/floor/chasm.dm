@@ -112,7 +112,7 @@
 
 /turf/simulated/floor/chasm/proc/drop(atom/movable/AM)
 	//Make sure the item is still there after our sleep
-	if(!AM || QDELETED(AM))
+	if(!AM || QDELETED(AM) || AM.anchored) //hispania changes start & end here
 		return
 	falling_atoms[AM] = TRUE
 	var/turf/T = locate(drop_x, drop_y, drop_z)
