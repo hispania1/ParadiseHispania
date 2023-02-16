@@ -73156,10 +73156,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet,
 /area/maintenance/asmaint)
-"iPp" = (
-/obj/structure/lattice/catwalk,
-/turf/space,
-/area/space)
 "iPz" = (
 /obj/structure/table,
 /obj/machinery/computer/library,
@@ -95030,7 +95026,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/space,
-/area/space)
+/area/space/nearstation)
 "uRK" = (
 /obj/item/organ/internal/heart/vox,
 /obj/item/reagent_containers/food/snacks/fried_vox,
@@ -147395,7 +147391,7 @@ ktm
 kdx
 xKT
 fNG
-iPp
+doE
 aaa
 aaa
 aaa
@@ -147652,7 +147648,7 @@ ciY
 ciY
 cBQ
 cBQ
-iPp
+doE
 aaa
 aaa
 aaa
