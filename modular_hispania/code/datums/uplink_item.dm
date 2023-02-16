@@ -15,10 +15,3 @@
 	cost = 30
 	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
 	surplus = FALSE
-/datum/uplink_item/jobspecific/telegunHispania
-	name = "Telegun"
-	desc = "An extremely high-tech energy gun that utilizes bluespace technology to teleport away living targets. Select the target beacon on the telegun itself; projectiles will send targets to the beacon locked onto."
-	reference = "TGH"
-	item = /obj/item/gun/energy/telegun
-	cost = 12
-	job = list("Scientist")
