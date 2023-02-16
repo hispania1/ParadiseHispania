@@ -1,4 +1,4 @@
-/obj/effect/proc_holder/spell/clown/pie_cannon
+/obj/effect/proc_holder/spell/clown/pie_cannon 			//pie cannon spell
 	name = "Deploy pie cannon"
 	desc = "Activate to deploy your very own auto-recharging pie cannon."
 	school = "clown"
@@ -30,8 +30,11 @@
 		else
 			to_chat(user, "<span class='notice'>Holster your pie cannon.</span>")
 			revert_cast(user)
+//termina el pie cannon spell
 
 
+
+///Empieza el spellbook
 /obj/item/spellbook/oneuse/clown
 	spell = /obj/effect/proc_holder/spell/clown/pie_cannon
 	spellname = "Advanced Clowning"
@@ -39,6 +42,7 @@
 	desc = "As soon as you open the book images of the HonkMother start flashing inside your mind.. So beautiful."
 	icon_state = "bookmime"
 	var/ash_type = /obj/effect/decal/cleanable/ash
+
 
 /obj/item/spellbook/oneuse/clown/attack_self(mob/user)
 	var/obj/effect/proc_holder/spell/S = new spell
@@ -64,3 +68,4 @@
 	new ash_type(loc)
 	qdel(src)
 
+/// Final del spellbook
