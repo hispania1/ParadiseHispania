@@ -11,13 +11,6 @@
 	action_background_icon_state = "bg_mime"
 	var/gun = /obj/item/gun/throw/piecannon/auto_piecannon
 
-/obj/effect/proc_holder/spell/clown/pie_cannon/Click()
-	if(usr && usr.mind)
-		invocation = "You deploy the pie cannon."
-	else
-		invocation_type ="none"
-	..()
-
 /obj/effect/proc_holder/spell/clown/create_new_targeting()
 	return new /datum/spell_targeting/self
 
@@ -28,7 +21,7 @@
 			C.drop_item()
 			C.put_in_hands(new gun)
 		else
-			to_chat(user, "<span class='notice'>Holster your pie cannon.</span>")
+			to_chat(user, "<span class='notice'>Holster your pie cannon first.</span>")
 			revert_cast(user)
 
 //empieza el lube floor spell
@@ -38,20 +31,19 @@
 	school = "clown"
 	panel = "Clown"
 	clothes_req = FALSE
-	base_cooldown = 5 SECONDS
+	base_cooldown = 8 SECONDS
 	human_req = TRUE
 
 /obj/effect/proc_holder/spell/clown/floor_lube/create_new_targeting()
 	return new /datum/spell_targeting/self
 
-/obj/effect/proc_holder/spell/clown/floor_lube/Click(list/targets, mob/user = usr)
+/obj/effect/proc_holder/spell/clown/floor_lube/cast(list/targets, mob/user = usr)
 	if(user.dir == SOUTH || user.dir == NORTH)
 		for(var/turf/simulated/floor/O in range("3x1", usr))
 			O.MakeSlippery(TURF_WET_LUBE, 20 SECONDS)
 	else
 		for(var/turf/simulated/floor/O in range("1x3", usr))
 			O.MakeSlippery(TURF_WET_LUBE, 20 SECONDS)
-
 
 ///Empieza el spellbook
 /obj/item/spellbook/oneuse/clown
@@ -60,7 +52,6 @@
 	desc = "As soon as you open the book images of the HonkMother start flashing inside your mind.. So beautiful."
 	icon_state = "bookmime"
 	var/ash_type = /obj/effect/decal/cleanable/ash
-
 
 /obj/item/spellbook/oneuse/clown/attack_self(mob/user)
 	var/obj/effect/proc_holder/spell/S = new spell
