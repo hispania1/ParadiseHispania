@@ -2825,6 +2825,7 @@
 #include "modular_hispania\code\modules\research\xenobiology\crossbreeding\burning.dm"
 #include "modular_hispania\code\modules\research\xenobiology\crossbreeding\charged.dm"
 #include "modular_hispania\code\modules\research\xenobiology\crossbreeding\chilling.dm"
+#include "modular_hispania\code\modules\research\xenobiology\crossbreeding\consuming.dm"
 #include "modular_hispania\code\modules\research\xenobiology\crossbreeding\industrial.dm"
 #include "modular_hispania\code\modules\research\xenobiology\crossbreeding\prismatic.dm"
 #include "modular_hispania\code\modules\research\xenobiology\crossbreeding\recurring.dm"
