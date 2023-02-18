@@ -6,8 +6,8 @@
 	clothes_req = FALSE
 	base_cooldown = 15 SECONDS
 	human_req = TRUE
-	action_icon_state = "clown"
-	action_background_icon_state = "bg_mime"
+	action_icon_state = "piecannon"
+	action_background_icon_state = "bgclown"
 	var/gun = /obj/item/gun/throw/piecannon/auto_piecannon
 
 /obj/effect/proc_holder/spell/clown/create_new_targeting()
@@ -26,12 +26,14 @@
 //empieza el lube floor spell
 /obj/effect/proc_holder/spell/clown/floor_lube
 	name = "Floor lube"
-	desc = "placeholder"
+	desc = "Activate to create a barrier of spacelube below your feet, CAREFUL VERY SLIPPERY."
 	school = "clown"
 	panel = "Clown"
 	clothes_req = FALSE
 	base_cooldown = 8 SECONDS
 	human_req = TRUE
+	action_icon_state = "spacelube"
+	action_background_icon_state = "bgclown"
 
 /obj/effect/proc_holder/spell/clown/floor_lube/create_new_targeting()
 	return new /datum/spell_targeting/self
@@ -44,16 +46,35 @@
 		for(var/turf/simulated/floor/O in range("1x3", usr))
 			O.MakeSlippery(TURF_WET_LUBE, 20 SECONDS)
 
+//empieza Funny button
+/obj/effect/proc_holder/spell/clown/funny_button
+	name = "Laughs-on-demand"
+	desc = "Conjure laughs from another dimension and channel them into humilliating your peers."
+	action_icon_state = "clown_laugh"
+	action_background_icon_state = "bgclown"
+	school = "clown"
+	panel = "Clown"
+	clothes_req = FALSE
+	base_cooldown = 3 SECONDS
+	human_req = TRUE
+
+/obj/effect/proc_holder/spell/clown/funny_button/create_new_targeting()
+	return new /datum/spell_targeting/self
+
+/obj/effect/proc_holder/spell/clown/funny_button/cast(list/targets, mob/user = usr)
+	playsound(user.loc, 'modular_hispania/sound/effects/sitcomlaugh.ogg', 150, 1)
+
 ///Empieza el spellbook
 /obj/item/spellbook/oneuse/clown
 	spellname = "Advanced Clowning"
 	name = "Tome of: "
-	desc = "As soon as you open the book images of the HonkMother start flashing inside your mind.. So beautiful."
+	desc = "Dripping with goo and smelling like bananas this compendium of forbidden clowning arts gives you an unsettling feeling. MIMES STAY AWAY."
 	icon_state = "bookmime"
 	var/ash_type = /obj/effect/decal/cleanable/ash
 
 /obj/item/spellbook/oneuse/clown/attack_self(mob/user)
-	if(usr.mind.miming)
+	if(usr.mind.miming)		//placeholder for something bad if user has vow of silence.
+		to_chat(user, "<span class='boldannounce'>Your instinct starts yelling at you that this will end horribly! YOU SHOULD STOP, NOW!</span>")
 		if(do_after(usr, 150, target = usr))
 			usr.gib()
 	else
@@ -68,7 +89,8 @@
 		else
 			user.mind.AddSpell(new /obj/effect/proc_holder/spell/clown/pie_cannon(null))
 			user.mind.AddSpell(new /obj/effect/proc_holder/spell/clown/floor_lube(null))
-			to_chat(user, "<span class='notice'>As soon as you open the book images of the HonkMother start flashing inside your mind.. So beautiful.</span>")
+			user.mind.AddSpell(new /obj/effect/proc_holder/spell/clown/funny_button(null))
+			to_chat(user, "<span class='warning'>As soon as you open the book images of the HonkMother start flashing inside your mind.. So beautiful.</span>")
 			user.create_log(MISC_LOG, "learned the spell [spellname] ([S])")
 			user.create_attack_log("<font color='orange'>[key_name(user)] learned the spell [spellname] ([S]).</font>")
 			onlearned(user)
