@@ -112,6 +112,7 @@
 #include "code\__DEFINES\dcs\dcs_helpers.dm"
 #include "code\__DEFINES\dcs\flags.dm"
 #include "code\__DEFINES\dcs\signals.dm"
+#include "code\__DEFINES\hispania_defines\status_effects.dm"
 #include "code\__DEFINES\hispania_defines\traits.dm"
 #include "code\__HELPERS\_logging.dm"
 #include "code\__HELPERS\_string_lists.dm"
