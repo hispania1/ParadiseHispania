@@ -8,9 +8,8 @@ GLOBAL_LIST_EMPTY(monkey_recyclers)
 	layer = 2.9
 	density = TRUE
 	anchored = TRUE
-	use_power = IDLE_POWER_USE
-	idle_power_usage = 5
-	active_power_usage = 50
+	idle_power_consumption = 5
+	active_power_consumption = 50
 	var/grinded = 0
 	var/required_grind = 5
 	var/cube_production = 1
@@ -52,7 +51,7 @@ GLOBAL_LIST_EMPTY(monkey_recyclers)
 	if(exchange_parts(user, O))
 		return
 
-	if(default_unfasten_wrench(user, O))
+	if(default_unfasten_wrench(user, O, time = 4 SECONDS))
 		power_change()
 		return
 
@@ -97,7 +96,7 @@ GLOBAL_LIST_EMPTY(monkey_recyclers)
 					playsound(loc, 'sound/machines/juicer.ogg', 50, 1)
 					var/offset = prob(50) ? -2 : 2
 					animate(src, pixel_x = pixel_x + offset, time = 0.2, loop = 200) //start shaking
-					use_power(500)
+					power_state(500)
 					grinded++
 					sleep(50)
 					pixel_x = initial(pixel_x)
