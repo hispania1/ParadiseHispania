@@ -2837,6 +2837,7 @@
 #include "modular_hispania\code\modules\research\xenobiology\crossbreeding\reproductive.dm"
 #include "modular_hispania\code\modules\research\xenobiology\crossbreeding\selfsustaining.dm"
 #include "modular_hispania\code\modules\research\xenobiology\crossbreeding\stabilized.dm"
+#include "modular_hispania\code\modules\research\xenobiology\crossbreeding\warping.dm"
 #include "modular_hispania\code\modules\supply\supply_packs\pack_miscellaneous.dm"
 #include "modular_hispania\code\modules\surgery\tools.dm"
 #include "modular_hispania\code\modules\vehicle\vehicle.dm"

@@ -17,6 +17,7 @@
 	var/Uses = 1
 	/// The mob who last injected the extract with plasma, water or blood. Used for logging.
 	var/mob/living/injector_mob
+	var/color_slime	//hispania changes start & end here- slime cross update
 
 /obj/item/slime_extract/attackby(obj/item/O, mob/user)
 	if(istype(O, /obj/item/slimepotion/enhancer))
@@ -27,6 +28,9 @@
 		if(O.type == /obj/item/slimepotion/enhancer)
 			to_chat(user, "<span class='notice'>You apply the enhancer to the slime extract. It may now be reused one more time.</span>")
 			Uses++
+		if(O.type == /obj/item/slimepotion/enhancer/max)
+			to_chat(user, "<span class='notice'>You dump the maximizer on the slime extract. It can now be used a total of 5 times!</span>")
+			Uses = max(Uses,5)
 		//hispania changes end here
 		qdel(O)
 	if(istype(O, /obj/item/reagent_containers/syringe))
