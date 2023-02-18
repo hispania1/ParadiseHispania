@@ -579,7 +579,7 @@
 	qdel(src)
 
 /obj/machinery/button/windowtint/proc/toggle_tint()
-	use_power(5)
+	power_state(5)
 
 	active = !active
 	update_icon()
@@ -599,8 +599,9 @@
 			D.toggle_polarization()
 
 /obj/machinery/button/windowtint/power_change()
-	..()
-	if(active && !powered(power_channel))
+	if(!..())
+		return
+	if(active && (stat & NOPOWER))
 		toggle_tint()
 
 /obj/machinery/button/windowtint/update_icon_state()

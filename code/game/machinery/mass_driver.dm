@@ -4,9 +4,8 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "mass_driver"
 	anchored = TRUE
-	use_power = IDLE_POWER_USE
-	idle_power_usage = 2
-	active_power_usage = 50
+	idle_power_consumption = 2
+	active_power_consumption = 50
 
 	/// Throw power
 	var/power = 1
@@ -41,7 +40,7 @@
 	if(stat & (BROKEN|NOPOWER))
 		return
 
-	use_power(500 * power)
+	power_state(500 * power)
 	var/O_limit = 0
 	var/atom/target = get_edge_target_turf(src, dir)
 	for(var/atom/movable/O in loc)
@@ -51,7 +50,7 @@
 			if(O_limit >= 20)//so no more than 20 items are sent at a time, probably for counter-lag purposes
 				break
 
-			use_power(500)
+			power_state(500)
 			var/coef = 1
 			if(emagged)
 				coef = 5
