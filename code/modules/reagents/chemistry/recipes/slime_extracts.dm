@@ -135,7 +135,7 @@
 		T.visible_message("<span class='danger'>The slime extract sputters out, there's too many mobs to make any more!</span>")
 
 //Silver
-/datum/chemical_reaction/slimebork
+/datum/chemical_reaction/silme/slimebork	//hispania changes start&end ehre
 	name = "Slime Bork"
 	id = "m_tele2"
 	result = null
@@ -144,10 +144,10 @@
 	required_container = /obj/item/slime_extract/silver
 	required_other = TRUE
 
-/datum/chemical_reaction/slimebork/on_reaction(datum/reagents/holder)
+/datum/chemical_reaction/silme/slimebork/on_reaction(datum/reagents/holder) //hispania changes start & end here
 
 	SSblackbox.record_feedback("tally", "slime_cores_used", 1, type)
-	var/list/blocked = list(/obj/item/reagent_containers/food/snacks,
+	/*var/list/blocked = list(/obj/item/reagent_containers/food/snacks, //hispania changes start here, CODE OBSOLETO DE PARADISE, NOSTROS USAMOS GET_BORK, GET_DRINK Y GET_FOOD//
 		/obj/item/reagent_containers/food/snacks/breadslice,
 		/obj/item/reagent_containers/food/snacks/sliceable,
 		/obj/item/reagent_containers/food/snacks/margheritapizzaslice,
@@ -171,30 +171,29 @@
 		)
 	blocked |= typesof(/obj/item/reagent_containers/food/snacks/customizable)
 
-	var/list/borks = typesof(/obj/item/reagent_containers/food/snacks) - blocked
+	var/list/borks = typesof(/obj/item/reagent_containers/food/snacks) - blocked **/ //hispania changes end here , CODE OBSOLETO DE PARADISE, NOSTROS USAMOS GET_BORK, GET_DRINK Y GET_FOOD//
 	// BORK BORK BORK
+	var/turf/T = get_turf(holder.my_atom) //hispania changes start & end here
 
-	playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, 1)
+	playsound(T, 'sound/effects/phasein.ogg', 100, TRUE) //hispania changes start & end here
 
-	for(var/mob/living/carbon/C in viewers(get_turf(holder.my_atom), null))
+	for(var/mob/living/carbon/C in viewers(T, null))  //hispania changes start & end here
 		C.flash_eyes()
+	//hispania changes start here
+	for(var/i = 1, i <= 3 + rand(0,3), i++)
+		var/chosen = getbork()
+		var/obj/B = new chosen(T)
+		if(prob(50))
+			for(var/j = 1, j <= rand(1, 3), j++)
+				step(B, pick(NORTH,SOUTH,EAST,WEST))
+	//hispania changes end here
 
-	for(var/i = 1, i <= 4 + rand(1,2), i++)
-		var/chosen = pick(borks)
-		var/obj/B = new chosen
-		if(B)
-			B.forceMove(get_turf(holder.my_atom))
-			if(prob(50))
-				for(var/j = 1, j <= rand(1, 3), j++)
-					step(B, pick(NORTH,SOUTH,EAST,WEST))
-
-
-/datum/chemical_reaction/slimebork2
-	name = "Slime Bork 2"
+/datum/chemical_reaction/silme/slimebork/drinks //hispania changes start & end here HISPANIA ESTO SE HEREDA DEL SLIMEBORK DE COMIDAS
+	name = "Slime Bork Drinks" //hispania changes start & end
 	id = "m_tele4"
-	result = null
+	//result = null  //hispania changes start & end
 	required_reagents = list("water" = 1)
-	result_amount = 1
+	/* result_amount = 1	//hispania changes start here
 	required_container = /obj/item/slime_extract/silver
 	required_other = TRUE
 
@@ -232,7 +231,7 @@
 			if(prob(50))
 				for(var/j = 1, j <= rand(1, 3), j++)
 					step(B, pick(NORTH,SOUTH,EAST,WEST))
-
+	*/ //hispania changes start & end here
 
 //Blue
 /datum/chemical_reaction/slimefrost
