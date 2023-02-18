@@ -4,7 +4,7 @@
 	school = "clown"
 	panel = "Clown"
 	clothes_req = FALSE
-	base_cooldown = 15 SECONDS
+	base_cooldown = 20 SECONDS
 	human_req = TRUE
 	action_icon_state = "piecannon"
 	action_background_icon_state = "bgclown"
@@ -30,7 +30,7 @@
 	school = "clown"
 	panel = "Clown"
 	clothes_req = FALSE
-	base_cooldown = 8 SECONDS
+	base_cooldown = 12 SECONDS
 	human_req = TRUE
 	action_icon_state = "spacelube"
 	action_background_icon_state = "bgclown"
