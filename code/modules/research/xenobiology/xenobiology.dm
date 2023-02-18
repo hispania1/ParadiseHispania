@@ -6,7 +6,7 @@
 	desc = "Goo extracted from a slime. Legends claim these to have \"magical powers\"."
 	icon = 'icons/mob/slimes.dmi'
 	icon_state = "grey slime extract"
-	force = 1
+	force = 0	//hispania changes start & end here- slime cross update
 	w_class = WEIGHT_CLASS_TINY
 	container_type = INJECTABLE | DRAWABLE
 	throwforce = 0
@@ -20,11 +20,14 @@
 
 /obj/item/slime_extract/attackby(obj/item/O, mob/user)
 	if(istype(O, /obj/item/slimepotion/enhancer))
-		if(Uses >= 5)
+		if(Uses >= 5 || recurring) // hispania changes start & end here
 			to_chat(user, "<span class='warning'>You cannot enhance this extract further!</span>")
 			return ..()
-		to_chat(user, "<span class='notice'>You apply the enhancer to the slime extract. It may now be reused one more time.</span>")
-		Uses++
+		//hispania changes start here
+		if(O.type == /obj/item/slimepotion/enhancer)
+			to_chat(user, "<span class='notice'>You apply the enhancer to the slime extract. It may now be reused one more time.</span>")
+			Uses++
+		//hispania changes end here
 		qdel(O)
 	if(istype(O, /obj/item/reagent_containers/syringe))
 		injector_mob = user

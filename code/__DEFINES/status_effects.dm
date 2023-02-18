@@ -153,3 +153,11 @@
 #define STATUS_EFFECT_OFFERING_ITEM /datum/status_effect/offering_item
 
 #define STATUS_EFFECT_BLOB_BURST /datum/status_effect/blob_burst
+
+
+/////////////
+//  SLIME  //
+/////////////
+
+#define STATUS_EFFECT_RAINBOWPROTECTION /datum/status_effect/rainbow_protection //Invulnerable and pacifistic
+#define STATUS_EFFECT_SLIMESKIN /datum/status_effect/slimeskin //Increased armor
