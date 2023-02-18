@@ -199,7 +199,7 @@
 			teles_left -= 1
 
 			// use a lot of power
-			use_power(power * 10)
+			power_state(power * 10)
 
 			do_sparks(5, 1, get_turf(telepad))
 

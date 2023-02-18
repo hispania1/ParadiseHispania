@@ -186,8 +186,8 @@
 	var/datum/discord_webhook_payload/nr = new
 	nr.embeds += nwe // Insertamos el nuevo discord_embed en la lista.
 
-	SSdiscord.send2discord_complex(DISCORD_WEBHOOK_PRIMARY, nr)
-	SSdiscord.send2discord_simple(DISCORD_WEBHOOK_PRIMARY, "<@&[GLOB.configuration.discord.player_role_id]>")
+	GLOB.discord_manager.send2discord_complex(DISCORD_WEBHOOK_PRIMARY, nr)
+	GLOB.discord_manager.send2discord_simple(DISCORD_WEBHOOK_PRIMARY, "<@&[GLOB.configuration.discord.player_role_id]>")
 	///HISPANIA ENDS HERE
 
 	return 0

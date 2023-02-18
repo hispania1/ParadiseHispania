@@ -7,6 +7,8 @@
 	desc = "It produces items using metal and glass."
 	icon_state = "autolathe"
 	density = TRUE
+	idle_power_consumption = 10
+	active_power_consumption = 100
 
 	var/list/queue = list()
 	var/queue_max_len = 12
@@ -20,9 +22,7 @@
 	var/hack_wire
 	var/disable_wire
 	var/shock_wire
-	use_power = IDLE_POWER_USE
-	idle_power_usage = 10
-	active_power_usage = 100
+
 	var/busy = FALSE
 	var/prod_coeff
 	var/datum/wires/autolathe/wires = null
@@ -341,7 +341,7 @@
 			flick("autolathe_o", src)//plays metal insertion animation
 		if(MAT_GLASS)
 			flick("autolathe_r", src)//plays glass insertion animation
-	use_power(min(1000, amount_inserted / 100))
+	power_state(min(1000, amount_inserted / 100))
 	SStgui.update_uis(src)
 
 /obj/machinery/autolathe/attack_ghost(mob/user)
@@ -379,7 +379,7 @@
 	var/power = max(2000, (metal_cost+glass_cost)*multiplier/5)
 	if(can_build(D, multiplier))
 		being_built = list(D, multiplier)
-		use_power(power)
+		power_state(power)
 		icon_state = "autolathe"
 		flick("autolathe_n",src)
 		if(is_stack)

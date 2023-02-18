@@ -21,7 +21,7 @@
 	icon_state = "h_lathe"
 	density = TRUE
 	anchored = TRUE
-	use_power = IDLE_POWER_USE
+	power_state = IDLE_POWER_USE
 	var/recentlyExperimented = 0
 	var/badThingCoeff = 0
 	var/resetTime = 15
@@ -514,7 +514,7 @@
 			ejectItem(TRUE)
 		if(globalMalf > 60)
 			visible_message("<span class='warning'>[src] begins to smoke and hiss, shaking violently!</span>")
-			use_power(500000)
+			power_state(500000)
 			investigate_log("Experimentor has drained power from its APC", "experimentor")
 
 	spawn(resetTime)
@@ -560,7 +560,7 @@
 		else
 			dotype = matchReaction(process,scantype)
 		experiment(dotype,process)
-		use_power(750)
+		power_state(750)
 		if(dotype != FAIL)
 			if(process && process.origin_tech)
 				var/list/temp_tech = ConvertReqString2List(process.origin_tech)
