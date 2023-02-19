@@ -69,7 +69,8 @@
 	spellname = "Advanced Clowning"
 	name = "Tome of: "
 	desc = "Dripping with goo and smelling like bananas this compendium of forbidden clowning arts gives you an unsettling feeling. MIMES STAY AWAY."
-	icon_state = "bookmime"
+	icon = 'modular_hispania/icons/obj/library.dmi'
+	icon_state = "clownbook"
 	var/ash_type = /obj/effect/decal/cleanable/ash
 
 /obj/item/spellbook/oneuse/clown/attack_self(mob/user)
