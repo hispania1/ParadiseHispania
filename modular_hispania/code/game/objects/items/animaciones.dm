@@ -8,6 +8,7 @@
 	playsound(src, 'modular_hispania/sound/effects/hypospray.ogg',25)
 	user.do_attack_animation(M)
 
+/*
 /obj/item/reagent_containers/syringe/afterattack(atom/target, mob/user , proximity)
 	var/mob/living/L
 	if(!isliving(target))
@@ -18,3 +19,4 @@
 	user.do_attack_animation(target)
 	. = ..()
 	user.do_attack_animation(target)
+*/
