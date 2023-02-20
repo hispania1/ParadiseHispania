@@ -7,7 +7,13 @@
 	<br>
 	Its base parts should be available for shipping by your cargo shuttle.
 	<br>
-	In order to complete the mission, you must to order a special pack in cargo called BFL Mission goal, and install it content anywhere on the station.
+	In order to complete the mission, you must order a special pack in cargo called BFL Mission goal.
+	<br>
+	The emitter BFL has to be constructed in the station it makes a breach under it and should be activaded once the receiver is ready. It consumes a significant amount of energy
+	<br>
+	The receiver BFL should be constructed in lavaland on the plasma crack deposit. It doesnt require energy to function.
+	<br>
+	In order to receive the signal from the emitter one len is required.
 	<br><br>
 	-Nanotrasen Naval Command"}
 
@@ -36,29 +42,28 @@
 ////////////
 /obj/item/circuitboard/machine/bfl_emitter
 	name = "BFL Emitter (Machine Board)"
-	desc = "Be cautious, when emitter will be done it move up by one step"
+	desc = "This can be built and installed in the station, it demands a significant amount of energy. Be cautious, when emitter is  done it moves up by one step"
 	build_path = /obj/machinery/power/bfl_emitter
 	origin_tech = "engineering=4;combat=4;bluespace=4"
 	req_components = list(
 					/obj/item/stack/sheet/metal = 5,
 					/obj/item/stack/rods = 20,
 					/obj/item/stack/sheet/plasmaglass = 4,
-					/obj/item/stock_parts/manipulator/femto = 2,
-					/obj/item/stock_parts/capacitor/quadratic = 5,
-					/obj/item/stock_parts/micro_laser/quadultra = 20,
-					/obj/item/gun/energy/lasercannon = 4,
-					/obj/item/stack/cable_coil = 6)
+					/obj/item/stock_parts/manipulator/pico = 2,
+					/obj/item/stock_parts/capacitor/super = 5,
+					/obj/item/stock_parts/micro_laser/high = 5,
+					/obj/item/stack/cable_coil = 5)
 
 /obj/item/circuitboard/machine/bfl_receiver
 	name = "BFL Receiver (Machine Board)"
-	desc = "Must be built in the middle of the deposit"
+	desc = "Must be built on the middle of the deposit and it doesnt require energy. Deposits are found in lavaland"
 	build_path = /obj/machinery/bfl_receiver
 	origin_tech = "engineering=4;combat=4;bluespace=4"
 	req_components = list(
 					/obj/item/stack/sheet/metal = 20,
 					/obj/item/stack/sheet/plasteel = 10,
 					/obj/item/stack/sheet/plasmaglass = 20,
-					/obj/item/stack/sheet/mineral/diamond = 8)
+					/obj/item/stack/sheet/mineral/diamond = 1)
 
 ///////////
 //Emitter//
@@ -70,8 +75,10 @@
 	anchored = TRUE
 	density = TRUE
 	power_state = NO_POWER_USE
-	idle_power_consumption = 100000
-	active_power_consumption = 500000
+	idle_power_consumption = 50
+	active_power_consumption = 10000
+	pixel_x = -32
+	pixel_y = 0
 
 	var/emag = FALSE
 	var/state = FALSE
@@ -100,12 +107,12 @@
 			if(!powernet)
 				connect_to_network()
 			if(!powernet)
-				to_chat(user, "Powernet not found.")
+				to_chat(user, "Powernet not found. There must cable under the emitter green screen")
 				return
 			if(surplus() < active_power_consumption)
-				to_chat(user, "The connected wire doesn't have enough current.")
+				to_chat(user, "The connected wire doesn't have enough power.")
 				return
-			if(world.time - deactivate_time > 30 SECONDS)
+			if(world.time - deactivate_time > 5 SECONDS)
 				emitter_activate()
 			else
 				visible_message("Error, emitter is still cooling down")
@@ -157,13 +164,17 @@
 	var/turf/location = get_step(src, NORTH)
 	location.ex_act(1)
 	working_sound()
-
-	if(!receiver)
-		for(var/turf/T as anything in block(locate(1, 1, 3), locate(world.maxx, world.maxy, 3)))
-			receiver = locate() in T
-			if(receiver)
-				break
-
+	var/found_active = FALSE	//this only works with 1 receiver
+	while((!found_active) && (state == TRUE)) //we keep searching until there is a receiver and its ready
+		for(var/obj/machinery/bfl_receiver/T in world)
+			receiver = T
+		if(receiver)
+			if(receiver.state && receiver.lens)
+				found_active =TRUE
+				if(laser)
+					qdel(laser)
+					laser = null
+		sleep(15)
 	receiver_test()
 
 
@@ -190,9 +201,7 @@
 //TODO: Replace this,bsa and gravgen with some big machinery datum
 /obj/machinery/power/bfl_emitter/Initialize()
 	.=..()
-	pixel_x = -32
-	pixel_y = 0
-	playsound(src, 'modular_hispania/sound/BFL/drill_sound.ogg', 100, 1)
+	playsound(src, 'modular_hispania/sound/BFL/drill_sound.ogg', 25, 1)
 
 	var/list/occupied = list()
 	for(var/direction in list(NORTH, NORTHWEST, NORTHEAST, EAST, WEST))
@@ -229,7 +238,7 @@
 
 /obj/machinery/bfl_receiver
 	name = "BFL Receiver"
-	desc = "Activate button doesn't look right. Probably should open the pit manually, try using a crowbar."
+	desc = "A huge machine designed to drill plasma or sand. It needs an activaded BFL emitter to start mining"
 	icon = 'modular_hispania/icons/obj/machines/BFL_mission/Hole.dmi'
 	icon_state = "Receiver_Off"
 	anchored = TRUE
@@ -241,6 +250,9 @@
 	var/obj/machinery/bfl_lens/lens = null
 	var/ore_type = FALSE
 	var/last_user_ckey
+	pixel_x = -32
+	pixel_y = -32
+	//it's just works ¯\_(ツ)_/¯
 
 /obj/machinery/bfl_receiver/attack_hand(mob/user as mob)
 	var/response
@@ -252,9 +264,9 @@
 
 	switch(response)
 		if("deactivate")
-			to_chat(user, "No power. <br> You should open the pit manually, try using a crowbar")
+			receiver_deactivate()
 		if("activate")
-			to_chat(user, "No power. <br> You should open the pit manually, try using a crowbar")
+			receiver_activate()
 		if("empty ore storage")
 			if(lens)
 				to_chat(user, "The Lens interferes, you can't get any ore from storage.")
@@ -268,6 +280,7 @@
 
 
 /obj/machinery/bfl_receiver/crowbar_act(mob/user, obj/item/I)
+	playsound(loc,'sound/machines/airlockforced.ogg',30,1)
 	. = TRUE
 	if(!I.use_tool(src, user, 0, volume = 0))
 		return
@@ -289,11 +302,8 @@
 
 /obj/machinery/bfl_receiver/Initialize()
 	. = ..()
-	pixel_x = -32
-	pixel_y = -32
-	//it's just works ¯\_(ツ)_/¯
 	internal = new internal_type(src)
-	playsound(src, 'modular_hispania/sound/BFL/drill_sound.ogg', 100, 1)
+	playsound(src, 'modular_hispania/sound/BFL/drill_sound.ogg', 25, 1)
 
 	var/turf/turf_under = get_turf(src)
 	if(locate(/obj/bfl_crack) in turf_under)
@@ -306,8 +316,6 @@
 /obj/machinery/bfl_receiver/proc/receiver_activate()
 	state = TRUE
 	icon_state = "Receiver_On"
-	var/turf/T = get_turf(src)
-	T.ChangeTurf(/turf/simulated/floor/chasm/straight_down/lava_land_surface)
 
 /obj/machinery/bfl_receiver/proc/receiver_deactivate()
 	var/turf/turf_under = get_step(src, SOUTH)
@@ -342,8 +350,12 @@
 	layer = ABOVE_OBJ_LAYER
 	density = 1
 
+	pixel_x = -32
+	pixel_y = -32
+
 	var/step_count = 0
 	var/state = FALSE
+	var/last_time
 
 /obj/machinery/bfl_lens/update_icon()
 	if(state)
@@ -382,24 +394,26 @@
 
 /obj/machinery/bfl_lens/Initialize()
 	. = ..()
-	pixel_x = -32
-	pixel_y = -32
+	//pixel_x = -32
+	//pixel_y = -32
 
 /obj/machinery/bfl_lens/Destroy()
 	visible_message("Lens shatters in a million pieces")
 	playsound(src, "shatter", 70, 1)
+	new /obj/item/shard(src.loc)
+	new /obj/effect/decal/cleanable/glass(src.loc)
 	overlays.Cut()
 	return ..()
 
 
-/obj/machinery/bfl_lens/Move(atom/newloc, direction, movetime)
+/obj/machinery/bfl_lens/Move(atom/newloc, direction, movetime)// its fragile!
 	. = ..()
 	if(!.)
 		return
-	if(step_count > 5)
-		Destroy()
-	step_count++
-
+	if(last_time)// ignore first time
+		if((world.time-last_time)< 4)
+			Destroy()
+	last_time = world.time
 
 //everything else
 /obj/bfl_crack

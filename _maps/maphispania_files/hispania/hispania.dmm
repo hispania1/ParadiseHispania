@@ -17400,7 +17400,6 @@
 	},
 /area/hallway/secondary/entry)
 "aSY" = (
-/obj/structure/table/wood,
 /obj/item/flashlight/lamp/green{
 	pixel_x = 1;
 	pixel_y = 5
@@ -23351,12 +23350,6 @@
 	icon_state = "dark"
 	},
 /area/chapel/main)
-"bgj" = (
-/obj/structure/table/wood,
-/obj/item/reagent_containers/food/snacks/chips,
-/obj/item/reagent_containers/food/drinks/cans/cola,
-/turf/simulated/floor/carpet,
-/area/hallway/secondary/entry)
 "bgk" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
@@ -23433,8 +23426,12 @@
 /turf/simulated/floor/plasteel,
 /area/storage/office)
 "bgt" = (
-/obj/structure/table/wood,
-/obj/item/deck/cards,
+/obj/machinery/door/window/brigdoor{
+	base_state = "rightsecure";
+	icon_state = "rightsecure";
+	name = "Research Director";
+	req_access_txt = "30"
+	},
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -24948,7 +24945,16 @@
 	},
 /area/hydroponics)
 "bjO" = (
-/obj/structure/table/wood,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/bfl_emitter,
+/obj/machinery/door/window/brigdoor{
+	dir = 1;
+	name = "Security Checkpoint";
+	req_access_txt = "1"
+	},
 /turf/simulated/floor/carpet,
 /area/hallway/secondary/entry)
 "bjP" = (
@@ -25070,19 +25076,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/hallway/primary/port)
-"bkc" = (
-/obj/structure/table/wood,
-/obj/item/storage/fancy/cigarettes{
-	pixel_y = 2
-	},
-/obj/item/lighter{
-	pixel_x = 4;
-	pixel_y = 2
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "grimy"
-	},
-/area/hallway/secondary/entry)
 "bkd" = (
 /obj/machinery/economy/vending/cola,
 /turf/simulated/floor/plasteel{
@@ -26120,9 +26113,7 @@
 /turf/simulated/floor/plating,
 /area/hallway/secondary/exit)
 "bmo" = (
-/obj/structure/chair/comfy/beige{
-	dir = 1
-	},
+/obj/item/stack/sheet/mineral/diamond/fifty,
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -70525,6 +70516,16 @@
 	},
 /turf/simulated/floor/engine,
 /area/toxins/mixing)
+"iUR" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/hallway/secondary/entry)
 "iUT" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -87772,6 +87773,13 @@
 	icon_state = "whitepurple"
 	},
 /area/toxins/mixing)
+"uDM" = (
+/obj/machinery/door/window/brigdoor{
+	dir = 8;
+	name = "Server Interior Door"
+	},
+/turf/simulated/floor/carpet,
+/area/hallway/secondary/entry)
 "uDR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/portable/pump,
@@ -88341,6 +88349,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint)
+"vbu" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/port_gen/pacman/mrs/upgraded,
+/turf/simulated/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/hallway/secondary/entry)
 "vbD" = (
 /obj/structure/table/wood,
 /obj/machinery/computer/med_data/laptop,
@@ -90599,6 +90617,16 @@
 	icon_state = "white"
 	},
 /area/toxins/mixing)
+"wva" = (
+/obj/machinery/door/window/brigdoor{
+	dir = 2;
+	name = "Secure Armory";
+	req_access_txt = "1"
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/hallway/secondary/entry)
 "wvD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
@@ -106240,10 +106268,10 @@ aVc
 aVc
 bgk
 bhE
-aSd
-aSd
-aSd
-aSd
+aOQ
+aOQ
+aOQ
+aOQ
 bre
 bgG
 bqr
@@ -106497,9 +106525,9 @@ aZY
 aVc
 bgw
 bhN
-aSW
+aSX
 bgt
-bkc
+aSX
 bmo
 brk
 bwx
@@ -106754,10 +106782,10 @@ aZW
 bcX
 bgu
 bhL
-aSW
-bgj
+wva
+bhm
 bjO
-bmo
+iUR
 brk
 aSf
 bqr
@@ -107012,9 +107040,9 @@ aUt
 aNu
 bhN
 aSX
+uDM
 bhm
-bhm
-aSX
+vbu
 brk
 bpF
 bqr
@@ -107271,7 +107299,7 @@ bhN
 aSW
 bhm
 bhm
-bmo
+aSX
 brl
 bss
 bqr
