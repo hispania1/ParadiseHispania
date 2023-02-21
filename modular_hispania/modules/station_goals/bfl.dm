@@ -1,15 +1,16 @@
 /datum/station_goal/bfl
 	name = "BFL Mining laser"
+	var/plasma_required = 500
 
 /datum/station_goal/bfl/get_report()
 	return {"<b>Mining laser construcion</b><br>
-	Our surveillance drone detected an enormous deposit, oozing with plasma. We need you to construct a BFL system to collect plasma and send it to the Central Command via cargo shuttle.
+	Our surveillance drone detected an enormous deposit, oozing with plasma. We need you to construct a BFL system to collect 500 plasma ores.
 	<br>
-	Its base parts should be available for shipping by your cargo shuttle.
+	The parts of the BFL should be available for shipping with the cargo console.
 	<br>
-	In order to complete the mission, you must order a special pack in cargo called BFL Mission goal.
+	In order to complete the mission, you must gather 500 plasma ores wih the machine.
 	<br>
-	The emitter BFL has to be constructed in the station it makes a breach under it and should be activaded once the receiver is ready. It consumes a significant amount of energy
+	The emitter BFL has to be constructed in the station it makes a breach under it and should be activaded once the receiver is ready. It requires a significant amount of energy
 	<br>
 	The receiver BFL should be constructed in lavaland on the plasma crack deposit. It doesnt require energy to function.
 	<br>
@@ -26,14 +27,11 @@
 	P =  SSeconomy.supply_packs["[/datum/supply_packs/misc/station_goal/bfl_lens]"]
 	P.special_enabled = TRUE
 
-	P =  SSeconomy.supply_packs["[/datum/supply_packs/misc/station_goal/bfl_goal]"]
-	P.special_enabled = TRUE
-
 /datum/station_goal/bfl/check_completion()
 	if(..())
 		return TRUE
-	for(var/obj/structure/toilet/golden_toilet/bfl_goal/B)
-		if(B && is_station_contact(B.z))
+	for(var/obj/machinery/power/bfl_emitter/B in world)
+		if(B.receiver.plasma_collected >= plasma_required)
 			return TRUE
 	return FALSE
 
@@ -42,14 +40,14 @@
 ////////////
 /obj/item/circuitboard/machine/bfl_emitter
 	name = "BFL Emitter (Machine Board)"
-	desc = "This can be built and installed in the station, it demands a significant amount of energy. Be cautious, when emitter is  done it moves up by one step"
+	desc = "This can be built and installed in the station, it demands a significant amount of energy and there should a cable under it. It is a 3x3 structure."
 	build_path = /obj/machinery/power/bfl_emitter
 	origin_tech = "engineering=4;combat=4;bluespace=4"
 	req_components = list(
 					/obj/item/stack/sheet/metal = 5,
 					/obj/item/stack/rods = 20,
 					/obj/item/stack/sheet/plasmaglass = 4,
-					/obj/item/stock_parts/manipulator/pico = 2,
+					/obj/item/stock_parts/manipulator/nano = 2,
 					/obj/item/stock_parts/capacitor/super = 5,
 					/obj/item/stock_parts/micro_laser/high = 5,
 					/obj/item/stack/cable_coil = 5)
@@ -61,8 +59,8 @@
 	origin_tech = "engineering=4;combat=4;bluespace=4"
 	req_components = list(
 					/obj/item/stack/sheet/metal = 20,
-					/obj/item/stack/sheet/plasteel = 10,
-					/obj/item/stack/sheet/plasmaglass = 20,
+					/obj/item/stack/sheet/plasteel = 5,
+					/obj/item/stack/sheet/plasmaglass = 5,
 					/obj/item/stack/sheet/mineral/diamond = 1)
 
 ///////////
@@ -76,7 +74,7 @@
 	density = TRUE
 	power_state = NO_POWER_USE
 	idle_power_consumption = 50
-	active_power_consumption = 10000
+	active_power_consumption = 100000
 	pixel_x = -32
 	pixel_y = 0
 
@@ -86,38 +84,6 @@
 	var/obj/machinery/bfl_receiver/receiver = FALSE
 	var/deactivate_time = 0
 	var/list/obj/structure/fillers = list()
-
-/obj/machinery/power/bfl_emitter/attack_hand(mob/user as mob)
-	var/response
-	src.add_fingerprint(user)
-	if(state)
-		response = alert(user, "You trying to deactivate BFL emitter machine, are you sure?", "BFL Emitter", "deactivate", "nothing")
-	else
-		response = alert(user, "You trying to activate BFL emitter machine, are you sure?", "BFL Emitter", "activate", "nothing")
-
-	switch(response)
-		if("deactivate")
-			if(emag)
-				visible_message("BFL software update, please wait.<br> 99% complete")
-				playsound(src, 'modular_hispania/sound/BFL/prank.ogg', 100, 1)
-			else
-				emitter_deactivate()
-				deactivate_time = world.time
-		if("activate")
-			if(!powernet)
-				connect_to_network()
-			if(!powernet)
-				to_chat(user, "Powernet not found. There must cable under the emitter green screen")
-				return
-			if(surplus() < active_power_consumption)
-				to_chat(user, "The connected wire doesn't have enough power.")
-				return
-			if(world.time - deactivate_time > 5 SECONDS)
-				emitter_activate()
-			else
-				visible_message("Error, emitter is still cooling down")
-
-
 
 /obj/machinery/power/bfl_emitter/emag_act()
 	. = ..()
@@ -136,7 +102,6 @@
 		return
 	if(laser)
 		return
-
 	if(!receiver || !receiver.state || emag || !receiver.lens || !receiver.lens.anchored)
 		var/turf/rand_location = locate(rand((2*TRANSITIONEDGE), world.maxx - (2*TRANSITIONEDGE)), rand((2*TRANSITIONEDGE), world.maxy - (2*TRANSITIONEDGE)), 3)
 		laser = new (rand_location)
@@ -149,41 +114,45 @@
 			receiver.mining = FALSE
 			if(receiver.lens)
 				receiver.lens.deactivate_lens()
-
-
-/obj/machinery/power/bfl_emitter/proc/receiver_test()
-	if(receiver)
-		if(receiver.state && receiver.lens)
-			receiver.lens.activate_lens()
-			receiver.mining = TRUE
-		return TRUE
+		receiver = FALSE
 
 /obj/machinery/power/bfl_emitter/proc/emitter_activate()
+	if(laser) //just in case
+		qdel(laser)
+		laser = null
 	state = TRUE
 	icon_state = "Emitter_On"
 	var/turf/location = get_step(src, NORTH)
 	location.ex_act(1)
+	if(receiver && receiver.state && receiver.lens && receiver.lens.anchored)
+		receiver.lens.activate_lens()
+		receiver.mining = TRUE
 	working_sound()
-	var/found_active = FALSE	//this only works with 1 receiver
-	while((!found_active) && (state == TRUE)) //we keep searching until there is a receiver and its ready
-		for(var/obj/machinery/bfl_receiver/T in world)
-			receiver = T
-		if(receiver)
-			if(receiver.state && receiver.lens)
-				found_active =TRUE
-				if(laser)
-					qdel(laser)
-					laser = null
-		sleep(15)
-	receiver_test()
 
+
+/obj/machinery/power/bfl_emitter/proc/emitter_sync_with_receiver()
+	for(var/obj/machinery/bfl_receiver/T in world)
+		if(!T.state)
+			atom_say("Receiver found but its closed. Open manually the deposit with a crowbar")
+			receiver = FALSE
+			return
+		if(!T.lens || !T.lens.anchored)
+			atom_say("The receiver has no lens installed")
+			receiver = FALSE
+			return
+		if(T.state && T.lens && T.lens.anchored)
+			receiver = T
+		else
+			receiver = FALSE
+		return
+	atom_say("No receivers found")
 
 /obj/machinery/power/bfl_emitter/proc/emitter_deactivate()
 	state = FALSE
 	icon_state = "Emitter_Off"
 	if(receiver)
 		receiver.mining = FALSE
-		if(receiver.lens.state)
+		if(receiver.lens && receiver.lens.state)
 			receiver.lens.deactivate_lens()
 
 	if(laser)
@@ -222,6 +191,78 @@
 	QDEL_LIST_CONTENTS(fillers)
 	return ..()
 
+/////////////////
+//Emitter TGUI//
+////////////////
+
+/obj/machinery/power/bfl_emitter/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
+	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+	if(!ui)
+		ui = new(user, src, ui_key, "bfl_emitter", name, 400, 280, master_ui, state)
+		ui.open()
+
+/obj/machinery/power/bfl_emitter/attack_hand(mob/user)
+	add_fingerprint(user)
+	ui_interact(user)
+
+/obj/machinery/power/bfl_emitter/attack_ai(mob/user)
+	add_hiddenprint(user)
+	ui_interact(user)
+
+/obj/machinery/power/bfl_emitter/attack_ghost(mob/user)
+	ui_interact(user)
+
+/obj/machinery/power/bfl_emitter/ui_data(mob/user)
+	var/list/data = list()
+	data["state"] = state	// 1 o 0, funcionando o apagado
+	data["receiver"] = (receiver != FALSE && receiver != null)	// si tiene un receiver syncronizado
+	if(receiver != FALSE && receiver != null)
+		data["plasma_collected"] = receiver.plasma_collected
+	else
+		data["plasma_collected"] = 0
+	return data
+
+/obj/machinery/power/bfl_emitter/ui_act(action, params)
+	if(..())
+		return
+	. = TRUE
+	switch(action)
+		if("activate")
+			if(state == TRUE)//just in case
+				return
+			if(!powernet)
+				connect_to_network()
+			if(!powernet)
+				atom_say("Powernet not found. There must cable under the emitter green screen")
+				return
+			if(surplus() < active_power_consumption)
+				atom_say("The connected wire doesn't have enough power")
+				return
+			if(world.time - deactivate_time < 5 SECONDS)
+				atom_say("Error, emitter is still cooling down")
+				return
+			emitter_activate()
+
+		if("deactivate")
+			if(state == FALSE)//just in case
+				return
+			if(emag)
+				visible_message("BFL software update, please wait.<br> 99% complete")
+				//playsound(src, 'modular_hispania/sound/BFL/prank.ogg', 100, 1)
+			else
+				emitter_deactivate()
+				deactivate_time = world.time
+
+		if("sync")
+			if(state)
+				atom_say("Please deactivate laser before syncing")//just in case
+			else
+				emitter_sync_with_receiver()
+
+
+
+
+
 ////////////
 //Receiver//
 ////////////
@@ -231,14 +272,34 @@
 
 /obj/item/storage/bag/ore/bfl_storage
 	storage_slots = 20
+
 /obj/item/storage/bag/ore/bfl_storage/proc/empty_storage(turf/location)
-	for(var/obj/item/I in contents)
-		remove_from_storage(I, location)
-		CHECK_TICK
+	var/OB
+	for(var/obj/structure/ore_box/B in range(2,src.loc))
+		OB = B
+	if(OB)//to orebox
+		for(var/obj/item/I in contents)
+			remove_from_storage(I, OB)
+			CHECK_TICK
+		to_chat(usr, "You empty [src] contents in the ore box")
+	else//to the floor
+		for(var/obj/item/I in contents)
+			remove_from_storage(I, location)
+			CHECK_TICK
+		to_chat(usr, "You empty [src] contents in the floor, having an orebox would be smarter")
+
+
+
+/obj/machinery/bfl_receiver/verb/quick_empty()
+	set name = "Empty Contents"
+	set category = "Object"
+	set src in view(1)
+	var/turf/location = get_turf(src)
+	internal.empty_storage(location)
 
 /obj/machinery/bfl_receiver
 	name = "BFL Receiver"
-	desc = "A huge machine designed to drill plasma or sand. It needs an activaded BFL emitter to start mining"
+	desc = "A huge machine designed to drill plasma or sand. It needs an activaded BFL emitter to start mining, you can open the drilling hole with a crowbar"
 	icon = 'modular_hispania/icons/obj/machines/BFL_mission/Hole.dmi'
 	icon_state = "Receiver_Off"
 	anchored = TRUE
@@ -252,32 +313,7 @@
 	var/last_user_ckey
 	pixel_x = -32
 	pixel_y = -32
-	//it's just works ¯\_(ツ)_/¯
-
-/obj/machinery/bfl_receiver/attack_hand(mob/user as mob)
-	var/response
-	src.add_fingerprint(user)
-	if(state)
-		response = alert(user, "You trying to deactivate BFL receiver machine, are you sure?", "BFL Receiver", "deactivate", "empty ore storage", "nothing")
-	else
-		response = alert(user, "You trying to activate BFL receiver machine, are you sure?", "BFL Receiver", "activate", "empty ore storage", "nothing")
-
-	switch(response)
-		if("deactivate")
-			receiver_deactivate()
-		if("activate")
-			receiver_activate()
-		if("empty ore storage")
-			if(lens)
-				to_chat(user, "The Lens interferes, you can't get any ore from storage.")
-				return
-			if(state && (user.ckey != last_user_ckey))
-				to_chat(user, "Your inner voice telling you should close the pit first.")
-				last_user_ckey = user.ckey
-				return
-			var/turf/location = get_turf(src)
-			internal.empty_storage(location)
-
+	var/plasma_collected = 0
 
 /obj/machinery/bfl_receiver/crowbar_act(mob/user, obj/item/I)
 	playsound(loc,'sound/machines/airlockforced.ogg',30,1)
@@ -296,7 +332,14 @@
 		return
 	switch(ore_type)
 		if(PLASMA)
-			internal.handle_item_insertion(new /obj/item/stack/ore/plasma, 1)
+			var/make = rand(1,2)
+			if(make==1)
+				internal.handle_item_insertion(new /obj/item/stack/ore/plasma, 1)
+				plasma_collected++
+			else
+				internal.handle_item_insertion(new /obj/item/stack/ore/plasma, 1)
+				internal.handle_item_insertion(new /obj/item/stack/ore/plasma, 1)
+				plasma_collected += 2
 		if(SAND)
 			internal.handle_item_insertion(new /obj/item/stack/ore/glass, 1)
 
@@ -306,7 +349,7 @@
 	playsound(src, 'modular_hispania/sound/BFL/drill_sound.ogg', 25, 1)
 
 	var/turf/turf_under = get_turf(src)
-	if(locate(/obj/bfl_crack) in turf_under)
+	if(locate(/obj/bfl_crack) in range(2,turf_under)) //doesnt have to be the exact position
 		ore_type = PLASMA
 	else if(istype(turf_under, /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface))
 		ore_type = SAND

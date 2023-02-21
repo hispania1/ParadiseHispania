@@ -40,7 +40,7 @@
 //objetivo BFL
 /datum/supply_packs/misc/station_goal/bfl
 	name = "BFL assembly crate"
-	cost = 150
+	cost = 250
 	contains = list(
 					/obj/item/circuitboard/machine/bfl_emitter,
 					/obj/item/circuitboard/machine/bfl_receiver
@@ -49,16 +49,8 @@
 
 /datum/supply_packs/misc/station_goal/bfl_lens
 	name = "BFL High-precision lens"
-	cost = 200
+	cost = 50
 	contains = list(
 					/obj/machinery/bfl_lens
 					)
 	containername = "BFL High-precision lens"
-
-/datum/supply_packs/misc/station_goal/bfl_goal
-	name = "BFL Mission goal"
-	cost = 12500
-	contains = list(
-					/obj/structure/toilet/golden_toilet/bfl_goal
-					)
-	containername = "Goal crate"
