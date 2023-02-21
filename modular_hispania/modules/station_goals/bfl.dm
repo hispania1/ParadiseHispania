@@ -74,7 +74,7 @@
 	density = TRUE
 	power_state = NO_POWER_USE
 	idle_power_consumption = 50
-	active_power_consumption = 100000
+	active_power_consumption = 50000
 	pixel_x = -32
 	pixel_y = 0
 
@@ -150,6 +150,8 @@
 /obj/machinery/power/bfl_emitter/proc/emitter_deactivate()
 	state = FALSE
 	icon_state = "Emitter_Off"
+	var/turf/location = get_step(src, NORTH)
+	location.ChangeTurf(/turf/simulated/floor/plating)
 	if(receiver)
 		receiver.mining = FALSE
 		if(receiver.lens && receiver.lens.state)
@@ -198,7 +200,7 @@
 /obj/machinery/power/bfl_emitter/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if(!ui)
-		ui = new(user, src, ui_key, "bfl_emitter", name, 400, 280, master_ui, state)
+		ui = new(user, src, ui_key, "bfl_emitter", name, 400, 220, master_ui, state)
 		ui.open()
 
 /obj/machinery/power/bfl_emitter/attack_hand(mob/user)
@@ -284,7 +286,8 @@
 		to_chat(usr, "You empty [src] contents in the ore box")
 	else//to the floor
 		for(var/obj/item/I in contents)
-			remove_from_storage(I, location)
+			var/s_location = get_step(location, SOUTH)
+			remove_from_storage(I, s_location)
 			CHECK_TICK
 		to_chat(usr, "You empty [src] contents in the floor, having an orebox would be smarter")
 
@@ -441,6 +444,7 @@
 	//pixel_y = -32
 
 /obj/machinery/bfl_lens/Destroy()
+	anchored = FALSE
 	visible_message("Lens shatters in a million pieces")
 	playsound(src, "shatter", 70, 1)
 	new /obj/item/shard(src.loc)

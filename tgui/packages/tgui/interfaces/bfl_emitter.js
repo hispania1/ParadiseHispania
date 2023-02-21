@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Section,
+  NoticeBox,
   ProgressBar,
   LabeledList,
 } from '../components';
@@ -14,6 +15,11 @@ export const bfl_emitter = (props, context) => {
     <Window>
       <Window.Content>
         <Section>
+
+          {data.receiver === 0 && data.state === 1 &&(<NoticeBox danger p={1.5}>
+          <b>WARNING:</b> Laser is loose in lavaland!
+          </NoticeBox>)}
+
         <LabeledList>
 
         {data.receiver === 0 && (<LabeledList.Item label="Alert" color="red">
@@ -41,7 +47,7 @@ export const bfl_emitter = (props, context) => {
         />
         </LabeledList.Item>
 
-        {data.state === 0 && (<LabeledList.Item label="Action">
+        {data.state === 0 && data.receiver === 0 && (<LabeledList.Item label="Action">
         <Button
                 icon="crosshairs"
                 content=" Start drilling "
@@ -50,6 +56,26 @@ export const bfl_emitter = (props, context) => {
         />
         </LabeledList.Item>
         )}
+
+        {data.state === 0 && data.receiver === 1 && (<LabeledList.Item label="Action">
+        <Button
+                icon="crosshairs"
+                content=" Start drilling "
+                color="green"
+                onClick={() => act('activate')}
+        />
+        </LabeledList.Item>
+        )}
+
+          {data.state === 1 && (
+          <LabeledList.Item label="Action">
+          <Button
+                  icon="times"
+                  content=" Stop drilling "
+                  onClick={() => act('deactivate')}
+          />
+          </LabeledList.Item>
+          )}
 
         {(<LabeledList.Item label="Collected plasma">
           <ProgressBar
@@ -65,30 +91,8 @@ export const bfl_emitter = (props, context) => {
           </ProgressBar>
         </LabeledList.Item>)}
 
-        {data.state === 1 && (
-        <LabeledList.Item label="Action">
-        <Button
-                icon="times"
-                content=" Stop drilling "
-                onClick={() => act('deactivate')}
-        />
-        </LabeledList.Item>
-        )}
 
         </LabeledList>
-        </Section>
-
-        <Section>
-        {data.receiver === 0 && (<Box>WARNING:
-        Drilling without a synced emitter is extremely dangerous
-        for the mining sector, the beam can go loose. </Box>)}
-        </Section>
-
-
-        <Section>
-        {data.receiver === 0 && data.state === 1 &&(<LabeledList.Item color="red">
-        DANGER LASER HAS NO DIRECTION IN LAVALAND
-        </LabeledList.Item>)}
         </Section>
 
       </Window.Content>
