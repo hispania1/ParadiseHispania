@@ -51,6 +51,7 @@
 	id_tag = "emergency_home";
 	name = "Escape Airlock"
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central/ne)
 "aI" = (
@@ -459,6 +460,7 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/effect/landmark/start/cyborg,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -548,6 +550,7 @@
 	id_tag = "emergency_home";
 	name = "Escape Airlock"
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/simulated/floor/plasteel,
 /area/hallway/primary/central/ne)
 "ck" = (
@@ -804,7 +807,7 @@
 /area/janitor)
 "dd" = (
 /obj/machinery/economy/vending/cigarette,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "de" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2557,6 +2560,15 @@
 "id" = (
 /turf/simulated/floor/plasteel,
 /area/hallway/primary/central/ne)
+"ie" = (
+/obj/effect/spawner/window/reinforced,
+/obj/machinery/door/airlock/multi_tile/glass{
+	req_access_txt = "5";
+	name = "Medbay";
+	unres_sides = 1
+	},
+/turf/simulated/floor/plating,
+/area/assembly/robotics)
 "if" = (
 /obj/structure/table/reinforced,
 /obj/item/scalpel,
@@ -3206,11 +3218,7 @@
 /area/hallway/primary/central/ne)
 "ko" = (
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/maintenance,
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
+/obj/effect/spawner/lootdrop/maintenance/eight,
 /turf/simulated/floor/plating,
 /area/maintenance/maintcentral2)
 "kq" = (
@@ -4615,7 +4623,9 @@
 	name = "north bump";
 	pixel_y = 24
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/lootdrop/maintenance/three{
+	pixel_x = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/maintcentral)
 "oE" = (
@@ -5130,12 +5140,10 @@
 	},
 /area/engine/engineering)
 "qu" = (
-/obj/effect/mapping_helpers/airlock/unres{
-	dir = 1
-	},
 /obj/machinery/door/airlock/multi_tile/glass{
 	req_access_txt = "5";
-	name = "Medbay"
+	name = "Medbay";
+	unres_sides = 1
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -5325,10 +5333,7 @@
 	},
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external{
-	id_tag = "fssolar_door_ext";
-	locked = 1;
-	name = "Engineering External Access";
-	req_access_txt = "10;13"
+	req_access_txt = "32"
 	},
 /turf/simulated/floor/plating,
 /area/engine/engineering)
@@ -5585,9 +5590,8 @@
 /area/engine/equipmentstorage)
 "rM" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
+/obj/effect/spawner/lootdrop/maintenance/three{
+	pixel_x = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint)
@@ -6248,7 +6252,9 @@
 	name = "north bump";
 	pixel_y = 24
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/lootdrop/maintenance/three{
+	pixel_x = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/maintcentral2)
 "tG" = (
@@ -6651,11 +6657,6 @@
 /turf/simulated/floor/plating,
 /area/security/nuke_storage)
 "vh" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 1;
 	name = "standard air scrubber";
@@ -6663,7 +6664,6 @@
 	scrub_N2O = 1;
 	scrub_Toxins = 1
 	},
-/obj/structure/cable,
 /turf/simulated/floor/plasteel,
 /area/quartermaster/miningdock)
 "vk" = (
@@ -6810,20 +6810,6 @@
 	icon_state = "darkred"
 	},
 /area/security/warden)
-"vT" = (
-/obj/effect/spawner/window/reinforced/plasma,
-/obj/effect/spawner/window/reinforced/plasma,
-/obj/machinery/door/poddoor/preopen{
-	id_tag = "Prison Gate";
-	name = "Prison Lockdown Blast Doors"
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/turf/simulated/floor/plating,
-/area/security/permabrig)
 "wc" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -7680,6 +7666,7 @@
 	id_tag = "emergency_home";
 	name = "Escape Airlock"
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/simulated/floor/plasteel,
 /area/hallway/primary/central/ne)
 "zA" = (
@@ -7825,6 +7812,11 @@
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/simulated/floor/plating,
 /area/security/nuke_storage)
+"Aj" = (
+/obj/structure/table,
+/obj/item/weapon/key/cargo_train,
+/turf/simulated/floor/plasteel,
+/area/quartermaster/office)
 "Ak" = (
 /obj/machinery/atmospherics/portable/canister/toxins,
 /obj/effect/decal/warning_stripes/yellow,
@@ -8029,13 +8021,6 @@
 	icon_state = "darkyellowfull"
 	},
 /area/engine/equipmentstorage)
-"AQ" = (
-/obj/effect/spawner/lootdrop/maintenance,
-/obj/effect/spawner/lootdrop/maintenance,
-/turf/simulated/floor/wood{
-	icon_state = "wood-broken"
-	},
-/area/maintenance/asmaint)
 "AR" = (
 /obj/structure/filingcabinet,
 /turf/simulated/floor/plasteel{
@@ -8060,13 +8045,6 @@
 	icon_state = "yellow"
 	},
 /area/hallway/primary/central/ne)
-"AX" = (
-/obj/effect/spawner/window/reinforced,
-/obj/machinery/status_display/supply_display{
-	layer = 3
-	},
-/turf/simulated/floor/plating,
-/area/quartermaster/office)
 "AY" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -8143,13 +8121,11 @@
 /area/security/brig)
 "Bw" = (
 /obj/docking_port/stationary{
-	area_type = /area/lavaland/surface/outdoors;
 	dir = 8;
 	dwidth = 3;
 	height = 5;
-	id = "mining_away";
-	name = "lavaland mine";
-	turf_type = /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface;
+	id = "mining_home";
+	name = "mining shuttle bay";
 	width = 7
 	},
 /turf/space,
@@ -8341,12 +8317,6 @@
 /area/security/detectives_office)
 "CF" = (
 /obj/structure/fans/tiny,
-/obj/machinery/door/airlock/external{
-	id_tag = "mining_home";
-	locked = 1;
-	name = "Mining Dock Airlock";
-	req_access_txt = "48"
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -8356,8 +8326,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/external{
+	id_tag = "mining_home";
+	locked = 1;
+	name = "Mining Dock Airlock";
+	req_access_txt = "48"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 10;
@@ -8852,6 +8826,7 @@
 	id_tag = "emergency_home";
 	name = "Escape Airlock"
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central/ne)
 "EI" = (
@@ -8982,10 +8957,7 @@
 	},
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external{
-	id_tag = "fssolar_door_ext";
-	locked = 1;
-	name = "Engineering External Access";
-	req_access_txt = "10;13"
+	req_access_txt = "32"
 	},
 /turf/simulated/floor/plating,
 /area/engine/engineering)
@@ -9050,11 +9022,8 @@
 /turf/simulated/floor/plasteel,
 /area/hallway/primary/central/ne)
 "Fz" = (
-/obj/structure/table,
-/obj/item/weapon/key/cargo_train,
-/obj/structure/railing{
-	dir = 8
-	},
+/obj/effect/decal/warning_stripes/yellow/hollow,
+/obj/vehicleh/train/cargo/engine,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "brown"
@@ -9205,11 +9174,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	tag = ""
+/obj/structure/cable,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/miningdock)
@@ -9479,11 +9448,7 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/effect/spawner/lootdrop/maintenance,
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
+/obj/effect/spawner/lootdrop/maintenance/eight,
 /turf/simulated/floor/plating,
 /area/maintenance/maintcentral)
 "Ho" = (
@@ -9938,9 +9903,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/auxsolarstarboard)
 "Jq" = (
-/obj/structure/railing{
-	dir = 8
-	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "brown"
@@ -10052,7 +10014,6 @@
 	icon_state = "0-4"
 	},
 /obj/structure/barricade/wooden,
-/obj/effect/spawner/lootdrop/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint)
 "JV" = (
@@ -10278,11 +10239,6 @@
 	icon_state = "bar"
 	},
 /area/hallway/primary/central/ne)
-"Lb" = (
-/obj/vehicleh/train/cargo/engine,
-/obj/effect/decal/warning_stripes/yellow,
-/turf/simulated/floor/plasteel,
-/area/quartermaster/office)
 "Ld" = (
 /obj/structure/closet/secure_closet/captains,
 /obj/machinery/power/apc{
@@ -11013,14 +10969,7 @@
 /area/quartermaster/office)
 "NM" = (
 /obj/structure/table/wood/poker,
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
+/obj/effect/spawner/lootdrop/maintenance/eight,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint)
 "NO" = (
@@ -11431,14 +11380,7 @@
 	},
 /area/hydroponics)
 "PH" = (
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
+/obj/effect/spawner/lootdrop/maintenance/three,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint)
 "PJ" = (
@@ -11935,18 +11877,7 @@
 	},
 /area/medical/cmostore)
 "Sm" = (
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
+/obj/effect/spawner/lootdrop/maintenance/eight,
 /turf/simulated/floor/wood{
 	icon_state = "wood-broken2"
 	},
@@ -12038,7 +11969,7 @@
 	pixel_y = 32
 	},
 /obj/effect/landmark/start/internal_affairs,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "SI" = (
 /turf/simulated/wall/r_wall,
@@ -12911,18 +12842,9 @@
 /turf/simulated/floor/carpet/black,
 /area/chapel/main)
 "WC" = (
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
+/obj/effect/spawner/lootdrop/maintenance/eight,
+/obj/effect/spawner/lootdrop/maintenance/eight,
+/obj/effect/spawner/lootdrop/maintenance/eight,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint)
 "WD" = (
@@ -12979,15 +12901,8 @@
 /turf/simulated/floor/plasteel,
 /area/security/nuke_storage)
 "WP" = (
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
+/obj/effect/spawner/lootdrop/maintenance/eight,
 /turf/simulated/floor/wood{
 	icon_state = "wood-broken"
 	},
@@ -13054,9 +12969,6 @@
 /turf/simulated/floor/plasteel,
 /area/security/nuke_storage)
 "Xe" = (
-/obj/effect/mapping_helpers/airlock/unres{
-	dir = 1
-	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
 	d1 = 1;
@@ -13169,6 +13081,7 @@
 	name = "Escape Airlock"
 	},
 /obj/structure/fans/tiny,
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/simulated/floor/plating,
 /area/medical/cmostore)
 "XK" = (
@@ -13243,14 +13156,7 @@
 	},
 /area/hallway/primary/central/ne)
 "Yn" = (
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
+/obj/effect/spawner/lootdrop/maintenance/eight,
 /turf/simulated/floor/wood{
 	icon_state = "wood-broken"
 	},
@@ -13356,10 +13262,7 @@
 	tag = ""
 	},
 /obj/machinery/door/airlock/external{
-	id_tag = "fssolar_door_ext";
-	locked = 1;
-	name = "Engineering External Access";
-	req_access_txt = "10;13"
+	req_access_txt = "32"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/auxsolarstarboard)
@@ -43134,7 +43037,7 @@ aa
 aa
 IL
 XJ
-aa
+JV
 JV
 JV
 IL
@@ -44953,8 +44856,8 @@ ou
 HE
 dA
 TU
-Lb
 Vc
+Aj
 pH
 Hw
 eh
@@ -45206,7 +45109,7 @@ Ux
 eX
 ox
 qd
-ou
+SF
 NL
 dA
 Fz
@@ -45460,7 +45363,7 @@ fU
 Hj
 WV
 JO
-eX
+ie
 oy
 dr
 ou
@@ -45722,7 +45625,7 @@ oA
 ds
 ou
 DA
-AX
+dA
 dA
 AC
 Ea
@@ -51376,7 +51279,7 @@ ol
 oT
 GB
 Lz
-vT
+UP
 xY
 Ns
 Az
@@ -54469,7 +54372,7 @@ ri
 Xg
 Lt
 yH
-AQ
+Yn
 Xg
 aa
 aa
