@@ -368,7 +368,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			linked_destroy.icon_state = "d_analyzer"
 
 	linked_destroy.busy = FALSE
-	use_power(DECONSTRUCT_POWER)
+	power_state(DECONSTRUCT_POWER)
 	menu = MENU_MAIN
 	submenu = SUBMENU_MAIN
 	SStgui.update_uis(src)
@@ -428,7 +428,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 		flick("circuit_imprinter_ani", machine)
 
 	machine.busy = TRUE
-	use_power(power)
+	power_state(power)
 
 	var/list/efficient_mats = list()
 	for(var/MAT in being_built.materials)
@@ -441,7 +441,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 		enough_materials = FALSE
 	else
 		for(var/R in being_built.reagents_list)
-			if(!machine.reagents.has_reagent(R, being_built.reagents_list[R]) * coeff)
+			if(!machine.reagents.has_reagent(R, being_built.reagents_list[R] * coeff))
 				atom_say("Not enough reagents to complete prototype.")
 				enough_materials = FALSE
 

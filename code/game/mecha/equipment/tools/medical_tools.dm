@@ -213,6 +213,9 @@
 /obj/item/mecha_parts/mecha_equipment/medical/sleeper/process()
 	if(..())
 		return
+	if(!chassis)
+		STOP_PROCESSING(SSobj, src)
+		return
 	if(!chassis.has_charge(energy_drain))
 		set_ready_state(1)
 		log_message("Deactivated.")
@@ -228,7 +231,7 @@
 	M.AdjustWeakened(-8 SECONDS)
 	if(M.reagents.get_reagent_amount("epinephrine") < 5)
 		M.reagents.add_reagent("epinephrine", 5)
-	chassis.use_power(energy_drain)
+	chassis.power_state(energy_drain)
 	update_equip_info()
 
 
@@ -501,7 +504,7 @@
 	var/amount = synth_speed / processed_reagents.len
 	for(var/reagent in processed_reagents)
 		reagents.add_reagent(reagent,amount)
-		chassis.use_power(energy_drain)
+		chassis.power_state(energy_drain)
 
 /obj/item/mecha_parts/mecha_equipment/medical/rescue_jaw
 	name = "rescue jaw"

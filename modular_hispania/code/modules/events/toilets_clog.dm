@@ -3,7 +3,7 @@
 	endWhen = 10
 
 /datum/event/toilets_clog/announce()
-	GLOB.event_announcement.Announce("Los baños de la estacion estan teniendo problemas para evacuar sus desechos. Se recomienda una revision")
+	GLOB.minor_announcement.Announce("Los baños de la estacion estan teniendo problemas para evacuar sus desechos. Se recomienda una revision")
 
 /datum/event/toilets_clog/start()
 	var/cant = 0
@@ -18,9 +18,9 @@
 				W.old_desc = W.desc
 				W.desc= (W.old_desc + "<span class='warning'>Esta tapado! Hace falta una sopapa de plomero</span>")
 	if((!al_menos_uno) && (cant>0))
-		GLOB.event_announcement.Announce("Revisando mejor.. los inodoros estan en muy buenas condiciones")
+		GLOB.minor_announcement.Announce("Revisando mejor.. los inodoros estan en muy buenas condiciones")
 	if(cant==0)
-		GLOB.event_announcement.Announce("Vaya parece que enrealidad no tenemos ningun inodoro en la estacion. Mejor no saber donde van los desechos humanos")
+		GLOB.minor_announcement.Announce("Vaya parece que enrealidad no tenemos ningun inodoro en la estacion. Mejor no saber donde van los desechos humanos")
 
 /obj/structure/toilet/
 	var/averiado = FALSE

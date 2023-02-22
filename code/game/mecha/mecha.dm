@@ -251,7 +251,7 @@
 	. = ..()
 	if(.)
 		return 1
-	if(thrusters_active && movement_dir && use_power(step_energy_drain))
+	if(thrusters_active && movement_dir && power_state(step_energy_drain))
 		return 1
 
 	var/atom/movable/backup = get_spacemove_backup()
@@ -316,7 +316,7 @@
 	return FALSE
 
 /obj/mecha/proc/aftermove(move_type)
-	use_power(step_energy_drain)
+	power_state(step_energy_drain)
 	if(move_type & (MECHAMOVE_RAND | MECHAMOVE_STEP) && occupant)
 		var/obj/machinery/atmospherics/unary/portables_connector/possible_port = locate(/obj/machinery/atmospherics/unary/portables_connector) in loc
 		if(possible_port)
@@ -348,7 +348,7 @@
 				. = FALSE // We lie to mech code and say we didn't get to move, because we want to handle power usage + cooldown ourself
 				flick("phazon-phase", src)
 				forceMove(get_step(src, direction))
-				use_power(phasing_energy_drain)
+				power_state(phasing_energy_drain)
 				playsound(src, stepsound, 40, 1)
 				can_move = world.time + (step_in * 3)
 	else if(stepsound)
@@ -640,7 +640,7 @@
 	connected_port = null
 	QDEL_NULL(spark_system)
 	QDEL_NULL(smoke_system)
-	QDEL_LIST(trackers)
+	QDEL_LIST_CONTENTS(trackers)
 	remove_from_all_data_huds()
 	GLOB.mechas_list -= src //global mech list
 	return ..()
@@ -650,7 +650,7 @@
 	if(emp_proof)
 		return
 	if(get_charge())
-		use_power((cell.charge/3)/(severity*2))
+		power_state((cell.charge/3)/(severity*2))
 		take_damage(30 / severity, BURN, ENERGY, 1)
 	log_message("EMP detected", 1)
 	check_for_internal_damage(list(MECHA_INT_FIRE, MECHA_INT_TEMP_CONTROL, MECHA_INT_CONTROL_LOST, MECHA_INT_SHORT_CIRCUIT), 1)
@@ -873,7 +873,7 @@
 /obj/mecha/mech_melee_attack(obj/mecha/M)
 	if(!has_charge(melee_energy_drain))
 		return 0
-	use_power(melee_energy_drain)
+	power_state(melee_energy_drain)
 	if(M.damtype == BRUTE || M.damtype == BURN)
 		add_attack_logs(M.occupant, src, "Mecha-attacked with [M] ([uppertext(M.occupant.a_intent)]) ([uppertext(M.damtype)])")
 		. = ..()
@@ -1013,6 +1013,7 @@
 			return T.remove_air(amount)
 
 /obj/mecha/return_air()
+	RETURN_TYPE(/datum/gas_mixture)
 	if(use_internal_tank)
 		return cabin_air
 	return get_turf_air()
@@ -1063,14 +1064,20 @@
 /obj/mecha/portableConnectorReturnAir()
 	return internal_tank.return_air()
 
-/obj/mecha/proc/toggle_lights()
+/obj/mecha/proc/toggle_lights(show_message = TRUE)
 	lights = !lights
 	if(lights)
 		set_light(light_range + lights_power)
 	else
 		set_light(light_range - lights_power)
-	occupant_message("Toggled lights [lights ? "on" : "off"].")
-	log_message("Toggled lights [lights ? "on" : "off"].")
+	if(show_message)
+		occupant_message("Toggled lights [lights ? "on" : "off"].")
+		log_message("Toggled lights [lights ? "on" : "off"].")
+
+/obj/mecha/extinguish_light(force)
+	if(!lights)
+		return
+	toggle_lights(show_message = FALSE)
 
 /obj/mecha/proc/toggle_internal_tank()
 	use_internal_tank = !use_internal_tank
@@ -1347,7 +1354,7 @@
 	if(cell)
 		return max(0, cell.charge)
 
-/obj/mecha/proc/use_power(amount)
+/obj/mecha/proc/power_state(amount)
 	if(get_charge())
 		cell.use(amount)
 		if(occupant)

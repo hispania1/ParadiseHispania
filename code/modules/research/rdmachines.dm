@@ -6,7 +6,6 @@
 	icon = 'icons/obj/machines/research.dmi'
 	density = TRUE
 	anchored = TRUE
-	use_power = IDLE_POWER_USE
 	var/busy = FALSE
 	var/obj/machinery/computer/rdconsole/linked_console
 	var/obj/item/loaded_item = null
@@ -59,11 +58,11 @@
 	var/stack_name
 	if(ispath(type_inserted, /obj/item/stack/ore/bluespace_crystal))
 		stack_name = "bluespace"
-		use_power(MINERAL_MATERIAL_AMOUNT / 10)
+		power_state(MINERAL_MATERIAL_AMOUNT / 10)
 	else
 		var/obj/item/stack/S = type_inserted
 		stack_name = initial(S.name)
-		use_power(min(1000, (amount_inserted / 100)))
+		power_state(min(1000, (amount_inserted / 100)))
 	add_overlay("protolathe_[stack_name]")
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, cut_overlay), "protolathe_[stack_name]"), 10)
 
