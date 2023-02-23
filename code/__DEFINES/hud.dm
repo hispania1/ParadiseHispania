@@ -28,9 +28,7 @@
 #define DIAG_AIRLOCK_HUD 	"23" // Airlock shock overlay
 //#define DIAG_PATH_HUD 		"24"//Bot path indicators
 #define GLAND_HUD 			"25"//Gland indicators for abductors
-//HISPANIA CHANGES START
-#define NATIONS_HUD			"26"
-//HISPANIA CHANGES END
+
 
 
 //by default everything in the hud_list of an atom is an image
