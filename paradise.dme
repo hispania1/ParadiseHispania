@@ -851,7 +851,6 @@
 #include "code\game\objects\effects\forcefields.dm"
 #include "code\game\objects\effects\gibs.dm"
 #include "code\game\objects\effects\glowshroom.dm"
-#include "code\game\objects\effects\landmarks.dm"
 #include "code\game\objects\effects\meteors.dm"
 #include "code\game\objects\effects\mines.dm"
 #include "code\game\objects\effects\misc_effects.dm"
