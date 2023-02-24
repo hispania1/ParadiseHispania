@@ -6,7 +6,7 @@ GLOBAL_LIST_EMPTY(feedmespawn)
 	var/zona_spawn = null
 
 /datum/event/feedme/announce()
-	GLOB.event_announcement.Announce("A new gourmet guest has arrived to the station bar. Its important to satisfy his culinary taste or there could be consequences for service workers")
+	GLOB.minor_announcement.Announce("A new gourmet guest has arrived to the station bar. Its important to satisfy his culinary taste or there could be consequences for service workers")
 
 /datum/event/feedme/start()
 	INVOKE_ASYNC(src, PROC_REF(spawnear))
@@ -92,7 +92,7 @@ GLOBAL_LIST_EMPTY(feedmespawn)
 	if(world.time > endtime)
 		endtime = endtime * 2 //para q no entre denuevo
 		var/stars = alimentado / 10
-		GLOB.event_announcement.Announce("The gourmet guest has left the station after waiting for a long time. He left a terrible review ([stars] star/s)")
+		GLOB.minor_announcement.Announce("The gourmet guest has left the station after waiting for a long time. He left a terrible review ([stars] star/s)")
 		var/locat = src.loc
 		new /obj/effect/portal/(locat)
 
@@ -109,7 +109,7 @@ GLOBAL_LIST_EMPTY(feedmespawn)
 		var/locat = src.loc
 		new /obj/effect/portal/(locat)
 		new /obj/item/storage/secure/briefcase/syndie/(locat)
-		GLOB.event_announcement.Announce("El Catador se ha ido totalmente satisfecho. Buen trabajo!")
+		GLOB.minor_announcement.Announce("El Catador se ha ido totalmente satisfecho. Buen trabajo!")
 		sleep(1)
 		qdel(src)
 		return
@@ -162,7 +162,7 @@ GLOBAL_LIST_EMPTY(feedmespawn)
 	. = ..(gibbed)
 	if(!.)
 		return
-	GLOB.event_announcement.Announce("... The gourmet guest is dead. This damages NT reputation in the culinary galaxy newspaper. A bluespace projectile has been fired to the bar")
+	GLOB.minor_announcement.Announce("... The gourmet guest is dead. This damages NT reputation in the culinary galaxy newspaper. A bluespace projectile has been fired to the bar")
 
 	var/list/possible_areas = list()
 	for(var/area/crew_quarters/bar/A in world) 	//esto devuelve 1 area (bar)

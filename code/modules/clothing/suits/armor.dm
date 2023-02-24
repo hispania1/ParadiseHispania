@@ -317,12 +317,19 @@
 	item_state = "armor_reflec"
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 5, BULLET = 5, LASER = 75, ENERGY = 50, BOMB = 0, BIO = 0, RAD = 0, FIRE = INFINITY, ACID = INFINITY)
-	var/hit_reflect_chance = 40
+	var/last_reflect_time
+	var/reflect_cooldown = 5 SECONDS
 
 /obj/item/clothing/suit/armor/laserproof/IsReflect()
 	var/mob/living/carbon/human/user = loc
-	if(prob(hit_reflect_chance) && (user.wear_suit == src))
+	if(user.wear_suit != src)
+		return 0
+	if(world.time - last_reflect_time >= reflect_cooldown)
+		last_reflect_time = world.time
 		return 1
+	if(world.time - last_reflect_time <= 1) // This is so if multiple energy projectiles hit at once, they're all reflected
+		return 1
+	return 0
 
 /obj/item/clothing/suit/armor/vest/det_suit
 	name = "armor"
@@ -395,7 +402,7 @@
 	disable(emp_power)
 	..()
 
-/obj/item/clothing/suit/armor/reactive/proc/use_power()
+/obj/item/clothing/suit/armor/reactive/proc/power_state()
 	if(in_grace_period)
 		return TRUE
 	if(!cell.use(energy_cost)) //No working if cells are dry
@@ -440,14 +447,14 @@
 //When the wearer gets hit, this armor will teleport the user a short distance away (to safety or to more danger, no one knows. That's the fun of it!)
 /obj/item/clothing/suit/armor/reactive/teleport
 	name = "reactive teleport armor"
-	desc = "Someone seperated our Research Director from his own head!"
+	desc = "Someone separated our Research Director from his own head!"
 	energy_cost = 200
 	var/tele_range = 6
 
 /obj/item/clothing/suit/armor/reactive/teleport/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	if(!active)
 		return 0
-	if(reaction_check(hitby) && is_teleport_allowed(owner.z) && use_power())
+	if(reaction_check(hitby) && is_teleport_allowed(owner.z) && power_state())
 		var/mob/living/carbon/human/H = owner
 		if(do_teleport(owner, owner, 6, safe_turf_pick = TRUE)) //Teleport on the same spot with a precision of 6 gets a random tile near the owner.
 			owner.visible_message("<span class='danger'>The reactive teleport system flings [H] clear of [attack_text]!</span>")
@@ -474,7 +481,7 @@
 /obj/item/clothing/suit/armor/reactive/fire/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	if(!active)
 		return FALSE
-	if(reaction_check(hitby) && use_power())
+	if(reaction_check(hitby) && power_state())
 		owner.visible_message("<span class='danger'>[src] blocks [attack_text], sending out jets of flame!</span>")
 		for(var/mob/living/carbon/C in range(6, owner))
 			if(C != owner)
@@ -493,7 +500,7 @@
 /obj/item/clothing/suit/armor/reactive/stealth/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	if(!active)
 		return FALSE
-	if(reaction_check(hitby) && use_power())
+	if(reaction_check(hitby) && power_state())
 		var/mob/living/simple_animal/hostile/illusion/escape/E = new(owner.loc)
 		E.Copy_Parent(owner, 50)
 		E.GiveTarget(owner) //so it starts running right away
@@ -510,7 +517,7 @@
 /obj/item/clothing/suit/armor/reactive/tesla/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	if(!active)
 		return FALSE
-	if(reaction_check(hitby) && use_power())
+	if(reaction_check(hitby) && power_state())
 		owner.visible_message("<span class='danger'>[src] blocks [attack_text], sending out arcs of lightning!</span>")
 		for(var/mob/living/M in view(6, owner))
 			if(M == owner)
@@ -536,9 +543,9 @@
 /obj/item/clothing/suit/armor/reactive/repulse/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	if(!active)
 		return FALSE
-	if(reaction_check(hitby) && use_power())
+	if(reaction_check(hitby) && power_state())
 		owner.visible_message("<span class='danger'>[src] blocks [attack_text], converting the attack into a wave of force!</span>")
-		use_power()
+		power_state()
 		var/list/thrown_atoms = list()
 		for(var/turf/T in range(repulse_range, owner)) //Done this way so things don't get thrown all around hilariously.
 			for(var/atom/movable/AM in T)

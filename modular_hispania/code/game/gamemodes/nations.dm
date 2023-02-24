@@ -11,7 +11,7 @@
 
 /datum/game_mode/nations/post_setup()
 	spawn (60 SECONDS)
-		GLOB.event_announcement.Announce("Debido a acusaciones recientes y TOTALMENTE INFUNDADAS de fraude masivo a Centcomm se esta evaluando tomar medidas. \
+		GLOB.minor_announcement.Announce("Debido a acusaciones recientes y TOTALMENTE INFUNDADAS de fraude masivo a Centcomm se esta evaluando tomar medidas. \
 		Los puestos de trabajo de la estacion y contratos podrian verse afectados",new_sound = 'sound/AI/intercept.ogg')
 	spawn (180 SECONDS)
 		kickoff=1
@@ -32,7 +32,7 @@
 	to_chat(world, "<B>Se recomienda jugar con una IA presente!</B>")
 
 /datum/game_mode/nations/proc/send_intercept()
-	GLOB.event_announcement.Announce(
+	GLOB.minor_announcement.Announce(
 					" Nanotrasen ha decidido liquidar todos \
 					los activos de la División de Centcom para pagar los honorarios legales masivos en los que se incurrirá. \
 					Por lo tanto, todos los contratos de trabajo actuales son TERMINADOS INMEDIATAMENTE \

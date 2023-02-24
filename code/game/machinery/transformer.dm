@@ -47,7 +47,8 @@
 		new /obj/machinery/conveyor/auto(west, WEST)
 
 /obj/machinery/transformer/power_change()
-	..()
+	if(!..())
+		return
 	update_icon(UPDATE_ICON_STATE)
 
 /obj/machinery/transformer/update_icon_state()
@@ -89,7 +90,7 @@
 		return
 
 	playsound(loc, 'sound/items/welder.ogg', 50, 1)
-	use_power(5000) // Use a lot of power.
+	power_state(5000) // Use a lot of power.
 
 	// Activate the cooldown
 	is_on_cooldown = TRUE
@@ -132,7 +133,7 @@
 		return
 
 	playsound(loc, 'sound/items/welder.ogg', 50, 1)
-	use_power(5000) // Use a lot of power.
+	power_state(5000) // Use a lot of power.
 
 	var/icon/newicon = new(I.icon, I.icon_state)
 	newicon.GrayScale()
@@ -165,7 +166,8 @@
 			new /obj/machinery/conveyor/auto(west2, EAST)
 
 /obj/machinery/transformer/xray/power_change()
-	..()
+	if(!..())
+		return
 	update_icon(UPDATE_ICON_STATE)
 
 /obj/machinery/transformer/xray/update_icon_state()

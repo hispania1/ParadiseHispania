@@ -6,6 +6,7 @@ SUBSYSTEM_DEF(ticker)
 	flags = SS_KEEP_TIMING
 	runlevels = RUNLEVEL_LOBBY | RUNLEVEL_SETUP | RUNLEVEL_GAME
 	offline_implications = "The game is no longer aware of when the round ends. Immediate server restart recommended."
+	cpu_display = SS_CPUDISPLAY_LOW
 
 	/// Time the game should start, relative to world.time
 	var/round_start_time = 0
@@ -87,11 +88,10 @@ SUBSYSTEM_DEF(ticker)
 	'modular_hispania/sound/music/title11.ogg',\
 	'modular_hispania/sound/music/title12.ogg',\
 	'modular_hispania/sound/music/title13.ogg',\
-	'modular_hispania/sound/music/traitor.ogg',
+	'modular_hispania/sound/music/traitor.ogg',\
+	'modular_hispania/sound/music/title14.ogg',
 	//HISPANIA CHANGES END
 	)
-
-	return ..()
 
 
 /datum/controller/subsystem/ticker/fire()
@@ -322,7 +322,7 @@ SUBSYSTEM_DEF(ticker)
 			var/datum/holiday/holiday = SSholiday.holidays[holidayname]
 			to_chat(world, "<h4>[holiday.greet()]</h4>")
 
-	SSdiscord.send2discord_simple(DISCORD_WEBHOOK_ADMIN ,"**\[Info]** Round has started")
+	GLOB.discord_manager.send2discord_simple(DISCORD_WEBHOOK_ADMIN ,"**\[Info]** Round has started")
 	auto_toggle_ooc(FALSE) // Turn it off
 	time_game_started = world.time
 
@@ -537,6 +537,7 @@ SUBSYSTEM_DEF(ticker)
 
 /datum/controller/subsystem/ticker/proc/declare_completion()
 	GLOB.nologevent = TRUE //end of round murder and shenanigans are legal; there's no need to jam up attack logs past this point.
+	set_observer_default_invisibility(0) //spooks things up
 	//Round statistics report
 	var/datum/station_state/ending_station_state = new /datum/station_state()
 	ending_station_state.count()
