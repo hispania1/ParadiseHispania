@@ -153,6 +153,9 @@ GLOBAL_LIST_INIT(protected_objects, list(/obj/structure/table, /obj/structure/ca
 
 /mob/living/simple_animal/hostile/mimic/copy/proc/CopyObject(obj/O, mob/living/user, destroy_original = 0)
 	if(destroy_original || CheckObject(O))
+		//HISPANIA CHANGES START
+		forma_anterior = O.type
+		//HISPANIA CHANGES END
 		O.loc = src
 		name = O.name
 		desc = O.desc
@@ -202,7 +205,7 @@ GLOBAL_LIST_INIT(protected_objects, list(/obj/structure/table, /obj/structure/ca
 
 /mob/living/simple_animal/hostile/mimic/copy/machine
 	speak = list("HUMANS ARE IMPERFECT!", "YOU SHALL BE ASSIMILATED!", "YOU ARE HARMING YOURSELF", "You have been deemed hazardous. Will you comply?", \
-				 "My logic is undeniable.", "One of us.", "FLESH IS WEAK", "THIS ISN'T WAR, THIS IS EXTERMINATION!")
+				"My logic is undeniable.", "One of us.", "FLESH IS WEAK", "THIS ISN'T WAR, THIS IS EXTERMINATION!")
 	speak_chance = 15
 
 /mob/living/simple_animal/hostile/mimic/copy/machine/CanAttack(atom/the_target)

@@ -8,9 +8,6 @@
 	name = "traitor"
 	config_tag = "traitor"
 	restricted_jobs = list("Cyborg")//They are part of the AI if he is traitor so are they, they use to get double chances
-	//HISPANIA STARTS HERE
-	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Blueshield", "Nanotrasen Representative", "Magistrate", "Internal Affairs Agent", "Nanotrasen Navy Officer", "Special Operations Officer", "Syndicate Officer", "Solar Federation General", , "Head of Personnel", "Research Director", "Chief Engineer", "Chief Medical Officer")
-	//HISPANIA ENDS HERE
 	required_players = 0
 	required_enemies = 1
 	recommended_enemies = 4
@@ -34,7 +31,7 @@
 	var/list/possible_traitors = get_players_for_role(ROLE_TRAITOR)
 
 	for(var/datum/mind/candidate in possible_traitors)
-		if(candidate.special_role == SPECIAL_ROLE_VAMPIRE) // no traitor vampires
+		if(candidate.special_role == SPECIAL_ROLE_VAMPIRE || candidate.special_role == SPECIAL_ROLE_CHANGELING) // no traitor vampires or changelings
 			possible_traitors.Remove(candidate)
 
 	// stop setup if no possible traitors

@@ -41,6 +41,7 @@
 	init_datum_subtypes(/datum/job, GLOB.joblist, list(/datum/job/ai, /datum/job/cyborg), "title")
 	init_datum_subtypes(/datum/superheroes, GLOB.all_superheroes, null, "name")
 	init_datum_subtypes(/datum/language, GLOB.all_languages, null, "name")
+	init_datum_subtypes(/datum/nations, GLOB.all_nations, null, "default_name")	//HISPANIA CHANGES START & END HERE
 
 	// Setup languages
 	for(var/language_name in GLOB.all_languages)
@@ -171,6 +172,12 @@
 		var/datum/keybinding/D = path
 		if(initial(D.name))
 			GLOB.keybindings += new path()
+
+	for(var/path in subtypesof(/datum/objective))
+		var/datum/objective/O = path
+		if(isnull(initial(O.name)))
+			continue // These are not valid objectives to add.
+		GLOB.admin_objective_list[initial(O.name)] = path
 
 /* // Uncomment to debug chemical reaction list.
 /client/verb/debug_chemical_list()

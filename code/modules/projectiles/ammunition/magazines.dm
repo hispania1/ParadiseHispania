@@ -180,7 +180,7 @@
 	max_ammo = 5
 
 /obj/item/ammo_box/magazine/internal/shot/toy/tommygun
- 	max_ammo = 10
+	max_ammo = 10
 
 ///////////EXTERNAL MAGAZINES////////////////
 
@@ -348,8 +348,9 @@
 	multi_sprite_step = 2
 
 /obj/item/ammo_box/magazine/tommygunm45
-	name = "drum magazine (.45)"
-	icon_state = "drum45"
+	name = "tommy magazine (.45)"
+	icon = 'modular_hispania/icons/obj/ammo.dmi'
+	icon_state = "tommy45"
 	ammo_type = /obj/item/ammo_casing/c45
 	caliber = ".45"
 	max_ammo = 50
@@ -486,10 +487,15 @@
 
 /obj/item/ammo_box/magazine/toy/m762
 	name = "donksoft box magazine"
+	icon = 'modular_hispania/icons/obj/ammo.dmi'
 	icon_state = "a762"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/riot
-	max_ammo = 50
+	max_ammo = 100
 	multi_sprite_step = 10
+
+/obj/item/ammo_box/magazine/toy/m762/update_icon_state()
+	..()
+	icon_state = "a762-[CEILING(ammo_count()/20, 1)*20]"
 
 /obj/item/ammo_box/magazine/toy/m762/riot
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/riot
@@ -497,11 +503,12 @@
 /obj/item/ammo_box/magazine/laser
 	name = "encased laser projector magazine"
 	desc = "Fits experimental laser ammo casings."
+	icon = 'modular_hispania/icons/obj/ammo.dmi'
 	icon_state = "laser"
 	ammo_type = /obj/item/ammo_casing/laser
 	origin_tech = "combat=3"
 	caliber = "laser"
-	max_ammo = 20
+	max_ammo = 40
 	multi_sprite_step = 5
 
 /obj/item/ammo_box/magazine/toy/smgm45

@@ -1,8 +1,11 @@
 /obj/item/gun/projectile/revolver
 	name = "\improper .357 revolver"
+	lefthand_file = 'modular_hispania/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'modular_hispania/icons/mob/inhands/guns_righthand.dmi'
 	desc = "A suspicious revolver. Uses .357 ammo."
 	materials = list()
 	icon_state = "revolver"
+	item_state = "revolver"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder
 	origin_tech = "combat=3;materials=2"
 	fire_sound = 'sound/weapons/gunshots/gunshot_strong.ogg'
@@ -291,6 +294,7 @@
 	sawn_desc = "Omar's coming!"
 	can_holster = FALSE
 	unique_reskin = TRUE
+	pb_knockback = 1
 
 /obj/item/gun/projectile/revolver/doublebarrel/Initialize(mapload)
 	. = ..()
@@ -317,8 +321,8 @@
 		return ..()
 
 /obj/item/gun/projectile/revolver/doublebarrel/sawoff(mob/user)
-    . = ..()
-    weapon_weight = WEAPON_MEDIUM
+	. = ..()
+	weapon_weight = WEAPON_MEDIUM
 
 /obj/item/gun/projectile/revolver/doublebarrel/attack_self(mob/living/user)
 	var/num_unloaded = 0

@@ -147,13 +147,6 @@
 /obj/structure/chair/stool,
 /turf/simulated/floor/plasteel,
 /area/awaymission/challenge/main)
-"ay" = (
-/obj/structure/table/wood,
-/obj/structure/safe/floor,
-/obj/item/gun/projectile/shotgun/automatic/combat,
-/obj/item/gun/projectile/automatic/mini_uzi,
-/turf/simulated/floor/plasteel,
-/area/awaymission/challenge/main)
 "az" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/plasteel,
@@ -578,24 +571,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/challenge/main)
-"bY" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8";
-	tag = ""
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/apc/noalarm{
-	dir = 4;
-	name = "Worn-out APC";
-	pixel_x = 24
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/challenge/main)
 "bZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -648,24 +623,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/challenge/main)
-"ci" = (
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
-	},
-/obj/machinery/power/apc/noalarm{
-	dir = 4;
-	name = "Worn-out APC";
-	pixel_x = 24
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/challenge/start)
 "cj" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/plasteel,
@@ -772,6 +729,49 @@
 	},
 /obj/effect/decal/warning_stripes/northwestcorner,
 /turf/simulated/floor/plasteel,
+/area/awaymission/challenge/start)
+"jM" = (
+/obj/structure/table/wood,
+/obj/structure/safe/floor,
+/obj/item/gun/projectile/shotgun/automatic/combat,
+/obj/item/gun/projectile/automatic/fullauto/mini_uzi,
+/turf/simulated/floor/plasteel,
+/area/awaymission/challenge/main)
+"XF" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8";
+	tag = ""
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/off_station{
+	dir = 4;
+	name = "Worn-out APC";
+	pixel_x = 24
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/challenge/main)
+"Za" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8";
+	tag = ""
+	},
+/obj/machinery/power/apc/off_station{
+	dir = 4;
+	name = "Worn-out APC";
+	pixel_x = 24
+	},
+/turf/simulated/floor/plating,
 /area/awaymission/challenge/start)
 
 (1,1,1) = {"
@@ -2352,8 +2352,8 @@ ac
 ab
 ab
 bR
-bY
-ci
+XF
+Za
 cg
 cg
 aa
@@ -4022,7 +4022,7 @@ aj
 aj
 as
 at
-ay
+jM
 ag
 ac
 ac

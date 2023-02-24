@@ -1,7 +1,7 @@
 /obj/item/gun/projectile/automatic/toy
 	name = "foam force SMG"
 	desc = "A prototype three-round burst toy submachine gun. Ages 8 and up."
-	icon = 'icons/obj/guns/toy.dmi'
+	icon = 'modular_hispania/icons/obj/guns/toy.dmi'
 	icon_state = "saber"
 	item_state = "saber"
 	mag_type = /obj/item/ammo_box/magazine/toy/smg
@@ -75,6 +75,10 @@
 	if(chambered && !chambered.BB)
 		qdel(chambered)
 
+/obj/item/gun/projectile/shotgun/toy/process_fire(atom/target, mob/living/user, message = 1, params, zone_override, bonus_spread = 0)
+	. = ..()
+	chambered = null
+
 /obj/item/gun/projectile/shotgun/toy/crossbow
 	name = "foam force crossbow"
 	desc = "A weapon favored by many overactive children. Ages 8 and up."
@@ -89,32 +93,32 @@
 	slot_flags = SLOT_BELT
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/gun/projectile/automatic/c20r/toy
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r/toy
 	name = "donksoft SMG"
 	desc = "A bullpup two-round burst toy SMG, designated 'C-20r'. Ages 8 and up."
-	icon = 'icons/obj/guns/toy.dmi'
 	can_suppress = FALSE
 	needs_permit = FALSE
 	mag_type = /obj/item/ammo_box/magazine/toy/smgm45
 
-/obj/item/gun/projectile/automatic/c20r/toy/riot
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r/toy/riot
 	mag_type = /obj/item/ammo_box/magazine/toy/smgm45/riot
 
-/obj/item/gun/projectile/automatic/c20r/toy/process_chamber(eject_casing = 0, empty_chamber = 1)
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r/toy/process_chamber(eject_casing = 0, empty_chamber = 1)
 	..()
 
-/obj/item/gun/projectile/automatic/l6_saw/toy
+/obj/item/gun/projectile/automatic/fullauto/l6_saw/toy
 	name = "donksoft LMG"
 	desc = "A heavily modified toy light machine gun, designated 'L6 SAW'. Ages 8 and up."
-	icon = 'icons/obj/guns/toy.dmi'
+	icon = 'modular_hispania/icons/obj/guns/toy.dmi'
+	icon_state = "l6closed100"
 	can_suppress = FALSE
 	needs_permit = FALSE
 	mag_type = /obj/item/ammo_box/magazine/toy/m762
 
-/obj/item/gun/projectile/automatic/l6_saw/toy/riot
+/obj/item/gun/projectile/automatic/fullauto/l6_saw/toy/riot
 	mag_type = /obj/item/ammo_box/magazine/toy/m762/riot
 
-/obj/item/gun/projectile/automatic/l6_saw/toy/process_chamber(eject_casing = 0, empty_chamber = 1)
+/obj/item/gun/projectile/automatic/fullauto/l6_saw/toy/process_chamber(eject_casing = 0, empty_chamber = 1)
 	..()
 
 /obj/item/gun/projectile/shotgun/toy/tommygun

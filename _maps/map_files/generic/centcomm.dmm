@@ -236,6 +236,10 @@
 	icon_state = "red"
 	},
 /area/holodeck/source_emptycourt)
+"aS" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "aU" = (
 /obj/effect/decal/warning_stripes/northwest,
 /turf/simulated/floor/plating/airless,
@@ -309,6 +313,19 @@
 	},
 /turf/simulated/floor/plating/abductor,
 /area/abductor_ship)
+"bh" = (
+/obj/structure/rack,
+/obj/item/ammo_box/magazine/mm556x45,
+/obj/item/ammo_box/magazine/mm556x45,
+/obj/item/ammo_box/magazine/mm556x45,
+/obj/item/ammo_box/magazine/mm556x45,
+/obj/item/gun/projectile/automatic/fullauto/l6_saw,
+/obj/item/gun/projectile/automatic/fullauto/l6_saw{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/turf/simulated/floor/plasteel,
+/area/admin)
 "bj" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
@@ -339,6 +356,21 @@
 	},
 /turf/simulated/floor/plating/abductor,
 /area/abductor_ship)
+"bs" = (
+/obj/structure/rack,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r,
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/turf/simulated/floor/plasteel,
+/area/admin)
 "bt" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/holofloor/grass,
@@ -361,6 +393,11 @@
 /obj/item/hemostat/alien,
 /turf/simulated/floor/plating/abductor,
 /area/abductor_ship)
+"by" = (
+/obj/structure/table/wood,
+/obj/item/reagent_containers/food/drinks/trophy/bronze_cup/toolbox_win,
+/turf/simulated/floor/plasteel/dark,
+/area/tdome/tdomeobserve)
 "bz" = (
 /obj/structure/ninjatele{
 	pixel_y = 25
@@ -405,6 +442,9 @@
 /obj/item/storage/box/alienhandcuffs,
 /turf/simulated/floor/plating/abductor,
 /area/abductor_ship)
+"bL" = (
+/turf/simulated/wall/indestructible/opsglass/limited_smooth,
+/area/syndicate_mothership)
 "bM" = (
 /turf/simulated/floor/holofloor,
 /area/holodeck/source_emptycourt)
@@ -906,6 +946,17 @@
 	icon_state = "green"
 	},
 /area/holodeck/source_boxingcourt)
+"dP" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	autolink_id = "syndishuttle_vent"
+	},
+/obj/machinery/access_button{
+	autolink_id = "syndishuttle_btn_ext";
+	pixel_x = -25;
+	pixel_y = 25
+	},
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/syndicate)
 "dS" = (
 /obj/docking_port/stationary/transit{
 	dir = 4;
@@ -1226,18 +1277,6 @@
 "fc" = (
 /turf/simulated/floor/beach/away/water,
 /area/ninja/holding)
-"fd" = (
-/obj/structure/table/wood,
-/obj/item/paper_bin,
-/obj/item/pen,
-/obj/machinery/economy/vending/wallmed{
-	name = "Emergency NanoMed";
-	pixel_y = 32;
-	use_power = 0
-	},
-/obj/item/clipboard,
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/specops)
 "fe" = (
 /obj/machinery/poolcontroller/invisible,
 /turf/simulated/floor/beach/away/water,
@@ -1331,6 +1370,15 @@
 /mob/living/carbon/human/monkey,
 /turf/simulated/floor/wood,
 /area/wizard_station)
+"fC" = (
+/obj/machinery/door_control/no_emag{
+	pixel_y = -24;
+	req_access_txt = "114";
+	name = "Engineering Storage Shutters";
+	id = "SpecopsEngineering"
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "fE" = (
 /obj/structure/table,
 /obj/item/storage/box/handcuffs,
@@ -1556,6 +1604,18 @@
 	},
 /turf/simulated/floor/plating/airless,
 /area/shuttle/syndicate_sit)
+"go" = (
+/obj/machinery/airlock_controller/access_controller{
+	name = "Syndicate Jail Access Controller";
+	pixel_y = 24;
+	req_access_txt = "150";
+	ext_door_link_id = "syndijail_door_ext";
+	int_door_link_id = "syndijail_door_int";
+	ext_button_link_id = "syndijail_btn_ext";
+	int_button_link_id = "syndijail_btn_int"
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/syndicate_mothership)
 "gp" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1;
@@ -1580,6 +1640,16 @@
 	},
 /turf/simulated/floor/plating/airless,
 /area/shuttle/syndicate_elite)
+"gu" = (
+/obj/structure/table/reinforced,
+/obj/item/rpd/bluespace,
+/obj/item/rpd/bluespace,
+/obj/item/rpd/bluespace,
+/obj/item/rpd/bluespace,
+/obj/item/rpd/bluespace,
+/obj/item/rpd/bluespace,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "gv" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1
@@ -2397,10 +2467,6 @@
 	},
 /turf/simulated/floor/mineral/titanium,
 /area/shuttle/transport)
-"iW" = (
-/obj/structure/table/wood,
-/turf/simulated/floor/transparent/glass,
-/area/centcom/specops)
 "iX" = (
 /obj/machinery/suit_storage_unit/syndicate/secure,
 /turf/simulated/floor/mineral/plastitanium/red,
@@ -2421,6 +2487,16 @@
 /obj/effect/decal/warning_stripes/red/hollow,
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
+"ja" = (
+/obj/structure/table/reinforced,
+/obj/item/stock_parts/cell/bluespace,
+/obj/item/stock_parts/cell/bluespace,
+/obj/item/stock_parts/cell/bluespace,
+/obj/item/stock_parts/cell/bluespace,
+/obj/item/stock_parts/cell/bluespace,
+/obj/item/stock_parts/cell/bluespace,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "jb" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/item/trash/semki,
@@ -2463,17 +2539,6 @@
 	},
 /turf/simulated/wall/indestructible/opsglass,
 /area/syndicate_mothership)
-"jj" = (
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1331;
-	master_tag = "synd_airlock";
-	name = "interior access button";
-	pixel_x = 25;
-	pixel_y = 25
-	},
-/turf/simulated/floor/mineral/plastitanium/red,
-/area/shuttle/syndicate)
 "jk" = (
 /obj/effect/landmark/spawner/syndicate_infiltrator,
 /turf/simulated/floor/plasteel/dark,
@@ -2526,19 +2591,6 @@
 "jv" = (
 /obj/structure/table,
 /obj/machinery/recharger,
-/turf/simulated/floor/mineral/plastitanium/red,
-/area/shuttle/syndicate)
-"jw" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1331;
-	id_tag = "synd_inner";
-	locked = 1;
-	name = "Ship External Access";
-	req_access_txt = "150"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
-	},
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate)
 "jx" = (
@@ -2781,20 +2833,6 @@
 /obj/machinery/dna_scannernew/upgraded,
 /turf/simulated/floor/mineral/titanium,
 /area/shuttle/administration)
-"kn" = (
-/obj/structure/rack,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/gun/projectile/automatic/c20r,
-/obj/item/gun/projectile/automatic/c20r,
-/turf/simulated/floor/plasteel/dark,
-/area/syndicate_mothership)
 "ko" = (
 /obj/structure/closet/secure_closet/guncabinet,
 /obj/item/gun/energy/bsg/prebuilt{
@@ -2875,6 +2913,10 @@
 /obj/structure/chair,
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
+"kB" = (
+/obj/machinery/economy/vending/engivend,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "kC" = (
 /obj/docking_port/stationary{
 	dir = 2;
@@ -3052,18 +3094,6 @@
 	},
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
-"lc" = (
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1441;
-	master_tag = "syndicate_jail_airlock_control";
-	name = "Syndicate Jail Access Button";
-	pixel_x = -24;
-	pixel_y = -8;
-	req_access_txt = "150"
-	},
-/turf/simulated/floor/plasteel/dark,
-/area/syndicate_mothership/jail)
 "ld" = (
 /obj/machinery/door/window/westleft,
 /turf/simulated/floor/plasteel/dark,
@@ -3085,49 +3115,6 @@
 	},
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
-"li" = (
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1441;
-	master_tag = "syndicate_jail_airlock_control";
-	name = "Syndicate Jail Access Button";
-	pixel_y = 24;
-	req_access_txt = "150"
-	},
-/turf/simulated/floor/plasteel/dark,
-/area/syndicate_mothership)
-"lj" = (
-/obj/machinery/door/airlock/hatch/syndicate{
-	autoclose = 0;
-	frequency = 1441;
-	id_tag = "syndicate_jail_airlock_external";
-	locked = 1;
-	name = "Syndicate Jail External Airlock"
-	},
-/turf/simulated/floor/plasteel/dark,
-/area/syndicate_mothership)
-"lk" = (
-/obj/machinery/embedded_controller/radio/airlock/access_controller{
-	frequency = 1441;
-	id_tag = "syndicate_jail_airlock_control";
-	name = "Syndicate Jail Access Controller";
-	pixel_y = 24;
-	req_access_txt = "150";
-	tag_exterior_door = "syndicate_jail_airlock_external";
-	tag_interior_door = "syndicate_jail_airlock_internal"
-	},
-/turf/simulated/floor/plasteel/dark,
-/area/syndicate_mothership)
-"ll" = (
-/obj/machinery/door/airlock/hatch/syndicate{
-	autoclose = 0;
-	frequency = 1441;
-	id_tag = "syndicate_jail_airlock_internal";
-	locked = 1;
-	name = "Syndicate Jail Internal Airlock"
-	},
-/turf/simulated/floor/plasteel/dark,
-/area/syndicate_mothership/jail)
 "lm" = (
 /obj/structure/chair/office/dark,
 /turf/simulated/floor/plasteel/dark,
@@ -3616,6 +3603,16 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/admin)
+"mz" = (
+/obj/structure/mirror/magic/nuclear{
+	pixel_x = 28
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/turf/simulated/floor/plasteel/freezer,
+/area/syndicate_mothership)
 "mB" = (
 /obj/structure/rack,
 /obj/item/clothing/shoes/magboots/syndie{
@@ -3825,16 +3822,6 @@
 /obj/item/twohanded/required/kirbyplants,
 /turf/simulated/floor/plasteel/dark,
 /area/tdome/tdomeadmin)
-"nj" = (
-/obj/structure/mirror{
-	pixel_x = 28
-	},
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = 11
-	},
-/turf/simulated/floor/plasteel/freezer,
-/area/syndicate_mothership)
 "nk" = (
 /obj/machinery/atmospherics/portable/canister/oxygen{
 	name = "Canister: \[O2] (CRYO)"
@@ -3861,14 +3848,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/admin)
-"no" = (
-/obj/item/mop,
-/obj/structure/mirror{
-	pixel_x = 28
-	},
-/obj/item/twohanded/required/kirbyplants,
-/turf/simulated/floor/plasteel/freezer,
-/area/syndicate_mothership)
 "np" = (
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 8
@@ -4461,6 +4440,24 @@
 /obj/machinery/chem_heater,
 /turf/simulated/floor/plasteel/freezer,
 /area/admin)
+"pF" = (
+/obj/machinery/airlock_controller/air_cycler{
+	pixel_x = 25;
+	req_access_txt = "150";
+	vent_link_id = "syndishuttle_vent";
+	ext_door_link_id = "syndishuttle_door_ext";
+	int_door_link_id = "syndishuttle_door_int";
+	ext_button_link_id = "syndishuttle_btn_ext";
+	int_button_link_id = "syndishuttle_btn_int"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/syndicate)
 "pG" = (
 /obj/item/storage/box/syringes,
 /obj/item/assembly/igniter,
@@ -4590,13 +4587,6 @@
 /obj/effect/landmark/spawner/tdome1,
 /turf/simulated/floor/plasteel,
 /area/tdome/arena)
-"pX" = (
-/obj/machinery/door/airlock/centcom{
-	name = "Diplomatic Office";
-	req_access_txt = "114"
-	},
-/turf/simulated/floor/plasteel/dark/nitrogen,
-/area/centcom/specops)
 "pY" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Team Storage"
@@ -4712,6 +4702,20 @@
 	icon_state = "bar"
 	},
 /area/tdome/tdomeobserve)
+"qx" = (
+/obj/structure/rack,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r,
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r,
+/turf/simulated/floor/plasteel/dark,
+/area/syndicate_mothership)
 "qB" = (
 /obj/machinery/cryopod/offstation/right,
 /turf/simulated/floor/wood,
@@ -4744,6 +4748,28 @@
 /obj/machinery/recharge_station/upgraded,
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate)
+"qH" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/sheet/plasteel{
+	amount = 50
+	},
+/obj/item/stack/sheet/plasteel{
+	amount = 50
+	},
+/obj/item/stack/sheet/plasteel{
+	amount = 50
+	},
+/obj/item/stack/sheet/plasteel{
+	amount = 50
+	},
+/obj/item/stack/sheet/plasteel{
+	amount = 50
+	},
+/obj/item/stack/sheet/plasteel{
+	amount = 50
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "qI" = (
 /obj/structure/closet/syndicate/nuclear,
 /turf/simulated/floor/mineral/plastitanium/red,
@@ -4795,49 +4821,6 @@
 	},
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/assault_pod)
-"qR" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1331;
-	id_tag = "synd_outer";
-	name = "Ship External Access";
-	req_access_txt = "150"
-	},
-/obj/machinery/door/poddoor{
-	density = 0;
-	icon_state = "open";
-	id_tag = "smindicate";
-	name = "Outer Airlock";
-	opacity = 0
-	},
-/obj/machinery/door_control/no_emag{
-	id = "smindicate";
-	name = "External Door Control";
-	pixel_x = -26;
-	pixel_y = -2;
-	req_access_txt = "150"
-	},
-/obj/docking_port/mobile{
-	dheight = 9;
-	dir = 2;
-	dwidth = 5;
-	height = 22;
-	id = "syndicate";
-	name = "syndicate infiltrator";
-	width = 18
-	},
-/obj/docking_port/stationary{
-	area_type = /area/syndicate_mothership;
-	dheight = 9;
-	dir = 2;
-	dwidth = 5;
-	height = 22;
-	id = "syndicate_away";
-	name = "syndicate base";
-	turf_type = /turf/simulated/floor/plating/asteroid/snow/airless;
-	width = 18
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/syndicate)
 "qS" = (
 /obj/item/twohanded/required/kirbyplants,
 /turf/simulated/floor/plasteel/dark,
@@ -4862,21 +4845,6 @@
 /obj/item/ammo_box/magazine/m12g/dragon,
 /obj/item/gun/projectile/automatic/shotgun/bulldog,
 /obj/item/gun/projectile/automatic/shotgun/bulldog{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/turf/simulated/floor/plasteel,
-/area/admin)
-"qX" = (
-/obj/structure/rack,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/gun/projectile/automatic/c20r,
-/obj/item/gun/projectile/automatic/c20r{
 	pixel_x = 3;
 	pixel_y = -3
 	},
@@ -5168,13 +5136,6 @@
 /obj/item/reagent_containers/food/drinks/bottle/cognac,
 /turf/simulated/floor/transparent/glass,
 /area/tdome/tdomeobserve)
-"rU" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1331;
-	id_tag = "synd_pump"
-	},
-/turf/simulated/floor/mineral/plastitanium/red,
-/area/shuttle/syndicate)
 "rV" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "s_docking_airlock";
@@ -5312,32 +5273,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
-"sx" = (
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1331;
-	id_tag = "synd_airlock";
-	pixel_x = 25;
-	req_access_txt = "150";
-	tag_airpump = "synd_pump";
-	tag_chamber_sensor = "synd_sensor";
-	tag_exterior_door = "synd_outer";
-	tag_interior_door = "synd_inner"
-	},
-/obj/machinery/airlock_sensor{
-	frequency = 1331;
-	id_tag = "synd_sensor";
-	pixel_x = 25;
-	pixel_y = 12;
-	req_access_txt = "150"
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
-	},
-/turf/simulated/floor/mineral/plastitanium/red,
-/area/shuttle/syndicate)
 "sy" = (
 /obj/item/flag/syndi,
 /turf/simulated/floor/wood,
@@ -5389,25 +5324,6 @@
 "sG" = (
 /obj/effect/spawner/window/plastitanium,
 /turf/simulated/floor/plating,
-/area/shuttle/syndicate)
-"sH" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	frequency = 1331;
-	id_tag = "synd_pump"
-	},
-/turf/simulated/floor/mineral/plastitanium/red,
-/area/shuttle/syndicate)
-"sI" = (
-/obj/structure/rack,
-/obj/item/clothing/suit/space/syndicate/black/red,
-/obj/item/clothing/head/helmet/space/syndicate/black/red,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	frequency = 1331;
-	id_tag = "synd_pump"
-	},
-/turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate)
 "sK" = (
 /turf/simulated/floor/plasteel/stairs/old,
@@ -5596,6 +5512,24 @@
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
 /area/trader_station/sol)
+"tI" = (
+/obj/structure/table/wood,
+/obj/machinery/door_control/no_emag{
+	id = "specopsoffice";
+	name = "Privacy Shutters";
+	pixel_x = 6;
+	pixel_y = 10;
+	req_access_txt = "114"
+	},
+/obj/machinery/door_control/no_emag{
+	pixel_x = -6;
+	pixel_y = -17;
+	name = "Engineering Storage";
+	id = "SpecopsEngineering";
+	req_access_txt = "114"
+	},
+/turf/simulated/floor/carpet,
+/area/centcom/specops)
 "tJ" = (
 /obj/machinery/door/poddoor{
 	density = 0;
@@ -5649,6 +5583,13 @@
 	icon_state = "darkred"
 	},
 /area/centcom/specops)
+"tS" = (
+/obj/machinery/light/spot,
+/obj/effect/spawner/lootdrop/trade_sol/serv,
+/obj/structure/closet,
+/obj/item/stack/tile/disco_light/thirty,
+/turf/simulated/floor/mineral/titanium,
+/area/shuttle/trade/sol)
 "tT" = (
 /obj/machinery/door/window/westright{
 	name = "Tool Storage";
@@ -5749,47 +5690,6 @@
 /obj/item/clothing/mask/gas,
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate)
-"ug" = (
-/obj/structure/rack,
-/obj/item/ammo_box/magazine/mm556x45,
-/obj/item/ammo_box/magazine/mm556x45,
-/obj/item/ammo_box/magazine/mm556x45,
-/obj/item/ammo_box/magazine/mm556x45,
-/obj/item/gun/projectile/automatic/l6_saw,
-/obj/item/gun/projectile/automatic/l6_saw{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/turf/simulated/floor/plasteel,
-/area/admin)
-"uh" = (
-/obj/structure/rack,
-/obj/item/gun/projectile/automatic/proto,
-/obj/item/gun/projectile/automatic/proto{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/turf/simulated/floor/plasteel,
-/area/admin)
-"ui" = (
-/obj/structure/rack,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/a40mm,
-/obj/item/ammo_box/a40mm,
-/obj/item/ammo_box/a40mm,
-/obj/item/ammo_box/a40mm,
-/obj/item/gun/projectile/automatic/m90,
-/obj/item/gun/projectile/automatic/m90{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/turf/simulated/floor/plasteel,
-/area/admin)
 "uj" = (
 /obj/structure/mirror{
 	dir = 4;
@@ -5875,6 +5775,14 @@
 /obj/item/storage/firstaid/tactical,
 /turf/simulated/floor/plasteel/freezer,
 /area/admin)
+"ut" = (
+/obj/machinery/access_button{
+	pixel_y = -22;
+	pixel_x = 8;
+	autolink_id = "syndijail_btn_ext"
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/syndicate_mothership)
 "uu" = (
 /obj/structure/table,
 /obj/item/grenade/syndieminibomb{
@@ -5956,11 +5864,6 @@
 	dir = 4;
 	pixel_x = 11
 	},
-/turf/simulated/floor/mineral/plastitanium/red,
-/area/shuttle/syndicate)
-"uI" = (
-/obj/effect/landmark/spawner/nuclear_bomb,
-/obj/machinery/light/spot,
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate)
 "uJ" = (
@@ -6331,12 +6234,6 @@
 /obj/effect/spawner/lootdrop/trade_sol/vehicle,
 /turf/simulated/floor/mineral/titanium,
 /area/shuttle/trade/sol)
-"wa" = (
-/obj/machinery/light/spot,
-/obj/effect/spawner/lootdrop/trade_sol/serv,
-/obj/structure/closet,
-/turf/simulated/floor/mineral/titanium,
-/area/shuttle/trade/sol)
 "wb" = (
 /obj/machinery/light/spot,
 /turf/simulated/floor/mineral/titanium/blue,
@@ -6662,6 +6559,11 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/admin)
+"xn" = (
+/obj/effect/landmark/spawner/nuclear_bomb/syndicate,
+/obj/machinery/light/spot,
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/syndicate)
 "xo" = (
 /turf/simulated/floor/grass/jungle,
 /area/wizard_station)
@@ -6794,12 +6696,98 @@
 /obj/structure/flora/rock/jungle,
 /turf/simulated/floor/grass/jungle,
 /area/wizard_station)
+"yA" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
+"yD" = (
+/obj/structure/closet/secure_closet/guncabinet,
+/obj/item/ammo_box/magazine/smgm9mm/toxin,
+/obj/item/ammo_box/magazine/smgm9mm/toxin,
+/obj/item/ammo_box/magazine/smgm9mm/toxin,
+/obj/item/ammo_box/magazine/smgm9mm/fire,
+/obj/item/ammo_box/magazine/smgm9mm/fire,
+/obj/item/ammo_box/magazine/smgm9mm/fire,
+/obj/item/ammo_box/magazine/smgm9mm/ap,
+/obj/item/ammo_box/magazine/smgm9mm/ap,
+/obj/item/ammo_box/magazine/smgm9mm/ap,
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/gun/projectile/automatic/fullauto/twomode/proto,
+/obj/item/gun/projectile/automatic/fullauto/twomode/proto{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/gun/projectile/automatic/fullauto/twomode/proto{
+	pixel_x = 6;
+	pixel_y = -6
+	},
+/turf/simulated/floor/plasteel{
+	dir = 9;
+	icon_state = "darkred"
+	},
+/area/centcom/specops)
 "yH" = (
 /obj/structure/railing,
 /turf/simulated/floor/plasteel{
 	icon_state = "green"
 	},
 /area/centcom/evac)
+"yI" = (
+/obj/machinery/door/airlock/external{
+	id_tag = "syndishuttle_door_ext";
+	name = "Ship External Access";
+	req_access_txt = "150"
+	},
+/obj/machinery/door/poddoor{
+	density = 0;
+	icon_state = "open";
+	id_tag = "smindicate";
+	name = "Outer Airlock";
+	opacity = 0
+	},
+/obj/machinery/door_control/no_emag{
+	id = "smindicate";
+	name = "External Door Control";
+	pixel_x = -26;
+	pixel_y = 2;
+	req_access_txt = "150"
+	},
+/obj/docking_port/mobile{
+	dheight = 9;
+	dir = 2;
+	dwidth = 5;
+	height = 22;
+	id = "syndicate";
+	name = "syndicate infiltrator";
+	width = 18
+	},
+/obj/docking_port/stationary{
+	area_type = /area/syndicate_mothership;
+	dheight = 9;
+	dir = 2;
+	dwidth = 5;
+	height = 22;
+	id = "syndicate_away";
+	name = "syndicate base";
+	turf_type = /turf/simulated/floor/plating/asteroid/snow/airless;
+	width = 18
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/syndicate)
 "yL" = (
 /obj/machinery/computer/card,
 /turf/simulated/floor/plasteel,
@@ -7232,6 +7220,16 @@
 /obj/structure/chair/sofa,
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/escape)
+"BC" = (
+/obj/structure/closet/crate/engineering,
+/obj/item/stack/sheet/mineral/uranium{
+	amount = 10
+	},
+/obj/item/stack/sheet/mineral/uranium{
+	amount = 50
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "BD" = (
 /obj/structure/chair/sofa,
 /obj/machinery/light/spot{
@@ -7282,6 +7280,13 @@
 	},
 /turf/simulated/floor/mineral/titanium/blue,
 /area/shuttle/supply)
+"BQ" = (
+/obj/effect/landmark/spawner/nuclear_bomb/death_squad,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/centcom/specops)
 "BR" = (
 /obj/structure/kitchenspike,
 /turf/simulated/floor/wood,
@@ -7508,12 +7513,6 @@
 	icon_state = "bar"
 	},
 /area/tdome/tdomeobserve)
-"CH" = (
-/obj/item/flashlight/lamp,
-/obj/structure/table/reinforced,
-/obj/item/storage/fancy/donut_box,
-/turf/simulated/floor/carpet/black,
-/area/centcom/specops)
 "CJ" = (
 /obj/machinery/door_control/no_emag{
 	id = "CCcustoms2";
@@ -7613,16 +7612,17 @@
 	icon_state = "vault"
 	},
 /area/tdome/tdomeadmin)
-"Dn" = (
+"Dl" = (
 /obj/structure/table/wood,
-/obj/machinery/door_control/no_emag{
-	id = "specopsoffice";
-	name = "Privacy Shutters";
-	pixel_x = 6;
-	pixel_y = -3;
-	req_access_txt = "114"
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/machinery/economy/vending/wallmed{
+	name = "Emergency NanoMed";
+	pixel_y = 32;
+	power_state = 0
 	},
-/turf/simulated/floor/carpet,
+/obj/item/clipboard,
+/turf/simulated/floor/plasteel/dark,
 /area/centcom/specops)
 "Do" = (
 /turf/simulated/floor/engine,
@@ -7904,6 +7904,32 @@
 /obj/item/flash,
 /turf/simulated/floor/plasteel/dark,
 /area/shuttle/escape)
+"En" = (
+/obj/structure/table/reinforced,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
+"Eo" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/belt/utility/chief/full,
+/obj/item/storage/belt/utility/chief/full,
+/obj/item/storage/belt/utility/chief/full,
+/obj/item/storage/belt/utility/chief/full,
+/obj/item/storage/belt/utility/chief/full,
+/obj/item/storage/belt/utility/chief/full,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "Ep" = (
 /obj/structure/chair/comfy/black{
 	dir = 4
@@ -8023,6 +8049,14 @@
 /obj/machinery/economy/vending/cola,
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/administration)
+"EQ" = (
+/obj/machinery/access_button{
+	pixel_x = -22;
+	pixel_y = -8;
+	autolink_id = "syndijail_btn_int"
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/syndicate_mothership/jail)
 "ET" = (
 /obj/effect/decal/warning_stripes/northeast,
 /turf/simulated/floor/plating/airless,
@@ -8488,10 +8522,6 @@
 "GN" = (
 /turf/simulated/wall/indestructible/fakeglass/brass,
 /area/wizard_station)
-"GO" = (
-/obj/structure/closet/crate/can,
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/specops)
 "GP" = (
 /obj/effect/decal/warning_stripes/southeast,
 /turf/simulated/floor/plating/airless,
@@ -8537,17 +8567,6 @@
 	},
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/administration)
-"GV" = (
-/obj/structure/table/wood,
-/obj/item/dice/d20{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/dice/d10{
-	pixel_x = -3
-	},
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/specops)
 "GW" = (
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -8574,6 +8593,9 @@
 /obj/structure/flora/tree/jungle,
 /turf/simulated/floor/grass/jungle,
 /area/centcom/evac)
+"Hc" = (
+/turf/simulated/floor/plasteel/dark/nitrogen,
+/area/centcom/specops)
 "Hd" = (
 /obj/machinery/conveyor/east{
 	id = "QMLoad2"
@@ -8638,6 +8660,22 @@
 	},
 /turf/simulated/floor/mineral/titanium,
 /area/shuttle/administration)
+"Ho" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "Hp" = (
 /turf/simulated/floor/holofloor{
 	icon_state = "rampbottom"
@@ -8700,16 +8738,6 @@
 /obj/machinery/chem_master,
 /turf/simulated/floor/mineral/titanium,
 /area/shuttle/administration)
-"HI" = (
-/obj/structure/closet/secure_closet/guncabinet,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/gun/projectile/automatic/proto,
-/obj/item/gun/projectile/automatic/proto,
-/obj/item/gun/projectile/automatic/proto,
-/turf/simulated/floor/mineral/plastitanium/red,
-/area/shuttle/gamma/space)
 "HJ" = (
 /obj/structure/table/holotable,
 /obj/item/clothing/suit/armor/riot/knight/red,
@@ -9086,17 +9114,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/centcom/specops)
-"Jg" = (
-/obj/item/paper_bin,
-/obj/item/pen,
-/obj/structure/table/reinforced,
-/obj/machinery/newscaster{
-	dir = 8;
-	name = "east bump";
-	pixel_x = 28
-	},
-/turf/simulated/floor/carpet/black,
-/area/centcom/specops)
 "Jh" = (
 /turf/simulated/wall/indestructible/riveted,
 /area/tdome/tdomeadmin)
@@ -9324,15 +9341,6 @@
 /obj/item/gun/medbeam,
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/gamma/space)
-"JS" = (
-/obj/machinery/door_control/no_emag{
-	id = "CCGAMMA";
-	name = "Gamma Lockdown";
-	pixel_y = 32;
-	req_access_txt = "114"
-	},
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/specops)
 "JU" = (
 /obj/structure/holowindow{
 	dir = 1
@@ -9352,6 +9360,25 @@
 /obj/effect/spawner/window,
 /turf/simulated/floor/plating,
 /area/centcom/suppy)
+"JZ" = (
+/obj/structure/rack,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/a40mm,
+/obj/item/ammo_box/a40mm,
+/obj/item/ammo_box/a40mm,
+/obj/item/ammo_box/a40mm,
+/obj/item/gun/projectile/automatic/fullauto/twomode/m90,
+/obj/item/gun/projectile/automatic/fullauto/twomode/m90{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/turf/simulated/floor/plasteel,
+/area/admin)
 "Kb" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/poddoor/multi_tile/impassable/three_tile_hor{
@@ -9951,16 +9978,6 @@
 	icon_state = "vault"
 	},
 /area/tdome/tdomeadmin)
-"Mq" = (
-/obj/structure/chair/comfy/black,
-/turf/simulated/floor/transparent/glass,
-/area/centcom/specops)
-"Mr" = (
-/obj/structure/chair/office{
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/centcom/specops)
 "Ms" = (
 /obj/machinery/processor,
 /obj/effect/turf_decal/stripes/end,
@@ -9968,37 +9985,12 @@
 	icon_state = "cafeteria"
 	},
 /area/tdome/tdomeobserve)
-"Mu" = (
-/obj/item/clipboard,
-/obj/structure/table/reinforced,
-/obj/item/detective_scanner,
-/obj/item/storage/box/ids{
-	pixel_x = 6;
-	pixel_y = 12
-	},
-/turf/simulated/floor/carpet/black,
-/area/centcom/specops)
 "Mv" = (
 /obj/machinery/recharge_station/upgraded,
 /turf/simulated/floor/plasteel{
 	dir = 10;
 	icon_state = "vault"
 	},
-/area/centcom/specops)
-"Mw" = (
-/obj/structure/chair/comfy/brown{
-	dir = 8
-	},
-/turf/simulated/floor/carpet/black,
-/area/centcom/specops)
-"My" = (
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the Special Ops.";
-	name = "Special Ops. Monitor";
-	network = list("ERT")
-	},
-/obj/structure/table/reinforced,
-/turf/simulated/floor/carpet/black,
 /area/centcom/specops)
 "Mz" = (
 /obj/effect/turf_decal/stripes/line,
@@ -10352,16 +10344,6 @@
 /obj/item/reagent_containers/food/drinks/cans/starkist,
 /turf/simulated/floor/plasteel,
 /area/centcom/evac)
-"NU" = (
-/obj/structure/table/wood,
-/obj/item/storage/pill_bottle/dice,
-/obj/machinery/newscaster/security_unit{
-	dir = 4;
-	name = "west bump";
-	pixel_x = -28
-	},
-/turf/simulated/floor/transparent/glass,
-/area/centcom/specops)
 "NW" = (
 /obj/structure/sign/securearea{
 	pixel_x = 32
@@ -10406,13 +10388,6 @@
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/grass,
 /area/centcom/control)
-"Oj" = (
-/obj/structure/table/reinforced,
-/obj/item/folder/red,
-/obj/item/restraints/handcuffs,
-/obj/item/flash,
-/turf/simulated/floor/carpet/black,
-/area/centcom/specops)
 "Ok" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/ausbushes/ppflowers,
@@ -10785,6 +10760,16 @@
 	icon_state = "darkred"
 	},
 /area/centcom/gamma)
+"PE" = (
+/obj/structure/closet/secure_closet/guncabinet,
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/gun/projectile/automatic/fullauto/twomode/proto,
+/obj/item/gun/projectile/automatic/fullauto/twomode/proto,
+/obj/item/gun/projectile/automatic/fullauto/twomode/proto,
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
 "PG" = (
 /obj/item/clipboard,
 /obj/item/folder/red,
@@ -10813,12 +10798,13 @@
 /obj/effect/decal/warning_stripes/north,
 /turf/simulated/floor/plating/airless,
 /area/centcom/control)
-"PM" = (
-/obj/structure/chair/comfy/black{
-	dir = 1
+"PN" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	autolink_id = "syndishuttle_vent"
 	},
-/turf/simulated/floor/transparent/glass,
-/area/centcom/specops)
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/syndicate)
 "PO" = (
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/grass,
@@ -10858,6 +10844,15 @@
 /obj/item/lighter,
 /turf/simulated/floor/plasteel/dark,
 /area/centcom/specops)
+"PT" = (
+/obj/machinery/door/airlock/hatch/syndicate{
+	autoclose = 0;
+	id_tag = "syndijail_door_ext";
+	locked = 1;
+	name = "Syndicate Jail External Airlock"
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/syndicate_mothership)
 "PU" = (
 /obj/effect/turf_decal/delivery,
 /turf/simulated/floor/plasteel/dark,
@@ -11253,6 +11248,11 @@
 /obj/structure/chair,
 /turf/simulated/floor/plasteel/dark,
 /area/centcom/specops)
+"Ry" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/box/permits,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "Rz" = (
 /obj/structure/table,
 /turf/simulated/floor/mineral/plastitanium/red,
@@ -11305,6 +11305,13 @@
 /obj/item/storage/fancy/donut_box,
 /turf/simulated/floor/wood,
 /area/centcom/control)
+"RJ" = (
+/obj/machinery/door/poddoor/multi_tile/impassable/three_tile_hor{
+	id_tag = "SpecopsEngineering";
+	name = "Special Operations Engineering Storage"
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "RL" = (
 /obj/machinery/pdapainter,
 /turf/simulated/floor/wood,
@@ -11361,6 +11368,14 @@
 	},
 /turf/simulated/wall/indestructible/fakeglass,
 /area/centcom/specops)
+"RX" = (
+/obj/machinery/access_button{
+	autolink_id = "syndishuttle_btn_int";
+	pixel_x = 25;
+	pixel_y = 25
+	},
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/syndicate)
 "RZ" = (
 /obj/effect/turf_decal/bot,
 /turf/simulated/floor/plasteel{
@@ -11484,6 +11499,15 @@
 	icon_state = "greencorner"
 	},
 /area/centcom/evac)
+"SB" = (
+/obj/machinery/door/airlock/hatch/syndicate{
+	autoclose = 0;
+	id_tag = "syndijail_door_int";
+	locked = 1;
+	name = "Syndicate Jail Internal Airlock"
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/syndicate_mothership/jail)
 "SD" = (
 /obj/structure/table,
 /obj/machinery/recharger{
@@ -11541,6 +11565,10 @@
 	icon_state = "browncorner"
 	},
 /area/shuttle/escape)
+"SS" = (
+/obj/machinery/power/port_gen/pacman/super/upgraded,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "ST" = (
 /turf/simulated/floor/plasteel{
 	icon_state = "bot"
@@ -11670,6 +11698,15 @@
 /obj/machinery/computer/camera_advanced/shuttle_docker/ert,
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/specops)
+"TB" = (
+/obj/structure/rack,
+/obj/item/gun/projectile/automatic/fullauto/twomode/proto,
+/obj/item/gun/projectile/automatic/fullauto/twomode/proto{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/turf/simulated/floor/plasteel,
+/area/admin)
 "TC" = (
 /obj/structure/chair/comfy/shuttle,
 /turf/simulated/floor/mineral/plastitanium/red,
@@ -11759,13 +11796,6 @@
 "TU" = (
 /turf/simulated/floor/plasteel/dark,
 /area/centcom/evac)
-"TV" = (
-/obj/item/flag/command,
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/centcom/specops)
 "TW" = (
 /obj/structure/sign/directions/engineering{
 	desc = "A sign that shows there are doors here. There are doors everywhere!";
@@ -11971,9 +12001,6 @@
 	icon_state = "snow"
 	},
 /area/holodeck/source_snowfield)
-"UO" = (
-/turf/simulated/wall/indestructible/opsglass/limited_smooth,
-/area/syndicate_mothership)
 "UT" = (
 /obj/machinery/economy/vending/cola/free,
 /turf/simulated/floor/plasteel{
@@ -12076,6 +12103,46 @@
 	},
 /turf/simulated/floor/wood,
 /area/centcom/control)
+"Vp" = (
+/obj/structure/table/reinforced,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd/combat,
+/obj/item/rcd/combat,
+/obj/item/rcd/combat,
+/obj/item/rcd/combat,
+/obj/item/rcd/combat,
+/obj/item/rcd/combat,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "Vs" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/cans/badminbrew,
@@ -12112,12 +12179,6 @@
 	icon_state = "bar"
 	},
 /area/tdome/tdomeobserve)
-"VC" = (
-/obj/machinery/computer/card/centcom{
-	dir = 8
-	},
-/turf/simulated/floor/carpet/black,
-/area/centcom/specops)
 "VD" = (
 /obj/machinery/door/poddoor/multi_tile/impassable/two_tile_hor{
 	id_tag = "CCDOCK2";
@@ -12264,6 +12325,14 @@
 	icon_state = "brown"
 	},
 /area/shuttle/escape)
+"Wj" = (
+/obj/item/mop,
+/obj/structure/mirror/magic/nuclear{
+	pixel_x = 28
+	},
+/obj/item/twohanded/required/kirbyplants,
+/turf/simulated/floor/plasteel/freezer,
+/area/syndicate_mothership)
 "Wk" = (
 /obj/structure/flora/junglebush,
 /turf/simulated/floor/grass/jungle,
@@ -12480,6 +12549,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/centcom/control)
+"WV" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	autolink_id = "syndishuttle_vent"
+	},
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/syndicate)
 "WW" = (
 /obj/item/twohanded/required/kirbyplants,
 /turf/simulated/floor/plasteel{
@@ -12727,6 +12802,16 @@
 	},
 /turf/simulated/floor/plating/airless,
 /area/shuttle/specops)
+"XR" = (
+/obj/structure/rack,
+/obj/item/clothing/suit/space/syndicate/black/red,
+/obj/item/clothing/head/helmet/space/syndicate/black/red,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	autolink_id = "syndishuttle_vent"
+	},
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/syndicate)
 "XS" = (
 /obj/item/toy/plushie/corgi,
 /turf/simulated/floor/grass/jungle,
@@ -13077,6 +13162,18 @@
 "Ze" = (
 /turf/simulated/floor/mineral/titanium/blue,
 /area/shuttle/transport)
+"Zf" = (
+/obj/machinery/door_control/no_emag{
+	pixel_y = 24;
+	req_access_txt = "114";
+	name = "Engineering Storage Shutters";
+	id = "SpecopsEngineering"
+	},
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/centcom/specops)
 "Zg" = (
 /obj/machinery/door_control/no_emag{
 	id = "CCTELE";
@@ -13132,46 +13229,6 @@
 "Zr" = (
 /turf/simulated/wall/indestructible/riveted,
 /area/centcom/specops)
-"Zs" = (
-/obj/machinery/door/airlock/centcom{
-	name = "Gamma Armory";
-	req_access_txt = "114"
-	},
-/obj/structure/fans/tiny,
-/obj/machinery/door/poddoor/impassable{
-	id_tag = "CCGAMMA";
-	name = "Gamma Security"
-	},
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/specops)
-"Zt" = (
-/obj/structure/closet/secure_closet/guncabinet,
-/obj/item/ammo_box/magazine/smgm9mm/toxin,
-/obj/item/ammo_box/magazine/smgm9mm/toxin,
-/obj/item/ammo_box/magazine/smgm9mm/toxin,
-/obj/item/ammo_box/magazine/smgm9mm/fire,
-/obj/item/ammo_box/magazine/smgm9mm/fire,
-/obj/item/ammo_box/magazine/smgm9mm/fire,
-/obj/item/ammo_box/magazine/smgm9mm/ap,
-/obj/item/ammo_box/magazine/smgm9mm/ap,
-/obj/item/ammo_box/magazine/smgm9mm/ap,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/gun/projectile/automatic/proto,
-/obj/item/gun/projectile/automatic/proto{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/gun/projectile/automatic/proto{
-	pixel_x = 6;
-	pixel_y = -6
-	},
-/turf/simulated/floor/plasteel{
-	dir = 9;
-	icon_state = "darkred"
-	},
-/area/centcom/specops)
 "Zu" = (
 /obj/structure/sign/greencross,
 /turf/simulated/wall/mineral/titanium,
@@ -13225,6 +13282,18 @@
 	icon_state = "darkred"
 	},
 /area/centcom/specops)
+"ZE" = (
+/obj/machinery/door/airlock/external{
+	id_tag = "syndishuttle_door_int";
+	locked = 1;
+	name = "Ship External Access";
+	req_access_txt = "150"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/syndicate)
 "ZF" = (
 /obj/effect/decal/warning_stripes/yellow,
 /obj/machinery/door/poddoor/multi_tile/impassable/four_tile_ver{
@@ -30956,7 +31025,7 @@ aN
 aN
 Db
 DB
-HI
+PE
 Iq
 JN
 Iq
@@ -31986,7 +32055,7 @@ Db
 aN
 aN
 Zr
-Zs
+Zr
 Zr
 Zr
 Zr
@@ -32243,11 +32312,11 @@ aN
 aN
 aN
 Zr
-JS
-Mq
-NU
-PM
-NP
+SS
+SS
+SS
+BC
+aS
 Zr
 Ji
 Ra
@@ -32500,11 +32569,11 @@ aN
 aN
 aN
 Zr
+Ry
 Ra
-Mq
-iW
-PM
-Ae
+Ra
+Ra
+aS
 Zr
 Ji
 Ra
@@ -32757,13 +32826,13 @@ aN
 aN
 aN
 Zr
-Yx
-Yx
-Yx
-Yx
-AV
-VI
-TV
+yA
+Ra
+Ra
+Ra
+Ra
+RJ
+Ji
 Ra
 Xz
 Yj
@@ -33014,17 +33083,17 @@ aN
 aN
 aN
 VI
-gY
-Mr
-Mr
-Yx
+Ho
 Ra
-pX
+Ra
+Ra
+Ra
+Hc
 Ji
 Ra
 Xz
 Zr
-Ji
+BQ
 MG
 Ev
 Xu
@@ -33033,7 +33102,7 @@ zg
 Xz
 RW
 Jv
-Dn
+tI
 MQ
 ZQ
 Kh
@@ -33271,13 +33340,13 @@ aN
 aN
 Db
 Zr
-CH
-Mu
-Oj
-Yx
-AV
-RD
-TV
+qH
+Ra
+Ra
+Ra
+Ra
+Ra
+Ji
 Ra
 Xz
 Yj
@@ -33528,13 +33597,13 @@ wK
 aN
 aN
 Zr
-Yw
-Mw
-Yw
-Yx
-GO
+kB
+Ra
+Ra
+Ra
+fC
 Zr
-Ji
+Zf
 Ra
 Xz
 RD
@@ -33785,11 +33854,11 @@ wK
 GX
 aN
 Zr
-VC
-My
-Jg
-Yx
-GV
+gu
+Vp
+Eo
+En
+ja
 Zr
 Ji
 Ra
@@ -34060,7 +34129,7 @@ cC
 Ra
 DS
 Zr
-fd
+Dl
 Yw
 Yw
 Gn
@@ -34823,7 +34892,7 @@ Ra
 Ra
 Xz
 Zr
-Zt
+yD
 Sz
 Sm
 Sm
@@ -38945,7 +39014,7 @@ aN
 aN
 ZT
 gb
-om
+by
 WO
 ZT
 If
@@ -47897,7 +47966,7 @@ pa
 pc
 pa
 pc
-wa
+tS
 of
 vG
 aN
@@ -57556,27 +57625,27 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aN
 aN
 aN
@@ -57813,7 +57882,7 @@ aN
 aN
 aN
 aN
-aN
+aa
 UJ
 UJ
 UJ
@@ -57833,7 +57902,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -58070,7 +58139,7 @@ aN
 aN
 aN
 aN
-aN
+aa
 UJ
 UJ
 UJ
@@ -58090,7 +58159,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -58327,7 +58396,7 @@ aN
 aN
 aN
 aN
-aN
+aa
 UJ
 UJ
 UJ
@@ -58347,7 +58416,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -58584,7 +58653,7 @@ aN
 aN
 aN
 aN
-aN
+aa
 UJ
 UJ
 UJ
@@ -58604,7 +58673,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -58835,13 +58904,13 @@ aN
 aN
 "}
 (178,1,1) = {"
-aN
-aN
-aN
-aN
-aN
-aN
-aN
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 UJ
 UJ
 UJ
@@ -58861,7 +58930,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -59092,7 +59161,7 @@ aN
 aN
 "}
 (179,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -59118,12 +59187,12 @@ UJ
 UJ
 UJ
 UJ
-aN
-aN
-aN
-aN
-aN
-aN
+aa
+aa
+aa
+aa
+aa
+aa
 aN
 aN
 aN
@@ -59349,7 +59418,7 @@ aN
 aN
 "}
 (180,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -59380,9 +59449,9 @@ UJ
 UJ
 UJ
 UJ
-aN
-aN
-aN
+aa
+aa
+aa
 aN
 aN
 aN
@@ -59606,7 +59675,7 @@ aN
 aN
 "}
 (181,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -59639,8 +59708,8 @@ UJ
 UJ
 UJ
 UJ
-aN
-aN
+aa
+aa
 aN
 aN
 aN
@@ -59698,7 +59767,7 @@ KX
 KX
 KX
 uq
-uI
+xn
 uL
 uV
 ab
@@ -59863,7 +59932,7 @@ aN
 aN
 "}
 (182,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -59897,7 +59966,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -59948,7 +60017,7 @@ iS
 iS
 iS
 KR
-jj
+RX
 KX
 KX
 KX
@@ -60120,7 +60189,7 @@ aN
 aN
 "}
 (183,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -60154,7 +60223,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -60205,7 +60274,7 @@ KY
 KY
 KY
 rR
-jw
+ZE
 sG
 tf
 KY
@@ -60377,7 +60446,7 @@ aN
 aN
 "}
 (184,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -60411,7 +60480,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -60457,13 +60526,13 @@ KR
 mI
 KY
 nB
-UO
-UO
-UO
+bL
+bL
+bL
 KY
-rU
+WV
 sn
-sH
+PN
 KY
 tx
 KX
@@ -60634,7 +60703,7 @@ aN
 aN
 "}
 (185,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -60668,7 +60737,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -60717,10 +60786,10 @@ ab
 BZ
 BY
 BV
-qR
-rU
+yI
+dP
 sn
-sH
+PN
 KY
 jx
 jz
@@ -60891,7 +60960,7 @@ aN
 aN
 "}
 (186,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -60925,7 +60994,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -60973,11 +61042,11 @@ ab
 ab
 BZ
 hG
-UO
+bL
 iT
-rU
-sx
-sI
+WV
+pF
+XR
 KY
 jy
 KX
@@ -61148,7 +61217,7 @@ aN
 aN
 "}
 (187,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -61182,7 +61251,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -61230,7 +61299,7 @@ ab
 ab
 BZ
 BY
-UO
+bL
 lB
 KY
 KY
@@ -61405,7 +61474,7 @@ aN
 aN
 "}
 (188,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -61439,7 +61508,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -61662,7 +61731,7 @@ aN
 aN
 "}
 (189,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -61696,7 +61765,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -61919,7 +61988,7 @@ aN
 aN
 "}
 (190,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -61953,7 +62022,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -62176,7 +62245,7 @@ aN
 aN
 "}
 (191,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -62210,7 +62279,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -62433,7 +62502,7 @@ aN
 aN
 "}
 (192,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -62467,7 +62536,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -62690,7 +62759,7 @@ aN
 aN
 "}
 (193,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -62724,7 +62793,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -62947,7 +63016,7 @@ aN
 aN
 "}
 (194,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -62981,7 +63050,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -63204,7 +63273,7 @@ aN
 aN
 "}
 (195,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -63238,7 +63307,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -63461,7 +63530,7 @@ aN
 aN
 "}
 (196,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -63495,7 +63564,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -63718,7 +63787,7 @@ aN
 aN
 "}
 (197,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -63752,7 +63821,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -63975,7 +64044,7 @@ aN
 aN
 "}
 (198,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -64009,7 +64078,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -64232,7 +64301,7 @@ aN
 aN
 "}
 (199,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -64266,7 +64335,7 @@ UJ
 UJ
 UJ
 UJ
-aN
+aa
 aN
 aN
 aN
@@ -64489,7 +64558,7 @@ aN
 aN
 "}
 (200,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -64522,8 +64591,8 @@ UJ
 UJ
 UJ
 UJ
-aN
-aN
+aa
+aa
 aN
 aN
 aN
@@ -64746,7 +64815,7 @@ aN
 aN
 "}
 (201,1,1) = {"
-aN
+aa
 UJ
 UJ
 UJ
@@ -64777,9 +64846,9 @@ UJ
 UJ
 UJ
 UJ
-aN
-aN
-aN
+aa
+aa
+aa
 aN
 aN
 aN
@@ -65003,38 +65072,38 @@ aN
 aN
 "}
 (202,1,1) = {"
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aN
 aN
 aN
@@ -65338,8 +65407,8 @@ aN
 aN
 aN
 Yi
-no
-nj
+Wj
+mz
 Yi
 Yi
 BZ
@@ -67426,7 +67495,7 @@ lZ
 wk
 qL
 lZ
-ug
+bh
 lZ
 vE
 wu
@@ -67683,7 +67752,7 @@ lZ
 wk
 qV
 lZ
-uh
+TB
 lZ
 vF
 lZ
@@ -67938,9 +68007,9 @@ nu
 lZ
 lZ
 lH
-qX
+bs
 lZ
-ui
+JZ
 lZ
 vH
 lZ
@@ -69180,7 +69249,7 @@ XJ
 jQ
 Yi
 ka
-kn
+qx
 kw
 kE
 kQ
@@ -71755,8 +71824,8 @@ ke
 XJ
 ke
 Yi
-li
 XJ
+ut
 Yi
 aN
 aN
@@ -72012,8 +72081,8 @@ je
 XJ
 je
 Yi
-lj
-lj
+PT
+PT
 Yi
 aN
 aN
@@ -72526,7 +72595,7 @@ aN
 aN
 aN
 Yi
-lk
+go
 XJ
 Yi
 aN
@@ -72783,8 +72852,8 @@ aN
 kG
 kG
 kG
-ll
-ll
+SB
+SB
 kG
 kG
 kG
@@ -73039,7 +73108,7 @@ aN
 aN
 kG
 kU
-lc
+EQ
 kU
 kU
 ls

@@ -1,7 +1,18 @@
-
 /obj/item
-
+	var/pixelYoffset = 0
 	var/hispania_icon = FALSE
+
+/obj/item/proc/swapped(mob/usr)
+	return
+
+/obj/item/proc/swappedto(mob/usr)
+	return
+
+/obj/item/proc/hotkeyequip(mob/usr)
+	return
+
+/obj/item/proc/gotcha(mob/usr) // Al conseguir un objeto mediante put_in_hands()
+	return
 
 /obj/item/Initialize()
 	..()

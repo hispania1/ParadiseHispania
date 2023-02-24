@@ -201,7 +201,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 //mime
 /datum/uplink_item/jobspecific/caneshotgun
 	name = "Cane Shotgun and Assassination Shells"
-	desc = "A specialised, one shell shotgun with a built-in cloaking device to mimic a cane. The shotgun is capable of hiding it's contents and the pin alongside being supressed. Comes boxed with 6 specialised shrapnel rounds laced with a silencing toxin and 1 preloaded in the shotgun's chamber."
+	desc = "A specialised, one shell shotgun with a built-in cloaking device to mimic a cane. The shotgun is capable of hiding it's contents and the pin alongside being suppressed. Comes boxed with 6 specialised shrapnel rounds laced with a silencing toxin and 1 preloaded in the shotgun's chamber."
 	reference = "MCS"
 	item = /obj/item/storage/box/syndie_kit/caneshotgun
 	cost = 8
@@ -356,10 +356,10 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 
 /datum/uplink_item/jobspecific/telegun
 	name = "Telegun"
-	desc = "An extremely high-tech energy gun that utilizes bluespace technology to teleport away living targets. Select the target beacon on the telegun itself; projectiles will send targets to the beacon locked onto."
+	desc = "An extremely high-tech energy gun that utilizes bluespace technology to teleport away living targets. Select the target beacon on the telegun itself; projectiles will send targets to the beacon locked onto. Can only send targets to beacons in-sector unless they are emagged!"
 	reference = "TG"
 	item = /obj/item/gun/energy/telegun
-	cost = 12
+	cost = 10
 	job = list("Research Director")
 
 //Roboticist
@@ -471,7 +471,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "C-20r Submachine Gun"
 	reference = "SMG"
 	desc = "A fully-loaded Scarborough Arms bullpup submachine gun that fires .45 rounds with a 20-round magazine and is compatible with suppressors."
-	item = /obj/item/gun/projectile/automatic/c20r
+	item = /obj/item/gun/projectile/automatic/fullauto/twomode/c20r
 	cost = 14
 	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
 	surplus = 40
@@ -480,7 +480,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "M-90gl Carbine"
 	desc = "A fully-loaded three-round burst carbine that uses 30-round 5.56mm magazines with a togglable underslung 40mm grenade launcher."
 	reference = "AR"
-	item = /obj/item/gun/projectile/automatic/m90
+	item = /obj/item/gun/projectile/automatic/fullauto/twomode/m90
 	cost = 18
 	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
 	surplus = 50
@@ -489,7 +489,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "L6 Squad Automatic Weapon"
 	desc = "A fully-loaded Aussec Armory belt-fed machine gun. This deadly weapon has a massive 50-round magazine of devastating 7.62x51mm ammunition."
 	reference = "LMG"
-	item = /obj/item/gun/projectile/automatic/l6_saw
+	item = /obj/item/gun/projectile/automatic/fullauto/l6_saw
 	cost = 40
 	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
 	surplus = 0
@@ -537,10 +537,10 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 
 /datum/uplink_item/dangerous/powerfist
 	name = "Power Fist"
-	desc = "The power-fist is a metal gauntlet with a built-in piston-ram powered by an external gas supply.\
-		 Upon hitting a target, the piston-ram will extend foward to make contact for some serious damage. \
-		 Using a wrench on the piston valve will allow you to tweak the amount of gas used per punch to \
-		 deal extra damage and hit targets further. Use a screwdriver to take out any attached tanks."
+	desc = "The power-fist is a metal gauntlet with a built-in piston-ram powered by an external gas supply. \
+		Upon hitting a target, the piston-ram will extend forward to make contact for some serious damage. \
+		Using a wrench on the piston valve will allow you to tweak the amount of gas used per punch to \
+		deal extra damage and hit targets further. Use a screwdriver to take out any attached tanks."
 	reference = "PF"
 	item = /obj/item/melee/powerfist
 	cost = 8
@@ -617,7 +617,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "Toy Submachine Gun"
 	desc = "A fully-loaded Donksoft bullpup submachine gun that fires riot grade rounds with a 20-round magazine."
 	reference = "FSMG"
-	item = /obj/item/gun/projectile/automatic/c20r/toy
+	item = /obj/item/gun/projectile/automatic/fullauto/twomode/c20r/toy
 	cost = 5
 	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
 	surplus = 0
@@ -626,7 +626,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "Toy Machine Gun"
 	desc = "A fully-loaded Donksoft belt-fed machine gun. This weapon has a massive 50-round magazine of devastating riot grade darts, that can briefly incapacitate someone in just one volley."
 	reference = "FLMG"
-	item = /obj/item/gun/projectile/automatic/l6_saw/toy
+	item = /obj/item/gun/projectile/automatic/fullauto/l6_saw/toy
 	cost = 10
 	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
 	surplus = 0
@@ -791,10 +791,10 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 
 /datum/uplink_item/ammo/machinegun
 	name = "L6 SAW - 5.56x45mm Box Magazine"
-	desc = "A 50-round magazine of 5.56x45mm ammunition for use in the L6 SAW machine gun. By the time you need to use this, you'll already be on a pile of corpses."
+	desc = "A 100-round magazine of 5.56x45mm ammunition for use in the L6 SAW machine gun. By the time you need to use this, you'll already be on a pile of corpses."
 	reference = "762"
 	item = /obj/item/ammo_box/magazine/mm556x45
-	cost = 12
+	cost = 18 // PRECIO HISPANICO
 	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
 	surplus = 0
 
@@ -884,7 +884,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	item = /obj/item/sleeping_carp_scroll
 	cost = 13
 	excludefrom = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
-	refundable = TRUE
 	cant_discount = TRUE
 
 /datum/uplink_item/stealthy_weapons/cqc
@@ -905,9 +904,9 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 
 /datum/uplink_item/stealthy_weapons/cameraflash
 	name = "Camera Flash"
-	desc = "A flash disguised as a camera with a self-charging safety system preventing the flash from burning out.\
-			 Due to its design, this flash cannot be overcharged like regular flashes can.\
-			 Useful for stunning borgs and individuals without eye protection or blinding a crowd for a get away."
+	desc = "A flash disguised as a camera with a self-charging safety system preventing the flash from burning out. \
+			Due to its design, this flash cannot be overcharged like regular flashes can. \
+			Useful for stunning borgs and individuals without eye protection or blinding a crowd for a get away."
 	reference = "CF"
 	item = /obj/item/flash/cameraflash
 	cost = 1
@@ -915,7 +914,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 /datum/uplink_item/stealthy_weapons/throwingweapons
 	name = "Box of Throwing Weapons"
 	desc = "A box of shurikens and reinforced bolas from ancient Earth martial arts. They are highly effective \
-			 throwing weapons. The bolas can knock a target down and the shurikens will embed into limbs."
+			throwing weapons. The bolas can knock a target down and the shurikens will embed into limbs."
 	reference = "STK"
 	item = /obj/item/storage/box/syndie_kit/throwing_weapons
 	cost = 3
@@ -1116,7 +1115,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "Pizza Bomb"
 	desc = "A pizza box with a bomb taped inside of it. The timer needs to be set by opening the box; afterwards, opening the box again will trigger the detonation."
 	reference = "PB"
-	item = /obj/item/pizza_bomb
+	item = /obj/item/pizzabox/pizza_bomb
 	cost = 6
 	surplus = 80
 

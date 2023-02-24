@@ -765,7 +765,7 @@
 	head = null
 	mask = /obj/item/clothing/mask/gas/explorer/marines
 	belt = /obj/item/storage/belt/military/assault/marines/elite/full
-	l_hand = /obj/item/gun/projectile/automatic/ar
+	l_hand = /obj/item/gun/projectile/automatic/fullauto/ar
 	backpack_contents = list(
 		/obj/item/clothing/shoes/magboots/advance = 1,
 		/obj/item/whetstone = 1,
@@ -955,7 +955,7 @@
 	head = /obj/item/clothing/head/det_hat
 	glasses = /obj/item/clothing/glasses/thermal/monocle
 	l_pocket = /obj/item/ammo_box/a357
-	r_hand = /obj/item/gun/projectile/automatic/proto
+	r_hand = /obj/item/gun/projectile/automatic/fullauto/twomode/proto // hispania
 
 /datum/outfit/admin/tournament_chef //Steven Seagal FTW
 	name = "Tournament Chef"

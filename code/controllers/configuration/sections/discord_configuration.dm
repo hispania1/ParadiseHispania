@@ -9,9 +9,6 @@
 	var/admin_role_id = ""
 	/// Mentor role to ping if no mentors are online. Disables if empty string
 	var/mentor_role_id = ""
-	/// HISPANIA START -  player_role_id mencion de rol para embed
-	var/player_role_id = ""
-	/// HISPANIA END
 	/// List of all URLs for the main webhooks
 	var/list/main_webhook_urls = list()
 	/// List of all URLs for the admin webhooks
@@ -33,3 +30,7 @@
 	CONFIG_LOAD_LIST(main_webhook_urls, data["main_webhook_urls"])
 	CONFIG_LOAD_LIST(mentor_webhook_urls, data["mentor_webhook_urls"])
 	CONFIG_LOAD_LIST(admin_webhook_urls, data["admin_webhook_urls"])
+	/// HISPANIA START
+	CONFIG_LOAD_LIST(bans_webhook_urls, data["bans_webhook_urls"])
+	CONFIG_LOAD_LIST(notes_webhook_urls, data["notes_webhook_urls"])
+	/// HISPANIA END

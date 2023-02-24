@@ -1,3 +1,6 @@
+// HISPANIA USA SU PROPIO AUTOMATIC.DM
+// modular_hispania/modules/projectiles/guns/projectile/automatic.dm
+
 /obj/item/gun/projectile/automatic
 	w_class = WEIGHT_CLASS_NORMAL
 	var/alarmed = 0
@@ -75,7 +78,7 @@
 		alarmed = 1
 
 //Saber SMG//
-/obj/item/gun/projectile/automatic/proto
+/obj/item/gun/projectile/automatic/fullauto/twomode/proto
 	name = "\improper Nanotrasen Saber SMG"
 	desc = "A rejected prototype three-round burst 9mm submachine gun, designated 'SABR'. Surplus of this model are bouncing around armories of Nanotrasen Space Stations. Has a threaded barrel for suppressors."
 	icon_state = "saber"
@@ -85,7 +88,7 @@
 	fire_sound = 'sound/weapons/gunshots/gunshot_pistol.ogg'
 
 //C-20r SMG//
-/obj/item/gun/projectile/automatic/c20r
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r
 	name = "\improper C-20r SMG"
 	desc = "A two-round burst .45 SMG, designated 'C-20r'. Has a 'Scarborough Arms - Per falcis, per pravitas' buttstamp."
 	icon_state = "c20r"
@@ -99,15 +102,15 @@
 	knife_x_offset = 26
 	knife_y_offset = 12
 
-/obj/item/gun/projectile/automatic/c20r/Initialize(mapload)
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r/Initialize(mapload)
 	. = ..()
 	update_icon()
 
-/obj/item/gun/projectile/automatic/c20r/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, flag)
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, flag)
 	..()
 	empty_alarm()
 
-/obj/item/gun/projectile/automatic/c20r/update_icon_state()
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r/update_icon_state()
 	icon_state = "c20r[magazine ? "-[CEILING(get_ammo(0)/4, 1)*4]" : ""][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
 
 //WT550//
@@ -145,7 +148,7 @@
 	can_holster = TRUE // it's a mini-uzi after all
 
 //M-90gl Carbine//
-/obj/item/gun/projectile/automatic/m90
+/obj/item/gun/projectile/automatic/fullauto/twomode/m90
 	name = "\improper M-90gl Carbine"
 	desc = "A three-round burst 5.56 toploading carbine, designated 'M-90gl'. Has an attached underbarrel grenade launcher which can be toggled on and off."
 	icon_state = "m90"
@@ -160,23 +163,23 @@
 	burst_size = 3
 	fire_delay = 2
 
-/obj/item/gun/projectile/automatic/m90/Initialize(mapload)
+/obj/item/gun/projectile/automatic/fullauto/twomode/m90/Initialize(mapload)
 	. = ..()
 	underbarrel = new /obj/item/gun/projectile/revolver/grenadelauncher(src)
 	update_icon()
 
-/obj/item/gun/projectile/automatic/m90/Destroy()
+/obj/item/gun/projectile/automatic/fullauto/twomode/m90/Destroy()
 	qdel(underbarrel)
 	return ..()
 
-/obj/item/gun/projectile/automatic/m90/afterattack(atom/target, mob/living/user, flag, params)
+/obj/item/gun/projectile/automatic/fullauto/twomode/m90/afterattack(atom/target, mob/living/user, flag, params)
 	if(select == 2)
 		underbarrel.afterattack(target, user, flag, params)
 	else
 		..()
 		return
 
-/obj/item/gun/projectile/automatic/m90/attackby(obj/item/A, mob/user, params)
+/obj/item/gun/projectile/automatic/fullauto/twomode/m90/attackby(obj/item/A, mob/user, params)
 	if(istype(A, /obj/item/ammo_casing))
 		if(istype(A, underbarrel.magazine.ammo_type))
 			underbarrel.attack_self(user)
@@ -184,14 +187,14 @@
 	else
 		return ..()
 
-/obj/item/gun/projectile/automatic/m90/update_icon_state()
+/obj/item/gun/projectile/automatic/fullauto/twomode/m90/update_icon_state()
 	icon_state = "[initial(icon_state)][magazine ? "" : "-e"]"
 	if(magazine)
 		item_state = "m90-[CEILING(get_ammo(0)/7.5, 1)]"
 	else
 		item_state = "m90-0"
 
-/obj/item/gun/projectile/automatic/m90/update_overlays()
+/obj/item/gun/projectile/automatic/fullauto/twomode/m90/update_overlays()
 	. = ..()
 	switch(select)
 		if(0)
@@ -203,7 +206,7 @@
 	if(magazine)
 		. += image(icon = icon, icon_state = "m90-[CEILING(get_ammo(0)/6, 1)*6]")
 
-/obj/item/gun/projectile/automatic/m90/burst_select()
+/obj/item/gun/projectile/automatic/fullauto/twomode/m90/burst_select()
 	var/mob/living/carbon/human/user = usr
 	switch(select)
 		if(0)
