@@ -22,9 +22,9 @@
 	var/hack_wire
 	var/disable_wire
 	var/shock_wire
-	use_power = IDLE_POWER_USE
-	idle_power_usage = 10
-	active_power_usage = 100
+	power_state = IDLE_POWER_USE
+	idle_power_consumption = 10
+	active_power_consumption = 100
 	var/busy = FALSE
 	var/prod_coeff
 	var/datum/wires/clothelate/wires = null
@@ -339,7 +339,7 @@
 	switch(id_inserted)
 		if(MAT_METAL)
 			flick("clothelate", src)//plays metal insertion animation
-	use_power(min(1000, amount_inserted / 100))
+	power_state(min(1000, amount_inserted / 100))
 	SStgui.update_uis(src)
 
 /obj/machinery/clothelate/attack_ghost(mob/user)
@@ -376,7 +376,7 @@
 	var/power = max(2000, (metal_cost)*multiplier/5)
 	if(can_build(D, multiplier))
 		being_built = list(D, multiplier)
-		use_power(power)
+		power_state(power)
 		icon_state = "clothelate"
 		flick("clothelate_n",src)
 		if(is_stack)

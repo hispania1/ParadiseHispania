@@ -1,9 +1,9 @@
-/obj/item/gripper
+/obj/item/gripper_engineering
 	var/list/hispa_can_hold = list(
 		/obj/item/stack/sheet/mineral
 	)
 
-/obj/item/gripper/Initialize(mapload)
+/obj/item/gripper_engineering/Initialize(mapload)
 	can_hold |= hispa_can_hold
 	..()
 

@@ -284,6 +284,38 @@
 	bitesize = 3
 	list_reagents = list("nutriment" = 10, "vitamin" = 5)
 
+//stun de banana cream pies//
+/obj/item/reagent_containers/food/snacks/pie/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
+	if(ishuman(hit_atom))
+		var/mob/living/carbon/human/L = hit_atom
+		L.Weaken(2 SECONDS)
+		L.creampied = 1
+		playsound(src.loc, 'sound/effects/meatslap.ogg', 50, 1)
+		L.update_misc_effects()
+	..()
+
+/obj/structure/sink/attack_hand(mob/user as mob) //lavarse la cara
+	.=..()
+	var/washing_face = 0
+	var/selected_area = parse_zone(user.zone_selected)
+	if(selected_area in list("head", "mouth", "eyes"))
+		washing_face = 1
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(washing_face && H.creampied)
+			H.creampied = 0
+			H.update_misc_effects()
+
+/obj/machinery/shower/wash(atom/A) //bañarse para limpiar la cara
+	if(iscarbon(A))
+		var/mob/living/carbon/human/H = A
+		H.creampied = 0
+		H.update_misc_effects()
+	..()
+
+/mob/living/carbon/human
+    var/creampied = 0
+
 //  HoneyBread       //
 /obj/item/reagent_containers/food/snacks/sliceable/honeybread
 	name = "honey bread"
