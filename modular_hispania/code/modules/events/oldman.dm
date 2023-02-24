@@ -8,7 +8,7 @@
 
 /datum/event/spawn_oldman/announce()
 	if(successSpawn)
-		GLOB.event_announcement.Announce("Unknown entity detected aboard [station_name()]. Please report any sightings to local authority.", "Bioscan Alert", 'modular_hispania/sound/effects/oldman/alert.ogg')
+		GLOB.minor_announcement.Announce("Unknown entity detected aboard [station_name()]. Please report any sightings to local authority.", "Bioscan Alert", 'modular_hispania/sound/effects/oldman/alert.ogg')
 
 /datum/event/spawn_oldman/proc/get_oldman(end_if_fail = 0)
 	spawn()
@@ -55,7 +55,7 @@
 		var/oldman_report = "<font size=3><b>NAS Trurl High-Priority Update</b></span>"
 		oldman_report += "<br><br>Our long-range sensors have detected paranormal activity emanating from your station. There is not much information but a femur breaker seems to be its weakness. Build one and use it with a living being. We highly recommend using perma-prisoners or non-crewmembers for this horrible task"
 		print_command_report(oldman_report, "Classified NAS Trurl Update", FALSE)
-		GLOB.event_announcement.Announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/AI/commandreport.ogg')
+		GLOB.minor_announcement.Announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/AI/commandreport.ogg')
 
 /datum/event/spawn_oldman/start()
 	get_oldman()
