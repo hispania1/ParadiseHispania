@@ -8063,7 +8063,7 @@
 /area/security/processing)
 "awv" = (
 /obj/machinery/atmospherics/portable/canister/toxins,
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/plasma,
 /area/atmos)
 "awx" = (
 /obj/structure/table,
@@ -56902,7 +56902,7 @@
 	autolink_id = "n2o_sensor";
 	output = 127
 	},
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/n20,
 /area/atmos)
 "cWn" = (
 /obj/effect/spawner/lootdrop/maintenance,
@@ -64451,7 +64451,7 @@
 	})
 "eok" = (
 /obj/machinery/atmospherics/portable/canister/carbon_dioxide,
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/co2,
 /area/atmos)
 "eoB" = (
 /obj/structure/lattice/catwalk,
@@ -64778,7 +64778,7 @@
 	dir = 1;
 	autolink_id = "n2o_in"
 	},
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/n20,
 /area/atmos)
 "eyk" = (
 /obj/effect/decal/warning_stripes/north,
@@ -67427,7 +67427,7 @@
 /area/maintenance/asmaint2)
 "fQu" = (
 /obj/machinery/atmospherics/portable/canister/sleeping_agent,
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/n20,
 /area/atmos)
 "fQI" = (
 /obj/effect/decal/cleanable/dirt,
@@ -68116,7 +68116,7 @@
 	dir = 1;
 	autolink_id = "co2_in"
 	},
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/co2,
 /area/atmos)
 "giQ" = (
 /obj/structure/rack,
@@ -69940,7 +69940,7 @@
 	internal_pressure_bound = 2000;
 	pressure_checks = 2
 	},
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/plasma,
 /area/atmos)
 "hgT" = (
 /obj/machinery/disposal,
@@ -71702,6 +71702,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
+"hYA" = (
+/turf/simulated/floor/engine/vacuum,
+/area/atmos)
 "hZh" = (
 /obj/effect/decal/warning_stripes/south,
 /turf/simulated/floor/plasteel{
@@ -75219,6 +75222,9 @@
 /obj/structure/chair/stool,
 /turf/simulated/floor/plasteel,
 /area/maintenance/apmaint)
+"kaX" = (
+/turf/simulated/floor/engine/co2,
+/area/atmos)
 "kbg" = (
 /obj/structure/chair/stool,
 /turf/simulated/floor/plasteel{
@@ -78793,7 +78799,7 @@
 	internal_pressure_bound = 2000;
 	pressure_checks = 2
 	},
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/n20,
 /area/atmos)
 "lYX" = (
 /obj/structure/reagent_dispensers/watertank,
@@ -80408,7 +80414,7 @@
 	internal_pressure_bound = 2000;
 	pressure_checks = 2
 	},
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/vacuum,
 /area/atmos)
 "mQq" = (
 /obj/structure/table,
@@ -82120,7 +82126,7 @@
 	internal_pressure_bound = 2000;
 	pressure_checks = 2
 	},
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/co2,
 /area/atmos)
 "nHM" = (
 /obj/structure/cable{
@@ -83638,7 +83644,7 @@
 	autolink_id = "waste_sensor";
 	output = 127
 	},
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/vacuum,
 /area/atmos)
 "oBz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
@@ -84152,7 +84158,7 @@
 	autolink_id = "tox_sensor";
 	output = 127
 	},
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/plasma,
 /area/atmos)
 "oND" = (
 /obj/machinery/light{
@@ -86422,7 +86428,7 @@
 	dir = 1;
 	autolink_id = "waste_in"
 	},
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/vacuum,
 /area/atmos)
 "qat" = (
 /obj/effect/decal/cleanable/dirt,
@@ -86440,7 +86446,7 @@
 	autolink_id = "co2_sensor";
 	output = 127
 	},
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/co2,
 /area/atmos)
 "qcl" = (
 /obj/structure/table/holotable/wood,
@@ -88507,6 +88513,9 @@
 	icon_state = "bluefull"
 	},
 /area/medical/reception)
+"rea" = (
+/turf/simulated/floor/engine/plasma,
+/area/atmos)
 "ree" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -88749,7 +88758,7 @@
 	dir = 1;
 	autolink_id = "tox_in"
 	},
-/turf/simulated/floor/engine/air,
+/turf/simulated/floor/engine/plasma,
 /area/atmos)
 "rlW" = (
 /obj/effect/spawner/window/reinforced/polarized{
@@ -90996,6 +91005,9 @@
 	icon_state = "dark"
 	},
 /area/medical/cmostore)
+"sBS" = (
+/turf/simulated/floor/engine/n20,
+/area/atmos)
 "sBW" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Robotics Maintenance";
@@ -131299,8 +131311,8 @@ fPG
 iNM
 ejK
 giH
-dkV
-dkV
+kaX
+kaX
 pHu
 mCc
 amW
@@ -131557,7 +131569,7 @@ oqD
 lKf
 qbs
 eok
-dkV
+kaX
 pHu
 mCc
 aab
@@ -131813,8 +131825,8 @@ xbo
 qRm
 ejK
 nHE
-dkV
-dkV
+kaX
+kaX
 pHu
 mCc
 amW
@@ -132327,8 +132339,8 @@ fPG
 iNM
 ejK
 rlI
-dkV
-dkV
+rea
+rea
 pHu
 mCc
 amW
@@ -132585,7 +132597,7 @@ oqD
 lKf
 oNA
 awv
-dkV
+rea
 pHu
 mCc
 amW
@@ -132841,8 +132853,8 @@ xbo
 qRm
 ejK
 hgd
-dkV
-dkV
+rea
+rea
 pHu
 mCc
 aab
@@ -133355,8 +133367,8 @@ fPG
 iNM
 ejK
 exK
-dkV
-dkV
+sBS
+sBS
 pHu
 mCc
 amW
@@ -133613,7 +133625,7 @@ oqD
 lKf
 cWm
 fQu
-dkV
+sBS
 pHu
 mCc
 amW
@@ -133869,8 +133881,8 @@ xbo
 qRm
 ejK
 lYP
-dkV
-dkV
+sBS
+sBS
 pHu
 mCc
 amW
@@ -134383,8 +134395,8 @@ fPG
 iNM
 ejK
 qaj
-dkV
-dkV
+hYA
+hYA
 pHu
 mCc
 amW
@@ -134640,8 +134652,8 @@ ijK
 oqD
 lKf
 oAP
-dkV
-dkV
+hYA
+hYA
 pHu
 mCc
 amW
@@ -134897,8 +134909,8 @@ xbo
 qRm
 ejK
 mQo
-dkV
-dkV
+hYA
+hYA
 pHu
 mCc
 amW
