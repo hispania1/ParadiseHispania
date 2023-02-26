@@ -9,21 +9,12 @@
 	var/admin_role_id = ""
 	/// Mentor role to ping if no mentors are online. Disables if empty string
 	var/mentor_role_id = ""
-	/// HISPANIA START -  player_role_id mencion de rol para embed
-	var/player_role_id = ""
-	/// HISPANIA END
 	/// List of all URLs for the main webhooks
 	var/list/main_webhook_urls = list()
 	/// List of all URLs for the admin webhooks
 	var/list/mentor_webhook_urls = list()
 	/// List of all URLs for the mentor webhooks
 	var/list/admin_webhook_urls = list()
-	/// HISPANIA START
-	/// Lista de URLS para el webhook de bans
-	var/list/bans_webhook_urls = list()
-	/// Lista de URLS para el webhook de notas
-	var/list/notes_webhook_urls = list()
-	/// HISPANIA END
 
 
 

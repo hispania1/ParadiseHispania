@@ -88,7 +88,8 @@ SUBSYSTEM_DEF(ticker)
 	'modular_hispania/sound/music/title11.ogg',\
 	'modular_hispania/sound/music/title12.ogg',\
 	'modular_hispania/sound/music/title13.ogg',\
-	'modular_hispania/sound/music/traitor.ogg',
+	'modular_hispania/sound/music/traitor.ogg',\
+	'modular_hispania/sound/music/title14.ogg',
 	//HISPANIA CHANGES END
 	)
 
