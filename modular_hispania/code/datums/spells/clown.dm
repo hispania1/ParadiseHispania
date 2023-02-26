@@ -62,7 +62,7 @@
 	return new /datum/spell_targeting/self
 
 /obj/effect/proc_holder/spell/clown/funny_button/cast(list/targets, mob/user = usr)
-	playsound(user.loc, 'modular_hispania/sound/effects/sitcomlaugh.ogg', 150, 1)
+	playsound(user.loc, 'modular_hispania/sound/effects/sitcomlaugh.ogg', 550, 1)
 
 ///Empieza el spellbook
 /obj/item/spellbook/oneuse/clown
