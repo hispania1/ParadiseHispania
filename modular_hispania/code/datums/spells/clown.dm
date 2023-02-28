@@ -19,6 +19,7 @@
 			to_chat(user, "<span class='notice'>You draw your pie cannon!</span>")
 			C.drop_item()
 			C.put_in_hands(new gun)
+			playsound(user, 'sound/weapons/gun_interactions/shotgunpump.ogg', 50)
 		else
 			to_chat(user, "<span class='notice'>Holster your pie cannon first.</span>")
 			revert_cast(user)
