@@ -1365,6 +1365,19 @@ GLOBAL_LIST_EMPTY(damage_icon_parts)
 	if(eyes_shine())
 		overlays_standing[MISC_LAYER] = get_eye_shine() //Image layer is specified in get_eye_shine() proc as LIGHTING_LAYER + 1.
 
+		//HISPANIA CHANGES START CREAMPIED!
+	if(src.creampied == 1)
+		var/mutable_appearance/pied
+		if(isvox(src) || isvulpkanin(src) || isunathi(src) || istajaran(src))
+			pied = mutable_appearance('modular_hispania/icons/mob/creampie.dmi', "creampie_lizard", layer = -MISC_LAYER)
+		if(ismonkeybasic(src))
+			pied = mutable_appearance('modular_hispania/icons/mob/creampie.dmi', "creampie_monkey", layer = -MISC_LAYER)
+		else
+			pied = mutable_appearance('modular_hispania/icons/mob/creampie.dmi', "creampie_human", layer = -MISC_LAYER)
+
+		overlays_standing[MISC_LAYER] = pied
+		//HISPANIA CHANGES END
+
 	apply_overlay(MISC_LAYER)
 
 /mob/living/carbon/human/proc/update_halo_layer()
