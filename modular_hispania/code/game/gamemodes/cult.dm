@@ -1,2 +1,0 @@
-/datum/game_mode/cult
-	restricted_jobs = list("Chaplain", "AI", "Cyborg", "Internal Affairs Agent", "Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Head of Personnel", "Blueshield", "Nanotrasen Representative", "Magistrate", "Nanotrasen Navy Officer", "Special Operations Officer", "Syndicate Officer", "Solar Federation General", "Head of Personnel", "Research Director", "Chief Engineer", "Chief Medical Officer")

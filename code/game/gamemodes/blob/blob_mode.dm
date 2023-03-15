@@ -14,6 +14,9 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 	required_enemies = 1
 	recommended_enemies = 1
 	restricted_jobs = list("Cyborg", "AI")
+	//HISPANIA STARTS HERE
+	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Blueshield", "Magistrate", "Internal Affairs Agent")
+	//HISPANIA ENDS HERE
 	var/burst = 0
 
 	var/cores_to_spawn = 1

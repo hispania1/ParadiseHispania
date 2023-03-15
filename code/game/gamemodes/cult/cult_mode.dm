@@ -49,6 +49,9 @@ GLOBAL_LIST_EMPTY(all_cults)
 
 /datum/game_mode/cult
 	name = "cult"
+	//HISPANIA STARTS HERE
+	restricted_jobs = list("Chaplain", "AI", "Cyborg", "Internal Affairs Agent", "Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Head of Personnel", "Blueshield", "Nanotrasen Representative", "Magistrate", "Nanotrasen Navy Officer", "Special Operations Officer", "Syndicate Officer", "Solar Federation General", "Head of Personnel", "Research Director", "Chief Engineer", "Chief Medical Officer")
+	//HISPANIA ENDS HERE
 	config_tag = "cult"
 	protected_jobs = list()
 	required_players = 30

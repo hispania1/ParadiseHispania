@@ -1,2 +1,0 @@
-/datum/game_mode/vampire
-	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Blueshield", "Nanotrasen Representative", "Magistrate", "Chaplain", "Internal Affairs Agent", "Nanotrasen Navy Officer", "Special Operations Officer", "Syndicate Officer", "Solar Federation General", "Head of Personnel", "Research Director", "Chief Engineer", "Chief Medical Officer")
